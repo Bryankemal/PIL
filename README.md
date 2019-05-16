@@ -4,10 +4,10 @@
 - Lieu: *PIL*
 - Projet : *Visualisation des processus logistiques dans le cadre du FEDER classe 2 - action 5 - lot 5*
 
-# Why is there a package.json ?
-It is needed to have [bulma](https://bulma.io/) a css framework
+# package.json ?
+Il est necessaire d'avoir [bulma](https://bulma.io/) un framework de css
 
-You can modify the css of the app by modifying `_sass/main.scss` file and running `npm run css-build`
+Vous pouvez modifier le css dans le fichier `_sass/main.scss` et executer la commande `npm run css-build`
 
 # Auteur(s)
 
