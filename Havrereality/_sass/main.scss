@@ -12,6 +12,8 @@
 // 2. Set your own initial variables
 // Update the blue shade, used for links
 $blue: #06bcef;
+$white: #ffffff;
+$menu: #b3c0da;
 // Add pink and its invert
 $pink: #ff8080;
 $pink-invert: #fff;
@@ -28,3 +30,7 @@ $primary-invert: $pink-invert;
 @import "../node_modules/bulma/bulma";
 
 html { background-image: url(../fond.png);}
+#corps { background-color: $white;}
+#menu { background-color: $menu }
+#barreTop {padding-top: 5%;}
+#containerCentre { padding-top: 2.2%;}
