@@ -31,11 +31,18 @@ $primary-invert: $pink-invert;
 @import "../node_modules/bulma/bulma";
 
 html { background-image: url(../src/fond.png);}
+
 table {
   table-layout: fixed;
   width:100%;
 }
+
 td, tr {   background-color: $etape; }
+
+li {
+  border-bottom: 0.2em solid #244281;
+  width: 100%;
+}
 
 #corps { background-color: $white;}
 #menu { background-color: $menu }
@@ -45,3 +52,19 @@ td, tr {   background-color: $etape; }
   overflow: auto
 }
 #imgtest { width: auto;}
+
+#titreliste {
+  color: #32327d;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#liste {
+  color: #32327d;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#menu a:active{
+  background-color: white;
+}

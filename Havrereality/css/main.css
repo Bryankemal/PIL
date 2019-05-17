@@ -6514,6 +6514,10 @@ table {
 td, tr {
   background-color: #718ed6; }
 
+li {
+  border-bottom: 0.2em solid #244281;
+  width: 100%; }
+
 #corps {
   background-color: #ffffff; }
 
@@ -6529,3 +6533,16 @@ td, tr {
 
 #imgtest {
   width: auto; }
+
+#titreliste {
+  color: #32327d;
+  font-weight: bold;
+  font-size: 2em; }
+
+#liste {
+  color: #32327d;
+  font-weight: bold;
+  font-size: 1em; }
+
+#menu a:active {
+  background-color: white; }
