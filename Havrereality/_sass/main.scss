@@ -14,6 +14,7 @@
 $blue: #06bcef;
 $white: #ffffff;
 $menu: #b3c0da;
+$etape : #718ed6;
 // Add pink and its invert
 $pink: #ff8080;
 $pink-invert: #fff;
@@ -32,5 +33,4 @@ $primary-invert: $pink-invert;
 html { background-image: url(../fond.png);}
 #corps { background-color: $white;}
 #menu { background-color: $menu }
-#barreTop {padding-top: 5%;}
-#containerCentre { padding-top: 2.2%;}
+#barreTop { background-color: $etape;}
