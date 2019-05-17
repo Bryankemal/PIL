@@ -30,7 +30,7 @@ $primary-invert: $pink-invert;
 
 @import "../node_modules/bulma/bulma";
 
-html { background-image: url(../fond.png);}
+html { background-image: url(../src/fond.png);}
 #corps { background-color: $white;}
 #menu { background-color: $menu }
 #barreTop { background-color: $etape;}
