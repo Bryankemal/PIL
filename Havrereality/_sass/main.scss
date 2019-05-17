@@ -31,6 +31,17 @@ $primary-invert: $pink-invert;
 @import "../node_modules/bulma/bulma";
 
 html { background-image: url(../src/fond.png);}
+table {
+  table-layout: fixed;
+  width:100%;
+}
+td, tr {   background-color: $etape; }
+
 #corps { background-color: $white;}
 #menu { background-color: $menu }
 #barreTop { background-color: $etape;}
+#pieds {
+  background-color: $etape;
+  overflow: auto
+}
+#imgtest { width: auto;}

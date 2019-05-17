@@ -6507,6 +6507,13 @@ label.panel-block {
 html {
   background-image: url(../src/fond.png); }
 
+table {
+  table-layout: fixed;
+  width: 100%; }
+
+td, tr {
+  background-color: #718ed6; }
+
 #corps {
   background-color: #ffffff; }
 
@@ -6515,3 +6522,10 @@ html {
 
 #barreTop {
   background-color: #718ed6; }
+
+#pieds {
+  background-color: #718ed6;
+  overflow: auto; }
+
+#imgtest {
+  width: auto; }
