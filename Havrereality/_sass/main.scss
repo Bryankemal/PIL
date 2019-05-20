@@ -39,7 +39,7 @@ table {
 
 td, tr {   background-color: $etape; }
 
-.credit { background-color: $white; }
+.credit { background-color: $white;  border: 1px solid #32327d;}
 
 #corps { background-color: $white;}
 #menu { background-color: $menu }
@@ -49,16 +49,17 @@ td, tr {   background-color: $etape; }
   position: relative;
   z-index: 1;
   text-align: center;
+  border: 2.5px solid #32327d;
 }
 #imgtest { width: 100%;}
 
-#corps { background-color: $white; position: relative; z-index: 1;}
-#menu { background-color: $menu; position: relative; z-index: 1; padding-top:5%;}
+#corps { background-color: $white; position: relative; z-index: 1; border: 2.5px solid #32327d;}
+#menu { background-color: $menu; position: relative; z-index: 1; padding-top:7%; border: 2.5px solid #32327d;}
 #barreTop { position: relative; z-index: 1; margin-top: 10%;}
 #barreBot { background-color: $etape; position: relative; z-index: 1;}
 #logo {width:15%; position: relative; z-index: 2;margin-bottom: -17%; margin-left: 13%;}
 
-@media screen and (min-width: 200px) and (max-width: 450px)
+@media screen and (min-width: 200px) and (max-width: 600px)
 {
   #logo {
     width:20%;
@@ -79,8 +80,6 @@ td, tr {   background-color: $etape; }
     margin-left: 11%;
   }
 }
-<<<<<<< HEAD
-=======
 
 #imgtest { width: auto;}
 
@@ -124,4 +123,3 @@ td, tr {   background-color: $etape; }
     width: 100%;
   }
 }
->>>>>>> Menu
