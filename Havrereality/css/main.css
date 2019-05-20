@@ -6565,6 +6565,12 @@ td, tr {
   margin-bottom: -17%;
   margin-left: 13%; }
 
+#popup {
+  color: black; }
+
+#popup:hover {
+  color: white; }
+
 @media screen and (min-width: 200px) and (max-width: 600px) {
   #logo {
     width: 20%;
@@ -6655,19 +6661,20 @@ td, tr {
   width: 60%;
   position: relative;
   margin: 10% auto;
+  padding: 2%;
   border-radius: 10px;
   background: #244281; }
 
 .close {
-  background: #b3c0da;
+  background: white;
   color: #244281;
   text-align: center;
   margin: 1%;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 2px;
+  border-radius: 3px;
   box-shadow: 3px 3px 3px #000; }
 
 .close:hover {
-  background: white;
+  background: #b3c0da;
   color: #244281; }
