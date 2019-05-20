@@ -36,6 +36,7 @@ table {
   table-layout: fixed;
   width:100%;
 }
+
 td, tr {   background-color: $etape; }
 
 #corps { background-color: $white;}
@@ -75,3 +76,49 @@ td, tr {   background-color: $etape; }
     margin-left: 11%;
   }
 }
+<<<<<<< HEAD
+=======
+
+#imgtest { width: auto;}
+
+#menu a:active{
+  background-color: white;
+}
+
+@media screen and (min-width: 900px) {
+  #titreliste {
+    color: #32327d;
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  #liste {
+    color: #32327d;
+    font-weight: bold;
+    font-size: 1em;
+  }
+
+  li {
+    border-bottom: 0.2em solid #244281;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #titreliste {
+    color: #32327d;
+    font-weight: bold;
+    font-size: 0.6em;
+  }
+
+  #liste {
+    color: #32327d;
+    font-weight: bold;
+    font-size: 0.5em;
+  }
+
+  li {
+    border-bottom: 0.2em solid #244281;
+    width: 100%;
+  }
+}
+>>>>>>> Menu

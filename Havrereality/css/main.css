@@ -6527,6 +6527,7 @@ td, tr {
   z-index: 1; }
 
 #imgtest {
+<<<<<<< HEAD
   width: 100%; }
 
 #corps {
@@ -6571,3 +6572,35 @@ td, tr {
     z-index: 2;
     margin-bottom: -20%;
     margin-left: 11%; } }
+=======
+  width: auto; }
+
+#menu a:active {
+  background-color: white; }
+
+@media screen and (min-width: 900px) {
+  #titreliste {
+    color: #32327d;
+    font-weight: bold;
+    font-size: 2em; }
+  #liste {
+    color: #32327d;
+    font-weight: bold;
+    font-size: 1em; }
+  li {
+    border-bottom: 0.2em solid #244281;
+    width: 100%; } }
+
+@media screen and (max-width: 900px) {
+  #titreliste {
+    color: #32327d;
+    font-weight: bold;
+    font-size: 0.6em; }
+  #liste {
+    color: #32327d;
+    font-weight: bold;
+    font-size: 0.5em; }
+  li {
+    border-bottom: 0.2em solid #244281;
+    width: 100%; } }
+>>>>>>> Menu
