@@ -123,3 +123,71 @@ td, tr {   background-color: $etape; }
     width: 100%;
   }
 }
+
+.popuptitre {
+  color : white;
+  font-size: 20px;
+  font-family: $family-sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.popuptexte {
+  color : white;
+  font-size: 16px;
+  font-family: $family-sans-serif;
+  text-align: center;
+}
+
+.popupImage {
+  border-radius: 3px;
+  width: auto;
+  position: relative;
+}
+.modalDialog {
+    position: fixed;
+    font-family: $family-sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 3;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 60%;
+    position: relative;
+    margin: 10% auto;
+    //padding: 2%;
+    border-radius: 10px;
+    background: #244281;
+
+}
+
+.close {
+background: $menu;
+color: #244281;
+text-align: center;
+margin: 1%;
+text-decoration: none;
+font-weight: bold;
+border-radius: 2px;
+box-shadow: 3px 3px 3px #000;
+
+}
+
+.close:hover {
+  background: white;
+  color : #244281;
+}
