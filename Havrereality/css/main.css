@@ -6536,6 +6536,34 @@ td, tr {
   width: 100%; }
 
 #corps {
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
+  border: 2.5px solid #32327d; }
+
+#menu {
+  background-color: #b3c0da;
+  position: relative;
+  z-index: 1;
+  padding-top: 7%;
+  border: 2.5px solid #32327d; }
+
+#barreTop {
+  position: relative;
+  z-index: 1;
+  margin-top: 10%; }
+
+#logo {
+  width: 15%;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -17%;
+  margin-left: 13%; }
+
+#popup {
+  color: black; }
+
+#corps {
   background-color: #f0f0f0;
   position: relative;
   z-index: 1;
@@ -6560,14 +6588,6 @@ td, tr {
   margin-bottom: -17%;
   margin-left: 13%; }
 
-<<<<<<< HEAD
-#popup {
-  color: black; }
-
-#popup:hover {
-  color: white; }
-
-=======
 /*------------------------------Styles de texte-------------------------------*/
 h1 {
   font-weight: bold;
@@ -6595,7 +6615,9 @@ h1 {
   z-index: 1; }
 
 /*---------------------Media Queries (responsive design)----------------------*/
->>>>>>> 879ba532904f557914644e13d3cdb0000db4b9c3
+#popup:hover {
+  color: white; }
+
 @media screen and (min-width: 200px) and (max-width: 600px) {
   #logo {
     width: 20%;

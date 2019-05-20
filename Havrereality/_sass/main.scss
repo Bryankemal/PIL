@@ -30,15 +30,10 @@ $primary-invert: $pink-invert;
 
 @import "../node_modules/bulma/bulma";
 
-<<<<<<< HEAD
-html { background-image: url(../src/fond.png);}
-table {
-=======
 html { background-image: url(../src/fond.png); }
 
 table
 {
->>>>>>> 879ba532904f557914644e13d3cdb0000db4b9c3
   table-layout: fixed;
   width:100%;
 }
@@ -65,14 +60,13 @@ td, tr { background-color: $etape; }
 
 #imgtest { width: 100%;}
 
-<<<<<<< HEAD
+
 #corps { background-color: $white; position: relative; z-index: 1; border: 2.5px solid #32327d;}
 #menu { background-color: $menu; position: relative; z-index: 1; padding-top:7%; border: 2.5px solid #32327d;}
 #barreTop { position: relative; z-index: 1; margin-top: 10%;}
-#barreBot { background-color: $etape; position: relative; z-index: 1;}
 #logo {width:15%; position: relative; z-index: 2;margin-bottom: -17%; margin-left: 13%;}
 #popup{ color: black;}
-=======
+
 #corps
 {
   background-color: #f0f0f0;
@@ -140,11 +134,11 @@ h1
 }
 
 /*---------------------Media Queries (responsive design)----------------------*/
->>>>>>> 879ba532904f557914644e13d3cdb0000db4b9c3
 
 #popup:hover{
   color: white;
 }
+
 @media screen and (min-width: 200px) and (max-width: 600px)
 {
   #logo
@@ -276,7 +270,6 @@ h1
     padding: 2%;
     border-radius: 10px;
     background: #244281;
-
 }
 
 .close {
@@ -288,7 +281,6 @@ text-decoration: none;
 font-weight: bold;
 border-radius: 3px;
 box-shadow: 3px 3px 3px #000;
-
 }
 
 .close:hover {
