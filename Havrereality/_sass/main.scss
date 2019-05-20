@@ -42,9 +42,11 @@ td, tr {   background-color: $etape; }
 #menu { background-color: $menu }
 #pieds {
   background-color: $etape;
-  overflow: auto
+  overflow: auto;
+  position: relative;
+  z-index: 1;
 }
-#imgtest { width: auto;}
+#imgtest { width: 100%;}
 
 #corps { background-color: $white; position: relative; z-index: 1;}
 #menu { background-color: $menu; position: relative; z-index: 1;}

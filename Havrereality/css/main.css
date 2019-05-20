@@ -6522,10 +6522,12 @@ td, tr {
 
 #pieds {
   background-color: #718ed6;
-  overflow: auto; }
+  overflow: auto;
+  position: relative;
+  z-index: 1; }
 
 #imgtest {
-  width: auto; }
+  width: 100%; }
 
 #corps {
   background-color: #ffffff;
