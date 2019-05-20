@@ -38,6 +38,8 @@ table {
 }
 td, tr {   background-color: $etape; }
 
+.credit { background-color: $white; }
+
 #corps { background-color: $white;}
 #menu { background-color: $menu }
 #pieds {
@@ -45,11 +47,12 @@ td, tr {   background-color: $etape; }
   overflow: auto;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 #imgtest { width: 100%;}
 
 #corps { background-color: $white; position: relative; z-index: 1;}
-#menu { background-color: $menu; position: relative; z-index: 1;}
+#menu { background-color: $menu; position: relative; z-index: 1; padding-top:5%;}
 #barreTop { position: relative; z-index: 1; margin-top: 10%;}
 #barreBot { background-color: $etape; position: relative; z-index: 1;}
 #logo {width:15%; position: relative; z-index: 2;margin-bottom: -17%; margin-left: 13%;}

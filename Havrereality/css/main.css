@@ -6514,6 +6514,9 @@ table {
 td, tr {
   background-color: #718ed6; }
 
+.credit {
+  background-color: #ffffff; }
+
 #corps {
   background-color: #ffffff; }
 
@@ -6524,7 +6527,8 @@ td, tr {
   background-color: #718ed6;
   overflow: auto;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  text-align: center; }
 
 #imgtest {
   width: 100%; }
@@ -6537,7 +6541,8 @@ td, tr {
 #menu {
   background-color: #b3c0da;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  padding-top: 5%; }
 
 #barreTop {
   position: relative;
