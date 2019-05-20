@@ -31,6 +31,7 @@ $primary-invert: $pink-invert;
 @import "../node_modules/bulma/bulma";
 
 html { background-image: url(../src/fond.png);}
+
 table {
   table-layout: fixed;
   width:100%;
@@ -39,9 +40,36 @@ td, tr {   background-color: $etape; }
 
 #corps { background-color: $white;}
 #menu { background-color: $menu }
-#barreTop { background-color: $etape;}
 #pieds {
   background-color: $etape;
   overflow: auto
 }
 #imgtest { width: auto;}
+
+#corps { background-color: $white; position: relative; z-index: 1;}
+#menu { background-color: $menu; position: relative; z-index: 1;}
+#barreTop { position: relative; z-index: 1; margin-top: 10%;}
+#barreBot { background-color: $etape; position: relative; z-index: 1;}
+#logo {width:15%; position: relative; z-index: 2;margin-bottom: -17%; margin-left: 13%;}
+
+@media screen and (min-width: 200px) and (max-width: 450px)
+{
+  #logo {
+    width:20%;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -23%;
+    margin-left: 9%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px)
+{
+  #logo {
+    width:18%;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -20%;
+    margin-left: 11%;
+  }
+}

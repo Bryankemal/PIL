@@ -6520,12 +6520,52 @@ td, tr {
 #menu {
   background-color: #b3c0da; }
 
-#barreTop {
-  background-color: #718ed6; }
-
 #pieds {
   background-color: #718ed6;
   overflow: auto; }
 
 #imgtest {
   width: auto; }
+
+#corps {
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1; }
+
+#menu {
+  background-color: #b3c0da;
+  position: relative;
+  z-index: 1; }
+
+#barreTop {
+  position: relative;
+  z-index: 1;
+  margin-top: 10%; }
+
+#barreBot {
+  background-color: #718ed6;
+  position: relative;
+  z-index: 1; }
+
+#logo {
+  width: 15%;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -17%;
+  margin-left: 13%; }
+
+@media screen and (min-width: 200px) and (max-width: 450px) {
+  #logo {
+    width: 20%;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -23%;
+    margin-left: 9%; } }
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  #logo {
+    width: 18%;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -20%;
+    margin-left: 11%; } }
