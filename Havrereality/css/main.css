@@ -6536,7 +6536,7 @@ td, tr {
   width: 100%; }
 
 #corps {
-  background-color: #ffffff;
+  background-color: #f0f0f0;
   position: relative;
   z-index: 1;
   border: 2.5px solid #32327d; }
@@ -6553,11 +6553,6 @@ td, tr {
   z-index: 1;
   margin-top: 10%; }
 
-#barreBot {
-  background-color: #718ed6;
-  position: relative;
-  z-index: 1; }
-
 #logo {
   width: 15%;
   position: relative;
@@ -6565,13 +6560,50 @@ td, tr {
   margin-bottom: -17%;
   margin-left: 13%; }
 
+/*------------------------------Styles de texte-------------------------------*/
+h1 {
+  font-weight: bold;
+  font-family: Bahnschrift;
+  color: #32327d;
+  font-size: 25px;
+  margin-left: 5px;
+  position: relative;
+  z-index: 2; }
+
+.pImportant {
+  text-align: center;
+  font-weight: bold;
+  border: 3px solid #244281;
+  background-color: white; }
+
+.pNormal {
+  text-align: justify;
+  font-weight: normal;
+  border: 3px solid #b3c0da;
+  background-color: white;
+  padding: 10px;
+  margin-top: -13px;
+  position: relative;
+  z-index: 1; }
+
+/*---------------------Media Queries (responsive design)----------------------*/
 @media screen and (min-width: 200px) and (max-width: 600px) {
   #logo {
     width: 20%;
     position: relative;
     z-index: 2;
     margin-bottom: -23%;
-    margin-left: 9%; } }
+    margin-left: 9%; }
+  p {
+    font-size: 10px; }
+  h1 {
+    font-size: 15px; }
+  .pImportant {
+    font-size: 10px; }
+  table {
+    width: 150%;
+    margin-left: -20px;
+    margin-right: -20px; } }
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
   #logo {
@@ -6582,7 +6614,8 @@ td, tr {
     margin-left: 11%; } }
 
 #imgtest {
-  width: auto; }
+  width: auto;
+  border-radius: 5px; }
 
 #menu a:active {
   background-color: white; }
