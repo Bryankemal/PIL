@@ -6570,7 +6570,8 @@ h1 {
   font-size: 25px;
   margin-left: 5px;
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  margin-bottom: 5px; }
 
 .pImportant {
   text-align: center;
