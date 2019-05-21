@@ -15,10 +15,6 @@ $family-sans-serif: "Helvetica", "Arial", sans-serif;
 // import du reste des éléments de Bulma (node_modules)
 @import "../node_modules/bulma/bulma";
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a6eaaf26be0f9a0727300a2eae1857b1fdef4875
 html { background-image: url(../src/fond.png); }
 
 table
@@ -50,16 +46,6 @@ td, tr { background-color: $etape; }
 #popup       { color: black; }
 #popup:hover { color: white; }
 
-<<<<<<< HEAD
-
-#corps { background-color: $white; position: relative; z-index: 1; border: 2.5px solid #32327d;}
-#menu { background-color: $menu; position: relative; z-index: 1; padding-top:7%; border: 2.5px solid #32327d;}
-#barreTop { position: relative; z-index: 1; margin-top: 10%;}
-#logo {width:15%; position: relative; z-index: 2;margin-bottom: -17%; margin-left: 13%;}
-#popup{ color: black;}
-
-=======
->>>>>>> a6eaaf26be0f9a0727300a2eae1857b1fdef4875
 #corps
 {
   background-color: #f0f0f0;
@@ -132,13 +118,6 @@ h1
 
 /*---------------------Media Queries (responsive design)----------------------*/
 
-<<<<<<< HEAD
-#popup:hover{
-  color: white;
-}
-
-=======
->>>>>>> a6eaaf26be0f9a0727300a2eae1857b1fdef4875
 @media screen and (min-width: 200px) and (max-width: 600px)
 {
   #logo

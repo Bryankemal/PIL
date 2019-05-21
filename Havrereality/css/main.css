@@ -6536,7 +6536,7 @@ td, tr {
   color: white; }
 
 #corps {
-  background-color: #ffffff;
+  background-color: #f0f0f0;
   position: relative;
   z-index: 1;
   border: 2.5px solid #32327d; }
@@ -6562,37 +6562,6 @@ td, tr {
   margin-bottom: -17%;
   margin-left: 13%; }
 
-<<<<<<< HEAD
-#popup {
-  color: black; }
-
-#corps {
-  background-color: #f0f0f0;
-  position: relative;
-  z-index: 1;
-  border: 2.5px solid #32327d; }
-
-#menu {
-  background-color: #b3c0da;
-  position: relative;
-  z-index: 1;
-  padding-top: 7%;
-  border: 2.5px solid #32327d; }
-
-#barreTop {
-  position: relative;
-  z-index: 1;
-  margin-top: 10%; }
-
-#logo {
-  width: 15%;
-  position: relative;
-  z-index: 2;
-  margin-bottom: -17%;
-  margin-left: 13%; }
-
-=======
->>>>>>> a6eaaf26be0f9a0727300a2eae1857b1fdef4875
 /*------------------------------Styles de texte-------------------------------*/
 h1 {
   font-weight: bold;
@@ -6622,12 +6591,6 @@ h1 {
   z-index: 1; }
 
 /*---------------------Media Queries (responsive design)----------------------*/
-<<<<<<< HEAD
-#popup:hover {
-  color: white; }
-
-=======
->>>>>>> a6eaaf26be0f9a0727300a2eae1857b1fdef4875
 @media screen and (min-width: 200px) and (max-width: 600px) {
   #logo {
     width: 20%;
