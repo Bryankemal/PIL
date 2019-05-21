@@ -1,35 +1,24 @@
 @charset "utf-8";
 
-// Customization
-
-// You can easily customize Bulma with your own variables.
-// Just uncomment the following block to see the result.
-
-
-// 1. Import the initial variables
+// import des éléments css du framework Bulma
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 
-// 2. Set your own initial variables
-// Update the blue shade, used for links
+// couleurs utilisées fréquemment
 $blue: #06bcef;
 $white: #ffffff;
-$menu: #b3c0da;
+$bClair: #b3c0da;
+$bFonce: #32327d;
 $etape : #718ed6;
-// Add pink and its invert
-$pink: #ff8080;
-$pink-invert: #fff;
-// Update the sans-serif font family
+
 $family-sans-serif: "Helvetica", "Arial", sans-serif;
 
-// 3. Set the derived variables
-// Use the new pink as the primary color
-$primary: $pink;
-$primary-invert: $pink-invert;
-
-// 4. Import the rest of Bulma
-
+// import du reste des éléments de Bulma (node_modules)
 @import "../node_modules/bulma/bulma";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a6eaaf26be0f9a0727300a2eae1857b1fdef4875
 html { background-image: url(../src/fond.png); }
 
 table
@@ -43,23 +32,25 @@ td, tr { background-color: $etape; }
 .credit
 {
   background-color: $white;
-  border: 1px solid #32327d;
+  border: 1px solid $bFonce;
 }
 
-#corps { background-color: $white; }
-#menu  { background-color: $menu;  }
-
-#pieds {
+#pieds
+{
   background-color: $etape;
   overflow: auto;
   position: relative;
   z-index: 1;
   text-align: center;
-  border: 2.5px solid #32327d;
+  border: 2.5px solid $bFonce;
 }
 
-#imgtest { width: 100%;}
+#img { width: 100%; }
 
+#popup       { color: black; }
+#popup:hover { color: white; }
+
+<<<<<<< HEAD
 
 #corps { background-color: $white; position: relative; z-index: 1; border: 2.5px solid #32327d;}
 #menu { background-color: $menu; position: relative; z-index: 1; padding-top:7%; border: 2.5px solid #32327d;}
@@ -67,21 +58,25 @@ td, tr { background-color: $etape; }
 #logo {width:15%; position: relative; z-index: 2;margin-bottom: -17%; margin-left: 13%;}
 #popup{ color: black;}
 
+=======
+>>>>>>> a6eaaf26be0f9a0727300a2eae1857b1fdef4875
 #corps
 {
   background-color: #f0f0f0;
   position: relative;
   z-index: 1;
-  border: 2.5px solid #32327d;
+  border: 2.5px solid $bFonce;
 }
 
 #menu
 {
-  background-color: $menu;
+  background-color: $bClair;
   position: relative;
   z-index: 1;
   padding-top:7%;
-  border: 2.5px solid #32327d;
+  border: 2.5px solid $bFonce;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 #barreTop
@@ -106,7 +101,7 @@ h1
 {
   font-weight: bold;
   font-family:Bahnschrift;
-  color: #32327d;
+  color: $bFonce;
   font-size: 25px;
   margin-left: 5px;
   position:relative;
@@ -119,15 +114,17 @@ h1
   font-weight: bold;
   border: 3px solid #244281;
   background-color: white;
+  margin-bottom: -10px;
 }
 
 .pNormal
 {
   text-align: justify;
   font-weight: normal;
-  border: 3px solid $menu;
+  border: 3px solid $bClair;
   background-color: white;
   padding: 10px;
+  margin-bottom: 10px;
   margin-top: -13px;
   position:relative;
   z-index: 1;
@@ -135,10 +132,13 @@ h1
 
 /*---------------------Media Queries (responsive design)----------------------*/
 
+<<<<<<< HEAD
 #popup:hover{
   color: white;
 }
 
+=======
+>>>>>>> a6eaaf26be0f9a0727300a2eae1857b1fdef4875
 @media screen and (min-width: 200px) and (max-width: 600px)
 {
   #logo
@@ -150,13 +150,15 @@ h1
     margin-left: 9%;
   }
 
-  p { font-size: 10px; }
+  p,center { font-size: 10px; }
 
   h1 { font-size: 15px; }
 
   .pImportant { font-size: 10px; }
 
   table { width: 150%; margin-left: -20px; margin-right: -20px; }
+
+  li { text-align: center; font-size: 15px; }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px)
@@ -171,7 +173,7 @@ h1
   }
 }
 
-#imgtest { width: auto; border-radius: 5px;}
+#img { width: auto; border-radius: 5px;}
 
 #menu a:active { background-color: white; }
 
@@ -179,14 +181,14 @@ h1
 {
   #titreliste
   {
-    color: #32327d;
+    color: $bFonce;
     font-weight: bold;
     font-size: 2em;
   }
 
   #liste
   {
-    color: #32327d;
+    color: $bFonce;
     font-weight: bold;
     font-size: 1em;
   }
@@ -202,14 +204,14 @@ h1
 {
   #titreliste
   {
-    color: #32327d;
+    color: $bFonce;
     font-weight: bold;
     font-size: 0.6em;
   }
 
   #liste
   {
-    color: #32327d;
+    color: $bFonce;
     font-weight: bold;
     font-size: 0.5em;
   }
@@ -284,6 +286,6 @@ box-shadow: 3px 3px 3px #000;
 }
 
 .close:hover {
-  background: $menu;
+  background: $bClair;
   color : #244281;
 }
