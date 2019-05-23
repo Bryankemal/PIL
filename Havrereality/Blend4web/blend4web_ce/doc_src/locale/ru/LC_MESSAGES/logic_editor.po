@@ -1,0 +1,2140 @@
+# Blend4Web User Manual Russian Translation: Logic Editor
+# Copyright (C) 2014-2016, Triumph
+# This file is distributed under the same license as Blend4Web.
+# Blend4Web Team <info [at] blend4web.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Blend4Web 16.08\n"
+"Report-Msgid-Bugs-To: https://www.blend4web.com/en/forums/forum/17/\n"
+"POT-Creation-Date: 2017-10-26 11:36+0300\n"
+"PO-Revision-Date: 2015-08-28 10:55+0300\n"
+"Last-Translator: Blend4Web Team <info [at] blend4web.com>\n"
+"Language-Team: Russian <info [at] blend4web.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+msgid "Logic Editor"
+msgstr "Редактор логики"
+
+msgid "Table of Content"
+msgstr "Содержание"
+
+msgid "Basics"
+msgstr "Основы"
+
+msgid ""
+"Visual programming is performed by creating logic node tree in the node "
+"editor area in Blender. These nodes can extend the scene functionality "
+"significantly without any coding."
+msgstr ""
+"Визуальное программирование осуществляется путем создания нодового дерева"
+" логики в окне нодового редактора. С помощью ``Logic Editor`` можно "
+"существенно расширить функциональность сцены, не прибегая при этом к "
+"программированию."
+
+msgid ""
+"To activate logic on the given scene set the ``Logic Editor`` property in"
+" the ``Scene`` tab and append/select active node tree."
+msgstr ""
+"Для активации логики, на вкладке настроек сцены Blender необходимо "
+"установить галочку ``Logic Editor`` и добавить/выбрать активное нодовое "
+"дерево:"
+
+msgid ""
+"To edit logic tree go to the ``Node Editor`` area and select the "
+"``Blend4Web Logic`` tree type:"
+msgstr ""
+"Для редактирования дерева логики необходимо перейти в ``Редактор Нод`` "
+"(Node Editor) выбрать тип нодового дерева ``Blend4Web logic``:"
+
+msgid "Then select the required node tree:"
+msgstr "Затем выбрать дерево для редактирования:"
+
+msgid "Nodes are created by using standard Blender keyboard shortcut ``Shift+A``."
+msgstr ""
+"Создание нод осуществляется привычным для Blender сочетанием клавиш "
+"``Shift+A``."
+
+msgid ""
+"The nodes themselves are logic blocks that are executed from the ``Entry "
+"Point`` node which has no inputs and only one output. All other nodes "
+"have both inputs and outputs, and can be inserted in any place of a logic"
+" tree. The exception is ``Page Redirect`` node, which can be inserted "
+"only to the end of the node tree. The nodes which have two outputs allow "
+"branching, thus the next leave is selected based on condition specified "
+"for such nodes."
+msgstr ""
+"Ноды  - это логические блоки, выполнение которых начинается с ``Entry "
+"Point``, которая имеет один единственный выход. Почти все остальные ноды "
+"помимо одного или двух выходов имеют также входы, таким образом они могут"
+" быть вставлены в любое место в дереве. Ноды без выходов, например ``Page"
+" Redirect``, могут быть вставлены только в конец какой-либо ветви. Ноды с"
+" двумя выходами позволяют ветвить алгоритм в зависимости от "
+"успеха/провала указанного условия, например ``Conditional Jump``."
+
+msgid ""
+"For implementing complicated logic there are variables that can have "
+"either numeric or string values. The variables can be used for storing "
+"some scene state (e.g. this can be a counter of animation playbacks, "
+"character’s health points etc)."
+msgstr ""
+"Для реализации сложной логики предусмотрены переменные, которые могут "
+"иметь как числовые, так и строковые значения. Переменные могут быть "
+"использованы для хранения какого-либо состояния сцены (например, это "
+"может быть счётчик проигрываемых анимаций, количество жизней, оставшихся "
+"у персонажа и т.д.)."
+
+msgid "Logic Editor usage example:"
+msgstr "Пример использования редактора логики:"
+
+msgid "All available nodes are described below."
+msgstr "Ниже перечислены все доступные ноды."
+
+msgid "Control Flow"
+msgstr "Control Flow"
+
+msgid "Entry Point"
+msgstr "Entry Point"
+
+msgid ""
+"This is where the script starts. By using multiple entry points you can "
+"create multi-threaded applications."
+msgstr ""
+"Является точкой начала выполнения скрипта. Использование нескольких точек"
+" входа позволяет эмулировать многопоточное выполнение."
+
+msgid "Input Parameters"
+msgstr "Входные параметры"
+
+msgid "None."
+msgstr "Отсутствуют."
+
+msgid "Output Parameters"
+msgstr "Выходные параметры"
+
+msgid "*Next*"
+msgstr "*Next*"
+
+msgid "Next node."
+msgstr "Следующая нода."
+
+msgid "Internal Parameters"
+msgstr "Внутренние параметры"
+
+msgid "*Run From Script*"
+msgstr "*Run From Script*"
+
+msgid ""
+"If this parameter is enabled, the entry point can be triggered via API by"
+" using the :b4wref:`logic_nodes.run_entrypoint` method."
+msgstr ""
+"Если этот параметр активирован, точка входа может быть запущена с помощью"
+" API, используя метод :b4wref:`logic_nodes.run_entrypoint`."
+
+msgid "Select"
+msgstr ""
+
+msgid "Can be used to trace the selection of any object from the object list."
+msgstr "Позволяет отследить событие выбора какого-либо объекта из списка объектов."
+
+msgid "*Previous*"
+msgstr "*Previous*"
+
+msgid "Previous node."
+msgstr "Предыдущая нода."
+
+msgid "*<object name> Hit*"
+msgstr "*<имя объекта> Hit*"
+
+msgid ""
+"This parameter will pass the control to the next node if the user selects"
+" (with a mouse or by touch) an object mentioned in the parameter’s name. "
+"The ``Select`` node has one such parameter by default, but you can add "
+"new ones and remove existing ones (the node can even have no such "
+"parameters)."
+msgstr ""
+"Этот параметр передаёт управление следующей ноде в случае, если выбран "
+"объект, упомянутый в его названии. По умолчанию нода ``Select`` "
+"имеет один параметр этого типа, также присутствует возможность создавать "
+"новые и удалять уже существующие (нода может и не иметь ни одного такого "
+"параметра)."
+
+msgid "*Miss*"
+msgstr "*Miss*"
+
+msgid ""
+"This parameter will pass the control to the next node when the user "
+"selects any object with the ``Selectable`` property enabled (or used by "
+"another ``Select`` node), but not specified in the ``Select`` node."
+msgstr ""
+"Этот параметр передаёт управление следующей ноде в случае, если выбран "
+"любой из объектов со свойством ``Selectable``, не из числа "
+"объектов, указанных в данной ноде."
+
+msgid "*Object*"
+msgstr "*Object*"
+
+msgid ""
+"One of the objects that the user can select. These parameters are "
+"automatically created and deleted when you create or delete a ``Hit`` "
+"parameter. The number of such parameters is always equal to the number of"
+" the ``Hit`` parameters."
+msgstr ""
+"Один из объектов, доступных для выбора пользователю. Такие параметры "
+"создаются и удаляются автоматически при создании или удалении выходных "
+"параметров типа ``Hit``."
+
+msgid "*Variable*"
+msgstr ""
+
+msgid ""
+"If this parameter is enabled, you can specify an object variable in the "
+"corresponding ``Object`` field."
+msgstr ""
+"Если активирован этот параметр, переменная типа Object может быть указана "
+"в поле ``Object``."
+
+msgid "*Destination*"
+msgstr "*Destination*"
+
+msgid ""
+"Sets a variable that will be used to store a selected object after an "
+"event of selection."
+msgstr ""
+"Задаёт переменную, в которой сохраняется вбранный объект."
+
+msgid "Branch"
+msgstr ""
+
+msgid ""
+"Go to the specified node if the certain condition is met. The parameters "
+"(operands) can also be variables that are activated using the "
+"corresponding switches."
+msgstr ""
+"Перейти к указанной ноде в случае выполнения выбранного условия. В "
+"качестве параметров условия (операндов) могут выступать также переменные,"
+" которые активируются с помощью соответствующих переключателей."
+
+msgid "*True*"
+msgstr "*True*"
+
+msgid "Condition is true."
+msgstr "Утверждение истинно."
+
+msgid "*False*"
+msgstr "*False*"
+
+msgid "Condition is false."
+msgstr "Утверждение ложно."
+
+msgid "*Condition*"
+msgstr "*Condition*"
+
+msgid "Logical condition. Can have one of the following types:"
+msgstr "Логическое утверждение. Может иметь один из следующих типов:"
+
+msgid "*Equal (=)* - first operand is equal to the second."
+msgstr "*Equal (=)* - первый операнд равен второму."
+
+msgid "*Not Equal (!=)* - first operand is not equal to the second."
+msgstr "*Not Equal (!=)* - первый операнд не равен второму."
+
+msgid "*Less Than (<)* - first operand is less than the second."
+msgstr "*Less Than (<)* - первый операнд меньше второго."
+
+msgid "*Greater Than (>)* - first operand is greater than the second."
+msgstr "*Greater Than (>)* - первый операнд больше второго."
+
+msgid ""
+"*Less Than Or Equal (<=)* - first operand is less than or equal to the "
+"second."
+msgstr "*Less Than Or Equal (<=)* - первый операнд меньше либо равен второму."
+
+msgid ""
+"*Greater Than Or Equal (=>)* - first operand is greater than or equal to "
+"the second."
+msgstr "*Greater Than Or Equal (=>)* - первый операнд больше либо равен второму."
+
+msgid "*Operand1*"
+msgstr "*Operand1*"
+
+msgid ""
+"First operand of the logical condition. Contains a numeric value or a "
+"string (if the ``String Operators`` parameter is enabled). Can be "
+"specified in the node or can be a link to one of the variables (if the "
+"``Variable`` parameter at the right of it is enabled)."
+msgstr ""
+"Первый операнд логического выражения. Может быть числом либо строкой "
+"(если включена опция ``String Operators``). Может быть задан в самой ноде"
+" либо с помощью ссылки на одну из переменных (если включена опция "
+"``Variable``)."
+
+msgid "*Operand2*"
+msgstr "*Operand2*"
+
+msgid "Second operand of the logical condition. Works the same way as the first."
+msgstr "Второй операнд логического выражения. Аналогичен первому."
+
+msgid "*Operand's Type*"
+msgstr ""
+
+msgid ""
+"The type of the operands. Available values are ``Number`` (the default "
+"option), ``String`` and ``Object``."
+msgstr ""
+"Тип операндов. Доступные варианты - ``Number`` (значение по умолчанию), "
+"``String`` и ``Object``."
+
+msgid "Switch"
+msgstr ""
+
+msgid ""
+"This node compares several variables with a given value and executes a "
+"conditional jump depending on the outcome."
+msgstr ""
+"Эта нода сравнивает несколько переменных с заданным значением и выполняет "
+"условный переход в зависимости от результатов сравнения."
+
+msgid "*<variable name>*"
+msgstr "*<имя переменной>*"
+
+msgid ""
+"One of the variables used for comparison. If the value of the variable "
+"specified by this parameter is equal to the value of the ``Variable`` "
+"parameter, control is passed to the node connected to this output. The "
+"``Switch`` node has one such parameter by default, but you can add new "
+"ones and remove existing ones (the node can even have no such "
+"parameters)."
+msgstr ""
+"Одна из переменных, используемых при сравнении. Если значение переменной, "
+"заданной этип параметром, совпадает со значением, заданным параметром "
+"``Variable``, управление передаётся ноде, соединённой с соответствующих "
+"выходом. По умолчанию нода ``Switch`` включает один параметр этого типа, "
+"но пользователь может добавлять новые и удалять уже существующие (нода может "
+"и не иметь ни одного подобного параметра)."
+
+msgid "*Default*"
+msgstr ""
+
+msgid ""
+"This output will pass control to the next node in case none of the values"
+" are equal to that of the variable set by the ``Variable`` parameter."
+msgstr ""
+"Этот выход передаёт управление следующей ноде в случае, если но одно из "
+"заданных значений не совпадает со значение переменной, заданной параметром ``Variable``."
+
+msgid "Specifies a variable used for comparison."
+msgstr "Задаёт переменную, используемую при сравнении."
+
+msgid "JS Callback"
+msgstr "JS Callback"
+
+msgid ""
+"Can be used to call custom JavaScript callback defined in your Blend4Web "
+"application."
+msgstr ""
+"Используется для вызова callback-функции, заранее заданной в вашем "
+"Blend4Web-приложении."
+
+msgid "*Callback ID*"
+msgstr "*Callback ID*"
+
+msgid "The ID of a JavaScript function that will be called by the node."
+msgstr "ID JavaScript-функции, которая будет вызываться нодой."
+
+msgid ""
+"This value can be set directly or via a variable (if the ``Variable`` "
+"parameter is enabled)."
+msgstr ""
+"Это значение может быть задан напрямую или с помощью переменной (если"
+" включена опция ``Variable``)."
+
+msgid "*In Params*"
+msgstr "*In Params*"
+
+msgid ""
+"A list of the input parameters of the function. Each parameter can be "
+"either a variable or a link to a scene object. The number of the input "
+"parameters can be adjusted. By default, this list is empty."
+msgstr ""
+"Список входных параметров функции. Каждый параметр может представлять "
+"собой либо переменную, либо ссылку на объект сцены. Количество входящих "
+"параметров может быть настроено. По умолчанию список пуст."
+
+msgid ""
+"Input parameters are transferred to the callback function as an array "
+"that servers as the first argument of the function."
+msgstr ""
+"Входные параметры передаются callback-функции в виде массива, который "
+"используется в качестве первого аргумента функции."
+
+msgid "*Param <param_number>*"
+msgstr "*Param <param_number>*"
+
+msgid ""
+"Specifies an input parameter. This parameter can be a variable (``R1`` by"
+" default) or a link to a scene object, depending on the value of the "
+"``Type`` parameter (each one of these parameters always has a "
+"corresponding ``Type`` parameter)."
+msgstr ""
+"Задаёт входящий параметр. Параметр может быть как переменной (``R1`` по "
+"умолчанию), так и ссылкой на объект сцены, в зависимости от значения "
+"параметра ``Type`` (у каждого входного параметра всегда есть "
+"соответствующий параметр ``Type``)."
+
+msgid "*Type*"
+msgstr "*Type*"
+
+msgid ""
+"The type of the corresponding input parameter. It can have one of the two"
+" values: ``Variable`` (in this case, one of the variables will be used as"
+" the parameter) and ``Object`` (a link to a scene object)."
+msgstr ""
+"Тип соответствующего входного параметра. Может иметь одно из двух "
+"значений: ``Variable`` (в этом случае в качестве параметра будет "
+"использована одна из переменных) или ``Object`` (ссылка на объект сцены)."
+
+msgid "*Out Params*"
+msgstr "*Out Params*"
+
+msgid ""
+"A list of the output parameters. Empty by default. The number of the "
+"output parameters can be adjusted."
+msgstr ""
+"Список выходных параметров. По умолчанию пуст. Количество выходных "
+"параметров поддаётся настройке."
+
+msgid ""
+"An array that consists of the output parameters serves as the second "
+"argument of the callback function."
+msgstr ""
+"Массив, состоящий из выходных параметров, используется в качестве второго"
+" аргумента callback-функции."
+
+msgid ""
+"Specifies one of the variables that will be used as an output parameter. "
+"By default, ``R1`` variable is used."
+msgstr ""
+"Задаёт переменную, которая будет использоваться в качестве одного из "
+"выходных параметров. По умолчанию используется переменная ``R1``."
+
+msgid "Define Function"
+msgstr ""
+
+msgid ""
+"This node can be used to combine several logic nodes into a function - a "
+"subroutine that can be accessed from the main logic setup. This node "
+"always serves as a starting point of a separate node tree and thus "
+"feature no input parameters."
+msgstr ""
+"Эта нода может применяться для объединения нескольких логических нод в "
+"функцию, т.е. подпрограмму, которая может вызываться из основоного нодового "
+"дерева. Эта нода всегда выступает как начальная точка отдельного логического "
+"дерева и не имеет входных параметров."
+
+msgid "*Function*"
+msgstr ""
+
+msgid "The name of the function."
+msgstr "Имя функции."
+
+msgid ""
+"The list of the function's input parameters. This list is empty by "
+"default, but you can add and remove variables using ``+`` and ``-`` "
+"buttons. Each variable can also be named."
+msgstr ""
+"Список входных параметров функции. Список пуст по умолчанию, но пользователь "
+"может добавлять и удалять параметры с помощью кнопок ``+`` и ``-``. Параметрам "
+"также могут быть присвоены имена."
+
+msgid ""
+"The list of the function's output parameters. Works in the same way as "
+"the ``In Params`` list."
+msgstr ""
+"Список выходных параметров функции. Рабоает по тому же принципу, что и "
+"список ``In Params``."
+
+msgid "Call Function"
+msgstr ""
+
+msgid ""
+"This node can be used to call a function defined by a ``Define Function``"
+" node."
+msgstr ""
+"Эта нода применяется для вызова функии, заданной нодой ``Define Function``."
+
+msgid "*NodeTree*"
+msgstr ""
+
+msgid "The name of the node tree from which the function is called."
+msgstr "Имя нодового дерева, содержащего вызываемую функцию."
+
+msgid ""
+"The list of the variables to set the input parameters of the function "
+"specified by the ``Function`` parameter."
+msgstr ""
+"Список переменных, задающих входные параметры функции, установленной при "
+"помощи параметра ``Function``."
+
+msgid ""
+"The list of the variables to store the output parameters of the function "
+"specified by the ``Function`` parameter."
+msgstr ""
+"Список переменных, задающих выходные параметры функции, заданной параметром "
+"``Function``."
+
+msgid "Animation"
+msgstr "Animation"
+
+msgid "Play Timeline"
+msgstr ""
+
+msgid ""
+"This node can be used to control NLA animations. The ``Play Timeline`` "
+"node plays NLA fragment starting with a frame specified by the marker. "
+"Animation plays until next marker is encountered, or to the end of the "
+"scene’s timeline. After that, control passes on to the next node."
+msgstr ""
+"Позволяют управлять NLA анимацией. Нода ``Play Timeline`` проигрывать "
+"участок NLA, начиная с кадра, на который указывает маркер. Анимация "
+"воспроизводится до следующего маркера, либо до конца шкалы времени сцены,"
+" после чего управление переходит к следующей ноде."
+
+msgid "*Start Marker*"
+msgstr "*Start Marker*"
+
+msgid "First frame of the animation."
+msgstr "Первый кадр анимации."
+
+msgid ""
+"If this parameter is not specified, the animation plays from the current "
+"frame, i.e. if animation hasn't been played yet, playback will start from"
+" the first frame of the timeline. If playback has been stopped with the "
+"``Stop Timeline`` node and then started again, it will continue from the "
+"last played frame."
+msgstr ""
+"Если этот параметр не указан, анимация воспроизводится с текущего кадра, "
+"т.е. если до этого анимация не воспроизводилась, она начнётся с первого "
+"кадра таймлайна. Если анимация была остановлена с помощью ноды ``Stop "
+"Timeline``, а затем запущена заново, она продолжится с последнего "
+"воспроизведённого кадра."
+
+msgid "*End Marker*"
+msgstr "*End Marker*"
+
+msgid "Last frame of the animation."
+msgstr "Последний кадр анимации."
+
+msgid ""
+"If this parameter is not specified, an animation plays to the next marker"
+" (or to the end of the timeline, if there isn't any)."
+msgstr ""
+"Если этот параметр не указан, анимация воспроизводится до следующего "
+"маркера, а при отсутствии такового - до конца таймлайна."
+
+msgid "*Do Not Wait*"
+msgstr "*Do Not Wait*"
+
+msgid ""
+"If this parameter is enabled, the ``Play Timeline`` node will pass the "
+"control to the next node on starting the animation playback. If it isn’t,"
+" the control will be passed to the next node only after playback is "
+"finished."
+msgstr ""
+"Если этот параметр активирован, нода ``Play Animation`` передаст "
+"управление следующей ноде сразу после начала воспроизведения анимации. В "
+"противном случае управление будет передано только после окончания "
+"анимации."
+
+msgid "Stop Timeline"
+msgstr ""
+
+msgid ""
+"Stops the playback of the NLA animation started by the ``Play Animation``"
+" node."
+msgstr ""
+"Останавливает воспроизведение NLA-анимации, запущенное нодой ``Play "
+"Animation``."
+
+msgid "*Set First Frame*"
+msgstr "*Set First Frame*"
+
+msgid ""
+"If this parameter is enabled, the timeline will be reset to the first "
+"frame after the animation playback stops. Otherwise, the timeline will be"
+" set to the frame specified by the ``End Marker`` parameter of the ``Play"
+" Timeline`` node."
+msgstr ""
+"Если этот параметр активирован, анимация будет сброшена на первый кадр "
+"таймлайна после остановки воспроизведения. В противном случае анимация "
+"будет остановлена на кадре, заданном при помощи параметра ``End Marker`` "
+"ноды ``Play Timeline``."
+
+msgid "Play Animation"
+msgstr "Play Animation"
+
+msgid "This node can be used to play object animation."
+msgstr "Эта нода используется для воспроизведения анимации объекта."
+
+msgid "An animation can be one of the following types:"
+msgstr "Проигрываемая анимация может иметь один из трёх типов:"
+
+msgid "Regular Action:"
+msgstr "Обычный Action:"
+
+msgid "Shader Action:"
+msgstr "Шейдерный Action:"
+
+msgid "Particle system:"
+msgstr "Система частиц:"
+
+msgid "*Environment Anim.*"
+msgstr ""
+
+msgid ""
+"If this parameter is enabled, animation of the scene environment (a "
+"``World`` object) will be played."
+msgstr ""
+"Если этот параметр включён, воспроизводиться будет анимация окружающей "
+"среды (т.е., объекта типа ``World``)."
+
+msgid "*World*"
+msgstr ""
+
+msgid ""
+"Specifies the ``World`` object, animation of which will be played. This "
+"parameter is only available if the ``Environment Anim.`` parameter is "
+"enabled."
+msgstr ""
+"Задаёт объект типа ``World``, анимация которого будет воспроизводиться. Этот "
+"параметр доступен только в том случае, если включена опция ``Environment Anim.``."
+
+msgid "Name of the object, animation of which will be played."
+msgstr "Имя объекта, анимацию которого следует воспроизвести."
+
+msgid ""
+"If this parameter is enabled, an Object-type variable can be set in the "
+"``Object`` field."
+msgstr ""
+"Если этот параметр включён, в поле ``Object`` может быть указана переменная "
+"типа Object."
+
+msgid "*Anim. Name*"
+msgstr "*Anim. Name*"
+
+msgid ""
+"Name of an animation to play. If not specified, the entire timeline will "
+"be played."
+msgstr ""
+"Имя анимации, которую следует воспроизвести. В случае, если имя анимации "
+"не указано, проигрывается вся временная шкала."
+
+msgid "*Behavior*"
+msgstr "*Behavior*"
+
+msgid "Specifies animation behavior. Can have one of the following values:"
+msgstr "Задаёт поведение анимации. Может иметь одно из следующих значений:"
+
+msgid "*Finish Stop* - animation will be played once."
+msgstr "*Finish Stop* - анимация воспроизводится один раз."
+
+msgid ""
+"*Finish Reset* - animation will be played once, then the object will "
+"return to the starting point."
+msgstr ""
+"*Finish Reset* - анимация воспроизводится один раз, после её завершения "
+"объект возвращается в исходное состояние."
+
+msgid ""
+"*Loop* - animation will be playing repeatedly until it is stopped by the "
+"``Stop Animation`` node."
+msgstr ""
+"*Loop* - анимация воспроизводится циклически до тех пор, пока не "
+"остановлена с помощью ноды ``Stop Animation``."
+
+msgid ""
+"If this parameter is enabled, the ``Play Animation`` node will pass the "
+"control to the next node on starting the animation playback. If it isn’t,"
+" the control will be passed to the next node only after playback is "
+"finished."
+msgstr ""
+"Если этот параметр активирован, нода ``Play Animation`` передаст "
+"управление следующей ноде сразу после начала воспроизведения анимации. В "
+"противном случае управление будет передано только после окончания "
+"анимации."
+
+msgid "Stop Animation"
+msgstr "Stop Animation"
+
+msgid "Can be used to stop an object’s animation."
+msgstr "Используется для остановки анимации объекта."
+
+msgid "*Environmental Anim.*"
+msgstr ""
+
+msgid ""
+"If this parameter is turned on, animation of the scene environment (a "
+"``World`` object) will be stopped."
+msgstr ""
+"Если активирован этот параметр, остановлена будет анимация окружающей "
+"среды (т.е., объекта типа ``World``)."
+
+msgid ""
+"Specifies the ``World`` object, animation of which will be stopped. This "
+"parameter is only available if the ``Environment Anim.`` parameter is "
+"enabled."
+msgstr ""
+"Задаёт объект типа ``World``, анимация которого будет остановлена. Этот параметр "
+"доступен только в том случае, если включена опция ``Environment Anim.``."
+
+msgid "Name of the object, animation of which will be stopped."
+msgstr "Имя объекта, анимацию которого следует остановить."
+
+msgid "Go back to the first frame after the animation has been stopped."
+msgstr "Вернуться к первому кадру после того, как анимация остановлена."
+
+msgid "Camera"
+msgstr "Camera"
+
+msgid "Move Camera"
+msgstr "Move Camera"
+
+msgid ""
+"Can be used to move the camera, including smooth interpolation of its "
+"position."
+msgstr ""
+"Позволяет перемещать камеру, в том числе с плавной интерполяцией "
+"положения."
+
+msgid "*Camera*"
+msgstr "*Camera*"
+
+msgid "A camera that will be moved."
+msgstr "Камера, которую необходимо переместить."
+
+msgid ""
+"This parameter can be set directly or using an Object-type variable (if "
+"the ``Variable`` option is enabled)."
+msgstr ""
+"Этот параметр может быть задан напрямую или с помощью переменной типа "
+"Object (если включена опция ``Variable``)."
+
+msgid "*Location*"
+msgstr "*Location*"
+
+msgid ""
+"An object to which the camera will move. The camera’s coordinates will be"
+" the same as the object’s after the movement is finished."
+msgstr ""
+"Объект, к которому перемещается камера. После того, как перемещение "
+"завершится, координаты камеры и объекта будут совпадать."
+
+msgid "*Target*"
+msgstr "*Target*"
+
+msgid "The camera will point in the direction of this object after being moved."
+msgstr "Объект, в направлении которого камера будет развёрнута после перемещения."
+
+msgid "*Duration*"
+msgstr "*Duration*"
+
+msgid ""
+"Time (in seconds) that the camera will spend being moved to a new "
+"location. Set to zero by default (and in this case the camera doesn’t "
+"actually move, it simply changes its position). It can be specified "
+"manually or as a link to a variable (if the ``Variable`` parameter is "
+"enabled)."
+msgstr ""
+"Время (в секундах), которое займёт перемещение. По умолчанию равно нулю "
+"(в этом случае камера перемещается мгновенно). Может быть задано вручную "
+"или с помощью ссылки на переменную (эта возможность появляется при "
+"активации параметра ``Variable``)."
+
+msgid "Set Camera Move Style"
+msgstr "Set Camera Move Style"
+
+msgid "Can be used to change the move style of the selected camera."
+msgstr "Используется для задания нового режима перемещения камеры."
+
+msgid "This parameter specifies a camera to which the changes will be applied."
+msgstr "Камера, режим перемещения которой будет изменён."
+
+msgid "*New Camera Move Style*"
+msgstr "*New Camera Move Style*"
+
+msgid ""
+"This parameter specifies the new move style that the camera will use. "
+"Four options are available: ``Hover``, ``Eye``, ``Target`` and "
+"``Static``."
+msgstr ""
+"Задаёт новый режим перемещения выбранной камеры. Доступно четыре "
+"варианта: ``Hover``, ``Eye``, ``Target`` и ``Static``."
+
+msgid ""
+"The following options are only available if the ``New Camera Move Style``"
+" parameter is not set to ``Static``:"
+msgstr ""
+"Следующие параметры недоступны в том случае, если параметр ``New Camera "
+"Move Style`` имеет значение ``Static``:"
+
+msgid "*Translation*"
+msgstr "*Translation*"
+
+msgid ""
+"Sets the camera translation velocity. This parameter is set to 1.0 by "
+"default."
+msgstr "Задаёт скорость перемещения камеры. Значение по умолчанию - 1.0."
+
+msgid "*Rotation*"
+msgstr "*Rotation*"
+
+msgid ""
+"Sets the camera rotation velocity. This parameter is set to 1.0 by "
+"default."
+msgstr "Задаёт скорость поворота камеры. Значение по умолчанию - 1.0."
+
+msgid "*Zoom*"
+msgstr "*Zoom*"
+
+msgid ""
+"Sets the zoom velocity of the camera. Default value is 0.10. Available "
+"only if the ``New Camera Move Style`` parameter is set to either "
+"``Hover`` or ``Target``."
+msgstr ""
+"Задаёт скорость приближения и удаления камеры. Значение по умолчанию - "
+"0.10. Этот параметр доступен только в том случае, если параметр ``New "
+"Camera Move Style`` имеет значение ``Hover`` или ``Target``."
+
+msgid ""
+"The following parameters are used to specify a target or a pivot point of"
+" the camera and are available only if the ``New Camera Move Style`` "
+"parameter is set to either ``Hover`` or ``Target``:"
+msgstr ""
+"Следующие параметры используются для задания цели или точки привязки "
+"камеры. Они доступны только если параметр ``New Camera Move Style`` имеет"
+" значение ``Hover`` или ``Target``."
+
+msgid "*Use Object*"
+msgstr "*Use Object*"
+
+msgid ""
+"This parameter enables and disables using a scene object as camera's "
+"target or pivot point (depending on the camera type). If it is activated,"
+" a text field will appear to specify the object. This parameter is "
+"disabled by default."
+msgstr ""
+"Эта опция включает и выключает использования объекта сцены в качестве "
+"цели или точки привязки камеры (в зависимости от типа камеры). Если опция"
+" включена, появляется текстовое поле для задания объекта. Эта опция "
+"деактивирована по умолчанию."
+
+msgid ""
+"If the ``Use Object`` parameter is disabled, the following three options "
+"become available:"
+msgstr ""
+"Если параметр ``Use Object`` деактивирован, становятся доступны следующие"
+" три опции:"
+
+msgid "*x*"
+msgstr "*x*"
+
+msgid "The ``X`` component of the camera's target/pivot pint."
+msgstr "``X``-координата цели или точки привязки камеры."
+
+msgid "*y*"
+msgstr "*y*"
+
+msgid "The ``Y`` component of the camera's target/pivot point."
+msgstr "``Y``-координата цели или точки привязки камеры."
+
+msgid "*z*"
+msgstr "*z*"
+
+msgid "The ``Z`` component of the camera's target/pivot point."
+msgstr "``Z``-координата цели или точки привязки камеры."
+
+msgid "Set Camera Limits"
+msgstr "Set Camera Limits"
+
+msgid ""
+"This node can be used to set limits of the selected camera. The node "
+"lists all available limits, but only ones that are compatible with the "
+"type of the camera are applied."
+msgstr ""
+"Эта нода применяется для настройки ограничений движения камеры. Нода "
+"содержит список всех ограничений, доступных в движке, но применяет только"
+" ограничения, совместимые с типом камеры."
+
+msgid "This parameter specifies a camera to which the limits will be applied."
+msgstr "Камера, ограничители движения которой будут изменены."
+
+msgid "*Distance Limits*"
+msgstr "*Distance Limits*"
+
+msgid ""
+"Sets the ``Distance Limits`` parameter native to the :ref:`Target "
+"<camera_target_type>` and :ref:`Hover <camera_hover_type>` camera types."
+msgstr ""
+"Задаёт параметр ``Distance Limits``, доступный для камер типов "
+":ref:`Target <camera_target_type>` и :ref:`Hover <camera_hover_type>`."
+
+msgid "*Hor. Rotation Limits*"
+msgstr "*Hor. Rotation Limits*"
+
+msgid ""
+"Sets ``Horizontal Rotation Limits`` parameter native to :ref:`Target "
+"<camera_target_type>` and :ref:`Eye <camera_eye_type>` camera types."
+msgstr ""
+"Задаёт параметр ``Horizontal Rotation Limits``, доступный для камер типов"
+" :ref:`Target <camera_target_type>` и :ref:`Eye <camera_eye_type>`."
+
+msgid "*Vert. Rotation Limits*"
+msgstr "*Vert. Rotation Limits*"
+
+msgid ""
+"Sets ``Vertical Rotation Limits`` parameter native to :ref:`Target "
+"<camera_target_type>`, :ref:`Hover <camera_hover_type>` and :ref:`Eye "
+"<camera_eye_type>` camera types."
+msgstr ""
+"Задаёт параметр ``Vertical Rotation Limits``, доступный для камер типов "
+":ref:`Target <camera_target_type>`, :ref:`Hover <camera_hover_type>` и "
+":ref:`Eye <camera_eye_type>`."
+
+msgid "*Pivot Translation Limits*"
+msgstr "*Pivot Translation Limits*"
+
+msgid ""
+"Sets ``Pivot Translation Limits`` parameter native to :ref:`Target "
+"<camera_target_type>` camera type."
+msgstr ""
+"Задаёт параметр ``Pivot Translation Limits``, доступный для камер типа "
+":ref:`Target <camera_target_type>`."
+
+msgid "*Hor. Translation Limits*"
+msgstr "*Hor. Translation Limits*"
+
+msgid ""
+"Sets ``Horizontal Translation Limits`` parameter native to :ref:`Hover "
+"<camera_hover_type>` camera type."
+msgstr ""
+"Задаёт параметр ``Horizontal Translation Limits``, доступный для камер "
+"типа :ref:`Hover <camera_hover_type>`."
+
+msgid "*Vert. Translation Limits*"
+msgstr "*Vert. Translation Limits*"
+
+msgid ""
+"Sets ``Vertical Translation Limits`` parameter native to :ref:`Hover "
+"<camera_hover_type>` camera type."
+msgstr ""
+"Задаёт параметр ``Vertical Translation Limits``, доступный для камер типа"
+" :ref:`Hover <camera_hover_type>`."
+
+msgid "Object"
+msgstr "Object"
+
+msgid "Show Object"
+msgstr "Show Object"
+
+msgid "Can be used to show 3D objects."
+msgstr "Используется для отображения объектов."
+
+msgid "An object to show."
+msgstr "Объект, который нужно отобразить."
+
+msgid "*Process child objects*"
+msgstr "*Process child objects*"
+
+msgid "If this parameter is enabled, child objects will be shown as well."
+msgstr "Если этот параметр включён, объекты-потомки также будут показаны."
+
+msgid "Hide Object"
+msgstr "Hide Object"
+
+msgid "Can be used to hide 3D objects."
+msgstr "Используется для скрытия объекта."
+
+msgid "An object to hide."
+msgstr "Объект, который нужно скрыть."
+
+msgid "If this parameter is enabled, child objects will be hidden as well."
+msgstr "Если этот параметр включён, объекты-потомки также будут скрыты."
+
+msgid "Transform Object"
+msgstr "Transform Object"
+
+msgid "Can be used to transform object’s location, size and rotation angles."
+msgstr "Используется для изменения координат, размеров и углов поворота объекта."
+
+msgid "An object that needs to be translated."
+msgstr "Объект, который нужно трансформировать."
+
+msgid "*Space*"
+msgstr "*Space*"
+
+msgid ""
+"This parameter defines the coordinate space that will be used to "
+"transform the object. It can have one of the following values:"
+msgstr ""
+"Этот параметр определяет систему координат, которая будет использована "
+"для трансформации объекта. Может принимать одно из следующих значений:"
+
+msgid "``World`` - global coordinate space."
+msgstr "``World`` - глобальная система координат."
+
+msgid ""
+"``Parent`` - local coordinate system of the parent of the object "
+"specified by the ``Object`` parameter. Parent object's origin point is "
+"used as the center of coordinates, while its angles of rotation define "
+"the directions of the coordinate axes."
+msgstr ""
+"``Parent`` - система координат объекта, который является предком объекта,"
+" указанного в параметре ``Object``. Точка привязки родительского объекта "
+"используется как центр координат, а углы наклона задают направления "
+"координатных осей."
+
+msgid ""
+"``Local`` - local coordinate space of the selected object. Similar to the"
+" ``Parent`` coordinate space, but in this case, the origin point of the "
+"object itself is used as the origin of coordinates."
+msgstr ""
+"``Local`` - локальная система координат выбранного объекта. Схожа с "
+"системой координат родительского объекта, но в данном случае точка "
+"привязки самого объекта используется в качестве начала координат."
+
+msgid "Set to ``World`` by default."
+msgstr "Значение по умолчанию - ``World``."
+
+msgid ""
+"How the object will move along the ``X``, ``Y`` and ``Z`` axes. By "
+"default, all three parameters are set to zero. Values can be specified in"
+" the node itself or through the variables (if the ``Variable`` option is "
+"enabled)."
+msgstr ""
+"Перемещение объекта по осям ``X``, ``Y`` и ``Z``. По умолчанию все три "
+"значения равны нулю. Значения могут быть заданы в самой ноде либо с "
+"помощью переменной (если включена опция ``Variable``)."
+
+msgid ""
+"Object’s rotation around the ``X``, ``Y`` and ``Z`` axes. All three "
+"values are set to zero by default. Can be specified directly in the node "
+"or through the variables (if the ``Variable`` option is enabled)."
+msgstr ""
+"Углы поворота объекта вокруг осей ``X``, ``Y`` и ``Z``. По умолчанию все "
+"три угла равны нулю. Значения могут быть заданы непосредственно в ноде "
+"или через переменные (в том случае, если включена опция ``Variable``)."
+
+msgid "*Scale*"
+msgstr "*Scale*"
+
+msgid ""
+"Object’s size. Can be specified directly or through a variable (if the "
+"``Variable`` parameter is enabled). Set to 1 by default."
+msgstr ""
+"Масштаб объекта. Может быть задан напрямую или с помощью переменной (если"
+" включена опция ``Variable``). По умолчанию равен нулю."
+
+msgid ""
+"Time (in seconds) that the transformation will take. It can be specified "
+"both directly or with a variable (to do this, the ``Variable`` parameter "
+"should be enabled). Set to zero by default."
+msgstr ""
+"Время (в секундах), которое займёт трансформация. Может быть задано как "
+"напрямую, так и посредством переменной (для этого должна быть включена "
+"опция ``Variable``). По умолчанию равно нулю."
+
+msgid "Move To"
+msgstr "Move To"
+
+msgid "Can be used to move objects."
+msgstr "Позволяет перемещать объекты."
+
+msgid ""
+"An object that you need to move. It can be set directly or using an "
+"Object-type variable (if the ``Variable`` option is enabled)"
+msgstr ""
+"Объект, который требуется переместить. Может быть задан напрямую или "
+"с помощью переменной (если включена опция ``Variable``)."
+
+msgid ""
+"A target (another object or a light source, camera or anything else) to "
+"which the selected object will move. The object’s coordinated will be the"
+" same as the target’s after the movement is finished."
+msgstr ""
+"Цель (объект, источник света, камера и т.п.), к которой перемещается "
+"объект. После того, как перемещение завершится, координаты объекта и цели"
+" будут совпадать."
+
+msgid ""
+"Time (in seconds) that the object will spend moving to the new location. "
+"By default, this parameter is set to zero (and in this case, the object "
+"doesn’t actually move, it just changes its position in a moment). It can "
+"be set manually or with a variable (available only if the ``Variable`` "
+"parameter is enabled)."
+msgstr ""
+"Время (в секундах), которое займёт перемещение. По умолчанию равно нулю "
+"(в этом случае объект не движется, а мгновенно перемещается к точке "
+"назначения). Может быть задано как в самой ноде, так и с помощью "
+"переменной (если активирован параметр ``Variable``)."
+
+msgid "Apply Shape Key"
+msgstr "Apply Shape Key"
+
+msgid "Set the Shape Key factor."
+msgstr "Позволяет задать значение параметра Shape Key."
+
+msgid "An object that needs to be transformed."
+msgstr "Объект, к которому нужно применить трансформацию."
+
+msgid "*Shape Key*"
+msgstr "*Shape Key*"
+
+msgid "Shape key that will be applied to the object."
+msgstr "Ключ формы, который нужно применить к объекту."
+
+msgid "*Value*"
+msgstr "*Value*"
+
+msgid ""
+"How much the shape key will influence the object. This value can be set "
+"directly in the node or using a variable (if the ``Variable`` parameter "
+"is set). The value should be between 0 and 1."
+msgstr ""
+"Степень влияния выбранного ключа формы на объект. Значение может быть "
+"задано в самой ноде или взято из переменной (если установлен параметр "
+"``Variable``). Изменяется в пределах от 0 до 1."
+
+msgid "Outline"
+msgstr "Outline"
+
+msgid "Controls object outlining effect."
+msgstr "Позволяет управлять эффектом обводки объекта."
+
+msgid ""
+"Any changes of the outline effect will be applied only to an object "
+"specified by this parameter."
+msgstr "Объект, эффект обводки которого требуется настроить."
+
+msgid "*Operation*"
+msgstr "*Operation*"
+
+msgid ""
+"Specifies an operation that will be done to the object’s outline. This "
+"parameter can have one of the following values:"
+msgstr ""
+"Операция, которую следует произвести с обводкой объекта. Этот параметр "
+"может принимать одно из следующих значений:"
+
+msgid "*PLAY* enables outline animation"
+msgstr "*PLAY* - включает анимацию обводки"
+
+msgid "*STOP* disables it"
+msgstr "*STOP* - выключает её"
+
+msgid "*INTENSITY* can be used to set intensity of the object’s outline"
+msgstr "*INTENSITY* - позволяет настраивать интенсивность обводки"
+
+msgid "*Intensity*"
+msgstr "*Intensity*"
+
+msgid ""
+"Outline intensity. This parameter is only available if the ``Operation`` "
+"parameter is set to ``INTENSITY``. The value can be set manually or via "
+"variable (if the ``Variable`` parameter is enabled)."
+msgstr ""
+"Интенсивность обводки объекта. Этот параметр появляется только если "
+"параметр ``Operation`` имеет значение ``INTENSITY``. Интенсивность может "
+"быть задана численно или взята из переменной (для этого нужно "
+"активировать параметр ``Variable``)."
+
+msgid "Set Shader Node Param"
+msgstr "Set Shader Node Param"
+
+msgid ""
+"Can be used to set the value for the shader node. Currently, only "
+"``Value`` and ``RGB`` nodes are supported."
+msgstr ""
+"Позволяет установить значение одного или нескольких параметров шейдерной "
+"ноды. В данный момент поддерживаются ноды ``Value`` и ``RGB``."
+
+msgid "An object that has material that needs to be edited."
+msgstr "Объект, материал которого нужно отредактировать."
+
+msgid "*Material*"
+msgstr "*Material*"
+
+msgid "Material that needs to be edited. It should use nodes."
+msgstr "Материал, параметры которого нужно изменить. Должен использовать ноды."
+
+msgid "*Node*"
+msgstr "*Node*"
+
+msgid ""
+"A node that has parameters that can be changed. For now, only ``Value`` "
+"and ``RGB`` nodes are supported."
+msgstr ""
+"Нода, параметры которой нужно изменить. На данный момент поддерживаются "
+"только ноды ``Value`` и ``RGB``."
+
+msgid "*Parameters*"
+msgstr "*Parameters*"
+
+msgid ""
+"Editable parameters of the selected node. They can be set in the node "
+"itself or through the variables (if the ``Variable`` parameter is "
+"enabled)."
+msgstr ""
+"Доступные для редактирования параметры выбранной ноды. Значения этих "
+"параметров могут быть заданы непосредственно в самой ноде или взяты из "
+"указанных переменных (для этого нужно активировать параметр "
+"``Variable``)."
+
+msgid "Inherit Material"
+msgstr "Inherit Material"
+
+msgid "Copy attributes from one material to another."
+msgstr "Позволяет скопировать атрибуты одного материала на другой."
+
+msgid "*Source*"
+msgstr "*Source*"
+
+msgid "An object that has a material that will be inherited."
+msgstr "Объект, которому присвоен материал, который требуется скопировать."
+
+msgid "The material to inherit."
+msgstr "Материал, который требуется скопировать."
+
+msgid "An object that will inherit selected material."
+msgstr "Объект, которому требуется присвоить скопированный материал."
+
+msgid "The material that will be replaced by the inherited one."
+msgstr "Материал, который будет заменен скопированным материалом."
+
+msgid "Operations"
+msgstr "Operations"
+
+msgid "Variable Store"
+msgstr "Variable Store"
+
+msgid "Saves numerical or string value to a variable."
+msgstr "Сохраняет числовое или строковое значение в переменную."
+
+msgid "*Var. name.*"
+msgstr "*Var. name.*"
+
+msgid ""
+"Name of the variable. Can be selected from the list of variables or "
+"specified manually (if the ``New variable`` parameter is enabled)."
+msgstr ""
+"Имя переменной. Может быть выбрано из списка переменных либо задано "
+"самостоятельно (если включен параметр ``New variable``)."
+
+msgid ""
+"Variable’s type. This parameter can have one of the three values: "
+"``Number`` (for numerical variables), ``String`` (for string variables) "
+"or ``Object`` (for object variables)."
+msgstr ""
+"Тип переменной. Может иметь значения ``Number`` (численная переменная), "
+"``String`` (строковая переменная) или ``Object`` (ссылка на объект)."
+
+msgid ""
+"This parameter is used to specify the object that will be used as a "
+"variable. It is only available if the ``Type`` parameter is set to "
+"``Object``."
+msgstr ""
+"Этот параметр используется для задания объекта, используемого в качестве "
+"переменной. Доступен только в случае, если параметр ``Type`` имеет значение "
+"``Object``."
+
+msgid "*New Variable*"
+msgstr "*New Variable*"
+
+msgid ""
+"If this parameter is enabled, you can manually input a variable’s name "
+"and not just select one of the variables. This can be used to transfer "
+"the data between the application and the server."
+msgstr ""
+"Если этот параметр активирован, имя переменной может быть задано "
+"самостоятельно (а не выбрано из списка переменных). Может применяться для"
+" обмена данными с сервером."
+
+msgid "*Global*"
+msgstr "*Global*"
+
+msgid ""
+"Enabling this parameter makes the variable global. Available only if the "
+"``New Variable`` parameter has been enabled."
+msgstr ""
+"Включение этого параметра делает переменную глобальной. Доступен только "
+"если выбран параметр ``New Variable``."
+
+msgid "Math Operation"
+msgstr "Math Operation"
+
+msgid ""
+"Perform a math operation and store the result in the variables. Any of "
+"parameters (operands) can be either a numeric value or a variables."
+msgstr ""
+"Выполнить математическую операцию и сохранить результат в регистр. Любой "
+"из параметров (операндов) может быть либо числовым значением, либо "
+"переменной."
+
+msgid "Mathematical operation. Can have one of the following types:"
+msgstr ""
+"Математическая операция, производимая над операндами. Может иметь один из"
+" следующих типов:"
+
+msgid ""
+"*Random* generates random value greater than the first operand and less "
+"than the second,"
+msgstr ""
+"*Random* - генерация случайной величины больше первого операнда и меньше "
+"второго."
+
+msgid "*Add* sums the operands,"
+msgstr "*Add* - сумма операндов."
+
+msgid "*Multiply* multiplies the operands,"
+msgstr "*Multiply* - произведение операндов."
+
+msgid "*Subtract* subtracts the second operand from the first,"
+msgstr "*Subtract* - разность операндов."
+
+msgid "*Divide* divides first operand by the second,"
+msgstr "*Divide* - частное операндов."
+
+msgid ""
+"*Sin* returns the sine of an angle (measured in radians) defined by the "
+"first operand,"
+msgstr "*Sin* - синус угла (в радианах), заданного первым операндом."
+
+msgid ""
+"*Cos* returns the cosine of an angle (measured in radians) defined by the"
+" first operand,"
+msgstr "*Cos* - косинус угла (в радианах), заданного первым операндом."
+
+msgid ""
+"*Tan* returns the tangent of an angle (measured in radians) defined by "
+"the first operand,"
+msgstr "*Tan* - тангенс угла (в радианах), заданного первым операндом."
+
+msgid "*ArcSin* returns the arcsine value of the first operand,"
+msgstr "*ArcSin* - арксинус значения, заданного первым операндом."
+
+msgid "*ArcCos* returns the arccosine value of the first operand,"
+msgstr "*ArcCos* - арккосинус значения, заданного первым операндом."
+
+msgid "*ArcTan* returns the arctangent value of the first operand,"
+msgstr "*ArcTan* - арктангенс значения, заданного первым операндом."
+
+msgid ""
+"*Log* returns the logarithmic value of the first operand with the second "
+"operand used as the base,"
+msgstr ""
+"*Log* - логарифм первого операнда; в качестве базы используется второй "
+"операнд."
+
+msgid "*Min* returns the lesser one of the two operands,"
+msgstr "*Min* - возвращает наименьший из двух операндов."
+
+msgid "*Max* returns the greater one of the two operands,"
+msgstr "*Max* - возвращает наибольший из двух операндов."
+
+msgid "*Round* rounds the first operator,"
+msgstr "*Round* - округляет первый операнд."
+
+msgid ""
+"*Mod* returns the remainder after division of the first operand by the "
+"second,"
+msgstr "*Mod* - остаток от деления первого операнда на второй."
+
+msgid "*Abs* returns the absolute value of the first operand."
+msgstr "*Abs* - значение первого операнда по модулю."
+
+msgid ""
+"First operand. It can be specified in the node or it can be a link to one"
+" of the variables (if the ``Variable`` parameter is enabled)."
+msgstr ""
+"Первый операнд. Может представлять собой численное значение либо ссылку "
+"на одну из переменных (в случае, если активирован параметр ``Variable``)."
+
+msgid "Second operand. Works the same way as the first."
+msgstr "Второй операнд. Аналогичен первому."
+
+msgid ""
+"The result of the operation will be saved in the variable specified by "
+"this parameter."
+msgstr "Переменная, в которую помещается результат операции."
+
+msgid "String Operation"
+msgstr "String Operation"
+
+msgid ""
+"Can be used to perform an operation with two strings and save the result "
+"to a variable."
+msgstr ""
+"Выполнить операцию над строковыми переменными и сохранить результат в "
+"переменную."
+
+msgid ""
+"An operation that you need to perform with two strings, which can have "
+"one of the following values:"
+msgstr ""
+"Операция, которую нужно произвести над строками. Может иметь одно из "
+"следующих значений:"
+
+msgid "*Join* - joins two strings into one."
+msgstr "*Join* - объединить первую строку со второй."
+
+msgid ""
+"*Find* - writes the index of the first occurrence of the second string in"
+" the first string to the variable. If there is no occurrences, the value "
+"of -1 will be written. It should be noted that the first symbol of a "
+"string has an index of 0, not 1."
+msgstr ""
+"*Find* - записывает в переменную позицию первого вхождения второй строки "
+"в первую. Если вхождений нет, в переменную записывается результат -1. "
+"Следует иметь в виду, что символы строки нумеруются, начиная с нуля, а не"
+" с единицы."
+
+msgid ""
+"*Replace* replaces first occurrence of the second string in the first "
+"string with the third one."
+msgstr "*Replace* - найти содержимое второй строки в первой и заменить третьей."
+
+msgid ""
+"*Split* splits the first string in two using the first occurrence of the "
+"second string as a splitting mark."
+msgstr ""
+"*Split* - разделить первую строку на две части, используя первое "
+"вхождение второй строки как маркер места разделения."
+
+msgid ""
+"*Compare* compares two strings. For this operation, you need to specify a"
+" logical condition. If this condition is met, a value of 1 will be "
+"outputted to the ``Destination`` variable, if it isn’t, zero will be "
+"outputted."
+msgstr ""
+"*Compare* - сравнить первую строку со второй. Для работы этой операции "
+"требуется определить логическое условие. Если условие выполняется, в "
+"``Destination`` будет будет записана единица, если нет - ноль."
+
+msgid ""
+"A logical condition to compare two strings. This parameter is available "
+"only if the ``Operation`` parameter is set to ``Compare``. Works the same"
+" way as the ``Condition`` parameter of the ``Conditional Jump`` node."
+msgstr ""
+"Логическое условие, по которому сравниваются строки. Этот параметр "
+"появляется только если параметр ``Operation`` имеет значение ``Compare``."
+" Аналогично параметру ``Condition`` ноды ``Conditional Jump``."
+
+msgid "The first string. Can be specified in the node itself or with a variable."
+msgstr "Первая строка. Может быть задана в самой ноде или с помощью переменной."
+
+msgid "The second string. Works the same way as the first."
+msgstr "Вторая строка. Аналогична первой."
+
+msgid "*Operand3*"
+msgstr "*Operand3*"
+
+msgid ""
+"This parameter is available only if the ``Operation`` parameter is set to"
+" ``Replace``. Can be used to specify the third string, which will replace"
+" the first occurrence of the second one."
+msgstr ""
+"Этот параметр появляется только если параметр ``Operation`` имеет "
+"значение ``Replace``. Здесь задаётся строка, которой будет заменена "
+"вторая строка."
+
+msgid "A variable to save the operation’s result."
+msgstr "Переменная, в которую будет сохранён результат операции."
+
+msgid "*Destination2*"
+msgstr "*Destination2*"
+
+msgid ""
+"This parameter is available only if the ``Operation`` parameter is set to"
+" ``Split``. Specifies the variable to save the second half of the string "
+"that has been split (the first half will be saved to the variable "
+"specified by the ``Destination`` parameter)."
+msgstr ""
+"Этот параметр появляется только в том случае, если параметр ``Operation``"
+" имеет значение ``Split``. Определяет переменную, в которую будет "
+"сохранена вторая половина разделённой строки."
+
+msgid "Sound"
+msgstr "Sound"
+
+msgid "Play Sound"
+msgstr "Play Sound"
+
+msgid "Can be used to play speaker’s sound."
+msgstr "Позволяет воспроизводить звук спикера."
+
+msgid "*Speaker*"
+msgstr "*Speaker*"
+
+msgid "A speaker that will be enabled."
+msgstr "Источник звука, который требуется активировать."
+
+msgid ""
+"If this parameter is enabled, an Object-type variable can be set in the "
+"``Speaker`` field."
+msgstr ""
+"Если этот параметр включён, в поле ``Speaker`` можно указать переменную типа Object."
+
+msgid ""
+"If this parameter is enabled, the control will pass to the next node "
+"right after sound playback starts. If it isn’t enabled, the control will "
+"pass only when the playback is finished."
+msgstr ""
+"Если этот параметр активирован, управление будет передано следующей ноде "
+"сразу же после того, как началось воспроизведение звука. В противном "
+"случае это произойдёт только после того, как звук закончится."
+
+msgid "Stop Sound"
+msgstr "Stop Sound"
+
+msgid "Can be used to stop speaker’s sound."
+msgstr "Позволяет останавливать звук спикера."
+
+msgid "A speaker that will be turned off."
+msgstr "Источник звука, который нужно отключить."
+
+msgid "Network"
+msgstr "Network"
+
+msgid "Send Request"
+msgstr "Send Request"
+
+msgid ""
+"Send an HTTP GET request to the specified URL and save the respond’s "
+"fields a variable."
+msgstr ""
+"Позволяет отправить HTTP GET запрос на указанный URL и поместить значения"
+" полей ответа в переменную."
+
+msgid "*Method*"
+msgstr "*Method*"
+
+msgid "Method of the request. Can have one of two values:"
+msgstr "Метод отправки запроса. Может иметь одно из двух значений:"
+
+msgid "*GET* is used to request data from the server."
+msgstr "*GET* - отправляет запрос на получение данных с сервера."
+
+msgid "*POST* is used to send data to the server."
+msgstr "*POST* - отправляет данные на сервер."
+
+msgid "Set to ``GET`` by default."
+msgstr "Значение по умолчанию - ``GET``."
+
+msgid "*Url*"
+msgstr "*Url*"
+
+msgid ""
+"A web address to send request to. It can be defined directly or using a "
+"variable (if the ``Variable URL`` option is enabled). Set to "
+"“https://www.blend4web.com” by default."
+msgstr ""
+"Адрес, на который следует отправить запрос. Может быть задан напрямую или с помощью переменной (если "
+"включена опция ``Variable URL``). По умолчанию имеет значение “https://www.blend4web.com”."
+
+msgid "*Response Params*"
+msgstr "*Response Params*"
+
+msgid "Specifies the variable to save the data received from the server."
+msgstr "Задаёт переменную, в которую будут сохранены данные с сервера."
+
+msgid "The data received from the server should be in the JSON format:"
+msgstr "Информация, полученная с сервера, должна быть в формате JSON:"
+
+msgid "*Content-Type*"
+msgstr "*Content-Type*"
+
+msgid ""
+"Indicates the media type of the message content. Consists of a type and a"
+" subtype, for example: ``text/plain``. Set to ``Auto`` by default. Can be"
+" used to reassign the title of the HTTP request."
+msgstr ""
+"Определяет формат запроса. Состоит из типа и подтипа, например: "
+"``text/plain``. Значение по умолчанию - ``Auto``. Используется для "
+"переназначения заголовка HTTP-запроса."
+
+msgid "*Request Params*"
+msgstr "*Request Params*"
+
+msgid ""
+"Specifies the variable that contains a JSON object that will be sent to "
+"the server.  Available only if the ``Method`` parameter is set to "
+"``POST``. Default value is ``R1``."
+msgstr ""
+"Задаёт переменную, содержащую JSON-объект, который будет отправлен на "
+"сервер. Этот параметр доступен только если параметр ``Method`` имеет "
+"значение ``POST``. Значение по умолчанию - ``R1``."
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "This node can be used to encode and decode complex JSON objects."
+msgstr "Используется для кодирования и декодирования сложных JSON-объектов."
+
+msgid "*JSON*"
+msgstr "*JSON*"
+
+msgid ""
+"A link to a JSON object that you need to decode or encode. Set to ``R1`` "
+"by default."
+msgstr ""
+"Сcылка на JSON-объект, который нужно кодировать или декодировать. По "
+"умолчанию имеет значение ``R1``."
+
+msgid "*JSON Operation*"
+msgstr "*JSON Operation*"
+
+msgid ""
+"An operation you need to perform with the JSON object specified by the "
+"``JSON`` parameter. Can have one of two values: ``ENCODE`` to encode the "
+"JSON object and ``PARSE`` to decode it. Set to ``ENCODE`` by default."
+msgstr ""
+"Операция, которую нужно произвести над JSON-объектом, указанном в "
+"параметре ``JSON``. Может иметь одно из двух значений: ``ENCODE`` "
+"кодирует объект, ``PARSE`` декодирует его. Значение по умолчанию - "
+"``ENCODE``."
+
+msgid "*Paths*"
+msgstr "*Paths*"
+
+msgid ""
+"A list of paths to the variables inside the JSON object. Paths are used "
+"to define the inner structure of a JSON object. A path should consist of "
+"several identifiers (separated by dots) that serve as a path to a JSON "
+"field. If a name of a fragment of the path consists solely of numbers, "
+"this name is interpreted as an array index. Paths are created and deleted"
+" in conjunction with variables (in the ``Variables`` list), and one path "
+"always corresponds to one variable. This list can be used both to encode "
+"and to decode JSON object. By default, the list is empty."
+msgstr ""
+"Список путей к переменным внутри объекта JSON. Пути используются для "
+"определения внутренней структуры объекта. Путь должен состоять из "
+"нескольких идентификаторов (разделённых точками), указывающих адрес поля "
+"JSON. Если имя фрагмента пути состоит только из цифр, такое имя "
+"интерпретируется как индекс массива. Пути создаются и удаляются вместе с "
+"переменными (в списке ``Variables``); один путь всегда соответствует "
+"одной переменной. Список путей может использоваться как для кодирования, "
+"так и для декодирования объектов JSON. По умолчанию список пуст."
+
+msgid "*Variables*"
+msgstr "*Variables*"
+
+msgid ""
+"A list of variables that will be used to either store the decoded data or"
+" to encode a JSON object (depending on the value of the ``JSON "
+"Operation`` parameter). The names and the quantity of the variables can "
+"be adjusted manually. This list is also empty by default."
+msgstr ""
+"Список переменных, которые будут использованы для кодирования или "
+"декодирования JSON-объекта (в зависимости от значения параметра ``JSON "
+"Operation``). Имена и количество переменных могут быть настроены. Этот "
+"список также пуст по умолчанию."
+
+msgid "Using JSON logic node to encode JSON object"
+msgstr "Кодирование объекта JSON с помощью логической ноды JSON."
+
+msgid ""
+"The logic node setup at the picture above encodes a JSON object and "
+"stores it in the ``R1`` variable. Such a JSON object looks like this:"
+msgstr ""
+"Логическое дерево на изображении выше кодирует объект JSON и сохраняет "
+"его в переменной ``R1``. Закодированный объект JSON будет иметь следующий"
+" вид:"
+
+msgid "Using JSON logic node to decode JSON object"
+msgstr "Декодирование объекта JSON с помощью логической ноды JSON."
+
+msgid ""
+"The picture above shows a logic node setup that receives a JSON object "
+"from the server, stores it in the ``R1`` variable and then decodes it. "
+"Such a JSON object looks like this:"
+msgstr ""
+"Логическое дерево на изображении выше получает объект JSON с сервера, "
+"сохраняет его в переменной ``R1`` и декодирует объект. Объект JSON имеет "
+"следующий вид:"
+
+msgid ""
+"Decoding this JSON object with the ``JSON`` logic node results in three "
+"variables named ``var0``, ``var1`` and ``var2`` (you don't have to create"
+" the variables beforehand) that will contain various parts of the JSON "
+"object. In this example, the ``var1`` variable has the value of 17, the "
+"``var2`` variable has the value \"abc\", while the ``var0`` variable "
+"contains the following fragment of the JSON object:"
+msgstr ""
+"При декодировании объекта JSON в этом примере создаются три переменные "
+"(создавать их заранее не требуется) с именами ``var0``, ``var1`` и "
+"``var2``, которые содержат разные части объекта JSON. В данном случае "
+"переменная ``var1`` будет иметь значение, равное 17, переменная ``var2`` "
+"будет иметь значение \"abc\", а переменная ``var0`` будет содержать "
+"следующий фрагмент объекта JSON:"
+
+msgid "Page Param"
+msgstr "Page Param"
+
+msgid "Allows to store any web page parameter in a given variable."
+msgstr ""
+"Позволяет сохранить произвольный параметр веб-страницы в выбранной "
+"переменной."
+
+msgid "*Param Name*"
+msgstr "*Param Name*"
+
+msgid "The name of the web page parameter."
+msgstr "Имя параметра веб-страницы."
+
+msgid ""
+"If the parameter specified in this field is presented in the URL, then "
+"its value will be saved to a variable specified by the ``Destination`` "
+"parameter."
+msgstr ""
+"Если параметр с данным именем присутствует в URL-строке, то его значение "
+"будет сохранено в переменную, определенную полем ``Destination``."
+
+msgid "A variable that will be used to save the parameter."
+msgstr "Переменная, в которую следует сохранить параметр."
+
+msgid "*Param type*"
+msgstr ""
+
+msgid ""
+"The type of the web page parameter. Available values are ``Number``, "
+"``String`` and ``Object``."
+msgstr ""
+"Тип параметра веб-страницы. Доступные значения: ``Number``, ``String`` "
+"и ``Object``."
+
+msgid "*Hash param*"
+msgstr ""
+
+msgid ""
+"If this option is enabled, the ``Page Param`` node will process hash "
+"parameters; if it isn't, the node will process regular URL parameters."
+msgstr ""
+"Если включена эта опция, нода ``Page Param`` возвращает хэш-параметры; "
+"если она не включена, нода возвращает обычные URL-параметры."
+
+msgid "Page Redirect"
+msgstr "Page Redirect"
+
+msgid ""
+"Can be used to redirect the browser to another page. This node always "
+"marks the end of the node tree and doesn’t have any output parameters."
+msgstr ""
+"Служит для перенаправления на другие веб-страницы. По этой причине нода "
+"всегда находится в конце логической цепочки и не имеет выходных "
+"параметров."
+
+msgid ""
+"Web address of a page that will be opened. It can be defined manually or "
+"using a variable (if the ``Variable URL`` parameter is enabled). Set to "
+"“https://www.blend4web.com” by default."
+msgstr ""
+"Адрес веб-страницы, которая будет открыта. Может быть задан напрямую или с помощью переменной (если"
+" включена опция ``Variable URL``). Значение по умолчанию - “https://www.blend4web.com”."
+
+msgid "Time"
+msgstr "Time"
+
+msgid "Date & Time"
+msgstr "Date & Time"
+
+msgid "This node returns the current time and date."
+msgstr "Эта нода возвращает текущее время и дату."
+
+msgid "*Time Format*"
+msgstr "*Time Format*"
+
+msgid ""
+"This parameter defines the format in which time is measured. It can be "
+"set to one of the following values:"
+msgstr ""
+"Этот параметр определяет формат, в котором измеряется время. Он может "
+"принимать одно из следующих значений:"
+
+msgid "*UTC*"
+msgstr "*UTC*"
+
+msgid "Coordinated Universal Time."
+msgstr "Всемирное координированное время."
+
+msgid ""
+"The Coordinated Universal Time this node returns is based on local system"
+" time and a time zone."
+msgstr ""
+"Всемирное координированное время, возвращаемое этой нодой, основывается "
+"на локальном системном времени и часовом поясе."
+
+msgid "*Local*"
+msgstr "*Local*"
+
+msgid ""
+"If this value is selected, time is retrieved from local system time. This"
+" value is selected by default."
+msgstr ""
+"Значение по умолчанию. Если выбрано это значение, нода возвращает "
+"локальное системное время."
+
+msgid ""
+"The time and date are returned as a set of numbers (current year, month, "
+"day etc.), each one of which can be stored into a specific variable. "
+"These numbers include:"
+msgstr ""
+"Время и дата возвращаются в виде набора чисел (текущий год, месяц, день и"
+" т.д.), каждое из которых может быть записано в специально выбранную "
+"переменную. Среди этих чисел:"
+
+msgid "*Year*"
+msgstr "*Year*"
+
+msgid "The current year."
+msgstr "Текущий год."
+
+msgid "*Month*"
+msgstr "*Month*"
+
+msgid "The current month."
+msgstr "Текущий месяц."
+
+msgid "*Day*"
+msgstr "*Day*"
+
+msgid "The current day."
+msgstr "Текущий день."
+
+msgid "*Hours*"
+msgstr "*Hours*"
+
+msgid "The current hour."
+msgstr "Часы."
+
+msgid "*Minutes*"
+msgstr "*Minutes*"
+
+msgid "The current minutes."
+msgstr "Минуты."
+
+msgid "*Seconds*"
+msgstr "*Seconds*"
+
+msgid "The current seconds."
+msgstr "Секунды."
+
+msgid "Get Timeline"
+msgstr "Get Timeline"
+
+msgid ""
+"This node can be used to get the current frame of an NLA animation or a "
+"timeline."
+msgstr ""
+"Эта нода используется для получения текущего кадра NLA-анимации или "
+"таймлайна."
+
+msgid "*NLA Timeline*"
+msgstr "*NLA Timeline*"
+
+msgid ""
+"If this parameter is enabled, the node will return the current frame of "
+"an NLA animation. If it is disabled, the node will return the current "
+"frame of the timeline. Enabled by default."
+msgstr ""
+"Если этот параметр активирован, нода будет возвращать текущий кадр "
+"NLA-анимации. Если параметр не активирован, нода будет возвращать текущий"
+" кадр таймлайна. Включено по умолчанию."
+
+msgid ""
+"Specifies a variable to store the number of the current frame. Set to "
+"``R1`` by default."
+msgstr ""
+"Задаёт переменную, в которую будет сохранено значение текущего кадра. По "
+"умолчанию имеет значение ``R1``."
+
+msgid "Elapsed"
+msgstr "Elapsed"
+
+msgid ""
+"This node returns the amount of time elapsed since the previous frame has"
+" been rendered."
+msgstr ""
+"Эта нода возвращает время, прошедшее с момента рендеринга предыдущего "
+"кадра."
+
+msgid ""
+"The ``Elapsed`` logic node has one internal parameter that allows user to"
+" specify the variable to save the number of seconds passed since the "
+"previous frame. By default, it uses the ``R1`` variable."
+msgstr ""
+"Логическая нода ``Elapsed`` обладает одним внутренним параметром, "
+"позволяющим пользователю назначить переменную, в которую будет записано "
+"количество секунд, прошедших с момента рендеринга предыдущего кадра. По "
+"умолчанию используется переменная ``R1``."
+
+msgid "Delay"
+msgstr "Delay"
+
+msgid "Make a delay (measured in seconds) before going to the next node."
+msgstr ""
+"Позволяет установить задержку (в секундах) перед выполнением следующей "
+"ноды."
+
+msgid ""
+"Time (in seconds) that will pass before the activation of the next node. "
+"Set to zero by default. Can be set manually or through a variable (if the"
+" ``Variable`` parameter is enabled)."
+msgstr ""
+"Время (в секундах), на которое задерживается передача управления "
+"следующей ноде. По умолчанию равно нулю. Может быть задано в явном виде "
+"или же взято из переменной (в случае, если активирован параметр "
+"``Variable``)."
+
+msgid "Layout"
+msgstr "Layout"
+
+msgid "Frame"
+msgstr ""
+
+msgid "An auxillary element used to separate nodes into groups."
+msgstr "Дополнительный элемент, который применяется для разделения нод на группы."
+
+msgid ""
+"This is not required, but we recommend to use frames in complex node "
+"setups so it would be easier to read and understand them."
+msgstr ""
+"Это не обязательное требование, но frame'ы рекомандуется использовать в "
+"сложных нодовых деревьях, чтобы сделать их проще для восприятия."
+
+msgid ""
+"``Frame`` elements feature several parameters that can be accessed from "
+"the Properties side panel. These parameters include ``Label`` (can be "
+"used to set a title for the frame) and ``Color`` (defines the color of "
+"the frame)."
+msgstr ""
+"Элемент ``Frame`` обладает рядом параметров, доступных из панели "
+"Properties. Среди этих параметров - ``Label`` (используется для задания "
+"заголовка frame'а) и ``Color`` (устанавливает цвет frame'а)."
+
+msgid "This element is also available in regular Blender node editors."
+msgstr "Этот элемент также присутствует в стандарнтных нодовых редакторах Blender."
+
+msgid "Empty"
+msgstr "Empty"
+
+msgid ""
+"This is a simple pass-through node that does not perform any operations "
+"on its own. It can be used to combine several logic threads into one or "
+"simply to make the logic node setup easier to read and understand."
+msgstr ""
+"Простая нода, не выполняющая никаких действий кроме передачи управления "
+"следующей ноде. Может применяться для объединения нескольких логических "
+"нитей в одну или для того, чтобы сделать логическое дерево более простым "
+"для понимания."
+
+msgid "Previous node (or several nodes)."
+msgstr "Предыдущая нода (либо несколько нод)."
+
+msgid "Reroute"
+msgstr "Reroute"
+
+msgid ""
+"Logic Editor also has ``Reroute`` elements, the nodes that don’t do "
+"anything aside from passing the control to the next node or to the next "
+"``Reroute`` element. Such elements can be used to create cyclic "
+"structures or to make the node tree easier to read and understand."
+msgstr ""
+"В редакторе логики также присутствуют элементы ``Reroute`` - специальные "
+"ноды, который не выполняют никаких операций, а только передают управление"
+" следующей ноде (или следующему элементу ``Reroute``). Они могут "
+"применяться для создания циклических структур или для того, чтобы сделать"
+" логическую цепочку более понятной и лёгкой для восприятия."
+
+msgid ""
+"Unlike the ``Empty`` node, ``Reroute`` element can only handle a single "
+"logic thread."
+msgstr ""
+"В отличие от ноды ``Empty``, через элемент ``Reroute`` может проходить "
+"только одна логическая нить."
+
+msgid ""
+"Output parameter can’t be connected to the same node’s input parameter. "
+"If you need to do this (to make a cycle, for example), you should use "
+"``Reroute`` elements."
+msgstr ""
+"Выходной параметр не может быть подключён к входному параметру той же "
+"ноды. В случае, когда это требуется сделать (например, для того, чтобы "
+"зациклить выполнение какой-либо операции), следует использовать "
+"``Reroute``."
+
+msgid "Debug"
+msgstr "Debug"
+
+msgid "Console Print"
+msgstr "Console Print"
+
+msgid ""
+"This node prints variables’s values and additional text to the web "
+"browser console. It can be used for debug purposes."
+msgstr ""
+"Позволяет выводить значения переменных и дополнительную информацию в "
+"консоли браузера. Может использоваться для отладки логики."
+
+msgid "*Message*"
+msgstr "*Message*"
+
+msgid "A message that will be printed to the console along with the values."
+msgstr ""
+"Сообщение, которые будет напечатано в консоли вместе со значениями "
+"переменных."
+
+msgid "<variable name>"
+msgstr "<имя переменной>"
+
+msgid ""
+"A variable that will be printed to the console. By default, a ``Console "
+"Print`` node has one such parameter, but you can add new and delete "
+"existing ones (the node might not even have such parameters at all)."
+msgstr ""
+"Имя одной из переменных, значение которой нужно вывести в консоли. По "
+"умолчанию нода ``Console Print`` имеет один параметр такого типа, также "
+"имеется возможность создавать новые и удалять уже существующие (нода "
+"может и не иметь ни одного параметра этого типа)."
+
+msgid "Other Features"
+msgstr "Другие возможности"
+
+msgid ""
+"For debugging purposes some nodes inside logic tree can be muted. To do "
+"that select the required node and press the ``M`` key. Muted nodes are "
+"not evaluated and simply pass control to the next ones. If the muted node"
+" has two outputs the execution continues from the output with negative "
+"result (``Miss``, ``False``)."
+msgstr ""
+"Для отладки имеется возможность отключения (muting) нод. Для этого "
+"необходимо выделить ноду и нажать горячую клавишу ``M``. Отключенная нода"
+" не выполняется, но при этом передает управление следующей ноде. Если у "
+"отключенной ноды имеется несколько выходов, то будет происходить "
+"выполнение ветки со стороны выхода отрицательного результата (``Miss``, "
+"``False``)."
+
+#~ msgid "*Parse JSON*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "*Encode JSON*"
+#~ msgstr ""
+
+#~ msgid "*Relative*"
+#~ msgstr ""
+
+#~ msgid "Can be used to..."
+#~ msgstr "Позволяет перемещать объекты."
+
+#~ msgid "*<param number>*"
+#~ msgstr ""
+
+#~ msgid "An ID of the JavaScript function that will be called by the node."
+#~ msgstr ""
+
+#~ msgid "Logic Nodes"
+#~ msgstr "Логические ноды"
+
+#~ msgid "*Members*"
+#~ msgstr ""
+
+#~ msgid "*Hor. Translation limits*"
+#~ msgstr ""
+
+#~ msgid "*Vert. Translation lImits*"
+#~ msgstr ""
+
+#~ msgid "Deprecated"
+#~ msgstr "Deprecated"
+
+#~ msgid "Select (Deprecated)"
+#~ msgstr "Select (Deprecated)"
+
+#~ msgid "Select & Play Timeline (Deprecated)"
+#~ msgstr "Select & Play Timeline (Deprecated)"
+
+#~ msgid "Select & Play Animation (Deprecated)"
+#~ msgstr "Select & Play Animation (Deprecated)"
+
+#~ msgid "Play Timeline and Stop Timeline"
+#~ msgstr "Play Timeline и Stop Timeline"
+
+#~ msgid "Debugging"
+#~ msgstr "Отладка"
+
+#~ msgid "Switch Select"
+#~ msgstr "Switch Select"
+
+#~ msgid "Conditional Jump"
+#~ msgstr "Conditional Jump"
+
+#~ msgid "*String Operands*"
+#~ msgstr "*String Operands*"
+
+#~ msgid ""
+#~ "If this parameter is enabled, first "
+#~ "and second operands can use strings "
+#~ "(set manually or by a variable) as"
+#~ " their values."
+#~ msgstr ""
+#~ "Если эта опция включена, то первый "
+#~ "и второй операнды могут быть строками"
+#~ " (как установленными вручную, так и "
+#~ "взятыми из переменной)."
+
+#~ msgid ""
+#~ "Can be used to play object’s "
+#~ "animation. An animation can be one "
+#~ "of the following types:"
+#~ msgstr ""
+#~ "Используется для воспроизведения анимации "
+#~ "объекта. Проигрываемая анимация может иметь"
+#~ " один из трёх типов:"
+
+#~ msgid "An object that you need to move."
+#~ msgstr "Объект, который требуется переместить."
+
+#~ msgid "*Num./Str.*"
+#~ msgstr "*Num./Str.*"
+
+#~ msgid ""
+#~ "Numeric or string (depending on the "
+#~ "``Var. type`` parameter value) value of"
+#~ " the variable."
+#~ msgstr ""
+#~ "Численное либо строковое (в зависимости "
+#~ "от значения параметра ``Var. type``) "
+#~ "значение, присваиваемое переменной."
+
+#~ msgid ""
+#~ "A web address to send request to."
+#~ " Set to “https://www.blend4web.com” by "
+#~ "default."
+#~ msgstr ""
+#~ "Адрес, на который следует отправить "
+#~ "запрос. По умолчанию имеет значение "
+#~ "\"https://www.blend4web.com\"."
+
+#~ msgid ""
+#~ "Web address of a page that will"
+#~ " be opened. Set to "
+#~ "“https://www.blend4web.com” by default."
+#~ msgstr ""
+#~ "Адрес страницы, которая будет открыта. "
+#~ "По умолчанию имеет значение "
+#~ "\"https://www.blend4web.com\"."
+

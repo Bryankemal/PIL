@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Havreality</title>
+    <link rel="stylesheet" href="test.css">
+  </head>
+  <body>
+    <img src="logoV3.png" onclick="modaleOn()">
+    <div class="modalDialog">
+      <div>
+          <iframe allowfullscreen src="citerne.html" width="800" height="500"></iframe>
+          <button title="Fermer" class="close" onclick="modaleOff()"> X </button>
+      </div>
+    </div>
+    <script language="javascript" type="text/javascript">
+
+      function modaleOff(){
+        var x = document.getElementById("myDIV");
+        x.style.display = "none";
+      }
+
+      function modaleOn(){
+        var x = document.getElementById("myDIV");
+        x.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

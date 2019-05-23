@@ -1,0 +1,901 @@
+# Blend4Web User Manual Russian Translation: Lighting
+# Copyright (C) 2014-2016, Triumph
+# This file is distributed under the same license as Blend4Web.
+# Blend4Web Team <info [at] blend4web.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Blend4Web 16.08\n"
+"Report-Msgid-Bugs-To: https://www.blend4web.com/en/forums/forum/17/\n"
+"POT-Creation-Date: 2017-05-25 16:00+0300\n"
+"PO-Revision-Date: 2015-08-28 10:55+0300\n"
+"Last-Translator: Blend4Web Team <info [at] blend4web.com>\n"
+"Language-Team: Russian <info [at] blend4web.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+msgid "Lighting, Shadows and Background"
+msgstr "Освещение, тени и фон"
+
+msgid "Table of Contents"
+msgstr "Содержание"
+
+msgid "Shading Types"
+msgstr "Типы затенения"
+
+msgid ""
+"Lighting (shading) depends on the direction of normal vectors. The "
+"standard Blender's shading types are supported: ``Shading: Flat`` (face "
+"normals are used), ``Shading: Smooth`` (interpolated vertex normals are "
+"used) and their combinations."
+msgstr ""
+"Результат расчета освещения (затенения) зависит от направления векторов "
+"нормалей. Поддерживаются стандартные типы затенения, использующиеся в "
+"Blender, ``Shading: Flat`` (используются нормали граней) и ``Shading: "
+"Smooth`` (используются интерполированные нормали вершин), а также их "
+"комбинации."
+
+msgid ""
+"If the required effect is impossible to achieve with the standard tools, "
+"you can use the :ref:`normals editor <normals_editor>`."
+msgstr ""
+"Если желаемый результат недостижим стандартными средствами, можно "
+"воспользоваться :ref:`редактором нормалей <normals_editor>`."
+
+msgid ""
+"The result of applying different shading types and using the normals "
+"editor:"
+msgstr ""
+"Результат применения различных типов затенения и использования редактора "
+"нормалей:"
+
+msgid "Flat Shading"
+msgstr "Flat Shading"
+
+msgid "Smooth Shading"
+msgstr "Smooth Shading"
+
+msgid "Smooth Shading + bevel"
+msgstr "Smooth Shading + фаска"
+
+msgid "Smooth Shading + bevel + editing normals"
+msgstr "Smooth Shading + фаска + редактирование нормалей"
+
+msgid "Lighting with Light Sources"
+msgstr "Освещение от источников света"
+
+msgid ""
+"A scene can have multiple (but not less than one) light sources of "
+"different types."
+msgstr ""
+"На сцене может быть несколько (но не менее одного) источников света "
+"разного типа."
+
+msgid "Light source types"
+msgstr "Типы источников света"
+
+msgid "The following light source types are supported:"
+msgstr "Поддерживаются источники света следующих типов:"
+
+msgid "*Point*"
+msgstr "*Point*"
+
+msgid ""
+"Light propagates from one point uniformly to all directions with gradual "
+"attenuation."
+msgstr ""
+"Точечный. Свет распространяется из одной точки равномерно во все стороны,"
+" с постепенным затуханием."
+
+msgid "*Sun*"
+msgstr "*Sun*"
+
+msgid ""
+"Light propagates from an infinite plane in one direction without "
+"attenuation."
+msgstr ""
+"\"Солнце\". Свет распространяется из бесконечной плоскости прямолинейно в"
+" одном направлении, без затухания."
+
+msgid "*Spot*"
+msgstr "*Spot*"
+
+msgid ""
+"Light propagates from one point within the angular limit, with gradual "
+"attenuation."
+msgstr ""
+"Прожектор. Свет распространяется из одной точки, с ограничением угла "
+"распространения, с постепенным затуханием."
+
+msgid "*Hemi*"
+msgstr "*Hemi*"
+
+msgid ""
+"Hemispherical. Light propagates from an infinite hemisphere without "
+"attenuation."
+msgstr "Полусфера. Свет распространяется из бесконечной полусферы, без затухания."
+
+msgid "Light source setup"
+msgstr "Настройка источников света"
+
+msgid "Performed in the ``Object Data`` tab when a lamp object is selected."
+msgstr "Производится во вкладке ``Object Data`` при выборе объекта-лампы."
+
+msgid "*Color*"
+msgstr "*Цвет*"
+
+msgid "Light color. The default value is (1.0, 1.0, 1.0) (i.e. white)."
+msgstr ""
+"Цветовая характеристика света. Значение по умолчанию (1.0, 1.0, 1.0) "
+"(белый)."
+
+msgid "*Energy*"
+msgstr "*Energy*"
+
+msgid "Radiation intensity. The default value is 1.0."
+msgstr "Интенсивность излучения. Значение по умолчанию 1.0."
+
+msgid "*Falloff*"
+msgstr "*Falloff*"
+
+msgid ""
+"Attenuation type. The value is exported but the engine always uses "
+"``Inverse Square``. It is applicable to the ``Point`` and ``Spot`` light "
+"source types. The default value is ``Inverse Square``."
+msgstr ""
+"Тип затухания. Значение экспортируется, но в движке всегда используется "
+"``Inverse Square`` (обратный квадратичный). Применяется для источников "
+"света типа ``Point`` и ``Spot``. Значение по умолчанию ``Inverse "
+"Square``."
+
+msgid "*Distance*"
+msgstr "*Distance*"
+
+msgid ""
+"Attenuation parameter. It is applicable to the ``Point`` and ``Spot`` "
+"light source types. The default value is 30.0."
+msgstr ""
+"Параметр затухания. Применяется для источников света типа ``Point`` и "
+"``Spot``. Значение по умолчанию 30.0."
+
+msgid "*Specular*"
+msgstr "*Specular*"
+
+msgid "Create specular highlights. Enabled by default."
+msgstr "Создание отблеска на объектах. По умолчанию включено."
+
+msgid "*Diffuse*"
+msgstr "*Diffuse*"
+
+msgid "Do diffuse shading. Enabled by default."
+msgstr "Применение рассеянного освещения к объектам. По умолчанию включено."
+
+msgid "*Spot Shape > Size*"
+msgstr "*Spot Shape > Size*"
+
+msgid ""
+"Cone angle in degrees. It is applicable to the ``Spot`` light source "
+"type. The default value is 45º."
+msgstr ""
+"Угол конуса в градусах. Применяется для источников света типа ``Spot``. "
+"Значение по умолчанию 45º."
+
+msgid "*Spot Shape > Blend*"
+msgstr "*Spot Shape > Blend*"
+
+msgid ""
+"Parameter for blurring light spot edges. It is applicable to the ``Spot``"
+" light source type. The default value is 0.15."
+msgstr ""
+"Параметр смягчения края светового пятна. Применяется для источников света"
+" типа ``Spot``. Значение по умолчанию 0.15."
+
+msgid "*Dynamic Intensity*"
+msgstr "*Dynamic Intensity*"
+
+msgid ""
+"Use this light source for calculating the time of day. Applicable only to"
+" the ``Sun`` light source type. Disabled by default."
+msgstr ""
+"Источник света используется для расчета изменения времени суток. "
+"Применяется для источников света типа \"Солнце\". По умолчанию отключено."
+
+msgid "*Shadow > Shadow*"
+msgstr "*Shadow > Shadow*"
+
+msgid ""
+"Use this light source for shadow calculation. Should be used when "
+"multiple light sources are present. Disabled by default."
+msgstr ""
+"Источник света используется для расчета падающих теней. Применяется в "
+"случае наличия нескольких источников света. По умолчанию отключено."
+
+msgid "*Shadow > Clip Start*"
+msgstr "*Shadow > Clip Start*"
+
+msgid ""
+"This parameter specifies a distance from the light source, below which "
+"objects do not generate shadows. Default value is 1.001."
+msgstr ""
+"Расстояние между источником света и ближней плоскостью отсечения. "
+"Используется при генерации теней. Значение по умолчанию - 1.001."
+
+msgid "*Shadow > Clip End*"
+msgstr "*Shadow > Clip End*"
+
+msgid ""
+"This parameter specifies a distance from the light source, beyond which "
+"objects do not generate shadows. Default value is 30.002."
+msgstr ""
+"Расстояние между источником света и дальней плоскостью отсечения. "
+"Используется при генерации теней Значение по умолчанию - 30.002."
+
+msgid "Environment Lighting (Ambient)"
+msgstr "Освещение от окружающей среды"
+
+msgid "The engine supports 3 methods of the environment lighting simulation."
+msgstr ""
+"Движок поддерживает 3 метода симуляции рассеянного освещения от "
+"окружающих объектов."
+
+msgid "Flat white lighting."
+msgstr "\"Плоское\" освещение белым цветом."
+
+msgid ""
+"Hemispherical lighting model in which horizon and zenith colors should be"
+" specified. As a result objects are filled with a gradient between these "
+"two colors depending on the direction of normals."
+msgstr ""
+"Полусферическая модель освещения, в которой задается цвет горизонта и "
+"цвет зенита, в результате чего объекты заливаются градиентом между этими "
+"цветами в зависимости от направления нормалей."
+
+msgid ""
+"Lighting using an :ref:`environment map <environment_map>` - so called "
+"image-based lighting."
+msgstr ""
+"Освещение с помощью :ref:`карты окружения <environment_map>` - т.н. "
+"методика image-based lighting."
+
+msgid ""
+"Please note that environment lighting uses a simplified model which "
+"doesn't take into account mutual shadowing of objects."
+msgstr ""
+"Обратите внимание, что освещение от окружающей среды рассчитывается по "
+"упрощённой модели, в которой объекты не затеняют друг друга."
+
+msgid "Activation"
+msgstr "Активация"
+
+msgid "Enable the ``Environment Lighting`` checkbox on the ``World`` tab."
+msgstr "Включить опцию ``Environment Lighting`` во вкладке ``World``."
+
+msgid "Setup"
+msgstr "Настройка"
+
+msgid "*World > Environment Lighting > Energy*"
+msgstr "*World > Environment Lighting > Energy*"
+
+msgid "Environment lighting intensity. The default value is 1.0."
+msgstr "Интенсивность освещения от окружающей среды. Значение по умолчанию 1.0."
+
+msgid "*World > Environment Lighting > Environment Color*"
+msgstr "*World > Environment Lighting > Environment Color*"
+
+msgid ""
+"Selection of the environment lighting simulation method: ``White`` - flat"
+" white lighting, ``Sky Color`` - hemispherical model, ``Sky Texture`` - "
+"lighting using an :ref:`environment map <environment_map>`. The default "
+"value is ``White``."
+msgstr ""
+"Выбор метода симуляции рассеянного освещения: ``White`` - \"плоское\" "
+"освещение белым цветом, ``Sky Color`` - полусферическая модель , ``Sky "
+"Texture`` - освещение с помощью :ref:`карты окружения <environment_map>`."
+" Значение по умолчанию ``White``."
+
+msgid "*World > Horizon Color* and *World > Zenith Color*"
+msgstr "*World > Horizon Color* и *World > Zenith Color*"
+
+msgid ""
+"If the hemispherical model (``Sky Color``) is selected the horizon and "
+"zenith colors can be specified by means of the ``World > Horizon Color`` "
+"and ``World > Zenith Color`` color pickers. It is recommended to activate"
+" the ``World > Blend Sky`` option for better color selection."
+msgstr ""
+"Если выбрана полусферическая модель рассеянного освещения ``Sky Color``, "
+"цвет горизонта и цвет зенита задаются цветоподборщиками ``World > Horizon"
+" Color`` (цвет горизонта) и ``World > Zenith Color`` (цвет зенита). При "
+"выборе цвета рекомендуется активировать опцию ``World > Blend Sky``."
+
+msgid "*World > Use Nodes (Cycles)*"
+msgstr "*World > Use Nodes (Cycles)*"
+
+msgid ""
+"If this option is enabled, ``Cycles`` nodes can be used to set up the "
+"environment. Disabled by default."
+msgstr ""
+"Если эта опция включена, ноды ``Cycles`` могут использоваться для настройки "
+"окружающей среды. По умолчанию отключено."
+
+msgid "*World > Reflect World*"
+msgstr "*World > Reflect World*"
+
+msgid ""
+"If this parameter is enabled, environment will also be rendered for "
+"reflections (i.e., it will be reflected by mirror surfaces). Disabled by "
+"default."
+msgstr ""
+"Если эта опция включена, окружающая среда будет отображаться при рендеринге "
+"отражений (т.е., будет отражаться в зеркальных поверхностях). По умолчанию отключено."
+
+msgid "*World > Render Only Reflection*"
+msgstr "*World > Render Only Reflection*"
+
+msgid ""
+"If this parameter is enabled, environment will be rendered for "
+"reflections, but not for the scene itself. Disabled by default."
+msgstr ""
+"Если эта опция включена, окружающая среда будет визуализироваться "
+"для отражений, но не для самой сцены. По умолчанию отключено."
+
+msgid "Environment map method"
+msgstr "Использование карты окружения"
+
+msgid "To use an environment map for environment lighting:"
+msgstr ""
+"Для того, чтобы использовать карту окружения в целях реализации освещения"
+" от окружающей среды, необходимо:"
+
+msgid "Select ``Environment Lighting > Sky Texture``."
+msgstr "Выбрать метод ``Environment Lighting > Sky Texture``."
+
+msgid "Go from the ``World`` tab to the ``Texture`` tab."
+msgstr "Перейти из вкладки ``World`` во вкладку ``Texture``."
+
+msgid ""
+"Create an :ref:`environment map <environment_map>`, load the "
+"corresponding image to it."
+msgstr ""
+"Создать :ref:`карту окружения <environment_map>`, загрузить в нее "
+"соответствующее изображение."
+
+msgid ""
+"For the environment map select ``ENVIRONMENT_LIGHTING`` or ``BOTH`` as "
+"the ``Sky Texture Usage`` value on the ``Export Options`` panel (the "
+"``BOTH`` option also enables using this texture as a :ref:`skydome "
+"texture <skydome_texture>`)."
+msgstr ""
+"Для карты окружения на панели ``Export Options`` для значения ``Sky "
+"Texture Usage`` выбрать ``ENVIRONMENT_LIGHTING`` или ``BOTH`` (опция "
+"``BOTH`` активирует также использование этой текстуры в качестве "
+":ref:`текстуры неба <skydome_texture>`)."
+
+msgid "Shadows"
+msgstr "Тени"
+
+msgid ""
+"Shadows are exceptionally important for rendering the final picture. They"
+" provide the viewer not only with information about the objects' outline "
+"but also about their height and relative position, light source position "
+"and so on."
+msgstr ""
+"Тени - один из важнейших элементов при рендеринге конечного изображения. "
+"Они предоставляют зрителю не только информацию о силуэте объектов, но и "
+"об их высоте и взаимном расположении, положении источника света и т.д."
+
+msgid ""
+"Blend4Web implements the following shadow rendering techniques: cascaded "
+"shadow maps (CSM) and softened shadows (PCF)."
+msgstr ""
+"Платформой Blend4Web реализуются такие техники, как каскадные карты теней"
+" (CSM) и смягченные тени (PCF)."
+
+msgid ""
+"Up to 4 (or 3 if SSAO is enabled) light sources can generate shadows "
+"simultaneously. If *Shadow* parameter is enabled for more than 4 light "
+"sources, shadows will still be generated only from 4 of them."
+msgstr ""
+"Генерировать тени могут не более четырёх (или трёх, если включен SSAO) "
+"источников света одновременно. Если источников света больше (и у всех "
+"включён параметр Shadow), будут видны тени только от четырёх из них."
+
+msgid ""
+"Enable the ``Shadows: Cast`` checkbox under the ``Object`` tab for the "
+"objects which **cast** shadows."
+msgstr ""
+"На объектах, **отбрасывающих** тени, включить опцию ``Shadows: Cast`` во "
+"вкладке ``Object``."
+
+msgid ""
+"Enable the ``Shadows: Receive`` checkbox under the ``Object`` tab for the"
+" objects which **receive** shadows."
+msgstr ""
+"На объектах, **получающих** тени, включить опцию ``Shadows: Receive`` во "
+"вкладке ``Object``."
+
+msgid ""
+"Make sure that the ``Shadows`` option in the ``Render`` tab has the value"
+" ``AUTO`` or ``ON``."
+msgstr ""
+"Убедиться, что включена опция ``Shadows`` ``AUTO`` или ``ON`` во вкладке "
+"``Render``."
+
+msgid ""
+"Objects, which have :ref:`transparent materials with a gradient "
+"<alpha_blend>`, do not cast shadows."
+msgstr ""
+"Объекты, имеющие :ref:`прозрачные материалы с градиентом <alpha_blend>`, "
+"не отбрасывают теней."
+
+msgid "*Direction*"
+msgstr "*Направление*"
+
+msgid ""
+"If there are multiple light sources, it is recommended to specify the "
+"exact light source which is used for shadow calculations, by enabling the"
+" ``Shadow > Shadow`` checkbox under the ``Object Data`` tab for the "
+"selected lamp object."
+msgstr ""
+"В случае наличия нескольких источников света рекомендуется указать, какой"
+" именно источник света будет использоваться для расчета падающих теней, "
+"включив опцию ``Shadow > Shadow`` во вкладке ``Object Data`` при выборе "
+"объекта-лампы."
+
+msgid ""
+"The shadow color is determined by the :ref:`environment lighting "
+"<environment_lighting>` settings."
+msgstr ""
+"Цвет тени определяется настройками :ref:`освещения от окружающей среды "
+"<environment_lighting>`."
+
+msgid ""
+"The following additional settings are located on the ``Shadows`` panel of"
+" the ``Render`` tab:"
+msgstr ""
+"Во вкладке ``Render`` на панели ``Shadows`` находятся дополнительные "
+"настройки:"
+
+msgid "*Render Shadows*"
+msgstr "*Render Shadows*"
+
+msgid ""
+"Enables and disables shadow rendering. Can be set to ``ON``, ``OFF`` and "
+"``AUTO``. Set to ``AUTO`` by default."
+msgstr ""
+"Включает и выключает рендеринг теней. Возможные значения: ``ON``, ``OFF``"
+" и ``AUTO``. Значение по умолчанию - ``AUTO``."
+
+msgid "*Soft Shadows*"
+msgstr "*Soft Shadows*"
+
+msgid "This option enables smoothing of the shadow maps. Enabled by default."
+msgstr "Включает размытие карт теней. По умолчанию включено."
+
+msgid "*Resolution*"
+msgstr "*Resolution*"
+
+msgid "Shadow map resolution. The default value is 2048 x 2048px."
+msgstr "Разрешение используемой карты теней. Значение по умолчанию: 2048 x 2048px."
+
+msgid "*Blur Samples*"
+msgstr "*Blur Samples*"
+
+msgid ""
+"The number of the samples used for smoothing shadow maps. Available "
+"values are 4x, 8x and 16x, with the latter being the default value."
+msgstr ""
+"Количество сэмплов, используемых для размытия карты теней. Возможные "
+"значения - 4x, 8x и 16x (значение по умолчанию)."
+
+msgid "*Self-Shadow Polygon Offset*"
+msgstr "*Self-Shadow Polygon Offset*"
+
+msgid ""
+"Coefficient for shifting polygons relative to light source orientation. "
+"The default value is 1."
+msgstr ""
+"Коэффициент смещения полигона в зависимости от ориентации к источнику "
+"света. Значение по умолчанию: 1."
+
+msgid "*Self-Shadow Normal Offset*"
+msgstr "*Self-Shadow Normal Offset*"
+
+msgid ""
+"Coefficient for shifting polygons along their normals. The default value "
+"is 0.010."
+msgstr "Коэффициент смещения полигона по нормали. Значение по умолчанию: 0.010."
+
+msgid ""
+"The last two parameters can be used to reduce self-shadowing artifacts. "
+"These artifacts appear for the objects that cast and receive shadows at "
+"the same time. The ``Self-Shadow Polygon Offset`` parameter is more "
+"effective for fighting against artifacts in inner areas of polygons while"
+" ``Self-Shadow Normal Offset`` is better for the boundary areas. Both "
+"these parameters lead to shadow distortions so we recommend to set them "
+"as low as possible."
+msgstr ""
+"Последние две настройки служат для борьбы с артефактами самозатенения. "
+"Они проявляются на объектах, одновременно отбрасывающих и принимающих "
+"тени. Параметр ``Self-Shadow Polygon Offset`` лучше справляется с "
+"артефактами во внутренних областях полигонов, а ``Self-Shadow Normal "
+"Offset`` - в приграничных. Оба параметра приводят к искажению теней, "
+"поэтому рекомендуется держать их как можно меньшими."
+
+msgid ""
+"Shadows from ``Point`` light sources are generated the same way as from "
+"``Spot`` light sources and are projected only in one direction specified "
+"by the source's ``Rotation`` parameter."
+msgstr ""
+"Тени для точечных (``Point``) источников света генерируются так же, как и"
+" для направленных (``Spot``), и падают только в одном направлении, "
+"определяемом параметром ``Rotation``."
+
+msgid "*Enable CSM*"
+msgstr "*Enable CSM*"
+
+msgid ""
+"Activates the using of cascaded shadows model; reveals additional "
+"options. Disabled by default. Won't work if the ``Shadow`` setting is "
+"enabled for more than one light source. ``Point`` and ``Spot`` type light"
+" sources support only one shadow cascade."
+msgstr ""
+"Включение каскадной модели теней; открывает доступ к расширенным "
+"настройкам. Отключено по умолчанию. Не работает, если опция ``Shadow`` "
+"включена более чем для одного источника света. Для источников света типа "
+"``Point`` и ``Spot`` поддерживается только один каскад теней."
+
+msgid ""
+"This option allows to choose between the following shadow generation "
+"models:"
+msgstr "Эта опция позволяет выбрать один из следующих вариантов наложения теней:"
+
+msgid ""
+"Generic model which uses a single optimized shadow map for the whole "
+"scene (``Enable CSM`` is turned off)."
+msgstr ""
+"Стандартная модель, использующая одну оптимизированную карту теней, "
+"охватывающую всю сцену (``Enable CSM`` отключена)."
+
+msgid "Shadow cascades (``Enable CSM`` is turned on)."
+msgstr "Каскады теней (``Enable CSM`` включена)."
+
+msgid "*Blur Radius*"
+msgstr "*Blur Radius*"
+
+msgid ""
+"Blur ratio for setting up softened shadows. The default value is 3. Zero "
+"value produces hard shadows."
+msgstr ""
+"Коэффициент размытия теней, позволяющий настроить cмягченные тени. "
+"Значение по умолчанию: 3. Коэффициент 0 даст жесткие тени."
+
+msgid ""
+"Softened shadows can improve visual quality and realism. They hide the "
+"jugged edges inevitable when using image-based techniques, that is "
+"especially noticeable for low-resolution shadow maps. The using of "
+"softened shadows often allows to decrease resolution without substantial "
+"quality loss."
+msgstr ""
+"Смягченные тени могут повысить качество и реалистичность изображения. Они"
+" скрывают неизбежную при использовании основанных на изображениях техник "
+"зубчатость краев, особенно сильно проявляющуюся для карт теней низкого "
+"разрешения. Использование смягченных теней часто позволяет снизить "
+"разрешение без существенной потери качества."
+
+msgid "Generic shadows"
+msgstr "Стандартная модель"
+
+msgid ""
+"This option suits well smaller scenes with a limited number of objects. "
+"Thanks to optimizations applied for such scenes, one can achieve better "
+"shadow quality as compared with cascaded shadows. Also, this option is "
+"simpler and faster for setting up, while using a single shadow map "
+"greatly improves the performance."
+msgstr ""
+"Этот вариант больше подходит для маленьких сцен, состоящих из небольшого "
+"числа объектов. Благодаря оптимизации на таких сценах можно добиться "
+"более высокого качества теней по сравнению с каскадной моделью. Данный "
+"вариант проще и быстрее настроить, а использование всего лишь одной карты"
+" теней положительно сказывается на производительности."
+
+msgid "Shadow cascades"
+msgstr "Каскады теней"
+
+msgid ""
+"These settings are supported only for ``Sun`` light sources. Cascades are"
+" turned off for other types of light sources."
+msgstr ""
+"Данные настройки поддерживаются только для источников освещения типа "
+"``Sun``. Для других источников каскады автоматически отключаются."
+
+msgid ""
+"In order to provide acceptable shadow quality and to cover considerable "
+"space at the same time it is required to use multiple stages for shadow "
+"generation (cascades). Thus, the best quality cascades are situated near "
+"the observer while the worst quality cascades are in the distance. This "
+"option suits well middle-to-large scenes, e.g. game levels."
+msgstr ""
+"Для обеспечения приемлемого качества теней и одновременно покрытия "
+"значительных пространств необходимо использовать несколько стадий "
+"генерации теней (каскадов). При этом вблизи наблюдателя располагается "
+"каскад с наилучшим качеством, вдали от наблюдателя — с наихудшим. Этот "
+"вариант больше подходит для сцен среднего и большого размера, например, "
+"игровых уровней."
+
+msgid "When enabled the following extended settings are revealed:"
+msgstr "При включении предоставляет расширенные настройки:"
+
+msgid "*CSM Number*"
+msgstr "*CSM Number*"
+
+msgid ""
+"Number of shadow cascades. From 1 to 4 cascades are supported. The "
+"default value is 1."
+msgstr ""
+"Количество каскадов теней. Поддерживается от 1 до 4 каскадов. Значение по"
+" умолчанию: 1."
+
+msgid "*CSM First Cascade Border*"
+msgstr "*CSM First Cascade Border*"
+
+msgid "First cascade size. The default value is 10.0."
+msgstr "Размер первого каскада. Значение по умолчанию: 10.0."
+
+msgid "*CSM Last Cascade Border*"
+msgstr "*CSM Last Cascade Border*"
+
+msgid "Last cascade size. The default value is 100.0."
+msgstr "Размер последнего каскада. Значение по умолчанию: 100.0."
+
+msgid ""
+"The sizes of the intermediate cascades are interpolated between the two "
+"above-mentioned parameters."
+msgstr ""
+"Размеры промежуточных каскадов интерполируются на основе последних двух "
+"параметров."
+
+msgid ""
+"When setting up the shadows keep in mind that the bigger the cascade size"
+" is, the worse and less detailed are the shadows inside it. On the other "
+"hand, reducing the ``CSM First Cascade Border`` parameter makes the "
+"subsequent less detailed cascades closer to the camera and thus more "
+"noticeable. Reducing the ``CSM Last Cascade Border`` parameter forces "
+"shadows to disappear at more close distance from the camera. However, "
+"when softened shadows are used the overall quality will improve thanks to"
+" blurring at the edges."
+msgstr ""
+"При настройке следует помнить, что, увеличивая размер каскада, мы "
+"получаем на нем менее качественные тени. С другой стороны, уменьшение "
+"параметра ``CSM First Cascade Border`` приблизит к камере и сделает более"
+" заметными последующие менее детальные каскады. Уменьшение параметра "
+"``CSM Last Cascade Border`` приведет к исчезновению теней на более "
+"близком расстоянии от камеры. Однако, при использовании мягких теней "
+"качество в целом улучшится благодаря размытию на границах."
+
+msgid "*CSM First Cascade Blur Radius*"
+msgstr "*CSM First Cascade Blur Radius*"
+
+msgid ""
+"Blur ratio for the first cascade. The default value is 3. Zero value "
+"produces hard shadows."
+msgstr ""
+"Коэффициент размытия на первом каскаде. Значение по умолчанию: 3. "
+"Коэффициент 0 даст жесткие тени."
+
+msgid "*CSM Last Cascade Blur Radius*"
+msgstr "*CSM Last Cascade Blur Radius*"
+
+msgid ""
+"Blur ratio for the last cascade. The default value is 1.5. Zero value "
+"produces hard shadows."
+msgstr ""
+"Коэффициент размытия на последнем каскаде. Значение по умолчанию: 1.5. "
+"Коэффициент 0 даст жесткие тени."
+
+msgid ""
+"The blur radii of the intermediate cascades are interpolated between the "
+"two above-mentioned parameters."
+msgstr ""
+"Радиус размытия каждого промежуточного каскада интерполируется на основе "
+"этих параметров."
+
+msgid ""
+"We recommend to start setting up the softened shadows with the first "
+"cascade (using ``CSM First Cascade Blur Radius``) and then proceed to "
+"other cascades (using ``CSM Last Cascade Blur Radius``). Often the last "
+"cascade may need less blurring than the first one. This may be needed to "
+"prevent the shadows on the last cascade being too faded due to low "
+"resolution. This also reduces undesirable self-shadowing artifacts."
+msgstr ""
+"Смягченные тени рекомендуется настраивать сначала на первом каскаде "
+"опцией ``CSM First Cascade Blur Radius``, а далее на всех остальных с "
+"помощью ``CSM Last Cascade Blur Radius``. Часто на последнем каскаде "
+"может потребоваться размытие меньшее, нежели на первом. Это нужно для "
+"того, чтобы тени на последнем каскаде не стали слишком блеклыми из-за "
+"низкой детализации, к тому же это уменьшит нежелательные артефакты "
+"самозатенения."
+
+msgid "*Fade-out Last Cascade*"
+msgstr "*Fade-out Last Cascade*"
+
+msgid "Smooth dying-out of the last cascade. Enabled by default."
+msgstr "Плавное исчезновение последнего каскада. По умолчанию включено."
+
+msgid "*Blend Between Cascades*"
+msgstr "*Blend Between Cascades*"
+
+msgid "Smoothing the boundaries between the cascades. Enabled by default."
+msgstr "Сглаживание границ между каскадами. По умолчанию включено."
+
+msgid "Background"
+msgstr "Цвет фона"
+
+msgid "You can change the background in the following ways:"
+msgstr "Цвет фона можно задать несколькими способами:"
+
+msgid ""
+"Enable ``World > Render Sky``, then set the ``Horizon Color`` and the "
+"``Zenith Color`` under Blender's ``World`` tab."
+msgstr ""
+"Установить параметры ``Horizon Color`` и ``Zenith Color`` на вкладке "
+"``World`` в Blender, предварительно выставив опцию ``World > Render "
+"Sky``."
+
+msgid ""
+"Place the whole scene inside a model (e.g. a cube or a sphere) with its "
+"normals directed inside, with a material and an optional texture."
+msgstr ""
+"Поместить сцену внутрь модели (например, куба или сферы) с направленными "
+"внутрь нормалями, с материалом и опциональной текстурой."
+
+msgid ""
+"Place a surface with a material and an optional texture in front of the "
+"camera. Parent it to the camera. If required, tweak the distance to this "
+"surface, starting and ending clipping planes for the camera."
+msgstr ""
+"Разместить перед камерой поверхность с материалом и опциональной "
+"текстурой, присоединить ее к камере связью родитель-потомок. При "
+"необходимости настроить расстояние до поверхности, переднюю и заднюю "
+"плоскости отсечения камеры."
+
+msgid "Use a :ref:`skydome <skydome_texture>`."
+msgstr "Использовать :ref:`текстуру неба <skydome_texture>`."
+
+msgid "Set up the procedurally generated :ref:`atmosphere <atmosphere>`."
+msgstr "Настроить динамически генерируемую :ref:`атмосферу <atmosphere>`."
+
+msgid ""
+"Set the engine's ``background_color`` parameter with the ``config.set()``"
+" method. Please note, that ``World > Render Sky`` under Blender's "
+"``World`` tab must be disabled. This value is used as argument for the "
+"WebGL ``clearColor()`` method. For correct results, it's recommended to "
+"turn the WebGL context transparency off (the ``alpha`` parameter). Such "
+"the configuration is used by default in the engine's standard web player."
+msgstr ""
+"Установить параметр движка ``background_color``, используя программный "
+"метод ``config.set()``, предварительно отключив опцию ``World > Render "
+"Sky`` на вкладке ``World`` в Blender. Установленное значение используется"
+" в качестве аргумента метода WebGL ``clearColor()``. Для получения "
+"корректных результатов рекомендуется отключить прозрачность контекста "
+"WebGL (параметр ``alpha``). Такая конфигурация используется по умолчанию "
+"в стандартном веб-плеере движка."
+
+msgid ""
+"You can use any HTML content behind the *canvas* element, to which the "
+"rendering is performed, as a background. To do this, activate the WebGL "
+"context transparency (the ``alpha`` parameter). Please note, that ``World"
+"  > Render Sky`` under Blender's ``World`` tab must be disabled. For "
+"correct results, it's recommended to set absolutely transparent black "
+"background color. Such the configuration is used by default in the "
+":ref:`scene viewer <viewer>` of Blend4Web SDK."
+msgstr ""
+"В качестве фона можно использовать любой HTML контент, находящийся позади"
+" элемента ``canvas``, который используется для рендеринга. Для это "
+"необходимо активировать прозрачность контекста WebGL (параметр "
+"``alpha``), предварительно отключив опцию ``World > Render Sky`` на "
+"вкладке ``World`` в Blender. Для получения корректных результатов "
+"рекомендуется выставить полностью прозрачный черный цвет фона. Такая "
+"конфигурация используется по умолчанию в стандартном :ref:`просмотрщике "
+"сцен <viewer>` SDK движка."
+
+msgid ":ref:`alpha_compositing`"
+msgstr ":ref:`alpha_compositing`"
+
+msgid "lighting"
+msgstr "освещение"
+
+msgid "shading"
+msgstr "затенение"
+
+msgid "types"
+msgstr "типы"
+
+msgid "light sources"
+msgstr "источники света"
+
+msgid "background"
+msgstr "цвет фона"
+
+#~ msgid "Background"
+#~ msgstr "Цвет фона"
+
+#~ msgid "Иackground"
+#~ msgstr "цвет фона"
+
+#~ msgid "*Dynamic Intesity*"
+#~ msgstr ""
+
+#~ msgid "Normal Editor"
+#~ msgstr "Редактор нормалей"
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "Normal editor workflow example:"
+#~ msgstr "Пример работы редактора нормалей:"
+
+#~ msgid "Main features of the normal editor:"
+#~ msgstr "Основные особенности редактора нормалей:"
+
+#~ msgid "all changes are being saved automatically;"
+#~ msgstr "все изменения записываются сразу же автоматически;"
+
+#~ msgid "edited normals are being exported automatically."
+#~ msgstr "редактированные нормали экспортируются автоматически."
+
+#~ msgid "Interface of the Vertex Normal Editor"
+#~ msgstr "Интерфейс редактора вертексных нормалей"
+
+#~ msgid "Activate"
+#~ msgstr ""
+
+#~ msgid "*Description*"
+#~ msgstr "*Описание*"
+
+#~ msgid "The new ``Activate`` button turns on vertex normal editing mode."
+#~ msgstr ""
+
+#~ msgid "*Usage*"
+#~ msgstr "*Использование*"
+
+#~ msgid "Show Normals"
+#~ msgstr ""
+
+#~ msgid "Rotation"
+#~ msgstr "Вращение"
+
+#~ msgid "Using these instruments you can change direction of the normals."
+#~ msgstr ""
+
+#~ msgid "Split Normals"
+#~ msgstr ""
+
+#~ msgid "Usage"
+#~ msgstr "Использование"
+
+#~ msgid "Average Split"
+#~ msgstr ""
+
+#~ msgid "Restore"
+#~ msgstr ""
+
+#~ msgid "Tree, Foliage and Face"
+#~ msgstr "Tree, Foliage и Face"
+
+#~ msgid "Copy/Paste"
+#~ msgstr ""
+
+#~ msgid "Copies the normal direction from one vertex to another."
+#~ msgstr "Копирует направление нормали с одного вертекса на другой."
+
+#~ msgid "Copy From Mesh"
+#~ msgstr ""
+
+#~ msgid "normals"
+#~ msgstr "нормали"
+
+#~ msgid "editor"
+#~ msgstr "редактор"
+

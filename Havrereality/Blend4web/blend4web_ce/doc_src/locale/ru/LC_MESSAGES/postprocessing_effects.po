@@ -1,0 +1,780 @@
+# Blend4Web User Manual Russian Translation: Postprocessing Effects
+# Copyright (C) 2014-2016, Triumph
+# This file is distributed under the same license as Blend4Web.
+# Blend4Web Team <info [at] blend4web.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Blend4Web 16.08\n"
+"Report-Msgid-Bugs-To: https://www.blend4web.com/en/forums/forum/17/\n"
+"POT-Creation-Date: 2017-04-20 16:04+0300\n"
+"PO-Revision-Date: 2015-08-28 10:55+0300\n"
+"Last-Translator: Blend4Web Team <info [at] blend4web.com>\n"
+"Language-Team: Russian <info [at] blend4web.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../postprocessing_effects.rst:5
+msgid "Postprocessing Effects"
+msgstr "Спецэффекты"
+
+#: ../postprocessing_effects.rst
+msgid "Table of Contents"
+msgstr "Содержание"
+
+#: ../postprocessing_effects.rst:16
+msgid "Motion Blur"
+msgstr "Размытие при движении"
+
+#: ../postprocessing_effects.rst:18
+msgid ""
+"The motion blur effect can be used to improve the realism of an "
+"interactive scene. It is displayed as picture blurring when the camera or"
+" objects move."
+msgstr ""
+"Эффект размытия при движении (motion blur) служит целям увеличения "
+"реализма интерактивной сцены. Он проявляется при движении камеры или "
+"объектов в виде \"смазывания\" изображения."
+
+#: ../postprocessing_effects.rst:25 ../postprocessing_effects.rst:53
+#: ../postprocessing_effects.rst:126 ../postprocessing_effects.rst:169
+#: ../postprocessing_effects.rst:198 ../postprocessing_effects.rst:232
+#: ../postprocessing_effects.rst:277 ../postprocessing_effects.rst:315
+msgid "Activation"
+msgstr "Активация"
+
+#: ../postprocessing_effects.rst:27
+msgid "Activate the ``Motion Blur`` panel on the ``Render`` tab."
+msgstr "Активировать панель ``Motion Blur`` во вкладке ``Render``."
+
+#: ../postprocessing_effects.rst:30 ../postprocessing_effects.rst:131
+#: ../postprocessing_effects.rst:174 ../postprocessing_effects.rst:203
+#: ../postprocessing_effects.rst:237 ../postprocessing_effects.rst:282
+#: ../postprocessing_effects.rst:325
+msgid "Additional settings"
+msgstr "Дополнительные настройки"
+
+#: ../postprocessing_effects.rst:33 ../postprocessing_effects.rst:260
+msgid "*Factor*"
+msgstr "*Factor*"
+
+#: ../postprocessing_effects.rst:33
+msgid ""
+"Effect appearance ratio. The higher this value is the stronger is the "
+"motion blur."
+msgstr ""
+"Степень проявления эффекта. Чем выше значение, тем сильнее эффект "
+"размытия. Значение по умолчанию 0.01."
+
+#: ../postprocessing_effects.rst:37
+msgid "*Decay Threshold*"
+msgstr "*Decay Threshold*"
+
+#: ../postprocessing_effects.rst:36
+msgid ""
+"Blur fade-out ratio. The higher this value is the more distinct is the "
+"effect. The default value is 0.01."
+msgstr ""
+"Степень плавности размытия. Чем выше значение, тем более резким будет "
+"эффект. Значение по умолчанию 0.01."
+
+#: ../postprocessing_effects.rst:44
+msgid "Depth of Field"
+msgstr "Глубина резкости камеры"
+
+#: ../postprocessing_effects.rst:46
+msgid ""
+"The depth of field effect (DOF) can be used to accentuate a part of a "
+"scene. It is displayed as picture blurring nearer and further from the "
+"camera focus."
+msgstr ""
+"Эффект глубины резкости камеры (depth of field, DOF) акцентирует внимание"
+" зрителя на части сцены. Проявляется в размытии изображения ближе и "
+"дальше от фокуса камеры."
+
+#: ../postprocessing_effects.rst:55
+msgid ""
+"Select an active camera and go to its settings panel ``Camera`` (``Object"
+" Data``)."
+msgstr ""
+"Выбрать активную камеру, перейти на панель ее настроек во вкладке "
+"``Camera`` (``Object Data``)."
+
+#: ../postprocessing_effects.rst:56
+msgid "Then two options are available:"
+msgstr "Далее возможны два варианта:"
+
+#: ../postprocessing_effects.rst:58
+msgid ""
+"Select an object to use as the camera's focus in the ``Focus`` option of "
+"the ``Depth of Field`` panel. In this case moving away or approaching "
+"this object will cause a corresponding correction of the camera focus."
+msgstr ""
+"На панели ``Depth of Field`` в опции ``Focus`` выбрать объект, на котором"
+" будет сфокусирована камера. В этом случае при удалении или приближении к"
+" этому объекту будет происходит соответствующая коррекция фокуса камеры."
+
+#: ../postprocessing_effects.rst:60
+msgid ""
+"Set a non-zero value for the ``Distance`` on the same panel (in Blender "
+"units = meters). In this case the camera focus will be located at this "
+"distance from the camera and will move together with it."
+msgstr ""
+"На той же панели установить ненулевое значение ``Distance`` (в метрах). В"
+" этом случае фокус камеры будет располагаться на заданном расстоянии от "
+"камеры и перемещаться вместе с ней."
+
+#: ../postprocessing_effects.rst:63
+msgid "Additional Settings"
+msgstr "Дополнительные настройки"
+
+#: ../postprocessing_effects.rst:70
+msgid "*Focus*"
+msgstr "*Focus*"
+
+#: ../postprocessing_effects.rst:70
+msgid "Sets the focal object. By default, this field is empty."
+msgstr ""
+"Задаёт объект, на котором фокусируется камера. Это поле пусто по "
+"умолчанию."
+
+#: ../postprocessing_effects.rst:73
+msgid "*Distance*"
+msgstr "*Distance*"
+
+#: ../postprocessing_effects.rst:73
+msgid ""
+"This parameter defines the focal distance. Available only if the "
+"``Focus`` parameter hasn't been set beforehand (if the corresponding "
+"field is empty). Set to zero by default."
+msgstr ""
+"Задаёт расстояние фокусировки. Этот параметр доступен только в том "
+"случае, если не установлен параметр ``Focus`` (соответствующее поле "
+"пусто). По умолчанию расстояние до точки фокуса равно нулю."
+
+#: ../postprocessing_effects.rst:78
+msgid "*Front Start*"
+msgstr "*Front Start*"
+
+#: ../postprocessing_effects.rst:76
+msgid ""
+"This sets the distance (in meters) from the focus to the nearest plane "
+"(relative to the camera) behind which blurring effect starts to occur. "
+"The default value is 1.0."
+msgstr ""
+"Задаёт расстояние (в метрах) от фокуса до ближней к камере плоскости, за "
+"которой начинает проявляться эффект размытия. Значение по умолчанию 1.0."
+
+#: ../postprocessing_effects.rst:78 ../postprocessing_effects.rst:86
+msgid ""
+"This parameter is available only if the ``High Quality (Bokeh)`` "
+"parameter is enabled."
+msgstr ""
+"Этот параметр доступен только при включённой опции ``High Quality "
+"(Bokeh)``."
+
+#: ../postprocessing_effects.rst:81
+msgid "*Front End*"
+msgstr "*Front End*"
+
+#: ../postprocessing_effects.rst:81
+msgid ""
+"This sets the distance from the camera and the nearest plane (relative to"
+" the camera) behind which blurring effect reaches maximum strength "
+"(defined by the ``Power`` value). Default value is 5.0."
+msgstr ""
+"Задаёт расстояние (в метрах) от фокуса до ближней к камере плоскости, за "
+"которой происходит полное размытие (сила размытия задаётся параметром "
+"``Power``). Значение по умолчанию 5.0."
+
+#: ../postprocessing_effects.rst:86
+msgid "*Rear Start*"
+msgstr "*Rear Start*"
+
+#: ../postprocessing_effects.rst:84
+msgid ""
+"This sets the distance from the focus to the furthest plane (relative to "
+"the camera) behind which blurring effect starts to occur. The default "
+"value is 1.0."
+msgstr ""
+"Задаёт расстояние (в метрах) от фокуса до дальней от камеры плоскости, за"
+" которой начинает проявляться эффект размытия. Значение по умолчанию 1.0."
+
+#: ../postprocessing_effects.rst:89
+msgid "*Rear End*"
+msgstr "*Rear End*"
+
+#: ../postprocessing_effects.rst:89
+msgid ""
+"This sets the distance from the camera to the furthest plane (relative to"
+" the camera) behind which blurring reaches maximum strength (defined by "
+"the ``Power`` value). Default value is 5.0."
+msgstr ""
+"Задаёт расстояние (в метрах) от фокуса до дальней от камеры плоскости, за"
+" которой происходит полное размытие (сила размытия задаётся параметром "
+"``Power``). Значение по умолчанию 5.0."
+
+#: ../postprocessing_effects.rst:92
+msgid "*Power*"
+msgstr "*Power*"
+
+#: ../postprocessing_effects.rst:92
+msgid ""
+"Blurring ratio. The value of this parameter can vary from 0.1 to 10. The "
+"default value is 2.0."
+msgstr ""
+"Сила размытия. Этот параметр может принимать значения от 0.1 до 10. "
+"Значение по умолчанию - 2.0."
+
+#: ../postprocessing_effects.rst:103
+msgid "*High Quality (Bokeh)*"
+msgstr "*High Quality (Bokeh)*"
+
+#: ../postprocessing_effects.rst:95
+msgid ""
+"This enables high quality rendering of the depth of field effect. "
+"Activating this option:"
+msgstr ""
+"Включает высококачественный рендеринг эффекта глубины резкости. Активация"
+" этого параметра:"
+
+#: ../postprocessing_effects.rst:97
+msgid ""
+"Enables bokeh effect and makes available the ``Bokeh Intensity`` "
+"parameter for adjusting the strength of the effect."
+msgstr ""
+"Включает эффект боке и опцию ``Bokeh Intensity``, которая может "
+"применяться для настройки силы этого эффекта."
+
+#: ../postprocessing_effects.rst:99
+msgid ""
+"Enables the ``Front Start`` and ``Rear Start`` parameters for setting "
+"soft transition between the distance from camera where the effect start "
+"to occur and the distance where it reaches its full strength."
+msgstr ""
+"Включает параметры ``Front Start`` и ``Rear Start``, предназначенные для "
+"установки мягкого перехода между расстоянием от камеры, за которым эффект"
+" размытия начинает проявляться, и расстоянием, за которым он достигает "
+"максимальной силы."
+
+#: ../postprocessing_effects.rst:101
+msgid "Enables ``Foreground Blur`` parameter that is described below."
+msgstr "Включает параметр ``Foreground Blur``, описанный ниже."
+
+#: ../postprocessing_effects.rst:103
+msgid "The parameter is disabled by default."
+msgstr "По умолчанию этот параметр деактивирован."
+
+#: ../postprocessing_effects.rst:106
+msgid "*Bokeh Intensity*"
+msgstr "*Bokeh Intensity*"
+
+#: ../postprocessing_effects.rst:106
+msgid ""
+"This value sets the strength of the bokeh effect. It can vary from zero "
+"to 1.0. Set to 0.3 by default."
+msgstr ""
+"Устанавливает силу эффекта боке. Значение может меняться от 0 до 1, "
+"значение по умолчанию - 0.3."
+
+#: ../postprocessing_effects.rst:110
+msgid "*Foreground Blur*"
+msgstr "*Foreground Blur*"
+
+#: ../postprocessing_effects.rst:109
+msgid ""
+"Enabling this option makes the engine to blur the silhouettes of the "
+"foreground objects, improving the quality of the effect at the cost of "
+"slight performance decrease. Disabled by default."
+msgstr ""
+"При включении этого параметра движок размывает границы объектов, "
+"находящихся на переднем плане, увеличивая качество эффекта размытия за "
+"счёт некоторого снижения производительности. По умолчанию отключен."
+
+#: ../postprocessing_effects.rst:117
+msgid "Screen-Space Ambient Occlusion"
+msgstr "Взаимное затенение"
+
+#: ../postprocessing_effects.rst:119
+msgid ""
+"The screen-space ambient occlusion (SSAO) effect can be used to fake "
+"complex light reflections from objects. The basis of this effect is that "
+"the space between close objects is less accessible for diffused light and"
+" hence is darker."
+msgstr ""
+"Эффект взаимного затенения (screen-space ambient occlusion, SSAO) "
+"применяется с целью воспроизведения сложного переотражения света от "
+"объектов. Пространство между близкими объектами менее доступно для "
+"рассеянного света и поэтому затеняется сильнее."
+
+#: ../postprocessing_effects.rst:128
+msgid ""
+"Activate the ``Ambient Occlusion SSAO`` panel under the ``Render`` tab "
+"and set the ``Render Shadows`` parameter to ``AUTO`` or ``ON``  on the "
+"``Render > Shadows`` panel."
+msgstr ""
+"Активировать панель ``Ambient Occlusion (SSAO)`` во вкладке ``Render`` и "
+"выставить параметр опции ``Render Shadows`` в положение ``AUTO`` или "
+"``ON``  на панели ``Render > Shadows``."
+
+#: ../postprocessing_effects.rst:134
+msgid "*Radius Increase*"
+msgstr "*Radius Increase*"
+
+#: ../postprocessing_effects.rst:134
+msgid ""
+"The spherical sampling radius multiply factor when transferring from the "
+"internal sampling ring to the external one. The default value is 3.0."
+msgstr ""
+"Фактор умножения радиуса сферического сэмплинга при переходе от "
+"внутреннего кольца к внешнему. Значение по умолчанию 3.0."
+
+#: ../postprocessing_effects.rst:137
+msgid "*Use Hemisphere*"
+msgstr "*Use Hemisphere*"
+
+#: ../postprocessing_effects.rst:137
+msgid ""
+"Use a hemispherical sampling for shading instead of a spherical. Besides,"
+" it uses different shading law."
+msgstr ""
+"Использовать для расчёта затенения полусферический сэмплинг вместо "
+"сферического. Помимо этого используется другой закон затенения."
+
+#: ../postprocessing_effects.rst:140
+msgid "*Use Blur Depth Test*"
+msgstr "*Use Blur Depth Test*"
+
+#: ../postprocessing_effects.rst:140
+msgid ""
+"Use edge-preserving blur to SSAO if flag will be turned on. Otherwise, it"
+" uses blur which averages a 4x4 rectangle around each pixel."
+msgstr ""
+"Если активировано - используется размытие SSAO на основе буфера глубины. "
+"Иначе - размытие по квадрату 4х4 по соседним пикселям."
+
+#: ../postprocessing_effects.rst:143
+msgid "*Blur Depth Test Discard Value*"
+msgstr "*Blur Depth Test Discard Value*"
+
+#: ../postprocessing_effects.rst:143
+msgid ""
+"Influence of depth difference between samples on blur weight. It uses "
+"with ``Use Blur Depth Test`` activated flag. The default value is 1.0."
+msgstr ""
+"Влияние разницы глубины сэмплов на их вес в размытии. Используется при "
+"активированном параметре ``Use Blur Depth Test``. Значение по умолчанию "
+"1.0."
+
+#: ../postprocessing_effects.rst:146
+msgid "*Influence*"
+msgstr "*Influence*"
+
+#: ../postprocessing_effects.rst:146
+msgid "SSAO appearance factor. The default value is 0.7."
+msgstr ""
+"Степень проявленности эффекта взаимного затенения. Значение по умолчанию "
+"0.7."
+
+#: ../postprocessing_effects.rst:149
+msgid "*Distance Factor*"
+msgstr "*Distance Factor*"
+
+#: ../postprocessing_effects.rst:149
+msgid ""
+"Factor of SSAO decay with distance. The default value is 0.0 (i.e. no "
+"decay)."
+msgstr ""
+"Фактор уменьшения проявленности эффекта взаимного затенения с "
+"расстоянием. Значение по умолчанию 0.0 (т.е. уменьшения нет)."
+
+#: ../postprocessing_effects.rst:153
+msgid "*Samples*"
+msgstr "*Samples*"
+
+#: ../postprocessing_effects.rst:152
+msgid ""
+"Number of samples (the more samples there are the better is the quality "
+"but the poorer is the performance). The default value is 16."
+msgstr ""
+"Количество сэмплов (чем больше, тем лучше качество, но меньше "
+"производительность). Значение по умолчанию 16."
+
+#: ../postprocessing_effects.rst:160
+msgid "God Rays"
+msgstr "Сумеречные лучи"
+
+#: ../postprocessing_effects.rst:162
+msgid ""
+"The god rays effect (aka crepuscular rays) simulates well-known natural "
+"phenomenon - the shining of illuminated air parts."
+msgstr ""
+"Эффект сумеречных лучей (crepuscular rays, \"god rays\") симулирует "
+"известное природное явление - свечение освещенных областей воздуха."
+
+#: ../postprocessing_effects.rst:171
+msgid "Activate the ``God Rays`` panel under the ``Render`` tab."
+msgstr "Активировать панель ``God Rays`` во вкладке ``Render``."
+
+#: ../postprocessing_effects.rst:177 ../postprocessing_effects.rst:209
+msgid "*Intensity*"
+msgstr "*Intensity*"
+
+#: ../postprocessing_effects.rst:177
+msgid "The effect appearance factor. The default value is 0.7."
+msgstr "Степень проявленности эффекта. Значение по умолчанию 0.7."
+
+#: ../postprocessing_effects.rst:180
+msgid "*Maximum Ray Length*"
+msgstr "*Maximum Ray Length*"
+
+#: ../postprocessing_effects.rst:180
+msgid ""
+"Rays length factor. Defines the step between samples of radial blurring. "
+"The default value is 1.0."
+msgstr ""
+"Фактор длины лучей. Определяет шаг сэмплов радиального размытия. Значение"
+" по умолчанию 1.0."
+
+#: ../postprocessing_effects.rst:184
+msgid "*Steps Per Pass*"
+msgstr "*Steps Per Pass*"
+
+#: ../postprocessing_effects.rst:183
+msgid "Number of steps per single sample. The default value is 10.0."
+msgstr "Количество шагов на один сэмпл. Значение по умолчанию 10.0."
+
+#: ../postprocessing_effects.rst:189
+msgid "Bloom"
+msgstr "Эффект засветки ярких деталей"
+
+#: ../postprocessing_effects.rst:191
+msgid ""
+"Bloom appears when a picture has elements with a very different "
+"brightness. A glowing halo is created around the bright details."
+msgstr ""
+"Эффект засветки (Bloom) проявляется при наличии на экране элементов с "
+"большой разницей в яркости. Вокруг ярких деталей создается светящийся "
+"ореол."
+
+#: ../postprocessing_effects.rst:200
+msgid "Activate the ``Bloom`` panel under the ``Render`` tab."
+msgstr "Активировать панель ``Bloom`` во вкладке ``Render``."
+
+#: ../postprocessing_effects.rst:206
+msgid "*Use Adaptive*"
+msgstr "*Use Adaptive*"
+
+#: ../postprocessing_effects.rst:206
+msgid "Use calculation of adaptive average luminance. Enabled by default."
+msgstr "Включает расчёт адаптивной средней яркости. По умолчанию включено."
+
+#: ../postprocessing_effects.rst:209
+msgid "Bloom intensity. Set to 1.0 by default."
+msgstr "Интенсивность засветки. По умолчанию равна 1.0."
+
+#: ../postprocessing_effects.rst:212
+msgid "*Blur*"
+msgstr "*Blur*"
+
+#: ../postprocessing_effects.rst:212
+msgid "Bloom blurriness factor. Set to 4.0 by default."
+msgstr "Степень размытия засветки. По умолчанию равна 4.0."
+
+#: ../postprocessing_effects.rst:216
+msgid "*Edge Luminance*"
+msgstr "*Edge Luminance*"
+
+#: ../postprocessing_effects.rst:215
+msgid ""
+"The boundary value of an element's relative brightness above which the "
+"bloom effect appears. Set to 1.0 by default."
+msgstr ""
+"Граничное значение относительной яркости элемента, выше которого начинает"
+" проявляться эффект засветки. По умолчанию равно 1.0."
+
+#: ../postprocessing_effects.rst:223
+msgid "Outlining"
+msgstr "Подсветка контура (outlining)"
+
+#: ../postprocessing_effects.rst:225
+msgid ""
+"As a result of the outline glow effect, a luminous colored halo will be "
+"displayed around the object."
+msgstr ""
+"В результате применения эффекта подсветки контура вокруг объекта "
+"появляется светящийся ореол произвольного цвета."
+
+#: ../postprocessing_effects.rst:234
+msgid ""
+"The outlining is activated programmatically via API. Different animation "
+"models can be applied such as constant glow, fading out glow, pulsatory "
+"glow and any other. In order to enable the outlining effect on a certain "
+"object, make sure that the ``Render > Object Selection`` panel's "
+"``Enable`` property is set to ``ON`` or ``AUTO``."
+msgstr ""
+"Эффект подсветки контура активируется программно через API. Может быть "
+"реализован как эффект постоянного свечения, так и затухающего, "
+"пульсирующего и любой другой модели. Для включения возможности подсветки "
+"объектов необходимо убедиться, что в панели ``Render > Object Selection``"
+" поле ``Enable`` установлено в состояние ``ON`` или ``AUTO``."
+
+#: ../postprocessing_effects.rst:239
+msgid "On the ``Object > Selection and Outlining`` panel:"
+msgstr "На панели ``Object > Selection and Outlining``:"
+
+#: ../postprocessing_effects.rst:242
+msgid "*Enable Outlining*"
+msgstr "*Enable Outlining*"
+
+#: ../postprocessing_effects.rst:242
+msgid "Permit using the outline glow effect on this object."
+msgstr "Разрешить использование эффекта подсветки контура на конкретном объекте."
+
+#: ../postprocessing_effects.rst:245
+msgid "*Duration*"
+msgstr "*Duration*"
+
+#: ../postprocessing_effects.rst:245
+msgid "Duration of glow animation, seconds. The default value is 1."
+msgstr "Длительность анимации подсветки, сек. Значение по умолчанию 1."
+
+#: ../postprocessing_effects.rst:248
+msgid "*Period*"
+msgstr "*Period*"
+
+#: ../postprocessing_effects.rst:248
+msgid "Repeat period of glow animation, seconds. The default value is 1."
+msgstr "Период повторения анимации подсветки, сек. Значение по умолчанию 1."
+
+#: ../postprocessing_effects.rst:251
+msgid "*Relapses*"
+msgstr "*Relapses*"
+
+#: ../postprocessing_effects.rst:251
+msgid ""
+"The number of iterations of glow animation. If zero, animation is "
+"repeated forever. The default value is 0."
+msgstr ""
+"Количество итераций анимации подсветки. В случае 0 анимация будет "
+"повторяться бесконечно. Значение по умолчанию 0."
+
+#: ../postprocessing_effects.rst:255
+msgid "*Outline on Select*"
+msgstr "*Outline on Select*"
+
+#: ../postprocessing_effects.rst:254
+msgid ""
+"Activate glow animation upon selecting the object. In this case the "
+"``Selectable`` option must be enabled. In case of a user-defined glow "
+"animation model, this option must be disabled in order to avoid conflict."
+msgstr ""
+"Активация анимации подсветки при выделении объекта. Для данного случая "
+"необходимо включить опцию ``Selectable``. При необходимости реализации "
+"собственной модели подсветки объекта следует отключить эту опцию во "
+"избежание конфликта."
+
+#: ../postprocessing_effects.rst:257
+msgid "On the ``Render > Object Outlining`` panel:"
+msgstr "На панели ``Render > Object Outlining``:"
+
+#: ../postprocessing_effects.rst:260
+msgid ""
+"When this parameter decreases so does the thickness and the brightness of"
+" the halo around the object. The default value is 1."
+msgstr ""
+"Толщина и яркость ореола, окружающего объект. Падает с уменьшением "
+"параметра. Значение по умолчанию 1."
+
+#: ../postprocessing_effects.rst:262
+msgid ""
+"The ``Render > Object Outlining`` settings are taken as default when the "
+"glow effect is initiated via API."
+msgstr ""
+"При управлении через API настройки на панели ``Render > Object "
+"Outlining`` воспринимаются как настройки по умолчанию."
+
+#: ../postprocessing_effects.rst:268
+msgid "Glow"
+msgstr "Свечение (glow)"
+
+#: ../postprocessing_effects.rst:270
+msgid ""
+"Effect of halo which is observed around emissive objects due to light "
+"scattering in the atmosphere and inside the human eye."
+msgstr ""
+"Эффект возникновения ореола вокруг светящихся объектов, возникающий "
+"вследствие рассеивания света в атмосфере и внутри человеческого глаза."
+
+#: ../postprocessing_effects.rst:279
+msgid ""
+"Add a :ref:`B4W_GLOW_OUTPUT <glow_output>` node to a node material. The "
+"``Enable Glow Materials`` option on the ``Render > Glow Materials`` panel"
+" should be set to ``ON`` or ``AUTO``."
+msgstr ""
+"Добавить в нодовый материал ноду :ref:`B4W_GLOW_OUTPUT <glow_output>`. "
+"Для включения возможности свечения в панели ``Render > Glow Materials`` "
+"опция ``Enable`` должна быть установлена в состояние ``ON`` или ``AUTO``."
+
+#: ../postprocessing_effects.rst:285
+msgid "*Small Mask: Intensity*"
+msgstr "*Small Mask: Intensity*"
+
+#: ../postprocessing_effects.rst:285
+msgid ""
+"Intensity of glow obtained through the smaller mask. The default value is"
+" 2.0."
+msgstr "Интенсивность свечения по малой маске. Значение по умолчанию 2.0."
+
+#: ../postprocessing_effects.rst:288
+msgid "*Small Mask: Width*"
+msgstr "*Small Mask: Width*"
+
+#: ../postprocessing_effects.rst:288
+msgid "Width of glow obtained through the smaller mask. The default value is 2.0."
+msgstr "Ширина свечения по малой маске. Значение по умолчанию 2.0."
+
+#: ../postprocessing_effects.rst:292
+msgid "*Large Mask: Intensity*"
+msgstr "*Large Mask: Intensity*"
+
+#: ../postprocessing_effects.rst:291
+msgid ""
+"Intensity of glow obtained through the larger mask. The default value is "
+"2.0."
+msgstr "Интенсивность свечения по большой маске. Значение по умолчанию 2.0."
+
+#: ../postprocessing_effects.rst:295
+msgid "*Large Mask: Width*"
+msgstr "*Large Mask: Width*"
+
+#: ../postprocessing_effects.rst:295
+msgid "Width of glow obtained through the larger mask. The default value is 6.0."
+msgstr "Ширина свечения по большой маске. Значение по умолчанию 6.0."
+
+#: ../postprocessing_effects.rst:299
+msgid "*Render Glow Over Transparent Objects*"
+msgstr "*Render Glow Over Transparent Objects*"
+
+#: ../postprocessing_effects.rst:298
+msgid "Render the glow effect over transparent objects."
+msgstr ""
+"Отрисовывание эффекта свечения поверх прозрачных объектов. По умолчанию "
+"выключено."
+
+#: ../postprocessing_effects.rst:306
+msgid "Anti-Aliasing"
+msgstr "Сглаживание"
+
+#: ../postprocessing_effects.rst:308
+msgid ""
+"Anti-aliasing is used to reduce undesirable rendering artifacts (poor "
+"pixelization)."
+msgstr ""
+"Сглаживание (anti-aliasing) необходимо для уменьшения влияния "
+"нежелательных артефактов рендеринга (\"зубчатости\")."
+
+#: ../postprocessing_effects.rst:317
+msgid ""
+"Select quality profile using ``AA Quality`` menu located on the ``Render "
+"> Anti-Aliasing`` panel."
+msgstr ""
+"Выбрать один из профилей качества в поле ``AA Quality`` на панели "
+"``Render > Anti-Aliasing``:"
+
+#: ../postprocessing_effects.rst:319
+msgid "*None* - disable anti-aliasing,"
+msgstr "*None* - антиалиасинг отключен,"
+
+#: ../postprocessing_effects.rst:320
+msgid ""
+"*Low*, *Medium*, *High* - enable anti-aliasing with the given quality "
+"profile."
+msgstr ""
+"*Low*, *Medium*, *High* - применяется антиалиасинг с низкими, средними и "
+"высокими параметрами качества соответственно."
+
+#: ../postprocessing_effects.rst:322
+msgid "*Medium* profile is used by default."
+msgstr "Значение по умолчанию: *Medium*."
+
+#: ../postprocessing_effects.rst:327
+msgid ""
+"The anti-aliasing method is assigned simultaneously with the selection of"
+" the engine performance profile:"
+msgstr ""
+"Итоговые настройки сглаживания назначаются композицией выбора профиля "
+"качества антиалиасинга и выбора профиля работы движка. При выборе профиля"
+" работы движка действуют следующие настройки:"
+
+#: ../postprocessing_effects.rst:329
+msgid "*low quality* - no anti-aliasing,"
+msgstr "*низкое качество* - антиалиасинг отключен,"
+
+#: ../postprocessing_effects.rst:330
+msgid ""
+"*high quality* and *ultra quality* - use the FXAA 3.11 algorithm (Fast "
+"Approximate Anti-Aliasing by Nvidia)."
+msgstr ""
+"*высокое качество* и *максимальное качество* - использовать алгоритм FXAA"
+" 3.11 (Fast Approximate Anti-Aliasing, Nvidia)."
+
+#: ../postprocessing_effects.rst:11
+msgid "motion blur"
+msgstr "размытие при движении (motion blur)"
+
+#: ../postprocessing_effects.rst:39
+msgid "depth of field"
+msgstr "глубина резкости камеры (depth of field)"
+
+#: ../postprocessing_effects.rst:39
+msgid "DOF"
+msgstr "DOF"
+
+#: ../postprocessing_effects.rst:112
+msgid "screen-space ambient occlusion"
+msgstr "взаимное затенение (screen-space ambient occlusion)"
+
+#: ../postprocessing_effects.rst:112
+msgid "SSAO"
+msgstr "SSAO"
+
+#: ../postprocessing_effects.rst:155
+msgid "crepuscular rays"
+msgstr "сумеречные лучи (crepuscular rays)"
+
+#: ../postprocessing_effects.rst:155
+msgid "god rays"
+msgstr "Сумеречные лучи"
+
+#: ../postprocessing_effects.rst:218
+msgid "outline glow"
+msgstr "подсветка контура (outline glow)"
+
+#: ../postprocessing_effects.rst:301
+msgid "anti-aliasing"
+msgstr "сглаживание"
+
+#~ msgid "*Key*"
+#~ msgstr ""
+
+#~ msgid "*Front*"
+#~ msgstr ""
+
+#~ msgid "*Rear*"
+#~ msgstr ""
+
+#~ msgid "Blurring ratio. The default value is 3.0."
+#~ msgstr "Степень размытия. Значение по умолчанию 3.0."
+
+#~ msgid "*Bokeh*"
+#~ msgstr ""
+
+#~ msgid "Activating this option enables bokeh effect. Disabled by default."
+#~ msgstr "Включает эффект боке. По умолчанию выключено."
+
+#~ msgid "Bloom intensity."
+#~ msgstr "Интенсивность эффекта свечения."
+
