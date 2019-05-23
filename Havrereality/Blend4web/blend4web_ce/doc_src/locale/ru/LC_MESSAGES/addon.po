@@ -1,0 +1,1974 @@
+# Blend4Web User Manual Russian Translation: Addon
+# Copyright (C) 2014-2016, Triumph
+# This file is distributed under the same license as Blend4Web.
+# Blend4Web Team <info [at] blend4web.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Blend4Web 16.08\n"
+"Report-Msgid-Bugs-To: https://www.blend4web.com/en/forums/forum/17/\n"
+"POT-Creation-Date: 2017-12-20 10:48+0300\n"
+"PO-Revision-Date: 2015-08-28 10:55+0300\n"
+"Last-Translator: Blend4Web Team <info [at] blend4web.com>\n"
+"Language-Team: Russian <info [at] blend4web.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+msgid "Add-on"
+msgstr "Аддон"
+
+msgid "Table of Content"
+msgstr "Содержание"
+
+msgid "Local Development Server"
+msgstr "Локальный сервер разработки"
+
+msgid ""
+"Settings for the local development server can be found in :file:`File > "
+"User Preferences...` (hot keys :file:`Ctrl-Alt-U`). Here you can change "
+"the port number to be used to run the development server (6687 by "
+"default), and also enable its launching upon Blender startup. To do this,"
+" enable ``Run on Startup`` option in the add-on settings."
+msgstr ""
+"Настройки локального сервера разработки находятся в меню :file:`File > "
+"User Preferences...` (горячие клавиши :file:`Ctrl-Alt-U`). Здесь можно "
+"изменить номер порта, используемый при создании локального сервера "
+"разработки (6687 по умолчанию), или включить автоматический запуск "
+"сервера при запуске Blender’a: для этого достаточно включить опцию ``Run "
+"on Startup`` в настройках аддона."
+
+msgid ""
+"After changing local development server settings in it required to "
+"restart Blender."
+msgstr ""
+"После изменения настроек локального сервера разработчика требуется "
+"перезапуск Blender’a."
+
+msgid ""
+"It is possible for the local server to process external requests. To do "
+"that enable the option ``Enable External Requests``."
+msgstr ""
+"Имеется возможность сделать локальный сервер доступным из внешней сети. "
+"Для этого достаточно включить свойство ``Enable External Requests``."
+
+msgid ""
+"If you chose not to start the server automatically, you can always do it "
+"manually: go to the ``Render`` tab and press the ``Start Server`` button "
+"on the ``Development Tools`` panel:"
+msgstr ""
+"Если не был настроен автоматический запуск сервера, то его можно "
+"стартовать вручную по кнопке ``Start Server`` во вкладке ``Render``, на "
+"панели ``Developement Tools``:"
+
+msgid ""
+"If the local development server cannot be launched, the corresponding "
+"message will be displayed instead of the ``Start Server`` button."
+msgstr ""
+"Если запуск локального сервера невозможен, вместо кнопки ``Start Server``"
+" будет выведено соответствующее сообщение."
+
+msgid ""
+"If the server is failed to run, an error message will be shown describing"
+" the reason:"
+msgstr "В случае ошибки запуска сервера будет показано окно с описанием причины:"
+
+msgid ""
+"This error can arise if the server port is already used by some other "
+"application."
+msgstr ""
+"Чаще всего ошибка возникает из-за того, что указанный серверу адрес уже "
+"используется другим приложением."
+
+msgid ""
+"Press the ``SDK Index`` button to open the index web page of the "
+"Blend4Web SDK in the browser. This page is available at "
+"http://localhost:6687."
+msgstr ""
+"Нажмите кнопку SDK Index для запуска в браузере обзорной веб-страницы "
+"Blend4Web SDK, доступной по адресу http://localhost:6687."
+
+msgid ""
+"As a result, the default browser for your operating system will be "
+"launched."
+msgstr ""
+"При этом будет автоматически запущен браузер, используемой в операционной"
+" системе по умолчанию."
+
+msgid ""
+"The ``Project Manager`` button can be used to open :ref:`project manager "
+"<project_management>`."
+msgstr ""
+"Кнопка ``Project Manager`` открывает :ref:`менеджер проектов "
+"<project_management>`."
+
+msgid ""
+"The ``Fast Preview`` button loads the scene that is currently open in "
+"Blender, into the :ref:`viewer <viewer>`."
+msgstr ""
+"Кнопка ``Fast Preview`` вызывает :ref:`просмотрщик сцен <viewer>` и "
+"загружает в него сцену, открытую в Blender на данный момент."
+
+msgid ""
+"This button is duplicated in the ``Info`` panel of the :ref:`3D View "
+"window <ui_3dview>`."
+msgstr ""
+"Эта кнопка также присутствует на панели ``Info`` окна "
+":ref:`3D View <ui_3dview>`."
+
+msgid "``Fast Preview`` button on the ``Info`` panel"
+msgstr "Кнопка ``Fast Preview`` на панели ``Info``"
+
+msgid ""
+"The button at the right side of it controls data syncronization between "
+"Blender and :ref:`Scene Viewer <viewer>`. If this option is enabled, re-"
+"exporting a scene will cause Scene Viewer application (if it is open) to "
+"reload and update the scene in accordance to the changes made to it. This"
+" option eliminates the need to open preview scene manually after "
+"exporting it. It is enabled by default."
+msgstr ""
+"Кнопка справа от неё усправляет синхронизацией данных между Blender и "
+":ref:`Просмотрщиком сцен <viewer>`. Если эта опция включена, то при повторном "
+"экспорте сцены Просмотрщик (если он открыт) перезагрузит запущенную сцену. "
+"Таким образом устраняется необходимость запускать изменённую вручную, "
+"чтобы увидеть изменения. Эта опция включена по умолчанию."
+
+msgid ""
+"The ``Fast Preview`` button in the ``Info`` panel is available in "
+"``Cycles`` render engine as well."
+msgstr ""
+"Кнопка ``Fast Preview`` также присутствует на панели ``Info`` в "
+"режиме рендеринга ``Cycles``."
+
+msgid ""
+"The server can be stopped by pressing the ``Stop Server`` button. It also"
+" stops when Blender is closed."
+msgstr ""
+"Сервер может быть остановлен по нажатию на кнопку ``Stop Server``. Сервер"
+" также прекращает работу при закрытии программы Blender."
+
+msgid "Running Viewer and Demos"
+msgstr "Запуск просмотрщика сцен и демо-приложений"
+
+msgid "The index page contains the following links:"
+msgstr "Обзорная страница содержит следующие ссылки:"
+
+msgid ":ref:`Project Manager <project_management>`;"
+msgstr ":ref:`Менеджер проектов <project_management>`;"
+
+msgid ""
+":ref:`Code Snippets <code_snippets>`, a list of demo applications. A :ref"
+":`WebGL-capable browser <browser_webgl_support>` is required to run these"
+" apps;"
+msgstr ""
+":ref:`Примеры кода <code_snippets>`: список демонстрационных приложений. "
+"Для их запуска необходим :ref:`браузер с поддержкой WebGL "
+"<browser_webgl_support>`."
+
+msgid ""
+"WebGL Report page for checking the level of WebGL support provided by the"
+" web browser;"
+msgstr ""
+"Страница WebGL Report, с помощью которой вы можете проверить степень "
+"поддержки WebGL вашим браузером;"
+
+msgid ""
+":ref:`User Manual <about>`, available in both HTML and PDF form in three "
+"languages;"
+msgstr ""
+":ref:`Документация <about>` на трёх разных языках, доступная как в HTML-,"
+" так и в PDF-формате;"
+
+msgid ""
+"API Reference that contains descriptions for every API module and method "
+"provided with the Blend4Web engine;"
+msgstr ""
+"Документация API, содержащая описания всех модулей и методов API, "
+"доступных в движке Blend4Web;"
+
+msgid "Tutorials;"
+msgstr "Уроки"
+
+msgid ""
+"FAQ page where you can find answers to some of the most basic questions "
+"regarding using the engine;"
+msgstr ""
+"Страница \"Вопрос-Ответ\", на которой вы можете найти ответы на некоторые"
+" общие вопросы, связанные с использованием движка;"
+
+msgid "Community Support Forums;"
+msgstr "Форумы сообщества;"
+
+msgid "Support Email (only available in PRO version)."
+msgstr "Адрес электронной почты поддержки (доступен только для PRO-версии)."
+
+msgid ""
+"If the SDK apps are not displayed correctly, or error messages are shown,"
+" follow the instructions in the :ref:`renderer_not_working` section."
+msgstr ""
+"Если приложения SDK не отображаются корректно, или появляются сообщения "
+"об ошибках, необходимо предпринять действия, описанные в разделе "
+":ref:`renderer_not_working`."
+
+msgid "Export Formats"
+msgstr "Форматы экспорта"
+
+msgid ""
+"After the scene is finished, you need to convert it into a format "
+"supported by the Blend4Web engine."
+msgstr ""
+"После того, как сцена закончена, её нужно преобразовать в формат, "
+"понятный движку Blend4Web."
+
+msgid "For now, two formats are supported: JSON and HTML."
+msgstr "На сегодняшний день поддерживаются два формата экспорта: JSON и HTML."
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid ""
+"Exporting the scene to this format creates a ``.json`` (JavaScript Object"
+" Notation) file that contains all exported data structures and links to "
+"external resources (images, sounds and such), and also a ``.bin`` file "
+"that contains model data arrays in binary format."
+msgstr ""
+"При экспорте в этот формат создаётся файл ``.json`` (JavaScript Object "
+"Notation), в котором хранятся экспортируемые структуры данных и ссылки на"
+" внешние ресурсы (изображения, звуки и пр.), а также файл ``.bin``, "
+"хранящий массивы данных моделей в бинарном формате."
+
+msgid ""
+"If media resources are `packed into the .blend file "
+"<https://www.blender.org/manual/data_system/introduction.html#pack-and-"
+"unpack-data>`_, they will be unpacked during the export and placed in the"
+" project's directory (inside the SDK directory). It should be noted that "
+"the names of such files will be automatically changed, which can "
+"complicate working with them."
+msgstr ""
+"Если медиаресурсы `запакованы в blend-файл "
+"<https://www.blender.org/manual/data_system/introduction.html#pack-and-"
+"unpack-data>`_, при экспорте они будут извлечены и размещены в каталоге "
+"проекта (внутри каталога SDK). При этом таким файлам будут автоматически "
+"присвоены имена (отличные от исходных), что может затруднить дальнейшую "
+"работу с ними."
+
+msgid ""
+"It is recommended to store all the resources in a dedicated folder inside"
+" the SDK directory, it can be called ``projects/project_name/assets`` for"
+" example."
+msgstr ""
+"Ресурсы рекомендуется размещать в отдельной директории внутри каталога "
+"SDK, например ``projects/project_name/имя_проекта``."
+
+msgid ""
+"In accordance with the security measures, the development server can only"
+" access the SDK folder. If media data is placed in another folder, the "
+"server won't be able to deploy it during the export (even if it is "
+"working correctly in Blender itself)."
+msgstr ""
+"В соответствии с требованиями безопасности, сервер разработки имеет "
+"доступ только к каталогу SDK. Если медиаданные расположены в другом "
+"каталоге, сервер не сможет подключить их при экспорте (даже если в самом "
+"Blender они работают нормально)."
+
+msgid ""
+"Paths to the external resources should be relative. If this is not the "
+"case,  execute the ``File > External Data > Make All Paths Relative`` "
+"command, or  else problems with opening the file on other computers may "
+"occur."
+msgstr ""
+"Пути к внешним ресурсам должны быть относительными. Если это не так, "
+"следует выполнить команду ``File > External Data > Make All Paths "
+"Relative``, иначе могут возникнуть проблемы с открытием файлов на других "
+"компьютерах."
+
+msgid ""
+"This is the main format for complex projects that include multiple scenes"
+" and require JavaScript programming. Project development is further "
+"described in the  :ref:`corresponding section <developers>`."
+msgstr ""
+"Это основной формат для сложных проектов, которые могут включать "
+"несколько сцен и требуют написание программного кода на JavaScript. "
+"Работа с проектом описана в :ref:`соответствующем разделе <developers>`."
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid ""
+"Exporting the scene to this format pack all scene resources into one file"
+" with the HTML extension. This HTML file contains not only the scene "
+"itself, but also textures, sounds, Blend4Web engine and standard "
+":ref:`web player <web_player>`. A file like this can be executed on any "
+"computer and any mobile device that have a web browser with WebGL "
+"support."
+msgstr ""
+"При экспорте в этот формат все ресурсы сцены упаковываются в один файл, "
+"имеющий расширение HTML. HTML-файл включает не только сцену, но и "
+"текстуры, звуки, сам движок Blend4Web и стандартный :ref:`веб-плеер "
+"<web_player>`. Такой файл может быть воспроизведен на любом компьютере "
+"или мобильном устройстве, имеющем браузер с поддержкой WebGL."
+
+msgid ""
+"You can't use HTML files for further development, but you also don't need"
+" any additional actions to run them. This format is useful for developing"
+" relatively simple applications of moderate size."
+msgstr ""
+"HTML-файлы не могут применяться для дальнейшей разработки, но и не "
+"требуют никаких дополнительных действий для запуска. Этот формат "
+"рекомендуется применять для относительно простых проектов небольшого "
+"размера."
+
+msgid ""
+"It should be noted, however, that HTML applications do not support "
+"following features:"
+msgstr ""
+"Однако следует заметить, что HTML-приложения не поддерживают следующие "
+"возможности:"
+
+msgid ":ref:`Physics <physics>`"
+msgstr ":ref:`Физику <physics>`"
+
+msgid ":ref:`DDS textures <converter_data_format>`"
+msgstr ":ref:`текстуры формата DDS <converter_data_format>`"
+
+msgid ":ref:`min50 textures <converter>`"
+msgstr ":ref:`текстуры min50 <converter>`"
+
+msgid "Export Options"
+msgstr "Опции экспорта"
+
+msgid "*Autosave blend File*"
+msgstr "*Autosave blend File*"
+
+msgid ""
+"Autosaving the file from which export occurs. **Enabled by default**. "
+"Autosaving is performed right after the export to guarantee conformity "
+"between the current blend file and the exported file contents. In "
+"addition, the relative path to the exported file is saved for "
+"convenience."
+msgstr ""
+"Автосохранение файла, из которого осуществляется экспорт. **Включено по "
+"умолчанию**. Осуществляется непосредственно после экспорта с целью "
+"поддержки соответствия между текущим содержимым blend-файла и экспортного"
+" файла. Кроме того, для удобства в blend-файле сохраняется относительный "
+"путь к экспортному файлу."
+
+msgid "*Strict Mode*"
+msgstr "*Strict Mode*"
+
+msgid ""
+"This mode prevents export if there are any errors or messages for users' "
+"attention. This mode is enabled with the ``Strict Mode`` setting in the "
+"export menu:"
+msgstr ""
+"Данный режим блокирует экспорт при наличии ошибок и сообщений, требующих "
+"внимания пользователя. Режим включается при выставлении опции ``Strict "
+"Mode`` в меню экспорта:"
+
+msgid ""
+"If there are any non-critical errors or messages for users' attention, a "
+"dialog window will be show like this:"
+msgstr ""
+"При наличии некритических ошибок экспорта или сообщений, требующих "
+"внимания пользователя, вашему вниманию будет представлено диалоговое окно"
+" вида:"
+
+msgid "*Export Converted Media*"
+msgstr "*Export Converted Media*"
+
+msgid ""
+"This option is available for HTML export. When this option is enabled, "
+"the converted media files of different formats are written in the HTML "
+"file. Using different media files is essential to create cross-browser "
+"and cross-platform applications while using HTML export. These files can "
+"be created by the :ref:`converter <converter>`."
+msgstr ""
+"Опция доступна при html-экспорте. Включение данного режима экспорта "
+"позволяет записать в HTML файл конвертированные медиафайлы разных "
+"форматов. Это необходимо использовать при создании кроссбраузерных и "
+"кроссплатформенных приложений при html-экспорте. При этом в html-файл "
+"будут записываться файлы, созданные с использованием :ref:`нашего "
+"конвертера <converter>`."
+
+msgid "*Run in Viewer*"
+msgstr "*Run in Viewer*"
+
+msgid "Automatically launch the Scene Viewer and add the exported scene to it."
+msgstr ""
+"Автоматически запустить просмотрщик сцен и добавить в него экспортируемую"
+" сцену."
+
+msgid ""
+"When using the :ref:`local development server "
+"<local_development_server>`, there is a possibility to open the exported "
+"``.json`` scene in the Scene Viewer. To do this, select any path inside "
+"the Blend4Web SDK file structure upon export."
+msgstr ""
+"При использовании :ref:`локального сервера разработки "
+"<local_development_server>`, имеется возможность открыть сцену, "
+"экспортированную в формате ``.json``, в просмотрщике сцен. Для этого при "
+"экспорте необходимо выбрать любой путь, лежащий внутри файловой структуры"
+" Blend4Web SDK."
+
+msgid ""
+"A directory inside the SDK should be used for export. If not, this option"
+" will not be displayed in the menu. Also, it will not be displayed if the"
+" local development server is down."
+msgstr ""
+"В качестве директории для экспорта может использоваться созданная "
+"пользователем директория внутри Blend4Web SDK. При несоблюдении этого "
+"условия опция не будет отображаться в меню экспорта. Также опция не будет"
+" отображаться если локальный web-сервер не запущен."
+
+msgid "Initialization Errors"
+msgstr "Ошибки инициализации"
+
+msgid ""
+"Initialization errors can arise upon installation of the add-on or when a"
+" scene is opened in Blender. In this case a dialog window with the error "
+"description is showed."
+msgstr ""
+"Ошибки инициализации могут проявляться при инициализации аддона, либо при"
+" загрузке сцены в Blender. При возникновении появится диалоговое окно с "
+"описанием ошибки."
+
+msgid "Error message"
+msgstr "Сообщение об ошибке"
+
+msgid "Cause"
+msgstr "Причина"
+
+msgid ""
+"Blend4Web initialization error! Add-on is not compatible with the "
+"PLATFORM platform."
+msgstr ""
+"Blend4Web initialization error! Add-on is not compatible with the "
+"PLATFORM platform."
+
+msgid "The Blend4Web add-on is not compatible with the PLATFORM platform."
+msgstr "Ошибка загрузки аддона. Аддон не совместим с платформой PLATFORM."
+
+msgid ""
+"Warning: Blender version mismatch. Blender VER_REQUIRED is recommended "
+"for the Blend4Web add-on. Current version is VER_CURRENT."
+msgstr ""
+"Warning: Blender version mismatch. Blender VER_REQUIRED is recommended "
+"for the Blend4Web add-on. Current version is VER_CURRENT."
+
+msgid ""
+"Warning about possible incompatibility with the current Blender version. "
+"It is recommended to use VER_REQUIRED Blender version. The current "
+"version is VER_CURRENT."
+msgstr ""
+"Предупреждение о возможной несовместимости с текущей версией Blender. Для"
+" работы рекомендуется версия Blender'а VER_REQUIRED. Текущая версия - "
+"VER_CURRENT."
+
+msgid "Incorrect add-on directory name."
+msgstr "Incorrect add-on directory name."
+
+msgid ""
+"Incorrect name of the add-on directory. Add-on structure in the archive "
+"has been damaged, or entirety of the archive has been disrupted."
+msgstr ""
+"Некорректное имя директории аддона. Структура аддона в архиве была "
+"повреждена, либо была нарушена целостность архива."
+
+msgid "Compatibility Errors"
+msgstr "Ошибки совместимости"
+
+msgid ""
+"Compatibility errors may arise when trying to view a scene in a browser, "
+"in the following cases: if version of the add-on used to export the scene"
+" differs from version of the Blend4Web engine which tries to load the "
+"scene, or if .bin file does not correspond to the .json file."
+msgstr ""
+"Ошибки совместимости версий могут проявиться при просмотре сцены в "
+"браузере, если версия аддона, которым был произведен экспорт сцены, не "
+"соответствует версии движка Blend4Web, который пытается эту сцену "
+"загрузить, а также если .bin-файл не соответствует .json-файлу."
+
+msgid ""
+"Engine version is too old as compared to version of the add-on with which"
+" the scene was exported. The scene will not be loaded. We recommend you "
+"to use the latest versions of the engine and the add-on."
+msgstr ""
+"Версия движка сильно устарела по сравнению с версией аддона, которым был "
+"произведен экспорт сцены. Сцена не будет загружена. Рекомендуется "
+"использовать последнюю версию движка и аддона."
+
+msgid ""
+"JSON version is too old relative to B4W engine: VER_OLD, required: "
+"VER_NEW. Reexport scene with the latest B4W add-on to fix it."
+msgstr ""
+"JSON version is too old relative to B4W engine: VER_OLD, required: "
+"VER_NEW. Reexport scene with the latest B4W add-on to fix it."
+
+msgid ""
+"Version of the add-on, with which the scene was exported, is too old: "
+"VER_OLD. The engine requires: VER_NEW. The scene will not be loaded. We "
+"recommend you to reexport the scene using the latest version of the add-"
+"on. We also recommend to use the latest version of the engine."
+msgstr ""
+"Версия аддона, которым была экспортирована сцена, сильно устарела: "
+"VER_OLD, движком требуется - VER_NEW. Сцена не будет загружена. "
+"Рекомендуется переэкспортировать сцену аддоном последней версии, а также "
+"использовать последнюю версию движка."
+
+msgid ""
+"JSON version is a bit old relative to B4W engine: VER_OLD, required: "
+"VER_NEW. Some compatibility issues can occur. Reexport scene with the "
+"latest B4W add-on to fix it."
+msgstr ""
+"JSON version is a bit old relative to B4W engine: VER_OLD, required: "
+"VER_NEW. Some compatibility issues can occur. Reexport scene with the "
+"latest B4W add-on to fix it."
+
+msgid ""
+"Version of the add-on, with which the scene was exported, is a bit old: "
+"VER_OLD. The engine requires: VER_NEW. The scene will be loaded as usual,"
+" however some errors may occur. We recommend you to reexport the scene "
+"using the latest version of the add-on. We also recommend to use the "
+"latest version of the engine."
+msgstr ""
+"Версия аддона, которым была экспортирована сцена, немного устарела: "
+"VER_OLD, движком требуется - VER_NEW. Сцена будет загружена, однако "
+"возможны различные ошибки. Рекомендуется переэкспортировать сцену аддоном"
+" последней версии, а также использовать последнюю версию движка."
+
+msgid ""
+"B4W engine version is too old relative to JSON. Can't load the scene. "
+"Update your engine version to fix it."
+msgstr ""
+"B4W engine version is too old relative to JSON. Can't load the scene. "
+"Update your engine version to fix it."
+
+msgid ""
+"B4W engine version is a bit old relative to JSON. Some compatibility "
+"issues can occur. Update your engine version to fix it."
+msgstr ""
+"B4W engine version is a bit old relative to JSON. Some compatibility "
+"issues can occur. Update your engine version to fix it."
+
+msgid ""
+"Engine version is a bit old as compared to version of the add-on with "
+"which the scene was exported. The scene will be loaded as usual, however "
+"some errors may occur. We recommend you to use the latest versions of the"
+" engine and the add-on."
+msgstr ""
+"Версия движка немного устарела по сравнению с версией аддона, которым был"
+" произведен экспорт сцены. Сцена будет загружена, однако возможны "
+"различные ошибки. Рекомендуется использовать последнюю версию движка и "
+"аддона."
+
+msgid ""
+"BIN version does not match to JSON version: VER_BIN, required: VER_JSON. "
+"Couldn't load the scene. Reexport scene to fix it."
+msgstr ""
+"BIN version does not match to JSON version: VER_BIN, required: VER_JSON. "
+"Couldn't load the scene. Reexport scene to fix it."
+
+msgid ""
+"Version of the .bin file is too old relative to .json file: VER_BIN, "
+".json file version is VER_JSON. The scene will not be loaded. We "
+"recommend you to reexport your scene."
+msgstr ""
+"Версия загружаемого .bin-файла сильно устарела по сравнению с "
+".json-файлом: VER_BIN, версия .json-файла: VER_JSON. Сцена не будет "
+"загружена. Рекомендуется переэкспортировать сцену."
+
+msgid ""
+"BIN version does not match to JSON version: VER_BIN, required: VER_JSON. "
+"Some compatibility issues can occur. Reexport scene to fix it."
+msgstr ""
+"BIN version does not match to JSON version: VER_BIN, required: VER_JSON. "
+"Some compatibility issues can occur. Reexport scene to fix it."
+
+msgid ""
+"Version of the .bin file is a bit old relative to .json file: VER_BIN, "
+".json file version is VER_JSON. Some incompatibility errors can arise. We"
+" recommend you to reexport your scene."
+msgstr ""
+"Версия загружаемого .bin-файла немного устарела по сравнению с "
+".json-файлом: VER_BIN, версия .json-файла: VER_JSON. Могут возникнуть "
+"ошибки несовместимости. Рекомендуется переэкспортировать сцену."
+
+msgid "Critical Export Errors"
+msgstr "Критические ошибки экспорта"
+
+msgid ""
+"In case of export errors a ``BLEND4WEB EXPORT ERROR`` dialog box "
+"describing of the problem appears:"
+msgstr ""
+"При возникновении ошибок во время экспорта появляется диалоговое окно "
+"``BLEND4WEB EXPORT ERROR`` с описанием проблемы:"
+
+msgid ""
+"``COMPONENT`` - type of component (object, mesh, material, texture etc) "
+"that has caused the export error."
+msgstr ""
+"``COMPONENT`` - тип компонента (объект, меш, материал, текстура и т.д.), "
+"при экспорте которого произошла ошибка."
+
+msgid "``NAME`` - component name."
+msgstr "``NAME`` - имя компонента."
+
+msgid "``ERROR`` - short description of the occurred problem."
+msgstr "``ERROR`` - краткое описание возникшей проблемы на англ. языке."
+
+msgid "Export to different disk is forbidden"
+msgstr "Export to different disk is forbidden"
+
+msgid "Export to a directory located on a different disk is forbidden"
+msgstr "Не разрешен экспорт в директорию, находящуюся на другом диске"
+
+msgid ""
+"Incompatible objects with a shared mesh; The OBJECT_NAME object has both "
+"vertex groups and a shared mesh"
+msgstr ""
+"Incompatible objects with a shared mesh; The OBJECT_NAME object has both "
+"vertex groups and a shared mesh"
+
+msgid ""
+"Incompatible objects with a shared mesh. Export of an object with both a "
+"shared mesh and vertex groups is not allowed. Exceptions: export is "
+"possible if an object has the ``Apply modifiers``, ``Export vertex "
+"animation``, ``Export edited normals``, ``Apply Scale and Modifiers`` "
+"options turned on (because in these cases a full copying of meshes "
+"occurs)."
+msgstr ""
+"Несовместимые объекты с общим мешем. Не допускается экспорт объекта с "
+"общим мешем и вертексными группами. Исключения: экспорт возможен, если на"
+" объекте включены опции ``Apply Modifiers``, ``Export Vertex Animation``,"
+" ``Export Edited Normals``, ``Apply Scale and Modifiers`` (т.к. в этом "
+"случае при экспорте происходит полное копирование мешей)."
+
+msgid "Incorrect mesh; Corrupted file: Wrong vertex color values"
+msgstr "Incorrect mesh; Corrupted file: Wrong vertex color values"
+
+msgid "Corrupted file: incorrect vertex color value."
+msgstr "Поврежденный файл: некорректное значение вертексного цвета."
+
+msgid "Loading of resources from different disk is forbidden"
+msgstr "Loading of resources from different disk is forbidden"
+
+msgid "Loading of resources from different disk is forbidden."
+msgstr "Не разрешен экспорт ресурсов из директории, находящейся на другом диске."
+
+msgid "The material has a normal map but doesn't have any material nodes"
+msgstr "The material has a normal map but doesn't have any material nodes"
+
+msgid "The node material uses ``Normal Mapping``, but has no ``Material`` node."
+msgstr ""
+"Нодовый материал использует ``Normal Mapping``, но не имеет ноды "
+"``Material``."
+
+msgid "The mesh has a UV map but has no exported material"
+msgstr "The mesh has a UV map but has no exported material"
+
+msgid "The mesh has a UV map layer but has no material for export."
+msgstr ""
+"Меш имеет текстурную развертку, но не имеет материала, который бы "
+"экспортировался."
+
+msgid "The mesh has a vertex color layer but has no exported material"
+msgstr "The mesh has a vertex color layer but has no exported material"
+
+msgid "The mesh has a vertex color layer but has no material for export."
+msgstr ""
+"Меш имеет слой вертексного цвета, но не имеет материала, который бы "
+"экспортировался."
+
+msgid "No such file or directory"
+msgstr "No such file or directory"
+
+msgid "The file or directory does not exist."
+msgstr "Данная директория не существует."
+
+msgid "Permission denied"
+msgstr "Permission denied"
+
+msgid "No access rights to the current directory."
+msgstr "Нет прав доступа к текущей директории."
+
+msgid "Wrong edited normals count; It doesn't match with the mesh vertices count"
+msgstr "Wrong edited normals count; It doesn't match with the mesh vertices count"
+
+msgid ""
+"The number of edited normals does not match the number of the mesh "
+"vertices. Execute ``Clean Up`` or ``Save`` in the ``B4W Vertex Normals "
+"Editor`` panel."
+msgstr ""
+"Число редактируемых нормалей не совпадает с числом вершин меша. Требуется"
+" сделать ``Clean Up`` либо ``Save`` в панели ``B4W Vertex Normals "
+"Editor``."
+
+msgid "Wrong overridden bounding box; Check the mesh's bounding box values"
+msgstr "Wrong overridden bounding box; Check the mesh's bounding box values"
+
+msgid ""
+"Wrong dimensions are specified when overriding the mesh's "
+"``BoundingBox``: minimum value is greater than maximum value for at least"
+" one of the dimensions."
+msgstr ""
+"Указаны неверные размеры при переопределении ``BoundingBox`` для меша: "
+"минимальное значение больше максимального для хотя бы одного из "
+"измерений."
+
+msgid "Non-Critical Export Errors"
+msgstr "Некритические ошибки экспорта"
+
+msgid ""
+"In contrast to the above-listed critical export errors, these errors do "
+"not prohibit the export, but can make scenes displayed incorrectly. These"
+" messages can be viewed in the browser console (opens with ``F12``) when "
+"a scene is loaded. The message looks like this:"
+msgstr ""
+"В отличие от критических ошибок экспорта, рассмотренных ранее, данные "
+"ошибки не препятствуют экспорту, однако могут приводить к некорректному "
+"отображению сцен. Сообщения выводятся в консоли браузера (горячая клавиша"
+" ``F12``) при загрузке сцены. Сообщение имеет вид:"
+
+msgid "``B4W EXPORT ERROR: Error message``"
+msgstr "``B4W EXPORT ERROR: Сообщение об ошибке``"
+
+msgid "Canvas texture ID NAME already exists. Texture NAME."
+msgstr "Canvas texture ID NAME already exists. Texture NAME."
+
+msgid "This ``Canvas`` ID already exists."
+msgstr "Данный идентификатор для объекта типа ``Canvas`` уже существует."
+
+msgid ""
+"Dupli group error for object OBJECT_NAME. Objects from the GROUP_NAME "
+"dupli group on the OBJECT_NAME object cannot be exported"
+msgstr ""
+"Dupli group error for object OBJECT_NAME. Objects from the GROUP_NAME "
+"dupli group on the OBJECT_NAME object cannot be exported"
+
+msgid ""
+"None of the objects in the GROUP_NAME group which were selected for "
+"duplication on the OBJECT_NAME object can be exported. Permission to "
+"export at least one object of the group, or to remove the duplication of "
+"the group is required."
+msgstr ""
+"Ни один из объектов группы GROUP_NAME, выбранной для дублирования на "
+"объекте OBJECT_NAME, не экспортируется. Требуется разрешить экспорт хотя "
+"бы одного из объектов группы, либо убрать дублирование группой."
+
+msgid "Empty canvas texture ID for texture NAME."
+msgstr "Empty canvas texture ID for texture NAME."
+
+msgid "``Canvas`` ID is empty."
+msgstr "Пустое поле идентификатора для объекта типа ``Canvas``."
+
+msgid "Empty material slot in node \\\"NAME\\\". Material: \\\"NAME\\\"."
+msgstr "Empty material slot in node \\\"NAME\\\". Material: \\\"NAME\\\"."
+
+msgid "Empty material slot in \\\"NAME\\\" node."
+msgstr "Не задан материал в ноде: \\\"NAME\\\""
+
+msgid "Environment map in the \\\"NAME\\\" world texture slot cannot be a movie."
+msgstr "Environment map in the \\\"NAME\\\" world texture slot cannot be a movie."
+
+msgid "Environment map can not be presented with a video file."
+msgstr "Карта окружения не может быть видео."
+
+msgid "Ignoring LODs after empty LOD for the NAME object."
+msgstr "Ignoring LODs after empty LOD for the NAME object."
+
+msgid ""
+"All LOD objects that follow the empty slot were ignored (in the LOD "
+"objects list for the NAME object)."
+msgstr "Все LOD-объекты, следующие за пустым слотом, были проигнорированы."
+
+msgid ""
+"Incomplete mesh NAME; Dynamic grass vertex colors required by material "
+"settings"
+msgstr ""
+"Incomplete mesh NAME; Dynamic grass vertex colors required by material "
+"settings"
+
+msgid ""
+"The ``Dynamic grass size`` and/or ``Dynamic grass color`` options are "
+"used by the special terrain material but the mesh has no vertex colors "
+"with such names."
+msgstr ""
+"Неполный меш: специальный материал для ландшафта использует опции "
+"``Dynamic grass size`` и/или ``Dynamic grass color``, но у меша нет слоев"
+" вертексного цвета с такими именами."
+
+msgid "Incomplete mesh; Material settings require vertex colors"
+msgstr "Incomplete mesh; Material settings require vertex colors"
+
+msgid ""
+"The ``Vertex Color Paint`` option is enabled for the mesh material, but "
+"the mesh has no vertex color layers."
+msgstr ""
+"Неполный меш: материал меша имеет включенную опцию вертексного цвета "
+"(``Vertex Color Paint``), но у меша нет слоя вертексного цвета."
+
+msgid "Incorrect NLA script, falling back to simple sequential NLA."
+msgstr "Incorrect NLA script, falling back to simple sequential NLA."
+
+msgid "Incorrect NLA script. Falling back to simple sequential NLA."
+msgstr ""
+"Некорректный NLA-скрипт. Вместо него будет использоваться стандартная "
+"NLA-анимация."
+
+msgid "Incorrect vertex animation for mesh NAME. Object has no vertex animation."
+msgstr "Incorrect vertex animation for mesh NAME. Object has no vertex animation."
+
+msgid ""
+"The object's vertex animation export option is on, but there is no vertex"
+" animation."
+msgstr ""
+"Включен экспорт вертексной анимации для объекта, но ни одной анимации не "
+"имеется."
+
+msgid ""
+"Incorrect vertex animation for mesh NAME. Unbaked \"ANIM_NAME\" vertex "
+"animation."
+msgstr ""
+"Incorrect vertex animation for mesh NAME. Unbaked \"ANIM_NAME\" vertex "
+"animation."
+
+msgid ""
+"Vertex animation export is turned on for the mesh, but the ANIM_NAME "
+"animation doesn't have any frames."
+msgstr ""
+"Включен экспорт вертексной анимации для меша, но анимация ANIM_NAME не "
+"содержит ни одного кадра."
+
+msgid "Incorrect mesh NAME; Wrong group indices"
+msgstr "Incorrect mesh NAME; Wrong group indices"
+
+msgid "The mesh has vertices assigned to the non-existing vertex group."
+msgstr "Меш содержит вершины, привязанные к несуществующей группе."
+
+msgid "Incorrect mesh NAME; Wrong vertex positions"
+msgstr "Incorrect mesh NAME; Wrong vertex positions"
+
+msgid "Corrupted file: incorrect vertex coordinate value."
+msgstr "Поврежденный файл: некорректное значение координаты вертекса."
+
+msgid "Incorrect mesh NAME; Wrong normals"
+msgstr "Incorrect mesh NAME; Wrong normals"
+
+msgid "Corrupted file: incorrect normal value."
+msgstr "Поврежденный файл: некорректное значение нормали."
+
+msgid "Incorrect mesh NAME; Wrong tangents"
+msgstr "Incorrect mesh NAME; Wrong tangents"
+
+msgid "Corrupted file: incorrect tangent value."
+msgstr "Поврежденный файл: некорректное значение тангенты."
+
+msgid "Incorrect mesh NAME; Wrong texture coordinates"
+msgstr "Incorrect mesh NAME; Wrong texture coordinates"
+
+msgid "Corrupted file: incorrect texture coordinate value."
+msgstr "Поврежденный файл: некорректное значение текстурной координаты."
+
+msgid "Incorrect mesh NAME; Wrong vertex group weights"
+msgstr "Incorrect mesh NAME; Wrong vertex group weights"
+
+msgid "Corrupted file: incorrect vertex group weight value."
+msgstr ""
+"Поврежденный файл: некорректное значение веса вертекса в вертексной "
+"группе."
+
+msgid "Incomplete vehicle. The NAME vehicle doesn't have any chassis or hull"
+msgstr "Incomplete vehicle. The NAME vehicle doesn't have any chassis or hull"
+
+msgid ""
+"The modelled NAME vehicle is not complete as it should contain a "
+"``Chassis`` or a ``Hull`` element."
+msgstr ""
+"Моделируемое средство передвижения NAME является незавершенным: оно "
+"должно содержать один элемент ``Chassis`` или ``Hull``."
+
+msgid "Incomplete vehicle. The NAME vehicle requires at least one bob"
+msgstr "Incomplete vehicle. The NAME vehicle requires at least one bob"
+
+msgid ""
+"The modelled NAME vehicle is not complete as it should contain at least "
+"one ``Bob`` element."
+msgstr ""
+"Моделируемое средство передвижения NAME является незавершенным: оно "
+"должно содержать хотя бы один элемент ``Bob``."
+
+msgid "Incomplete vehicle. The NAME vehicle requires at least one wheel"
+msgstr "Incomplete vehicle. The NAME vehicle requires at least one wheel"
+
+msgid ""
+"The modelled NAME vehicle is not complete as it should contain at least "
+"one ``Wheel`` element."
+msgstr ""
+"Моделируемое средство передвижения NAME является незавершенным: оно "
+"должно содержать хотя бы один элемент ``wheel``."
+
+msgid "Invalid link found in node material. Material: \\\"NAME\"\\."
+msgstr "Invalid link found in node material. Material: \\\"NAME\"\\."
+
+msgid "The \\\"NAME\\\" node material contains an incorrect link between nodes."
+msgstr ""
+"Нодовый материал с именем \\\"NAME\\\" содержит некорректные связи между "
+"нодами."
+
+msgid "No image in the NAME texture. [Material: NAME.]"
+msgstr "No image in the NAME texture. [Material: NAME.]"
+
+msgid "The texture has no image."
+msgstr "У текстуры отсутствует изображение."
+
+msgid "No texture for the NAME particle settings texture slot."
+msgstr "No texture for the NAME particle settings texture slot."
+
+msgid "No texture in the particle settings' texture slot."
+msgstr "В текстурном слоте системы частиц отсутствует текстура."
+
+msgid "No texture in the NAME world texture slot."
+msgstr "No texture in the NAME world texture slot."
+
+msgid "No texture in the NAME world's texture slot."
+msgstr "В текстурном слоте мира NAME отсутствует текстура."
+
+msgid "No texture in the texture slot. Material: NAME."
+msgstr "No texture in the texture slot. Material: NAME."
+
+msgid "There is no texture in the material texture slot."
+msgstr "В текстурном слоте материала отсутствует текстура."
+
+msgid ""
+"Node material invalid: \\\"NAME\\\". Check sockets compatibility: "
+"\\\"FROM_NODE\\\" with \\\"TO_NODE\\\"."
+msgstr ""
+"Node material invalid: \\\"NAME\\\". Check sockets compatibility: "
+"\\\"FROM_NODE\\\" with \\\"TO_NODE\\\"."
+
+msgid ""
+"Node material error: the input and output types of the link between the "
+"``FROM_NODE`` and ``TO_NODE`` nodes should match."
+msgstr ""
+"Ошибка нодового материала. Типы входа и выхода связи между нодами "
+"``FROM_NODE`` и ``TO_NODE`` не соответствуют друг другу."
+
+msgid "Object \\\"NAME\\\" hasn't renderable data. Converted to EMPTY."
+msgstr "Object \\\"NAME\\\" hasn't renderable data. Converted to EMPTY."
+
+msgid ""
+"An object named \\\"NAME\\\" is degenerate, e.g. has no polygons. The "
+"object's type has been changed to EMPTY."
+msgstr ""
+"Объект с именем \\\"NAME\\\" является вырожденным, например, не имеет "
+"полигонов, поэтому его тип изменён на EMPTY."
+
+msgid ""
+"Object: \\\"NAME\\\" > Constraint: \\\"CONSTRAINT_TYPE\\\". Check "
+"constraint settings."
+msgstr ""
+"Object: \\\"NAME\\\" > Constraint: \\\"CONSTRAINT_TYPE\\\". Check "
+"constraint settings."
+
+msgid ""
+"The object \\\"NAME\\\" has a constraint of type \\\"CONSTRAINT_TYPE\\\","
+" which isn't configured properly."
+msgstr ""
+"Ограничитель типа \\\"CONSTRAINT_TYPE\\\", назначенный объекту "
+"\\\"NAME\\\", не настроен должным образом."
+
+msgid ""
+"Object \\\"NAME\\\" has the mesh with shape keys. The property "
+"\\\"Relative\\\" of mesh has been enabled."
+msgstr ""
+"Object \\\"NAME\\\" has the mesh with shape keys. The property "
+"\\\"Relative\\\" of mesh has been enabled."
+
+msgid ""
+"An object named \\\"NAME\\\" has a mesh with shape keys. This mesh has "
+"the \\\"Relative\\\" property enabled which is forbidden."
+msgstr ""
+"Объект с именем \\\"NAME\\\" имеет меш с опорными фигурами. На меше было "
+"включено свойство \\\"Relative\\\"."
+
+msgid ""
+"Object \\\"NAME\\\" has no data or data is broken. Change object type to "
+"EMPTY."
+msgstr ""
+"Object \\\"NAME\\\" has no data or data is broken. Change object type to "
+"EMPTY."
+
+msgid ""
+"An object named \\\"NAME\\\" has no mesh or mesh is broken. The object's "
+"type has been changed to EMPTY."
+msgstr ""
+"Объект с именем \\\"NAME\\\" не имеет меша, либо меш повреждён. Тип "
+"объекта изменён на EMPTY."
+
+msgid ""
+"Packed media \\\"FILE_NAME\\\" has not been exported to "
+"\\\"CONVERTED_FILE_PATH\\\""
+msgstr ""
+"Packed media \\\"FILE_NAME\\\" has not been exported to "
+"\\\"CONVERTED_FILE_PATH\\\""
+
+msgid ""
+"The packed media file \\\"FILE_NAME\\\" cannot be converted to "
+"\\\"CONVERTED_FILE_PATH\\\". Please unpack this file and convert it."
+msgstr ""
+"Запакованный медиа файл \\\"FILE_NAME\\\" не может быть конвертирован в "
+"\\\"CONVERTED_FILE_PATH\\\". Требуется распаковать файл и произвести "
+"конвертацию."
+
+msgid ""
+"Particle system error for \\\"NAME\\\"; The \\\"NAME\\\" vertex color "
+"specified in the ``from`` field is missing in the last of the "
+"\\\"OBJECT_NAME\\\" object's vertex colors"
+msgstr ""
+"Particle system error for \\\"NAME\\\"; The \\\"NAME\\\" vertex color "
+"specified in the ``from`` field is missing in the last of the "
+"\\\"OBJECT_NAME\\\" object's vertex colors"
+
+msgid ""
+"The NAME vertex color is specified in the ``from`` field but it's not "
+"presented in the OBJECT_NAME emitter."
+msgstr ""
+"Ошибка системы частиц. Вертексный цвет NAME указанный в поле ``from``, "
+"отсутствует в эмиттере OBJECT_NAME."
+
+msgid ""
+"Particle system error for \\\"NAME\\\"; The \\\"NAME\\\" vertex color "
+"specified in the ``to`` field is missing in the list of the "
+"\\\"OBJECT_NAME\\\" object's vertex colors"
+msgstr ""
+"Particle system error for \\\"NAME\\\"; The \\\"NAME\\\" vertex color "
+"specified in the ``to`` field is missing in the list of the "
+"\\\"OBJECT_NAME\\\" object's vertex colors"
+
+msgid ""
+"The NAME vertex color is specified in the ``to`` field but it is not "
+"present in the OBJECT_NAME object which is selected as a particle."
+msgstr ""
+"Ошибка системы частиц. Вертексный цвет NAME указанный в поле ``to``, "
+"отсутствует в объекте OBJECT_NAME, выбранном в качестве частицы."
+
+msgid ""
+"Particle system error for \\\"NAME\\\"; The \\\"NAME\\\" vertex color "
+"specified in the \"``to`` field is missing in the \\\"OBJECT_NAME\\\" "
+"object (\\\"GROUP_NAME\\\" dupli group)"
+msgstr ""
+"Particle system error for \\\"NAME\\\"; The \\\"NAME\\\" vertex color "
+"specified in the \"``to`` field is missing in the \\\"OBJECT_NAME\\\" "
+"object (\\\"GROUP_NAME\\\" dupli group)"
+
+msgid ""
+"The NAME vertex color is specified in the ``to`` field but it is not "
+"present in the OBJECT_NAME object of the GROUP_NAME group which is "
+"selected as a particle."
+msgstr ""
+"Ошибка системы частиц. Вертексный цвет NAME указанный в поле ``to``, не "
+"присутствует в объекте OBJECT_NAME группы GROUP_NAME, выбранной в "
+"качестве частицы."
+
+msgid ""
+"Particle system error for object \\\"NAME\\\". Invalid dupli object "
+"\\\"OBJECT_NAME\\\"."
+msgstr ""
+"Particle system error for object \\\"NAME\\\". Invalid dupli object "
+"\\\"OBJECT_NAME\\\"."
+
+msgid ""
+"Particle system error for the object NAME. Invalid dupli-object "
+"OBJECT_NAME."
+msgstr "Ошибка системы частиц для объекта NAME. Неверный дупли объект OBJECT_NAME."
+
+msgid ""
+"Particle system error. Unsupported render type \\\"TYPE\\\" for the HAIR "
+"particles \\\"NAME\\\" on object \\\"OBJECT_NAME\\\". Particle system "
+"removed."
+msgstr ""
+"Particle system error. Unsupported render type \\\"TYPE\\\" for the HAIR "
+"particles \\\"NAME\\\" on object \\\"OBJECT_NAME\\\". Particle system "
+"removed."
+
+msgid ""
+"Particle system error. Unsupported render type TYPE for the HAIR "
+"particles PSYS_NAME on object NAME. The particle system has removed."
+msgstr ""
+"Ошибка системы частиц. Неподдерживаемый тип рендера TYPE для EMITTER/HAIR"
+" системы частиц с именем PSYS_NAME, находящейся на объекте NAME. Система "
+"частиц удалена."
+
+msgid ""
+"Particle system error. Unsupported render type \\\"TYPE\\\" for the "
+"EMITTER particles \\\"NAME\\\" on object \\\"OBJECT_NAME\\\". Particle "
+"system removed."
+msgstr ""
+"Particle system error. Unsupported render type \\\"TYPE\\\" for the "
+"EMITTER particles \\\"NAME\\\" on object \\\"OBJECT_NAME\\\". Particle "
+"system removed."
+
+msgid ""
+"Particle system error. Unsupported render type TYPE for the EMITTER "
+"particles PSYS_NAME on object NAME. The particle system has removed."
+msgstr ""
+"Ошибка системы частиц. Неподдерживаемый тип рендера TYPE для EMITTER/HAIR"
+" системы частиц с именем PSYS_NAME, находящейся на объекте NAME. Система "
+"частиц удалена."
+
+msgid "Particle system error for \\\"NAME\\\". Dupli object isn't specified."
+msgstr "Particle system error for \\\"NAME\\\". Dupli object isn't specified."
+
+msgid "Particle system error: no object is selected as a particle."
+msgstr "Ошибка системы частиц. Не выбран объект, используемый в качестве частицы."
+
+msgid "Particle system error for \\\"NAME\\\". Dupli group isn't specified."
+msgstr "Particle system error for \\\"NAME\\\". Dupli group isn't specified."
+
+msgid "Particle system error: no group is selected as a particle."
+msgstr ""
+"Ошибка системы частиц: не указана группа, использующаяся для генерации "
+"частиц."
+
+msgid ""
+"Particle system error for \\\"NAME\\\". Wrong dupli object type "
+"\\\"TYPE\\\"."
+msgstr ""
+"Particle system error for \\\"NAME\\\". Wrong dupli object type "
+"\\\"TYPE\\\"."
+
+msgid ""
+"An object of unsuitable type is selected for the particle. Supported "
+"types: ``MESH``."
+msgstr ""
+"Ошибка системы частиц. В качестве частицы выбран объект неподходящего "
+"типа. Поддерживаемые типы: ``MESH``."
+
+msgid ""
+"Particle system error for \\\"NAME\\\". Dupli object \\\"NAME\\\" has not"
+" been exported."
+msgstr ""
+"Particle system error for \\\"NAME\\\". Dupli object \\\"NAME\\\" has not"
+" been exported."
+
+msgid ""
+"The NAME object which is selected as a particle can not be exported (the "
+"``Do not export`` checkbox is set)."
+msgstr ""
+"Объект NAME, выбранный в качестве частицы, не экспортируется (на нем "
+"выбрана опция ``Do not export``)."
+
+msgid ""
+"Particle system error for \\\"NAME\\\". The \\\"GROUP_NAME\\\" dupli "
+"group contains no valid object for export."
+msgstr ""
+"Particle system error for \\\"NAME\\\". The \\\"GROUP_NAME\\\" dupli "
+"group contains no valid object for export."
+
+msgid ""
+"The GROUP_NAME dupli group which is selected as a particle contains no "
+"valid object for export. Either such objects have the ``Do not export`` "
+"checkbox enabled or the types of the objects are unsuitable. Supported "
+"object types: ``MESH``."
+msgstr ""
+"Ошибка системы частиц. Ни один подходящий объект из группы GROUP_NAME, "
+"выбранной в качестве частицы, не экспортируется. Либо на таких объектах "
+"выбрана опция ``Do not export``, либо объекты имеют неподходящий тип. "
+"Поддерживаемые типы: ``MESH``."
+
+msgid ""
+"Sound file is missing in the SPEAKER object \\\"NAME\\\". Converted to "
+"EMPTY."
+msgstr ""
+"Sound file is missing in the SPEAKER object \\\"NAME\\\". Converted to "
+"EMPTY."
+
+msgid ""
+"The speaker has no sound attached. The object's type has been changed to "
+"EMPTY."
+msgstr ""
+"У объекта типа SPEAKER отсутствует звуковой файл. Тип объекта изменён на "
+"EMPTY."
+
+msgid "The lamp object \\\"NAME\\\" has unsupported AREA type. Changed to SUN."
+msgstr "The lamp object \\\"NAME\\\" has unsupported AREA type. Changed to SUN."
+
+msgid ""
+"The lamp object \\\"NAME\\\" has unsupported AREA type. Lamp type has "
+"been changed to SUN."
+msgstr ""
+"Источник света \\\"NAME\\\" имеет неподдерживаемый тип AREA. Тип "
+"источника изменён на SUN."
+
+msgid ""
+"The main scene NAME can not be rendered by another scene. Material NAME "
+"has been removed."
+msgstr ""
+"The main scene NAME can not be rendered by another scene. Material NAME "
+"has been removed."
+
+msgid ""
+"The main scene NAME can not be rendered by another scene. The material "
+"NAME has been deleted."
+msgstr ""
+"Основная сцена NAME не может отображаться другой сценой. Материал NAME "
+"был удален."
+
+msgid "The NAME action has decimal frames. Converted to integer."
+msgstr "The NAME action has decimal frames. Converted to integer."
+
+msgid ""
+"The NAME action has decimal frames, which isn't supported. Converted to "
+"integer."
+msgstr ""
+"Анимация NAME содержит дробные значения кадров, что не поддерживается. "
+"Округлено до целых."
+
+msgid ""
+"The NAME armature modifier has a proxy object as an armature. Modifier "
+"removed."
+msgstr ""
+"The NAME armature modifier has a proxy object as an armature. Modifier "
+"removed."
+
+msgid "An armature modifier has a proxy object as an armature."
+msgstr "Модификатор арматуры имеет прокси объект в качестве арматуры."
+
+msgid ""
+"The NAME armature modifier has no armature object or it is not exported. "
+"Modifier removed."
+msgstr ""
+"The NAME armature modifier has no armature object or it is not exported. "
+"Modifier removed."
+
+msgid ""
+"The NAME ``Armature`` modifier has no armature object or it is not "
+"exported. Modifier removed."
+msgstr ""
+"В модификаторе NAME типа ``Armature`` не указан объект, либо объект не "
+"экспортируется. Модификатор удален."
+
+msgid "The NAME curve modifier has no curve object. Modifier removed."
+msgstr "The NAME curve modifier has no curve object. Modifier removed."
+
+msgid "The NAME curve modifier has no object. Modifier removed."
+msgstr "В модификаторе NAME типа ``Curve`` не указан объект. Модификатор удален."
+
+msgid "The NAME curve modifier has unsupported curve object. Modifier removed."
+msgstr "The NAME curve modifier has unsupported curve object. Modifier removed."
+
+msgid "The NAME curve modifier has unsupported object. Modifier removed."
+msgstr ""
+"В модификаторе NAME типа ``Curve`` указан неподходящий объект. "
+"Модификатор удален."
+
+msgid ""
+"The NAME object has the NAME armature modifier and a vertex animation. "
+"Modifier removed."
+msgstr ""
+"The NAME object has the NAME armature modifier and a vertex animation. "
+"Modifier removed."
+
+msgid ""
+"The NAME object has both vertex animation and an armature modifier which "
+"is not supported. As a result, the modifier has been removed."
+msgstr ""
+"Объект NAME имеет вертексную анимацию и арматурный модификатор. "
+"Модификатор удален."
+
+msgid ""
+"The NAME object has the NAME armature modifier. It belongs to a not "
+"exported scene. Modifier removed."
+msgstr ""
+"The NAME object has the NAME armature modifier. It belongs to a not "
+"exported scene. Modifier removed."
+
+msgid ""
+"The NAME object has the NAME armature modifier. The armature object in "
+"this modifier isn't specified or belongs to a not exported scene. "
+"Modifier removed."
+msgstr ""
+"В модификаторе NAME типа ``Armature`` не указан объект, либо объект не "
+"экспортируется. Модификатор удален."
+
+msgid "The NAME LAMP node has no lamp object. Material: NAME."
+msgstr "The NAME LAMP node has no lamp object. Material: NAME."
+
+msgid "Wrong object specified in the NAME ``LAMP`` node."
+msgstr "В ноде NAME типа ``LAMP`` не указан подходящий объект."
+
+msgid ""
+"The NAME node is not supported. The NAME material will be rendered "
+"without nodes. Material: NAME."
+msgstr ""
+"The NAME node is not supported. The NAME material will be rendered "
+"without nodes. Material: NAME."
+
+msgid ""
+"The engine does not support the node with this name, and so the node "
+"material will be turned off. Often this happens when Cycles nodes are "
+"used."
+msgstr ""
+"Нода с данным именем не поддерживается движком, поэтому нодовый материал "
+"будет отключён. Чаще всего проблемы подобного рода возникают при "
+"использовании нод Cycles."
+
+msgid ""
+"The NAME object has NAME armature modifier which references the wrong "
+"group. Modifier removed."
+msgstr ""
+"The NAME object has NAME armature modifier which references the wrong "
+"group. Modifier removed."
+
+msgid ""
+"An object should be in the same group as an armature, or both these "
+"objects should be explicitly present in the scene."
+msgstr ""
+"Объект должен находиться в той же группе, что и арматура или оба объекта "
+"должны явно присутствовать на сцене."
+
+msgid "\\\"TEXTURE_TYPE\\\" texture type is not supported for world \\\"NAME\\\"."
+msgstr "\\\"TEXTURE_TYPE\\\" texture type is not supported for world \\\"NAME\\\"."
+
+msgid "TEXTURE_TYPE texture type isn't supported for world WORLD_NAME"
+msgstr "TEXTURE_TYPE тип текстуры не поддерживается для мира, WORLD_NAME"
+
+msgid ""
+"Using B4W_REFRACTION node NODE_NAME with incorrect type of Alpha Blend. "
+"Material: NAME."
+msgstr ""
+"Using B4W_REFRACTION node NODE_NAME with incorrect type of Alpha Blend. "
+"Material: NAME."
+
+msgid ""
+"A node material with incorrect Alpha Blend property is used. ``Alpha "
+"sort``, ``Alpha blend`` and ``Add`` are allowed when using a "
+"\"REFRACTION\" node."
+msgstr ""
+"Используется нодовый материал с неправильно заданным свойством Alpha "
+"Blend. Допускается значение ``Alpha sort``, ``Alpha blend`` и ``Add`` при"
+" использовании ноды \"REFRACTION\"."
+
+msgid ""
+"Wind bending: not all vertex colors exist for \\\"NAME\\\". Properties "
+"were set to default values."
+msgstr ""
+"Wind bending: not all vertex colors exist for \\\"NAME\\\". Properties "
+"were set to default values."
+
+msgid ""
+"Wind bending parameters setup: all specified vertex color layers should "
+"exist."
+msgstr ""
+"Настройки процедурной анимации деревьев: должны существовать все "
+"указанные слои вертексных цветов."
+
+msgid ""
+"Wind bending: vertex colors weren't properly assigned for \\\"NAME\\\". "
+"Properties were set to default values."
+msgstr ""
+"Wind bending: vertex colors weren't properly assigned for \\\"NAME\\\". "
+"Properties were set to default values."
+
+msgid ""
+"Wind bending parameters setup: it's required to specify the names of "
+"either all vertex color layers (``Main stiffness (A)``, ``Leaves "
+"stiffness (R)``, ``Leaves phase (G)``, ``Overall stiffness (B)``), or of "
+"the main one only (``Main stiffness (A)``), or of none of them."
+msgstr ""
+"Настройки процедурной анимации деревьев; должны быть указаны названия "
+"всех слоев вертексных цветов (``Main stiffness (A)``, ``Leaves stiffness "
+"(R)``, ``Leaves phase (G)``, ``Overall stiffness (B)``), либо только "
+"главного (``Main stiffness (A)``), либо ни одного из них."
+
+msgid ""
+"Wrong \"Height Map\" input for the \"NAME\" B4W_PARALLAX node. Only link "
+"from the TEXTURE node with a non-empty texture is allowed."
+msgstr ""
+"Wrong \"Height Map\" input for the \"NAME\" B4W_PARALLAX node. Only link "
+"from the TEXTURE node with a non-empty texture is allowed."
+
+msgid ""
+"Wrong data were passed to the \"Height Map\" input of the NAME "
+"``B4W_PARALLAX`` node. Only the output from a non-empty ``TEXTURE`` node "
+"is allowed."
+msgstr ""
+"На вход \"Height Map\" ноды NAME типа ``B4W_PARALLAX`` подаются "
+"некорректные данные. Разрешено подавать только выход из ноды типа "
+"``TEXTURE`` с непустой текстурой."
+
+msgid "Wrong texture coordinates type in texture NAME. [Material: NAME.]"
+msgstr "Wrong texture coordinates type in texture NAME. [Material: NAME.]"
+
+msgid ""
+"The following coordinate types are supported for image textures: ``UV``, "
+"``Normal`` and ``Generated``."
+msgstr ""
+"Для текстур с изображением (image) поддерживаются следующие типы "
+"координат: ``UV``, ``Normal`` и ``Generated``."
+
+msgid ""
+"Wrong F-Curve interpolation mode for ACTION_NAME. Only BEZIER, LINEAR or "
+"CONSTANT mode is allowed for F-Curve interpolation. Switch to BEZIER."
+msgstr ""
+"Wrong F-Curve interpolation mode for ACTION_NAME. Only BEZIER, LINEAR or "
+"CONSTANT mode is allowed for F-Curve interpolation. Switch to BEZIER."
+
+msgid ""
+"The following types are supported for action interpolation mode: "
+"``BEZIER``, ``LINEAR`` and ``CONSTANT``."
+msgstr ""
+"Для режима интерполяции действий поддерживаются следующие типы: "
+"``BEZIER``, ``LINEAR`` и ``CONSTANT``."
+
+msgid ""
+"Wrong vertex animation vertices count for mesh NAME. It doesn't match "
+"with the mesh vertices count for \"ANIM_NAME\"."
+msgstr ""
+"Wrong vertex animation vertices count for mesh NAME. It doesn't match "
+"with the mesh vertices count for \"ANIM_NAME\"."
+
+msgid ""
+"Vertex animation export is enabled but the number of vertices in the "
+"baked ANIM_NAME animation frames does not match the mesh vertices number."
+" Possible solution is to \"re-bake\" the animation."
+msgstr ""
+"Включен экспорт вертексной анимации, но число вершин покадрово в анимации"
+" ANIM_NAME не совпадает с числом вершин меша. Возможное решение - "
+"\"перезапекание\" анимации."
+
+msgid "Other Messages"
+msgstr "Прочие сообщения"
+
+msgid ""
+"These messages can be viewed in the browser console (opens with ``F12``) "
+"when a scene is loaded. The message looks like this:"
+msgstr ""
+"Сообщения выводятся в консоли браузера (горячая клавиша ``F12``) при "
+"загрузке сцены. Сообщение имеет вид:"
+
+msgid "``B4W EXPORT WARNING: Export message which requires the user's attention``"
+msgstr ""
+"``B4W EXPORT WARNING: Сообщение экспорта, требующее внимания "
+"пользователя``"
+
+msgid "Error Message"
+msgstr "Сообщение об ошибке"
+
+msgid "Material tangent shading is enabled, but object's mesh has no UV map."
+msgstr "Material tangent shading is enabled, but object's mesh has no UV map."
+
+msgid ""
+"The material has the option \\\"Tangent Shading\\\" enabled, which always"
+" requires a UV map."
+msgstr ""
+"Для материала выставлена опция \\\"Tangent Shading\\\", которая требует "
+"наличия UV-развёртки."
+
+msgid "Missing active camera or wrong active camera object"
+msgstr "Missing active camera or wrong active camera object"
+
+msgid ""
+"There is no active camera on the scene (``Camera`` property on the "
+"``Scene`` tab)."
+msgstr ""
+"На сцене отсутствует активная камера (свойство ``Camera`` на вкладке "
+"``Scene``)."
+
+msgid "Missing world or wrong active world object"
+msgstr "Missing world or wrong active world object"
+
+msgid "There should be at least one world datablock in the scene."
+msgstr "На сцене должен быть хотя бы один мир."
+
+msgid ""
+"Multiple constraints added on an object \"Cube\", but it supports only "
+"one. Others won't be used."
+msgstr ""
+
+msgid ""
+"Multiple constraints added on an object NAME, but it supports only one. "
+"Others won't be used. The engine currently doesn't support multiple "
+"constraints on an object."
+msgstr ""
+"Объекту NAME назначено несколько ограничителей, в то время как "
+"поддерживается только один. Остальные ограничители не будут "
+"использоваться (на данный момент движок поддерживает только один "
+"ограничитель на объекте)."
+
+msgid ""
+"NAME particle settings has the NAME texture rendering a scene. It has "
+"been replaced by the default texture."
+msgstr ""
+"NAME particle settings has the NAME texture rendering a scene. It has "
+"been replaced by the default texture."
+
+msgid ""
+"The particle settings datablock NAME contains the texture NAME being used"
+" for rendering a scene into. This texture has been replaced by a default "
+"texture."
+msgstr ""
+"NAME система частиц имеет NAME текстуру, которая отображает сцену. Эта "
+"текстура была заменена на стандартную."
+
+msgid "The action NAME has no fcurves."
+msgstr "The action NAME has no fcurves."
+
+msgid "The action with the name \"NAME\" has no fcurves."
+msgstr "В анимации с именем \"NAME\" нет ни одного канала."
+
+msgid ""
+"The \\\"NAME\\\" camera has unsupported PANORAMIC type. Changed to "
+"PERSPECTIVE type.\""
+msgstr ""
+"The \\\"NAME\\\" camera has unsupported PANORAMIC type. Changed to "
+"PERSPECTIVE type.\""
+
+msgid "Panoramic cameras are not supported. Perspective mode is used instead."
+msgstr ""
+"Панорамная камера не поддерживается. Будет использована перспективная "
+"камера."
+
+msgid ""
+"Unsupported texture type or texture is missing for Lens Flare material "
+"\\\"NAME\\\""
+msgstr ""
+"Unsupported texture type or texture is missing for Lens Flare material "
+"\\\"NAME\\\""
+
+msgid ""
+"There are no textures on the material or unsupported texture type is used"
+" for material \\\"NAME\\\"."
+msgstr ""
+"Текстура для материала Lens Flare с именем \\\"NAME\\\" отсутствует или "
+"имеет неподдерживаемый формат."
+
+msgid ""
+"Use of ENVIRONMENT_MAP as diffuse color is not supported. Use as mirror "
+"instead."
+msgstr ""
+"Use of ENVIRONMENT_MAP as diffuse color is not supported. Use as mirror "
+"instead."
+
+msgid ""
+"The ENVIRONMENT MAP texture can not be used as diffuse color. Disable the"
+" Diffuse > Color and enable the Shading > Mirror option on the Textures >"
+" Influence panel to use this texture as mirror map."
+msgstr ""
+"Текстура типа ENVIRONMENT MAP не может быть использована как источник "
+"диффузного цвета. Чтобы использовать текстуру в качестве карты "
+"зеркального отражения (mirror map), отключите настройку Diffuse > Color и"
+" включите Shading > Mirror на панели Textures > Influence."
+
+msgid "Add-on Translations"
+msgstr "Перевод аддона"
+
+msgid ""
+"There is the possibility to translate the add-on to a language supported "
+"by Blender. In order to do this, rename the file \"empty.po\", which "
+"located in the directory SDK/blender_scripts/addons/blend4web/locales, to"
+" one of the names in the following table:"
+msgstr ""
+"Имеется возможность перевести аддон на язык, доступный в Blender'e. Для "
+"этого необходимо переименовать файл \"empty.po\", находящийся в "
+"директории: SDK/blender_scripts/addons/blend4web/locales, на одно из "
+"имен, соответствующих таблице:"
+
+msgid "File name"
+msgstr "Имя файла"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "ru_RU.po"
+msgstr "ru_RU.po"
+
+msgid "Russian"
+msgstr "Русский"
+
+msgid "ja_JP.po"
+msgstr "ja_JP.po"
+
+msgid "Japanese"
+msgstr "Японский"
+
+msgid "en_US.po"
+msgstr "en_US.po"
+
+msgid "English"
+msgstr "Английский"
+
+msgid "nl_NL.po"
+msgstr "nl_NL.po"
+
+msgid "Dutch"
+msgstr "Нидерландский"
+
+msgid "it_IT.po"
+msgstr "it_IT.po"
+
+msgid "Italian"
+msgstr "Итальянский"
+
+msgid "de_DE.po"
+msgstr "de_DE.po"
+
+msgid "German"
+msgstr "Немецкий"
+
+msgid "fi_FI.po"
+msgstr "fi_FI.po"
+
+msgid "Finnish"
+msgstr "Финский"
+
+msgid "sv_SE.po"
+msgstr "sv_SE.po"
+
+msgid "Swedish"
+msgstr "Шведский"
+
+msgid "fr_FR.po"
+msgstr "fr_FR.po"
+
+msgid "French"
+msgstr "Французский"
+
+msgid "es.po"
+msgstr "es.po"
+
+msgid "Spanish"
+msgstr "Испанский"
+
+msgid "ca_AD.po"
+msgstr "ca_AD.po"
+
+msgid "Catalan"
+msgstr "Каталанский"
+
+msgid "cs_CZ.po"
+msgstr "cs_CZ.po"
+
+msgid "Czech"
+msgstr "Чешский"
+
+msgid "pt_PT.po"
+msgstr "pt_PT.po"
+
+msgid "Portuguese"
+msgstr "Португальский"
+
+msgid "zh_CN.po"
+msgstr "zh_CN.po"
+
+msgid "Simplified Chinese"
+msgstr "Упрощённый китайский"
+
+msgid "zh_TW.po"
+msgstr "zh_TW.po"
+
+msgid "Traditional Chinese"
+msgstr "Традиционный китайский"
+
+msgid "hr_HR.po"
+msgstr "hr_HR.po"
+
+msgid "Croatian"
+msgstr "Хорватский"
+
+msgid "sr_RS.po"
+msgstr "sr_RS.po"
+
+msgid "Serbian"
+msgstr "Сербский"
+
+msgid "uk_UA.po"
+msgstr "uk_UA.po"
+
+msgid "Ukrainian"
+msgstr "Украинский"
+
+msgid "pl_PL.po"
+msgstr "pl_PL.po"
+
+msgid "Polish"
+msgstr "Польский"
+
+msgid "ro_RO.po"
+msgstr "ro_RO.po"
+
+msgid "Romanian"
+msgstr "Румынский"
+
+msgid "ar_EG.po"
+msgstr "ar_EG.po"
+
+msgid "Arabic"
+msgstr "Арабский"
+
+msgid "bg_BG.po"
+msgstr "bg_BG.po"
+
+msgid "Bulgarian"
+msgstr "Болгарский"
+
+msgid "el_GR.po"
+msgstr "el_GR.po"
+
+msgid "Greek"
+msgstr "Греческий"
+
+msgid "ko_KR.po"
+msgstr "ko_KR.po"
+
+msgid "Korean"
+msgstr "Корейский"
+
+msgid "ne_NP.po"
+msgstr "ne_NP.po"
+
+msgid "Nepali"
+msgstr "Непальский"
+
+msgid "fa_IR.po"
+msgstr "fa_IR.po"
+
+msgid "Persian"
+msgstr "Персидский"
+
+msgid "id_ID.po"
+msgstr "id_ID.po"
+
+msgid "Indonesian"
+msgstr "Индонезийский"
+
+msgid "sr_RS\\@latin.po"
+msgstr "sr_RS\\@latin.po"
+
+msgid "Serbian Latin"
+msgstr "Сербский латинский"
+
+msgid "ky_KG.po"
+msgstr "ky_KG.po"
+
+msgid "Kyrgyz"
+msgstr "Киргизский"
+
+msgid "tr_TR.po"
+msgstr "tr_TR.po"
+
+msgid "Turkish"
+msgstr "Турецкий"
+
+msgid "hu_HU.po"
+msgstr "hu_HU.po"
+
+msgid "Hungarian"
+msgstr "Венгерский"
+
+msgid "pt_BR.po"
+msgstr "pt_BR.po"
+
+msgid "Brazilian Portuguese"
+msgstr "Бразильский португальский"
+
+msgid "he_IL.po"
+msgstr "he_IL.po"
+
+msgid "Hebrew"
+msgstr "Иврит"
+
+msgid "et_EE.po"
+msgstr "et_EE.po"
+
+msgid "Estonian"
+msgstr "Эстонский"
+
+msgid "eo.po"
+msgstr "eo.po"
+
+msgid "Esperanto"
+msgstr "Эсперанто"
+
+msgid "es_ES.po"
+msgstr "es_ES.po"
+
+msgid "Spanish from Spain"
+msgstr "Испанский в Испании"
+
+msgid "am_ET.po"
+msgstr "am_ET.po"
+
+msgid "Amharic"
+msgstr "Амхарский"
+
+msgid "uz_UZ.po"
+msgstr "uz_UZ.po"
+
+msgid "Uzbek"
+msgstr "Узбекский"
+
+msgid "uz_UZ\\@cyrillic.po"
+msgstr "uz_UZ\\@cyrillic.po"
+
+msgid "Uzbek Cyrillic"
+msgstr "Узбекский кириллический"
+
+msgid "hi_IN.po"
+msgstr "hi_IN.po"
+
+msgid "Hindi"
+msgstr "Хинди"
+
+msgid "vi_VN.po"
+msgstr "vi_VN.po"
+
+msgid "Vietnamese"
+msgstr "Вьетнамский"
+
+msgid "Then open this file and edit/translate it."
+msgstr "Затем нужно открыть этот файл и написать перевод аддона."
+
+msgid ""
+"When translations are ready, you may contact us to include them as part "
+"of the add-on."
+msgstr ""
+"Если вы пишете перевод аддона, вы можете прислать нам ваш .po файл любым "
+"доступным способом, чтобы он был включен в состав аддона."
+
+msgid "add-on"
+msgstr "аддон"
+
+msgid "viewer"
+msgstr "viewer"
+
+msgid "launch"
+msgstr "launch"
+
+msgid "addon"
+msgstr "Аддон"
+
+msgid "initialization errors"
+msgstr "ошибки инициализации"
+
+msgid "version"
+msgstr "версия"
+
+msgid "errors"
+msgstr "ошибки"
+
+msgid "export"
+msgstr "экспорт"
+
+msgid "warnings about export errors"
+msgstr "предупреждения об ошибках экспорта"
+
+#~ msgid "Incorrect vertex animation; Unbaked"
+#~ msgstr ""
+
+#~ msgid "\"ANIM_NAME\" vertex animation"
+#~ msgstr ""
+
+#~ msgid "Incorrect vertex animation; Object"
+#~ msgstr ""
+
+#~ msgid "has no vertex animation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "The Add-on"
+#~ msgstr "Аддон"
+
+#~ msgid "The mesh has vertices assigned to the non-existing vertex group. "
+#~ msgstr "Меш содержит вершины, привязанные к несуществующей группе."
+
+#~ msgid "Particle system error: no group is selected as a particle."
+#~ msgstr ""
+
+#~ msgid "No texture in the NAME world's texture slot"
+#~ msgstr "В текстурном слоте объекта ``World`` отсутствует текстура."
+
+#~ msgid "Сообщение об ошибке"
+#~ msgstr ""
+
+#~ msgid "Причина"
+#~ msgstr ""
+
+#~ msgid "Physics"
+#~ msgstr ""
+
+#~ msgid "DDS textures"
+#~ msgstr ""
+
+#~ msgid "min50 textures"
+#~ msgstr ""
+
+#~ msgid "Addon"
+#~ msgstr "Аддон"
+
+#~ msgid "Incorrect addon directory name."
+#~ msgstr ""
+
+#~ msgid "Incomplete mesh; Material slot is empty"
+#~ msgstr ""
+
+#~ msgid "Material slot is empty."
+#~ msgstr "Неполный меш: пустой слот материала."
+
+#~ msgid "Incorrect mesh; Corrupted file: Wrong group indices"
+#~ msgstr ""
+
+#~ msgid "Incorrect mesh; Corrupted file: Wrong vertice positions"
+#~ msgstr ""
+
+#~ msgid "Incorrect mesh; Corrupted file: Wrong normals"
+#~ msgstr ""
+
+#~ msgid "Incorrect mesh; Corrupted file: Wrong tangents"
+#~ msgstr ""
+
+#~ msgid "Incorrect mesh; Corrupted file: Wrong texture coordinates"
+#~ msgstr ""
+
+#~ msgid "Incorrect mesh; Corrupted file: Wrong vertex group weights"
+#~ msgstr ""
+
+#~ msgid "Incorrect vertex animation; Object has no vertex animation"
+#~ msgstr ""
+
+#~ msgid "Incorrect vertex animation; Unbaked \"ANIM_NAME\" vertex animation"
+#~ msgstr ""
+
+#~ msgid "Object constraint has no target"
+#~ msgstr ""
+
+#~ msgid "Particle system error; Dupli group isn't specified"
+#~ msgstr ""
+
+#~ msgid "Particle system error; Dupli object isn't specified"
+#~ msgstr ""
+
+#~ msgid "Particle system error; Dupli object OBJECT_NAME doesn't export"
+#~ msgstr ""
+
+#~ msgid "Particle system error; Wrong dupli object type TYPE_NAME"
+#~ msgstr ""
+
+#~ msgid "Only 2 UV textures are allowed for a mesh; The mesh has N UVs."
+#~ msgstr ""
+
+#~ msgid "TEXTURE_TYPE isn't supported, WORLD_NAME"
+#~ msgstr ""
+
+#~ msgid "Incorrect mesh NAME; Wrong vertice positions"
+#~ msgstr ""
+
+#~ msgid "Support Email."
+#~ msgstr ""
+
+#~ msgid "Object constraint has no target. Check \\\"CONST_HOLDER_NAME\\\"."
+#~ msgstr "Object constraint has no target. Check \\\"CONST_HOLDER_NAME\\\"."
+

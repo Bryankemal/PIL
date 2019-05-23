@@ -1,0 +1,1027 @@
+# Blend4Web User Manual Russian Translation: Materials
+# Copyright (C) 2014-2016, Triumph
+# This file is distributed under the same license as Blend4Web.
+# Blend4Web Team <info [at] blend4web.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Blend4Web 16.08\n"
+"Report-Msgid-Bugs-To: https://www.blend4web.com/en/forums/forum/17/\n"
+"POT-Creation-Date: 2018-01-09 13:58+0300\n"
+"PO-Revision-Date: 2015-08-28 10:55+0300\n"
+"Last-Translator: Blend4Web Team <info [at] blend4web.com>\n"
+"Language-Team: Russian <info [at] blend4web.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+msgid "Materials"
+msgstr "Материалы"
+
+msgid "Table of Content"
+msgstr "Содержание"
+
+msgid ""
+"Materials describe the object surface’s response to light and also "
+"contain information about its transparency, reflectivity, physical "
+"parameters and so on."
+msgstr ""
+"Материалы описывают реакцию поверхности объекта на освещение, а также "
+"содержат информацию о ее прозрачности, отражающей способности, физических"
+" и других параметрах."
+
+msgid ""
+"Meshes can have one or more materials. In case of multiple materials they"
+" can be assigned to different polygons in the ``Edit Mode``. To do this "
+"select the needed polygons, select the needed material from the list and "
+"click the ``Assign`` button."
+msgstr ""
+"Меши могут использовать один или несколько материалов. В случае "
+"использования нескольких материалов назначение их различным полигонам "
+"происходит в режиме редактирования ``Edit Mode``. Для этого нужно "
+"выделить нужные полигоны, выбрать материал из списка и нажать кнопку "
+"``Assign``."
+
+msgid "The following material types are supported: ``Surface``, ``Halo``."
+msgstr ""
+"Поддерживаются следующие типы материалов: ``Surface`` (поверхность), "
+"``Halo`` (гало)."
+
+msgid "Lighting Parameters"
+msgstr "Параметры освещения"
+
+msgid "*Diffuse > Color*"
+msgstr "*Diffuse > Color*"
+
+msgid ""
+"Diffuse light color. The default value is (0.8, 0.8, 0.8). It may "
+"interact with the diffuse map color."
+msgstr ""
+"Цвет диффузного (рассеянного) света. Значение по умолчанию (0.8, 0.8, "
+"0.8). Может взаимодействовать с цветом диффузной текстуры."
+
+msgid "*Diffuse > Intensity*"
+msgstr "*Diffuse > Intensity*"
+
+msgid "Diffuse light intensity. The default value is 0.8."
+msgstr "Интенсивность диффузного (рассеянного) света. Значение по умолчанию 0.8."
+
+msgid "*Diffuse > Shader*"
+msgstr "*Diffuse > Shader*"
+
+msgid "Diffuse shading algorithm. The default value is ``Lambert``."
+msgstr ""
+"Алгоритм расчета диффузного (рассеянного) освещения. Значение по "
+"умолчанию ``Lambert``."
+
+msgid "*Specular > Color*"
+msgstr "*Specular > Color*"
+
+msgid ""
+"Specular light color. The default value is (1.0, 1.0, 1.0). It may "
+"interact with the specular map color."
+msgstr ""
+"Цвет отраженного света. Значение по умолчанию (1.0, 1.0, 1.0). Может "
+"взаимодействовать с цветом карты бликов."
+
+msgid "*Specular > Intensity*"
+msgstr "*Specular > Intensity*"
+
+msgid "Specular light intensity. The default value is 0.5."
+msgstr "Интенсивность отраженного света. Значение по умолчанию 0.5."
+
+msgid "*Specular > Hardness*"
+msgstr "*Specular > Hardness*"
+
+msgid ""
+"Exponent in the specular shading calculation formula. The default value "
+"is 50. Note that the formula used in the engine differs slightly from the"
+" Blender’s one."
+msgstr ""
+"Степенной показатель в формуле расчета отраженного света (\"жесткость\" "
+"блика). Значение по умолчанию 50. Алгоритм применения в движке отличается"
+" от алгоритма применения в Blender'e."
+
+msgid "*Specular > Shader*"
+msgstr "*Specular > Shader*"
+
+msgid "Specular shading algorithm. The default value is ``CookTorr``."
+msgstr ""
+"Алгоритм расчета отраженного освещения. Значение по умолчанию "
+"``CookTorr``."
+
+msgid "*Shading > Emit*"
+msgstr "*Shading > Emit*"
+
+msgid "Emission intensity. The default value is 0.0."
+msgstr "Интенсивность эмиссии (излучения). Значение по умолчанию 0.0."
+
+msgid "*Shading > Ambient*"
+msgstr "*Shading > Ambient*"
+
+msgid "Ambient influence factor on material. The default value is 1.0."
+msgstr ""
+"Фактор влияния освещения от окружающей среды на материал. Значение по "
+"умолчанию 1.0."
+
+msgid "*Shading > Shadeless*"
+msgstr "*Shading > Shadeless*"
+
+msgid "When enabled, a material doesn’t react to light. Disabled by default."
+msgstr "При включении материал не реагирует на освещение. По умолчанию выключено."
+
+msgid "*Shading > Tangent Shading*"
+msgstr "*Shading > Tangent Shading*"
+
+msgid ""
+"When this parameter is enabled, the engine will use the material's "
+"tangent vector (instead of normal vector) for calculating the object's "
+"color. This can be used for creating anisotropic shading effects."
+msgstr ""
+"При включении этого параметра движок использует тангенциальный вектор "
+"материала (вместо нормального вектора) для расчёта итогового цвета "
+"объекта. Может применяться для имитации анизотропных поверхностей."
+
+msgid ""
+"**On the left:** standard shading model; **on the right:** tangent "
+"shading model."
+msgstr "**Слева:** стандартное затенение, **справа:** тангенциальное затенение."
+
+msgid "*Shading > Double-Sided Lighting*"
+msgstr "*Shading > Double-Sided Lighting*"
+
+msgid ""
+"Enables the double-sided lighting mode. This option is useful for non-"
+"transparent objects with a single-layered mesh."
+msgstr ""
+"Включить двухстороннее освещение. Опция полезна для однослойных "
+"непросвечивающих объектов."
+
+msgid "Transparency"
+msgstr "Прозрачность"
+
+msgid "Types"
+msgstr "Типы"
+
+msgid ""
+"Transparency implementation type can be selected in the ``Transparency`` "
+"menu on the ``Properties > Material`` panel."
+msgstr ""
+"Тип реализации прозрачности выбирается в меню ``Transparency`` на панели "
+"``Properties > Material``."
+
+msgid "The engine supports all of the transparency types available in Blender."
+msgstr "Движком поддерживаются все типы прозрачности, доступные в Blender."
+
+msgid ""
+"Available transparency types are (sorted in the ascending order by "
+"performance):"
+msgstr ""
+"Движком поддерживаются все типы реализации прозрачности (перечислены в "
+"порядке увеличения производительности):"
+
+msgid "*Alpha Sort*"
+msgstr "*Alpha Sort*"
+
+msgid ""
+"Transparent with a gradient. The engine sorts the triangles by camera "
+"distance in order to render overlapping transparent surfaces correctly. "
+"This operation is computationally expensive. It is recommended to use "
+"this feature for closed transparent geometry (bottle, car glass etc)."
+msgstr ""
+"Прозрачный с градиентом. Для корректного отображения перекрывания одних "
+"прозрачных поверхностей другими движком производится сортировка "
+"треугольников по дальности от камеры. Операция требует дополнительных "
+"затрат вычислительных ресурсов. Рекомендуется применять для замкнутых "
+"прозрачных объектов (бутылка, стекла автомобиля и т.д.)."
+
+msgid "*Alpha Anti-Aliasing*"
+msgstr "*Alpha Anti-Aliasing*"
+
+msgid ""
+"Transparent with a gradient. This feature is implemented with the help of"
+" the Alpha to coverage technique. It's available only if MSAA is enabled "
+"(only on WebGL2-capable devices). The sorting of triangles is not "
+"performed. It is recommended to use this feature with a mask texture to "
+"visualize smaller details (tree leaves, grass)."
+msgstr ""
+"Прозрачный с градиентом. Этот тип реализован при помощи технологии Alpha "
+"to coverage и доступен только при включённом MSAA (только на устройствах "
+"с поддержкой WebGL2). Сортировка треугольников не производится. Эту "
+"технику рекомендуется использовать совместно с текстурой-маской для "
+"изображения мелких деталей, таких, как трава или листья."
+
+msgid "*Alpha Blend*"
+msgstr "*Alpha Blend*"
+
+msgid ""
+"Transparent with a gradient. The sorting of triangles is not performed. "
+"It is recommended to use this feature for unclosed transparent geometry "
+"(water surface, decals)."
+msgstr ""
+"Прозрачный с градиентом. Сортировка треугольников не производится. "
+"Рекомендуется применять для незамкнутых прозрачных объектов (поверхность "
+"воды, декали)."
+
+msgid "*Add*"
+msgstr "*Add*"
+
+msgid ""
+"Transparent with a gradient. The sorting of triangles is not performed. "
+"The engine disables writing to the depth buffer which causes transparent "
+"surfaces to be rendered in arbitrary order. It is recommended to use this"
+" feature for effects (particle systems, glowing beams)."
+msgstr ""
+"Прозрачный c градиентом. Сортировка треугольников не производится. Движок"
+" отключает запись в буфер глубины, что приводит к произвольному порядку "
+"отображения прозрачных поверхностей. Рекомендуется применять для создания"
+" эффектов (системы частиц, светящиеся лучи)."
+
+msgid "*Alpha Clip*"
+msgstr "*Alpha Clip*"
+
+msgid ""
+"Transparent without a gradient. The engine discards pixels if their alpha"
+" is less than 0.5. The sorting of triangles is not performed. It is "
+"recommended to use this feature with a mask texture to visualize smaller "
+"details (tree leaves, grass)."
+msgstr ""
+"Прозрачный без градиента. Движок отбрасывает пикселы (discard) с "
+"прозрачностью менее 0.5. Сортировка треугольников не производится. "
+"Рекомендуется применять с текстурой в качестве маски для визуализации "
+"множества мелких деталей (листва деревьев, трава)."
+
+msgid "*Opaque*"
+msgstr "*Opaque*"
+
+msgid "Non-transparent. Alpha is ignored. This is the default value."
+msgstr "Непрозрачный. Альфа-канал игнорируется. Значение по умолчанию."
+
+msgid "Additional Settings"
+msgstr "Дополнительные настройки"
+
+msgid "*Transparency > Show Transparency*"
+msgstr "*Transparency > Show Transparency*"
+
+msgid ""
+"Enabling the transparency checkbox is required for viewing transparent "
+"objects in Blender. The engine ignores this option - the ``Alpha Blend`` "
+"option is used instead."
+msgstr ""
+"Опция включения прозрачности требуется для отображения прозрачных "
+"объектов в Blender'e. Движок игнорирует эту опцию, используя вместо нее "
+"``Alpha Blend``."
+
+msgid "*Transparency > Alpha*"
+msgstr "*Transparency > Alpha*"
+
+msgid ""
+"Material transparency level. The engine ignores this parameter (in "
+"contrast to Blender) if there is a diffuse texture - the alpha channel "
+"values of a texture are used instead."
+msgstr ""
+"Уровень прозрачности материала. При наличии диффузной текстуры движок (в "
+"отличие от Blender'a) игнорирует этот параметр, используя вместо него "
+"значение прозрачности текстуры."
+
+msgid "*Transparency > Z Offset*"
+msgstr "*Transparency > Z Offset*"
+
+msgid ""
+"This option explicitly specifies relative positioning order of objects "
+"with **different** materials with the purpose of depth sorting. The "
+"option can take both negative and positive values. The more distant the "
+"object is the lesser parameter value should be to provide correct "
+"rendering. The default value is 0.0."
+msgstr ""
+"Используется для явного указания расположения прозрачных объектов с "
+"**разными** материалами относительно друг друга с целью сортировки по "
+"глубине. Может принимать отрицательные и положительные значения. Для "
+"корректного отображения дальние объекты должны иметь меньшее значение "
+"параметра, чем ближние. Значение по умолчанию 0.0."
+
+msgid "Reflection"
+msgstr "Зеркальное отражение"
+
+msgid "Reflection settings in the ``Material`` tab"
+msgstr "Настройки отражений во вкладке ``Material``"
+
+msgid "Static Reflection"
+msgstr "Статическое отражение"
+
+msgid ""
+"A surface reflects the same image no matter how the environment changes. "
+"For activation simply use the :ref:`mirror map <mirror_map>`."
+msgstr ""
+"Поверхность отражает одно и то же изображение вне зависимости от "
+"изменения окружающей среды. Для активации достаточно использовать "
+":ref:`карту зеркального отражения <mirror_map>`."
+
+msgid ":ref:`fresnel`"
+msgstr ":ref:`fresnel`"
+
+msgid "Dynamic Reflection"
+msgstr "Динамическое отражение"
+
+msgid ""
+"A surface reflects the selected objects in their current position. The "
+"engine supports planar and spherical reflections."
+msgstr ""
+"Поверхность отражает текущее расположение определенных объектов. "
+"Поддерживаются отражения от плоскости и сферические отражения."
+
+msgid ""
+"If you are using :ref:`node materials <node_materials>`, dynamic "
+"reflection will only work if an ``Extended Material`` node is present in "
+"the node tree."
+msgstr ""
+"При использовании :ref:`нодовых материалов <node_materials>` динамические"
+" отражения будут работать только в том случае, если в нодовом дереве "
+"присутствует нода ``Extended Material``."
+
+msgid "Activation"
+msgstr "Активация"
+
+msgid ""
+"Check ``Reflections`` setting on the ``Render > Reflections`` and "
+"Refractions panel."
+msgstr ""
+"Проверить опцию ``Reflections`` на панели ``Render > Reflections and "
+"Refractions``."
+
+msgid ""
+"For *reflective* objects enable the ``Reflective`` option on the ``Object"
+" > Reflections`` panel."
+msgstr ""
+"Для *отражающих* объектов на панели ``Object > Reflections`` выставить "
+"опцию ``Reflective``."
+
+msgid ""
+"For planar reflections, set the ``Object > Reflections > Type`` property "
+"to ``Plane``. After that, add an empty object to be used as a reflection "
+"plane by executing for example ``Add > Empty > Single Arrow``. Rename it "
+"for convenience and specify its name in the ``Reflection plane`` field of"
+" the reflective object."
+msgstr ""
+"Для плоских отражений выставить значение ``Object > Reflections > Type`` "
+"в ``Plane``. Добавить пустой объект для задания плоскости отражения ``Add"
+" > Empty > Single Arrow``. Переименовать для удобства и указать его имя в"
+" поле ``Reflection plane`` отражающего объекта."
+
+msgid ""
+"For cube-mapped reflections, set the ``Object > Reflections > Type`` "
+"property to ``Cube``."
+msgstr ""
+"Для кубических отражений выставить значение ``Object > Reflections > "
+"Type`` в ``Cube``."
+
+msgid ""
+"For the needed materials of the *reflective* objects, set the ``Material "
+"> Mirror > Reflectivity`` value."
+msgstr ""
+"Для нужных материалов *отражающих* объектов выставить значение отражающей"
+" способности ``Material > Mirror > Reflectivity``."
+
+msgid ""
+"``Mirror > Reflectivity > Show Reflectivity`` is required for displaying "
+"reflections on objects in Blender. The engine ignores this option."
+msgstr ""
+"``Mirror > Reflectivity > Show Reflectivity`` требуется для отображения "
+"отражений на объектах в Blender'e. Движок игнорирует эту опцию."
+
+msgid ""
+"For the *reflexible* objects, enable the ``Reflexible`` checkbox on the "
+"``Object > Reflections`` panel."
+msgstr ""
+"Для *отражаемых* объектов на панели ``Object > Reflections`` выставить "
+"опцию ``Reflexible``."
+
+msgid ""
+"It is also recommended to enable the ``World > Environment Lighting`` "
+"checkbox."
+msgstr ""
+"Рекомендуется также включить использование освещения от окружающей среды "
+"``World > Environment Lighting``."
+
+msgid "Limitations"
+msgstr "Ограничения"
+
+msgid ""
+"Normal maps and shadows are ignored in the reflected image for "
+"optimization purposes."
+msgstr "В отраженном изображении игнорируется карта нормалей, тени."
+
+msgid "Fresnel effect for reflection"
+msgstr "Эффект Френеля для отражения"
+
+msgid ""
+"The Fresnel effect manifests itself as the dependency of the intensity of"
+" passing and reflected light on the incidence angle. If the angle of "
+"incidence is close to zero (i.e. light falls almost at right angle to the"
+" surface) the passing light portion is large and the reflected light "
+"portion is small. On the contrary if the angle of incidence is close to "
+"90 degrees (i.e. light falls almost parallel to the surface) almost all "
+"light is reflected."
+msgstr ""
+"Эффект Френеля проявляется в зависимости интенсивностей проходящего и "
+"отраженного света от угла падения. Если угол падения близок к нулю (т.е. "
+"свет падает почти перпендикулярно поверхности), доля проходящего света "
+"велика, а отраженного мала. И наоборот, если угол падения близок к 90 "
+"градусам (т.е. свет падает почти параллельно поверхности), отражается "
+"почти весь свет."
+
+msgid "The engine uses the approximate Schlick’s formula:"
+msgstr "Движок использует приближенную формулу Шлика:"
+
+msgid "R = R\\ :sub:`0` + (1 − R\\ :sub:`0`)(1 - cos θ)\\ :sup:`N`, where"
+msgstr "R = R\\ :sub:`0` + (1 − R\\ :sub:`0`)(1 - cos θ)\\ :sup:`N`, где"
+
+msgid "R - reflection coefficient,"
+msgstr "R - коэффициент отражения,"
+
+msgid ""
+"R\\ :sub:`0` - reflection coefficient in case of viewing at a right angle"
+" to the surface (i.e. when θ = 0),"
+msgstr ""
+"R\\ :sub:`0` - коэффициент отражения в случае обзора под прямым углом к "
+"поверхности (т.е. при θ = 0),"
+
+msgid ""
+"θ - angle of incidence (which is equal to the angle of reflection under "
+"which light enters the camera), it is calculated by the engine in real-"
+"time,"
+msgstr ""
+"θ - угол падения (равный углу отражения, под которым свет попадает в "
+"камеру), рассчитывается движком в реальном времени,"
+
+msgid "N - exponent."
+msgstr "N - показатель степени."
+
+msgid "Settings"
+msgstr "Настройка"
+
+msgid "Fresnel effect can be set up both for static and dynamic reflection."
+msgstr ""
+"Эффект Френеля применяется как для статического, так и для динамического "
+"отражения."
+
+msgid "*Material > Mirror > Fresnel*"
+msgstr "*Material > Mirror > Fresnel*"
+
+msgid ""
+"Fresnel power for reflection. This is the N exponent in the Schlick’s "
+"formula. In Blender it is limited to values from 0 to 5. If this "
+"parameter is equal to zero the Fresnel effect is not observed and the "
+"*full* reflection at all angles occurs. If this parameter is greater than"
+" zero, the material is less reflective when viewing surfaces at angles "
+"which are close to the right angle. The bigger this parameter is the "
+"bigger is the angle deviation from the right angle for which the Fresnel "
+"effect is observed."
+msgstr ""
+"Степень Френеля для отражения. Показатель степени N в формуле Шлика. В "
+"пакете Blender ограничен значениями от 0 до 5. Если этот параметр равен "
+"нулю, эффект Френеля не проявляется, происходит *полное* отражение на "
+"всех углах. Если этот параметр больше нуля, при обзоре поверхности под "
+"углами, близкими к прямому (почти перпендикулярно поверхности), материал "
+"становится менее отражающим. Чем больше этот параметр, тем больше "
+"отклонение угла от прямого, для которого наблюдается такой эффект."
+
+msgid "*Material > Mirror > Blend*"
+msgstr "*Material > Mirror > Blend*"
+
+msgid ""
+"Fresnel factor for reflection. It is reduced to R\\ :sub:`0` in the "
+"Schlick’s formula by the following expression: R\\ :sub:`0` = 1 - "
+"``Blend`` / 5. In Blender it is limited to values from 0 to 5. This "
+"parameter defines the Fresnel effect intensity: the bigger the ``Blend`` "
+"factor is, the more is the Fresnel effect influence. If it is equal to "
+"zero the Fresnel effect is not observed."
+msgstr ""
+"Фактор Френеля для отражения. Приводится к R\\ :sub:`0` в формуле Шлика: "
+"R\\ :sub:`0` = 1 - ``Blend`` / 5. В пакете Blender ограничен значениями "
+"от 0 до 5. Этот параметр показывает интенсивность проявления эффекта "
+"Френеля: чем больше фактор ``Blend``, тем сильнее влияние эффекта "
+"Френеля. Если он равен нулю, эффект Френеля не проявляется."
+
+msgid "Rendering Properties"
+msgstr "Опции рендеринга"
+
+msgid "*Material > Rendering Options > Do not Render*"
+msgstr "*Material > Rendering Options > Do not Render*"
+
+msgid "Disable rendering of this object."
+msgstr "Отключить рендеринг объекта."
+
+msgid "*Material > Rendering Options > Backface Culling*"
+msgstr "*Material > Rendering Options > Backface Culling*"
+
+msgid ""
+"When enabled, polygons’ back faces are not rendered by the engine. "
+"Enabled by default."
+msgstr ""
+"При включении обратная сторона полигона не отображается движком. По "
+"умолчанию включено."
+
+msgid "*Material > Rendering Options > Wettable*"
+msgstr "*Material > Rendering Options > Wettable*"
+
+msgid "Water wetting effect is activated for the material."
+msgstr "Для материала активируется эффект смачивания водой."
+
+msgid ":ref:`water`"
+msgstr ":ref:`water`"
+
+msgid "*Material > Rendering Options > Lens Flare*"
+msgstr "*Material > Rendering Options > Lens Flare*"
+
+msgid "Enabling this parameter activates Lens Flare effect for the material."
+msgstr "Включает эффект Lens Flare для материала."
+
+msgid "*Material > Rendering Options > Render Above All*"
+msgstr "*Material > Rendering Options > Render Above All*"
+
+msgid ""
+"Material is rendered on top of all scene objects. Transparency type with "
+"a gradient is required (``Add``, Alpha Blend`` or ``Alpha Sort``)."
+msgstr ""
+"Материал отрисовывается поверх всех объектов на сцене. Требует тип "
+"прозрачности c градиентом (``Add``, ``Alpha Blend`` или ``Alpha Sort``)"
+
+msgid "*Material > Rendering Options > Vertex Color Paint*"
+msgstr "*Material > Rendering Options > Vertex Color Paint*"
+
+msgid ""
+"Mesh vertex color is used instead of the material diffuse color when the "
+"checkbox is enabled."
+msgstr ""
+"Опция включает использование вертексного цвета меша вместо диффузного "
+"цвета."
+
+msgid "*Material > Rendering Options > Refractive*"
+msgstr "*Material > Rendering Options > Refractive*"
+
+msgid ""
+"Make object refractive. Perturbation factor can be set with the option "
+"``Refraction Bump`` on the ``Refraction Settings`` panel. The default "
+"value is 0.001."
+msgstr ""
+"Включить рефракцию. Коэффициент возмущения задаётся опцией ``Refraction "
+"Bump`` на панели ``Refraction Settings``. Значение по умолчанию 0.001."
+
+msgid ""
+"In order to use this effect, select ``ON`` or ``AUTO`` on the ``Render > "
+"Reflections and Refractions > Refractions`` panel. The object must have "
+"``Alpha Blend`` transparency type."
+msgstr ""
+"Для отображения эффекта необходимо выбрать опцию ``ON`` или ``AUTO`` на "
+"панели ``Render > Reflections and Refractions > Refractions``. Объект "
+"должен быть с типом прозрачности ``Alpha Blend``."
+
+msgid ":ref:`alpha_blend`"
+msgstr ":ref:`alpha_blend`"
+
+msgid "Viewport Properties"
+msgstr "Настройки вьюпорта"
+
+msgid "The ``Viewport`` section can be found on the ``Blend4Web`` panel."
+msgstr "Раздел ``Viewport`` находится на панели ``Blend4Web``."
+
+msgid "*Update Material Animation*"
+msgstr "*Update Material Animation*"
+
+msgid "Update animated shader in Blender Viewport."
+msgstr "Обновлять анимированный шейдер во вьюпорте Blender."
+
+msgid "Engine Specific Parameters"
+msgstr "Специальные параметры движка"
+
+msgid "*Material > Water*"
+msgstr "*Material > Water*"
+
+msgid "Special material for :ref:`water rendering <water>`."
+msgstr "Специальный материал для :ref:`рендеринга воды <water>`."
+
+msgid "*Material > Terrain Dynamic Grass*"
+msgstr "*Material > Terrain Dynamic Grass*"
+
+msgid "Material is used for :ref:`grass rendering <particles_grass>`."
+msgstr ""
+"Материал используется для :ref:`рендеринга травяного покрова "
+"<particles_grass>`."
+
+msgid "*Material > Collision*"
+msgstr "*Material > Collision*"
+
+msgid "A special material for collision geometry."
+msgstr "Специальный материал для физического объекта."
+
+msgid ":ref:`physics`"
+msgstr ":ref:`physics`"
+
+msgid "*Material > Export Options > Do Not Export*"
+msgstr "*Material > Export Options > Do Not Export*"
+
+msgid "Material is not to be exported."
+msgstr "Не экспортировать."
+
+msgid "Halo Materials"
+msgstr "Материалы гало (Halo)"
+
+msgid ""
+"Halo materials are used in particle systems and in static meshes. Using "
+"the halo in static meshes is described below."
+msgstr ""
+"Используются в системах частиц и в статических мешах. Ниже "
+"рассматривается использование гало на статических мешах."
+
+msgid ""
+"Select the ``Halo`` type under the ``Materials`` tab. It’s also "
+"recommended to select the transparency type with a gradient (``Add``, "
+"``Alpha Blend`` or ``Alpha Sort``)."
+msgstr ""
+"Выставить тип ``Halo`` во вкладке ``Materials``. Рекомендуется также "
+"выставить тип прозрачности c градиентом (``Add``, ``Alpha Blend`` или "
+"``Alpha Sort``)."
+
+msgid "*Halo > Alpha*"
+msgstr "*Halo > Alpha*"
+
+msgid "Material transparency factor. The default value is 1.0 (non-transparent)."
+msgstr "Параметр прозрачности материала. Значение по умолчанию 1.0 (непрозрачный)."
+
+msgid "*Halo > Color*"
+msgstr "*Halo > Color*"
+
+msgid "Material color. The default value is (0.8, 0.8, 0.8) (almost white)."
+msgstr "Цвет материала. Значение по умолчанию (0.8, 0.8, 0.8) (почти белый)."
+
+msgid "*Halo > Size*"
+msgstr "*Halo > Size*"
+
+msgid "Particle size. The default value is 0.5."
+msgstr "Размер частиц. Значение по умолчанию 0.5."
+
+msgid "*Halo > Hardness*"
+msgstr "*Halo > Hardness*"
+
+msgid ""
+"Exponent for computing the gradient. Affects visible dimensions of "
+"particles. The default value is 50."
+msgstr ""
+"Показатель степени при расчете градиента. Влияет на видимый размер "
+"частиц. Значение по умолчанию 50."
+
+msgid "*Halo > Rings*"
+msgstr "*Halo > Rings*"
+
+msgid "Use rings. Relative quantity and color can be set up."
+msgstr "Использовать кольца. Настраивается относительное количество и цвет."
+
+msgid "*Halo > Lines*"
+msgstr "*Halo > Lines*"
+
+msgid "Use lines. Relative quantity and color can be set up."
+msgstr "Использовать линии. Настраивается относительное количество и цвет."
+
+msgid "*Halo > Star Tips*"
+msgstr "*Halo > Star Tips*"
+
+msgid "Use stars. The quantity of edges can be set up."
+msgstr "Использовать звезды. Настраивается количество концов."
+
+msgid "*Halo > Special: Stars*"
+msgstr "*Halo > Special: Stars*"
+
+msgid ""
+"Enables the starry sky rendering mode. The mesh is fixed relative to the "
+"camera. For the ``Sun`` lamp it is also required to enable the ``Lamp > "
+"Dynamic Intensity`` checkbox. Applications should set up the hours of "
+"darkness via API."
+msgstr ""
+"Включает режим рендеринга звездного неба, при этом меш неподвижен "
+"относительно камеры. Для лампы типа ``Sun`` необходимо также выставить "
+"опцию ``Lamp > Dynamic Intensity``. Приложения должны установить ночное "
+"время суток, используя API."
+
+msgid "*Halo > Blending Height*"
+msgstr "*Halo > Blending Height*"
+
+msgid "Height range for the fading of stars."
+msgstr "Диапазон высот, на котором происходит затухание яркости звезд."
+
+msgid "*Halo > Minimum Height*"
+msgstr "*Halo > Minimum Height*"
+
+msgid "Minimum height in the object’s local space at which stars are visible."
+msgstr ""
+"Минимальная высота в локальном пространстве объекта, на которой видны "
+"звезды."
+
+msgid "Material API"
+msgstr "Методы API для работы с материалами"
+
+msgid ""
+"All API methods used for setting and changing scene materials, both stack"
+" and node, are located in the Material API module. Every method that this"
+" module has to offer is thoroughly described in this :b4wmod:`page "
+"material` of the API reference."
+msgstr ""
+"Все методы API, используемые для настройки материалов, как стандартных, "
+"так и нодовых, находятся в модуле API material. Все методы этого модуля "
+"подробно описаны на :b4wmod:`странице material` документации API."
+
+msgid ""
+"API methods can only work with materials that are attached to dynamic "
+"objects."
+msgstr ""
+"Методы API могут работать только с материалами, которые используются с "
+"динамическими объектами."
+
+msgid "Methods for Stack Materials"
+msgstr "Методы для стандартных материалов"
+
+msgid ""
+"The :b4wmod:`material` API module includes methods to control virtually "
+"every aspect of a stack material."
+msgstr ""
+"Модуль API :b4wmod:`material` включает методы для управления практически "
+"любым параметром стандартного материала."
+
+msgid ""
+"Here are several examples of how the material API module can be used to "
+"perform various operations with the material of an object:"
+msgstr ""
+"Ниже приводится ряд примеров, демонстрирующих, как модуль API material "
+"может использоваться для различных операций с материалом объекта:"
+
+msgid "Getting object's diffuse color:"
+msgstr "Получение диффузного цвета объекта:"
+
+msgid "Getting object's specular color:"
+msgstr "Получение цвета блика материала:"
+
+msgid "Getting other parameters:"
+msgstr "Получение других параметров:"
+
+msgid "Setting stack material parameters:"
+msgstr "Установка параметров материала:"
+
+msgid "Methods for Node Materials"
+msgstr "Методы для нодовых материалов"
+
+msgid ""
+"At the moment, API methods can only affect RGB and Value nodes. Any other"
+" type is not supported."
+msgstr ""
+"На данный момент поддерживаются только ноды типа RGB и Value. Все прочие "
+"типы не поддерживаются."
+
+msgid "To change the value of a particular material node, you need:"
+msgstr "Для того, чтобы изменить значение той или иной ноды материала, требуется:"
+
+msgid "to get the object that uses this particular material,"
+msgstr "объект, использующий данный материал,"
+
+msgid "the name of the material,"
+msgstr "имя материала,"
+
+msgid "the name of the node itself"
+msgstr "имя самой ноды,"
+
+msgid "and the name of the node group that contains the node (if there is one)."
+msgstr "а также имя группы нод, в которую входит данная нода (если есть)."
+
+msgid ""
+"The name of a node can be viewed and changed in the upper part of the "
+"side panel at the right of the Node Editor window."
+msgstr ""
+"Имя ноды можно узнать (и изменить) в верхней части боковой панели справа "
+"от главного окна редактора нод."
+
+msgid ""
+"Nodes in the main window of the Node Editor do not show the name of the "
+"node, only its type."
+msgstr ""
+"Следует иметь в виду, что главное окно редактора нод не показывает имён "
+"нод, только их типы."
+
+msgid ""
+"These two examples show how the parameters of a node material can be "
+"adjusted using API methods."
+msgstr ""
+"Два следующих примера демонстрируют, как параметры нодового материала "
+"могут быть настроены с использованием методов API:"
+
+msgid "Getting node material parameters:"
+msgstr "Получение параметров нодового материала:"
+
+msgid "Setting node material parameters:"
+msgstr "Установка параметров нодового материала:"
+
+msgid ""
+"Same methods can also be used to adjust the scene environment, if the "
+"``World`` object in the scene uses ``RGB`` or ``Value`` nodes. However, "
+"in this case you won't have to use the name of the material. The other "
+"difference is that a link to a scene object has to be replaced with a "
+"link to the ``World`` object that can be retrieved with the "
+":b4wref:`scenes.get_world_by_name()` method:"
+msgstr ""
+"Те же методы могут применяться для настройки окружения сцены, если объект"
+" ``World`` использует ноды ``RGB`` или ``Value``. В этом случае не "
+"требуется использовать имя материала. Другое отличие в том, что ссылку на"
+" объект сцены следует заменить ссылкой на объект ``World``; эту ссылку "
+"можно получить при помощи метода :b4wref:`scenes.get_world_by_name()`:"
+
+msgid "Replacing Textures"
+msgstr "Замена текстур"
+
+msgid ""
+"API methods also allow you to replace texture images. This can be done "
+"using the :b4wref:`textures.change_image()` method from the "
+":b4wmod:`textures` module:"
+msgstr ""
+"Использование методов API также позволяет заменять текстуры. Это делается"
+" при помощи метода :b4wref:`textures.change_image()` из модуля "
+":b4wmod:`textures`:"
+
+msgid ""
+"This method can be applied to replace textures used by the ``World`` "
+"object as well. However, in this case the name of the ``Texture`` node "
+"should be used instead of the name of a texture."
+msgstr ""
+"Этот метод может применяться и для замены текстур, используемых объектом "
+"``World``. Однако в этом случае вместо имени текстуры следует "
+"использовать имя ноды ``Texture``."
+
+msgid "Inherit Material"
+msgstr "Наследование материалов"
+
+msgid ""
+"Blend4Web supports dynamic material switching. This feature is "
+"exceptionally useful for so-called configurator applications that give a "
+"user an opportunity to customize the appearance of a model such as an "
+"apparel, a piece of furniture, a car or something else. The Inherit "
+"Material feature should be used when API methods for adjusting stack and "
+"node materials as well as the :b4wref:`textures.change_texture` method do"
+" not suffice."
+msgstr ""
+"Blend4Web поддерживает динамическую смену материалов. Эта возможность "
+"очень полезна для т.н. приложений-конфигураторов, где пользователю "
+"предлагается настроить внешний вид какой-либо модели (одежда, мебель, "
+"автомобили и т.д.). В случае, если не хватает возможностей API по "
+"изменению стековых и нодовых материалов, описанных выше, а также метода "
+":b4wref:`textures.change_texture` и простой смены текстур, тогда можно "
+"воспользоваться наследованием."
+
+msgid ""
+"Inherit Material has the advantage of being flexible and easy to use, "
+"which makes it a better choice when you have to significantly alter the "
+"source material. It is available for both API scripts and logic nodes, "
+"and it can be used for stack and node materials alike. The downside of "
+"this feature is the fact that it might not work as fast as other methods "
+"described above, which can be critical in some cases."
+msgstr ""
+"Преимуществом наследования является простота и универсальность "
+"использования, что хорошо подходит, когда нужно довольно сильно изменить "
+"исходный материал. Также оно доступно как из внешнего API, так и в "
+"нодовой логике, и подходит одинаково как для нодовых, так и для стековых "
+"материалов. Недостатком может являться то, что операция наследования "
+"может быть хуже по производительности, чем другие вышеупомянутые методы, "
+"что может быть критически важным в ряде случаев."
+
+msgid ""
+"To use Inherit Material, you need two objects. First one of them is the "
+"source object that has a material that will be inherited assigned to it. "
+"The second one is the target object which has a material that you need to"
+" replace. Both object should have the ``Dynamic Geometry & Material`` "
+"option enabled (this option can be found under the ``Object`` tab, on the"
+" ``Rendering Properties`` panel)."
+msgstr ""
+"В наследовании участвуют 2 объекта. Первый - источник, на котором "
+"находится наследуемый материал, второй - целевой объект, на котором "
+"требуется произвести замену материала. Оба этих объекта требуют "
+"выставления опции ``Dynamic Geometry & Materials`` на панели ``Object`` в"
+" разделе ``Rendering Properties``."
+
+msgid ""
+"After a material is inherited, it will look exactly the same as if it was"
+" simply assigned to the target object in Blender. This means that you "
+"might have to manually prepare all UV maps and vertex color layers for "
+"every material that will be inherited by the object beforehand. For the "
+"source object, this is not necessary."
+msgstr ""
+"После наследования материал на целевом объекте будет выглядеть также как,"
+" если бы он был просто назначен на него в самом Blender, т.е. при "
+"необходимости на целевом объекте нужно заранее подготовить UV-слои и слои"
+" вертексного цвета под все материалы, которые будут на него "
+"наследоваться. Для объекта источника это уже необязательно."
+
+msgid ""
+"If you are using Logic Nodes, Inherit Material can be performed with the "
+"``Object->Inherit Material`` node. If you are using API, this can be done"
+" with the :b4wref:`materials.inherit_material` method."
+msgstr ""
+"При использовании нодовой логики наследование можно осуществить с помощью"
+" ноды ``Object->Inherit Material``. В API же для этого существует метод "
+":b4wref:`materials.inherit_material`."
+
+msgid ""
+"If an application requires many different materials to be changed, it "
+"might be a good approach to create a dedicated container object. It can "
+"be a simple flat mesh, like a ``Plane`` object, that has every material "
+"you might need assigned to it. This object can be hidden from the scene "
+"itself by setting the ``Hidden`` or ``Do Not Render`` option on the "
+"``Object->Rendering Properties`` panel."
+msgstr ""
+"Если в приложении требуется смена множества разных материалов, то хорошим"
+" подходом будет создание специального объекта-контейнера. Он может "
+"представлять собой простой объект типа ``Plane``, на котором будут "
+"находится все нужные материалы. При необходимости его можно скрыть на "
+"самой сцене, выставив на нём настройку ``Hidden`` или ``Do Not Render`` "
+"на панели ``Object->Rendering Properties``."
+
+msgid "materials"
+msgstr "материалы"
+
+msgid "lighting parameters"
+msgstr "Параметры освещения"
+
+msgid "transparency"
+msgstr "прозрачность"
+
+msgid "types"
+msgstr "типы"
+
+msgid "settings"
+msgstr "Настройка"
+
+msgid "reflection"
+msgstr "зеркальное отражение"
+
+msgid "static"
+msgstr "static"
+
+msgid "dynamic"
+msgstr "динамическое"
+
+msgid "fresnel effect"
+msgstr "эффект Френеля"
+
+msgid "rendering properties"
+msgstr "опции рендеринга"
+
+msgid "viewport properties"
+msgstr "опции рендеринга"
+
+msgid "specific parameters"
+msgstr "специальные параметры"
+
+msgid "halo"
+msgstr "гало"
+
+#~ msgid "Materials"
+#~ msgstr "Материалы"
+
+#~ msgid "setup"
+#~ msgstr "настройка"
+
+#~ msgid "*Transparency > Z Offset*, depth offset"
+#~ msgstr "*Transparency > Z Offset*, смещение по глубине"
+
+#~ msgid "static"
+#~ msgstr "статическое"
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "Материалы"
+#~ msgstr ""
+
+#~ msgid "*Transparency > Z Offset*, смещение по глубине"
+#~ msgstr ""
+
+#~ msgid "зеркальное отражение"
+#~ msgstr ""
+
+#~ msgid "статическое"
+#~ msgstr ""
+
+#~ msgid "Diffuse color:"
+#~ msgstr ""
+
+#~ msgid "Specular color:"
+#~ msgstr ""
+
+#~ msgid "Other parameters:"
+#~ msgstr "специальные параметры"
+
+#~ msgid "First of all, we have to get a link to an actual scene object."
+#~ msgstr "Прежде всего, необходимо получить ссылку на объект сцены."
+
+#~ msgid "To perform any actions with the material, you need its name."
+#~ msgstr ""
+
+#~ msgid "transparancy"
+#~ msgstr "прозрачность"
+

@@ -1,0 +1,990 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Triumph
+# This file is distributed under the same license as the Blend4Web. User
+# Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Blend4Web 16.08\n"
+"Report-Msgid-Bugs-To: https://www.blend4web.com/en/forums/forum/17/\n"
+"POT-Creation-Date: 2017-10-06 17:16+0300\n"
+"PO-Revision-Date: 2015-08-28 10:55+0300\n"
+"Last-Translator: Blend4Web Team <info [at] blend4web.com>\n"
+"Language-Team: Russian <info [at] blend4web.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+msgid "Outdoor Effects"
+msgstr "Природные эффекты"
+
+msgid "Table of Contents"
+msgstr "Содержание"
+
+msgid ""
+"Blend4Web has several environmental effects that can be useful for "
+"creating outdoor scenes."
+msgstr ""
+"В Blend4Web присутствует ряд эффектов окружающей среды, которые могут "
+"быть полезны при создании открытых пространств."
+
+msgid "Water"
+msgstr "Вода"
+
+msgid "Activation"
+msgstr "Активация"
+
+msgid ""
+"For the supposed water material activate the ``Water`` panel option under"
+" the ``Material`` tab."
+msgstr ""
+"Для предполагаемого материала воды активировать панель ``Water`` во "
+"вкладке ``Material``."
+
+msgid "Basic Settings"
+msgstr "Базовые настройки"
+
+msgid "*Transparency*"
+msgstr "*Прозрачность*"
+
+msgid ""
+"It is recommended to enable the gradient transparency (set the "
+"``Transparency > Type`` parameter to the ``Alpha Blend`` value) and to "
+"tweak the ``Alpha`` value."
+msgstr ""
+"Рекомендуется включить прозрачность с градиентом (установить значение "
+"``Alpha Blend`` для параметра ``Transparency > Type``) и настроить "
+"значение ``Alpha``."
+
+msgid "*Lighting parameters*"
+msgstr "*Параметры освещения*"
+
+msgid ""
+"Lighting parameters for the water material can be set up as described in "
+"the :ref:`material_lighting_params` section."
+msgstr ""
+"Параметры освещения материала воды настраиваются как описано в разделе "
+":ref:`material_lighting_params`."
+
+msgid "Waves Dynamics"
+msgstr "Динамика волн"
+
+msgid ""
+"Ripples on the water are simulated by normal maps with animated UVs (from"
+" 0 up to 4 pieces). For normal map the only shared image is used - the "
+"textures differs only by the ``Mapping > Size`` parameters. The water "
+"mesh must have a UV layer."
+msgstr ""
+"Рябь на водной поверхности симулируется при помощи карт нормалей с "
+"анимированными развертками (в количестве от 0 до 4). Для текстур - карт "
+"нормалей используется только одно общее изображение, текстуры различаются"
+" параметрами ``Mapping > Size``. Меш для воды должен иметь текстурную "
+"развертку."
+
+msgid "Surface Wetting"
+msgstr "Смачивание поверхностей"
+
+msgid ""
+"Is carried out automatically. To turn the effect on activate the "
+"``Wettable`` option on the needed materials ``Rendering Options`` panel."
+msgstr ""
+"Осуществляется автоматически. Для включения эффекта на соответствующих "
+"материалах необходимо активировать опцию ``Wettable`` на панели "
+"``Rendering Options``."
+
+msgid "Reflection and Fresnel Effect"
+msgstr "Отражение и эффект Френеля"
+
+msgid ""
+"For the water material both static and dynamic reflection is supported as"
+" well as the Fresnel effect. See the :ref:`material_mirror` section."
+msgstr ""
+"Для материала воды поддерживается как статическое, так и динамическое "
+"зеркальное отражение, с эффектом Френеля. См. раздел "
+":ref:`material_mirror`."
+
+msgid "Shoreline Smoothing"
+msgstr "Сглаживание у береговой линии"
+
+msgid ""
+"The effect affects the water near the shoreline - it becomes more "
+"transparent."
+msgstr "Эффект заключается в том, что вода ближе к берегу становится прозрачнее."
+
+msgid "*Water > Shore Smoothing*"
+msgstr "*Water > Shore Smoothing*"
+
+msgid "Enable smoothing."
+msgstr "Включить сглаживание."
+
+msgid "*Water > Absorb Factor*"
+msgstr "*Water > Absorb Factor*"
+
+msgid ""
+"This is the light absorption coefficient for water. The higher it is the "
+"more transparent the water is. This value can vary from 0 to 100. The "
+"default value is 6."
+msgstr ""
+"Коэффициент поглощения света водой. Чем он выше, тем прозрачнее "
+"вода.Значение этого параметра может находиться в пределах от 0 до 100. "
+"Значение по умолчанию - 6."
+
+msgid "Color Gradient"
+msgstr "Градиент цвета"
+
+msgid ""
+"For color gradient the water material must have a texture with the "
+"``Export Options > Shore Distance Map`` option enabled. This texture can "
+"be generated using the script for :ref:`baking shoreline parameters "
+"<shore_distance_bake>`."
+msgstr ""
+"Для создания цветного градиента на материале воды должна быть наложена "
+"текстура с включенной опцией ``Export Options > Shore Distance Map``, "
+"генерируемая с помощью скрипта для :ref:`запекания параметров береговой "
+"линии <shore_distance_bake>`."
+
+msgid "*Shallow Water > Color*"
+msgstr "*Shallow Water > Color*"
+
+msgid ""
+"This sets the color of shallow water. By default, blue (0.008, 0.222, "
+"0.8) is used."
+msgstr ""
+"Цвет воды на мелководье. По умолчанию используется синий (0.008, 0.222, "
+"0.8) цвет."
+
+msgid "*Shallow Water > Factor*"
+msgstr "*Shallow Water > Factor*"
+
+msgid ""
+"This sets the mixing factor for the color of shallow water. This value "
+"can vary from 0 to 2, and is set to 1 by default."
+msgstr ""
+"Коэффициент примешивания цвета воды на мелководье. Этот параметр может "
+"принимать значения от 0 до 2, значение по умолчанию - 1."
+
+msgid "*Shore Water > Color*"
+msgstr "*Shore Water > Color*"
+
+msgid ""
+"This determines the color of the water just at the shore line. By "
+"default, dark blue (0.003, 0.19, 0.57) is used."
+msgstr ""
+"Цвет воды непосредственно у береговой линии. По умолчанию используется "
+"тёмно-синий (0.003, 0.19, 0.57) цвет."
+
+msgid "*Shore Water > Factor*"
+msgstr "*Shore Water > Factor*"
+
+msgid ""
+"This sets the mixing factor for the color of the water just near the "
+"shoreline. This value can vary from 0 to 2, and is set to 0.5 by default."
+msgstr ""
+"Коэффициент примешивания цвета воды на береговой линии. Возможные "
+"значения - от 0 до 2, значение по умолчанию - 0.5."
+
+msgid "Refraction"
+msgstr "Преломление"
+
+msgid ""
+"Under the ``Render`` tab in the ``Reflections and Refractions`` panel set"
+" the ``Refractions`` option to ``ON`` or ``AUTO``."
+msgstr ""
+"Во вкладке ``Render``  в панели ``Reflections and Refractions`` выставить"
+" опцию ``Refractions`` в положение ``ON`` или ``AUTO``."
+
+msgid "Foam"
+msgstr "Пена"
+
+msgid ""
+"For creating foam add a diffuse texture into the water material slot. "
+"Every RGB channel of this image must contain a BW foam texture in it. "
+"Then enable the ``Water Foam`` panel."
+msgstr ""
+"Для создания пены необходимо добавить в текстурный слот материала воды "
+"диффузную текстуру, в каждом из RGB - каналов которой следует расположить"
+" черно-белые текстуры пены. Для полученной текстуры необходимо "
+"активировать панель ``Water Foam``."
+
+msgid "Setting up the Textures"
+msgstr "Настройка текстур"
+
+msgid "*Water Foam > UV Frequency*"
+msgstr "*Water Foam > UV Frequency*"
+
+msgid ""
+"Oscillation frequency of the animated UV coordinates. The default value "
+"is (1.0, 1.0)."
+msgstr ""
+"Частота колебаний анимированной развертки. Значение по умолчанию (1.0, "
+"1.0)."
+
+msgid "*Water Foam > UV Magnitude*"
+msgstr "*Water Foam > UV Magnitude*"
+
+msgid ""
+"Oscillation amplitude of the animated UV coordinates. The default value "
+"is (1.0, 1.0)."
+msgstr ""
+"Амплитуда колебаний анимированной развертки. Значение по умолчанию (1.0, "
+"1.0)."
+
+msgid "Setting up the Material"
+msgstr "Настройка материала"
+
+msgid "*Foam > Factor*"
+msgstr "*Foam > Factor*"
+
+msgid "General influence factor for the foam. The default value is 0.5."
+msgstr "Фактор общего влияния пены. Значение по умолчанию 0.5."
+
+msgid "Caustics and Chromatic Aberration"
+msgstr "Каустика и хроматическая аберрация"
+
+msgid ""
+"To create the caustics effect turn on the ``Caustics`` option on the "
+"water material. Also, there has to be at least one ``Sun`` on the scene."
+msgstr ""
+"Для создания каустики на подводных объектах следует включить опцию "
+"``Caustics``. Так же на сцене должен присутствовать источник освещение "
+"типа ``Sun``."
+
+msgid "*Scale*"
+msgstr "*Scale*"
+
+msgid "Cell size for the procedural texture. The default value is 0.25."
+msgstr "Размер ячеек процедурной текстуры. Значение по умолчанию 0.25."
+
+msgid "*Brightness*"
+msgstr "*Brightness*"
+
+msgid "Caustics influence factor. The default value is 0.5."
+msgstr "Фактор влияния каустики. Значение по умолчанию 0.5."
+
+msgid "Underwater Environment"
+msgstr "Подводная среда"
+
+msgid "Visibility Settings (“fog”)"
+msgstr "Настройки видимости (\"туман\")"
+
+msgid "*Underwater Fog > Color*"
+msgstr "*Underwater Fog > Color*"
+
+msgid "Fog color. The default value is (0.4, 0.6, 0.7)."
+msgstr "Цвет тумана. Значение по умолчанию (0.4, 0.6, 0.7)."
+
+msgid "*Underwater Fog > Density*"
+msgstr "*Underwater Fog > Density*"
+
+msgid ""
+"Exponential factor which affects the density and visibility distance. The"
+" default value is 0.06."
+msgstr ""
+"Экспоненциальный фактор, влияющий на плотность и расстояние. Значение по "
+"умолчанию 0.06."
+
+msgid "The :ref:`god rays <god_rays>` effect settings are also applied."
+msgstr "Применяются также настройки :ref:`сумеречных лучей <god_rays>`."
+
+msgid ""
+"The ``Rendering Options > Backface Culling`` option must be turned off "
+"for the correct water surface rendering."
+msgstr ""
+"Для корректного отображения водной поверхности необходимо выключить опцию"
+" ``Rendering Options > Backface Culling``."
+
+msgid "Volumetric Waves"
+msgstr "Объемные волны"
+
+msgid "To enable procedural waves the ``Waves`` option must be turned on."
+msgstr "Для создания объемных волн следует включить опцию ``Waves``."
+
+msgid ""
+"The direction of procedural waves is derived from a ``Wind`` force field "
+"in the scene."
+msgstr ""
+"Направление объёмных волн определяется силовым полем типа ``Wind``, "
+"присутствующим в сцене."
+
+msgid ""
+"If a scene does not have a ``Wind`` force field, procedural waves will "
+"only move in the default direction which cannot be changed."
+msgstr ""
+"Если в сцене отсутствует силовое поле типа ``Wind``, объёмные волны будут"
+" двигаться только в направлении, заданном по умолчанию. Это направление "
+"не может быть изменено."
+
+msgid "Setting up"
+msgstr "Настройка"
+
+msgid "*Wave Height*"
+msgstr "*Wave Height*"
+
+msgid "Wave height can vary from 0 to 5. The default value is 1.0."
+msgstr "Высота волн. Возможные значения - от 0 до 5. Значение по умолчанию 0.0."
+
+msgid "*Wave Length*"
+msgstr "*Wave Length*"
+
+msgid "Wave length can vary from 0.01 to 200. The default value is 10.0."
+msgstr ""
+"Длина волн. Возможные значения - от 0.01 до 200. Значение по умолчанию "
+"10.0."
+
+msgid "*Noise Dist Scale 0*"
+msgstr "*Noise Dist Scale 0*"
+
+msgid ""
+"This is the size of the first component of the open water waves. This "
+"parameter can vary from 0 to 1. Default value is 0.05."
+msgstr ""
+"Размер первого компонента волн, удаленных от берега. Этот параметр может "
+"принимать значения от 0 до 1. Значение по умолчанию - 0.05."
+
+msgid "*Noise Dist Scale 1*"
+msgstr "*Noise Dist Scale 1*"
+
+msgid ""
+"This is the size of the second component of the open water waves. This "
+"parameter can vary from 0 to 1. Default value is 0.03."
+msgstr ""
+"Размер второго компонента волн, удаленных от берега. Возможные значения -"
+" от 0 до 1. Значение по умолчанию - 0.03."
+
+msgid "*Noise Dist Freq 0*"
+msgstr "*Noise Dist Freq 0*"
+
+msgid ""
+"This sets the frequency of the first component of the open water waves. "
+"This parameter can vary from 0 to 10. Default value is 1.3."
+msgstr ""
+"Частота первого компонента волн, удалённых от берега. Этот параметр может"
+" принимать значения от 0 до 10. Значение по умолчанию - 1.3."
+
+msgid "*Noise Dist Freq 1*"
+msgstr "*Noise Dist Freq 1*"
+
+msgid ""
+"This sets the frequency of the second component of the open water waves. "
+"This parameter can vary from 0 to 10 and is set to 1 by default."
+msgstr ""
+"Частота второго компонента волн, удаленных от берега. Возможные значения "
+"- от 0 до 10, значение по умолчанию - 1."
+
+msgid "*Min Dir Shore Fac*"
+msgstr "*Min Dir Shore Fac*"
+
+msgid ""
+"This is the minimum height decrease coefficient of the shore waves. This "
+"parameter can vary from 0 to 1 and is set to 0.4 by default."
+msgstr ""
+"Минимальный коэффициент уменьшения высоты прибрежных волн. Диапазон "
+"значений - от 0 до 1, значение по умолчанию - 0.4."
+
+msgid "*Dir Frequency*"
+msgstr "*Dir Frequency*"
+
+msgid ""
+"This sets the frequency of the rolling of the shore waves. This parameter"
+" can vary from 0 to 10 and is set to 0.5 by default."
+msgstr ""
+"Частота накатывания прибрежных волн. Значение этого параметра может "
+"изменяться от 0 до 10. Значение по умолчанию - 0.5."
+
+msgid "*Noise Dir Scale*"
+msgstr "*Noise Dir Scale*"
+
+msgid ""
+"This specifies the size of the noise for the shore waves. This parameter "
+"can vary from 0 to 1 and is set to 0.05 by default."
+msgstr ""
+"Размер шума на прибрежных волнах. Возможные значения - от 0 до 1, "
+"значение по умолчанию - 0.05."
+
+msgid "*Noise Dir Freq*"
+msgstr "*Noise Dir Freq*"
+
+msgid ""
+"This describes the frequency of the noise for the shore waves. This "
+"parameter can vary from 0 to 1. Default value is 0.07."
+msgstr ""
+"Частота шума на прибрежных волнах. Возможные значения - от 0 до 1. "
+"Значение по умолчанию - 0.07."
+
+msgid "*Min Dir Noise Fac*"
+msgstr "*Min Dir Noise Fac*"
+
+msgid ""
+"This is the noise minimum for the shore waves. This parameter can vary "
+"from 0 to 1. Default value is 0.5."
+msgstr ""
+"Минимальное значение шума на прибрежных волнах.  Этот параметр может "
+"принимать значения от 0 до 1. Значение по умолчанию - 0.5."
+
+msgid "*Min Dist Fac*"
+msgstr "*Min Dist Fac*"
+
+msgid ""
+"This sets the minimum coefficient of mixing open water waves. This "
+"parameter can vary from 0 to 1. Default value is 0.2."
+msgstr ""
+"Минимальный коэффициент примешивания волн, удаленных от берега. Значение "
+"этого параметра может меняться от 0 до 1 и по умолчанию равно 0.2."
+
+msgid "*Horizontal Factor*"
+msgstr "*Horizontal Factor*"
+
+msgid ""
+"This coefficient shows how much the shore waves are shifted in the "
+"direction of the shoreline. This parameter can vary from 0 to 10. Default"
+" value is 5."
+msgstr ""
+"Коэффициент смещения прибрежных волн в направлении к берегу. Этот "
+"параметр может принимать значения от 0 до 10 и равен 5 по умолчанию."
+
+msgid "Settings for Surface Generation"
+msgstr "Настройки генерируемой поверхности"
+
+msgid "*Generate Mesh*"
+msgstr "*Generate Mesh*"
+
+msgid "This enables a generated surface."
+msgstr "Включить генерируемую поверхность."
+
+msgid "*Cascades Number*"
+msgstr "*Cascades Number*"
+
+msgid ""
+"This describes the number of cascades on the generated surface. This "
+"parameter's value can vary from 1 to 20. Default value is 5."
+msgstr ""
+"Задаёт количество каскадов в генерируемой поверхности. Этот параметр "
+"может принимать значения от 1 до 20. Значение по умолчанию - 5."
+
+msgid "*Subdivisions*"
+msgstr "*Subdivisions*"
+
+msgid ""
+"This is the number of subdivisions in generated mesh. Default value is "
+"64. The lowest possible value for this parameter is 2, while the highest "
+"possible value is 512."
+msgstr ""
+"Количество подразделений в генерируемой поверхности. Значение по "
+"умолчанию - 64. Минимальное возможное значение для этого параметра - 2, а"
+" максимальное - 512."
+
+msgid "*Detailed Distance*"
+msgstr "*Detailed Distance*"
+
+msgid ""
+"This specifies the maximum distance from the camera to the edge of the "
+"last cascade. The value of this parameter can vary from 1 to 5000. "
+"Default value is 1000."
+msgstr ""
+"Этот параметр задаёт максимальное расстояние от камеры до края последнего"
+" каскада. Значение параметра может меняться от 1 до 5000. Значение по "
+"умолчанию - 1000."
+
+msgid "Baking Shoreline Data to Texture"
+msgstr "Создание текстуры с параметрами береговой линии"
+
+msgid ""
+"On the tools panel (hotkey “T”) under the ``Blend4Web`` tab open the "
+"``Bake Shore Distance Map`` panel. Set the parameters: maximum distance "
+"to shore (``Maximum Distance``) and the resulting texture size (``Texture"
+" Size``). Select a landscape object (or multiple objects) first, and then"
+" - a water object. Click the ``Bake`` button."
+msgstr ""
+"На панели инструментов (горячая клавиша \"T\") во вкладке ``Blend4Web`` "
+"открыть панель ``Bake Shore Distance Map``. Выставить настройки "
+"максимального расстояния до берега ``Maximum Distance`` и размера "
+"получаемой текстуры ``Texture Size``. Выбрать сначала объект (или "
+"несколько объектов) ландшафта, затем объект воды. Нажать кнопку ``Bake``."
+
+msgid ""
+"Depending on the texture size and the number of vertices in the processed"
+" meshes the execution time of the script may vary from a fraction of a "
+"second up to several minutes. Make sure that the texture named "
+"``ShoreDistance`` is created for the water mesh."
+msgstr ""
+"В зависимости от размера текстуры и количества вершин в обрабатываемых "
+"мешах время выполнения скрипта варьируется от долей секунды до нескольких"
+" минут. Убедиться, что в меше воды создана текстура с названием "
+"``ShoreDistance``."
+
+msgid ""
+"Upon script execution some system properties are saved in the water "
+"material. Therefore, the scene must be saved after the script has "
+"finished working."
+msgstr ""
+"При вызове скрипта в материале воды сохраняются некоторые системные "
+"свойства. Поэтому, после его работы обязательно нужно сохранять сцену."
+
+msgid "Atmosphere"
+msgstr "Атмосфера"
+
+msgid "Scattering"
+msgstr "Рассеивание"
+
+msgid ""
+"Enable ``World > Render Sky``, then activate ``Procedural Sky`` panel "
+"under the World tab. Please note, that if a :ref:`static skydome texture "
+"<skydome_texture>` is being used at the same time, it will be replaced."
+msgstr ""
+"Во вкладке ``World`` активировать панель ``Procedural Sky``, "
+"предварительно выставив опцию ``World > Render Sky``. Если одновременно с"
+" этим используется статическая :ref:`текстура неба <skydome_texture>`, "
+"она будет заменена."
+
+msgid ""
+"Also, a procedural sky texture can be used to imitate scattered "
+":ref:`environment lighting <environment_lighting>` similar to the "
+":ref:`static skydome texture <skydome_texture>`. To do this, enable the "
+"``Procedural Sky > Use as Environment Lighting`` and ``Environment "
+"Lighting > Sky Texture`` options. If the world texture for environment "
+"lighting already exists, it will be replaced."
+msgstr ""
+"Кроме того, процедурная текстура неба может быть использована для "
+"имитации рассеянного :ref:`освещения от окружающей среды "
+"<environment_lighting>`, по аналогии со статической :ref:`текстурой неба "
+"<skydome_texture>`. Для этого необходимо выставить опции ``Procedural Sky"
+" > Use as Environment Lighting`` и ``Environment Lighting > Sky "
+"Texture``. Если текстура мира для рассеянного освещения уже существует, "
+"она будет заменена."
+
+msgid "Supported settings:"
+msgstr "Движком поддерживаются следующие настройки:"
+
+msgid "*Procedural Sky > Sky Color*"
+msgstr "*Procedural Sky > Sky Color*"
+
+msgid "Base sky color. The default value is (0.087, 0.255, 0.6) (blue)."
+msgstr "Базовый цвет неба. Значение по умолчанию (0.087, 0.255, 0.6) (голубой)."
+
+msgid "*Procedural Sky > Rayleigh Brightness*"
+msgstr "*Procedural Sky > Rayleigh Brightness*"
+
+msgid ""
+"Rayleigh scattering brightness (i.e. scattering on small particles). The "
+"default value is 3.3."
+msgstr ""
+"Яркость рэлеевского рассеяния (на малых частицах). Значение по умолчанию "
+"3.3."
+
+msgid "*Procedural Sky > Mie Brightness*"
+msgstr "*Procedural Sky > Mie Brightness*"
+
+msgid ""
+"Mie scattering brightness (i.e. scattering on large particles). The "
+"default value is 0.1."
+msgstr "Яркость рассеяния Ми (на крупных частицах). Значение по умолчанию 0.1."
+
+msgid "*Procedural Sky > Spot Brightness*"
+msgstr "*Procedural Sky > Spot Brightness*"
+
+msgid "Sun spot brightness. The default value is 20.0."
+msgstr "Яркость пятна солнца. Значение по умолчанию 20.0."
+
+msgid "*Procedural Sky > Scatter Strength*"
+msgstr "*Procedural Sky > Scatter Strength*"
+
+msgid "Light scattering factor. The default value is 0.2."
+msgstr "Фактор рассеяния света. Значение по умолчанию 0.2."
+
+msgid "*Procedural Sky > Rayleigh Strength*"
+msgstr "*Procedural Sky > Rayleigh Strength*"
+
+msgid "Rayleigh scattering factor. The default value is 0.2."
+msgstr "Фактор рэлеевского рассеяния. Значение по умолчанию 0.2."
+
+msgid "*Procedural Sky > Mie Strength*"
+msgstr "*Procedural Sky > Mie Strength*"
+
+msgid "Mie scattering factor. The default value is 0.006."
+msgstr "Фактор рассеяния Ми. Значение по умолчанию 0.006."
+
+msgid "*Procedural Sky > Rayleigh Collection Power*"
+msgstr "*Procedural Sky > Rayleigh Collection Power*"
+
+msgid "Rayleigh scattering exponent. The default value is 0.35."
+msgstr "Степенной коэффициент рэлеевского рассеяния. Значение по умолчанию 0.35."
+
+msgid "*Procedural Sky > Mie Collection Power*"
+msgstr "*Procedural Sky > Mie Collection Power*"
+
+msgid "Mie scattering exponent. The default value is 0.5."
+msgstr "Степенной коэффициент рассеяния Ми. Значение по умолчанию 0.5."
+
+msgid "*Procedural Sky > Mie Distribution*"
+msgstr "*Procedural Sky > Mie Distribution*"
+
+msgid "Mie scattering distribution. The default value is 0.4."
+msgstr "Распределение рассеяния Ми. Значение по умолчанию 0.4."
+
+msgid "Fog"
+msgstr "Туман"
+
+msgid ""
+"The engine supports standard parameters located on the ``World > Mist`` "
+"panel. Besides this, overriding fog color is possible."
+msgstr ""
+"Движком поддерживаются стандартные параметры вкладки ``World > Mist``. "
+"Помимо этого возможно переопределение цвета тумана."
+
+msgid ""
+"Fog settings are described in the :ref:`Scene Settings <world_mist>` "
+"chapter."
+msgstr "Настройки тумана описаны в главе :ref:`Параметры сцены <world_mist>`."
+
+msgid "When a dynamic skydome is used, the fog color is defined by the sky color."
+msgstr "При использовании динамического неба цвет тумана определяется цветом неба."
+
+msgid "Time of Day"
+msgstr "Время суток"
+
+msgid "Enable the ``Dynamic Intensity`` options for the lamp."
+msgstr "Для лампы необходимо выставить опцию ``Dynamic Intensity``."
+
+msgid ""
+"Time of day can be set by applications via API. Particularly time of day "
+"can be set using the ``Lighting`` interface of the :ref:`Scene viewer "
+"<viewer>`."
+msgstr ""
+"Время суток устанавливается приложениями с использованием "
+"соответствующего API. В частности, время суток может устанавливаться в "
+"интерфейсе ``Lighting`` :ref:`просмотрщика сцен <viewer>`."
+
+msgid "Stars"
+msgstr "Звезды"
+
+msgid "Stars setup is described in the :ref:`material_halo` section."
+msgstr "Настройка данного эффекта описывается в разделе :ref:`material_halo`."
+
+msgid "Lens Flare"
+msgstr "Блик (Lens Flare)"
+
+msgid ""
+"This feature can be enabled by the ``Lens Flare`` check-box located in "
+"the ``Rendering Options`` of the ``Material`` panel."
+msgstr ""
+"Включается с помощью опции ``Lens Flare`` на вкладке ``Rendering "
+"Options`` панели ``Material``."
+
+msgid ""
+"This effect is strongly recommended to use with a single ``Sun`` type "
+"light source present in the scene."
+msgstr ""
+"Этот эффект рекомендуется использовать только в том случае, если в сцене "
+"присутствует один источник света типа ``Sun``."
+
+msgid "Lens Flare Settings"
+msgstr "Настройки эффекта"
+
+msgid "Lens Flare Object"
+msgstr "Объект для бликов линз"
+
+msgid ""
+"Lens Flare object is used for the actual rendering of the effect. In "
+"essence, such an object consists of several planes with each plane "
+"containing one element of the flare. The normal vector of each plane "
+"should be pointed in the ``-Y`` direction. Every element can slide across"
+" the screen in relation to camera rotation with the sole exception being "
+"the central plane (bright white \"star\" on the picture above). This "
+"plane serves as a center of the lens flare object and should have a "
+"*local* ``Y`` coordinate set to 1."
+msgstr ""
+"Объект используется при визуализации эффекта. По сути, такой объект "
+"представляет собой набор плоскостей, каждая из которых содержит один из "
+"элементов блика. Нормаль каждой плоскости должна быть направлена в "
+"сторону ``-Y``. Каждый элемент блика может двигаться по экрану с "
+"поворотом камеры, единственным исключением является центральный элемент "
+"(яркая белая \"звезда\" на изображении выше). Эта плоскость считается "
+"центром объекта, и её *локальная* координата ``Y`` должна быть равна 1."
+
+msgid ""
+"The placement and spatial orientation of the object itself are not taken "
+"into account during rendering."
+msgstr ""
+"Расположение и пространственная ориентация самого объекта при "
+"визуализации не учитываются."
+
+msgid ""
+"For lens flare object to work correctly, the ``Disable Frustum Culling`` "
+"option should be activated."
+msgstr ""
+"Для корректной работы объекта следует включить опцию ``Disable Frustum "
+"Culling``."
+
+msgid ""
+"An example of such object can be seen, for example, in our **Island** "
+"demo."
+msgstr ""
+"Пример использования подобного объекта можно увидеть в нашем демо "
+"**Island**."
+
+msgid "Material Settings"
+msgstr "Настройки материала"
+
+msgid ""
+"The material used for the lens flare object should have the ``Alpha "
+"Blend`` transparency type. ``Alpha`` parameter should be set to zero."
+msgstr ""
+"Материал объекта для бликов линз должен иметь тип прозрачности ``Alpha "
+"Blend``. Значение параметра ``Alpha`` должно быть равно нулю."
+
+msgid ":ref:`Node materials <node_materials>` are not supported."
+msgstr ":ref:`Нодовые материалы <node_materials>` не поддерживаются."
+
+msgid "Texture Settings"
+msgstr "Настройки текстуры"
+
+msgid "An example of texture used to generate Lens Flare effect."
+msgstr "Пример использования текстуры для создания эффекта линз."
+
+msgid ""
+"The texture used for the Lens Flare object should contain all elements "
+"used to form the shape of the flare in an actual application. The texture"
+" image should use ``Alpha`` channel and influence both ``Color`` and "
+"``Alpha`` values."
+msgstr ""
+"Все элементы, используемые для изображения блика в приложении, должны "
+"находиться на одной текстуре. Текстура должна обладать каналом "
+"прозрачности и влиять на значения ``Color`` и ``Alpha``."
+
+msgid "Wind"
+msgstr "Ветер"
+
+msgid "Wind strength and direction affect:"
+msgstr "Сила и направление ветра оказывает воздействие на:"
+
+msgid ":ref:`grass and tree leaves animation <wind_bending>`"
+msgstr ":ref:`анимацию травы и крон деревьев <wind_bending>`"
+
+msgid ":ref:`particle system dynamics <particles_force_fields>`"
+msgstr ":ref:`динамику систем частиц <particles_force_fields>`"
+
+msgid ""
+":ref:`water waves rolling frequency <water_volumetric_waves>` (at the "
+"moment only strength is taken into account)"
+msgstr ""
+":ref:`частоту колебаний волн воды <water_volumetric_waves>` (в настоящий "
+"момент влияет только сила)"
+
+msgid "Add a force field object of the ``Wind`` type."
+msgstr "Добавить на сцену объект - силовое поле типа ``Wind``."
+
+msgid "*Direction*"
+msgstr "*Направление*"
+
+msgid "Direction can be set by rotating the force field object."
+msgstr "Направление задается посредством вращения объекта - силового поля."
+
+msgid "*Force Fields > Strength*"
+msgstr "*Force Fields > Strength*"
+
+msgid ""
+"Wind strength. Located under the ``Physics`` tab. The default value is "
+"1.0."
+msgstr ""
+"Сила ветра. Располагается во вкладке ``Physics``. Значение по умолчанию "
+"1.0."
+
+msgid "Animation of Grass and Tree Leaves"
+msgstr "Анимация травы и крон деревьев"
+
+msgid ""
+"Authoring resources for grass rendering is described in the "
+":ref:`particles_grass` section."
+msgstr ""
+"Подготовка ресурсов для рендеринга травы описана в разделе "
+":ref:`particles_grass`."
+
+msgid "Enable the ``Wind Bending`` panel for the grass or tree object."
+msgstr "На объекте травы или дерева активировать панель ``Wind Bending``."
+
+msgid ""
+"The interface panel becomes visible after turning on the ``Wind Bending``"
+" panel."
+msgstr "Интерфейс для настроек появляется после активации панели ``Wind Bending``."
+
+msgid "*Main Bending > Angle*"
+msgstr "*Main Bending > Angle*"
+
+msgid ""
+"Angle amplitude of the “main” deviation under the influence of wind (in "
+"degrees). The default value is 10.0."
+msgstr ""
+"Амплитуда угла \"основного\" отклонения под действием ветра (в градусах)."
+" Значение по умолчанию 10.0."
+
+msgid "*Main Bending > Frequency*"
+msgstr "*Main Bending > Frequency*"
+
+msgid ""
+"Frequency of the “main” deviation under the influence of wind. The "
+"default value is 0.25."
+msgstr ""
+"Частота \"основного\" отклонения под действием ветра. Значение по "
+"умолчанию 0.25."
+
+msgid "*Main Bending > Main Stiffness (A)*"
+msgstr "*Main Bending > Main Stiffness (A)*"
+
+msgid ""
+"Text field for specifying the name of the vertex color layer which "
+"contains the information about the stiffness of the “main” deviation. Can"
+" be left empty."
+msgstr ""
+"Текстовое поле для названия слоя вертексного цвета, содержащего "
+"информацию о жесткости \"основного\" отклонения. Может быть оставлено "
+"пустым."
+
+msgid "*Detail Bending > Amplitude*"
+msgstr "*Detail Bending > Amplitude*"
+
+msgid ""
+"Angle amplitude of the “detail” deviation caused by the influence of wind"
+" (in degrees). The default value is 0.1."
+msgstr ""
+"Амплитуда угла \"детализованного\" отклонения под действием ветра (в "
+"градусах). Значение по умолчанию 0.1."
+
+msgid "*Detail Bending > Branch Amplitude*"
+msgstr "*Detail Bending > Branch Amplitude*"
+
+msgid ""
+"Angle amplitude of the branch deviation caused by the influence of wind "
+"(in degrees). The default value is 0.3."
+msgstr ""
+"Амплитуда угла отклонения ветвей под действием ветра (в градусах). "
+"Значение по умолчанию 0.3."
+
+msgid "*Detail Bending > Bending Frequency*"
+msgstr "*Detail Bending > Bending Frequency*"
+
+msgid "Detail bending frequency. The default value is 1.0."
+msgstr "Частота колебаний ветвей. Значение по умолчанию 1.0."
+
+msgid "*Detail Bending > Leaves Stiffness (R)*"
+msgstr "*Detail Bending > Leaves Stiffness (R)*"
+
+msgid ""
+"Text field for specifying the name of the vertex color layer which "
+"contains the information about the stiffness of leaves. Can be left "
+"empty."
+msgstr ""
+"Текстовое поле для названия слоя вертексного цвета, содержащего "
+"информацию о жесткости листвы. Может быть оставлено пустым."
+
+msgid "*Detail Bending > Leaves Phase (G)*"
+msgstr "*Detail Bending > Leaves Phase (G)*"
+
+msgid ""
+"Text field for specifying the name of the vertex color layer which "
+"contains the information about the phase of leaves deviation. Can be left"
+" empty."
+msgstr ""
+"Текстовое поле для названия слоя вертексного цвета, содержащего "
+"информацию о фазе отклонения листвы. Может быть оставлено пустым."
+
+msgid "*Detail Bending > Overall Stiffness (B)*"
+msgstr "*Detail Bending > Overall Stiffness (B)*"
+
+msgid ""
+"Text field for specifying the name of the vertex color layer which "
+"contains the information about the overall stiffness of leaves. Can be "
+"left empty."
+msgstr ""
+"Текстовое поле для названия слоя вертексного цвета, содержащего "
+"информацию об общей жесткости листвы. Может быть оставлено пустым."
+
+msgid ""
+"Vertex color layers should be present in the mesh if their names are "
+"specified."
+msgstr ""
+"Слои вертексных цветов с указанными в настройках названиями должны "
+"существовать в меше."
+
+msgid "shoreline data"
+msgstr "береговая линия"
+
+msgid "shoreline"
+msgstr "береговая линия"
+
+#~ msgid "shore line parameters"
+#~ msgstr "параметры берега"
+
+#~ msgid "Shallow water color."
+#~ msgstr "Цвет воды на мелководье."
+
+#~ msgid "Shallow water color mixing factor."
+#~ msgstr "Коэффициент примешивания цвета воды на мелководье."
+
+#~ msgid "Water color just at the shore line."
+#~ msgstr "Цвет воды непосредственно у береговой линии."
+
+#~ msgid "Factor for mixing water color just near the shoreline."
+#~ msgstr "Коэффициент примешивания цвета воды на береговой линии."
+
+#~ msgid "*Influence > Color*"
+#~ msgstr ""
+
+#~ msgid "Texture color influence factor. The default value is 1.0."
+#~ msgstr "Фактор влияния цвета текстуры. Значение по умолчанию 1.0."
+
+#~ msgid "Size of the first component of the open water waves."
+#~ msgstr "Размер первого компонента волн, удаленных от берега."
+
+#~ msgid "Size of the second component of the open water waves."
+#~ msgstr "Размер второго компонента волн, удаленных от берега."
+
+#~ msgid "Frequency of the first component of the open water waves."
+#~ msgstr "Частота первого компонента волн, удаленных от берега."
+
+#~ msgid "Frequency of the second component of the open water waves."
+#~ msgstr "Частота второго компонента волн, удаленных от берега."
+
+#~ msgid "Minimum height decrease coefficient of the shore waves."
+#~ msgstr "Минимальный коэффициент уменьшения высоты прибрежных волн."
+
+#~ msgid "Frequency of the rolling of the shore waves."
+#~ msgstr "Частота накатывания прибрежных волн."
+
+#~ msgid "Noise size for the shore waves."
+#~ msgstr "Размер шума на прибрежных волнах."
+
+#~ msgid "Noise frequency for the shore waves."
+#~ msgstr "Частота шума на прибрежных волнах."
+
+#~ msgid "Noise minimum for the shore waves."
+#~ msgstr "Минимальное значение шума на прибрежных волнах."
+
+#~ msgid "Minimum coefficient of mixing for open water waves."
+#~ msgstr "Минимальный коэффициент примешивания волн, удаленных от берега."
+
+#~ msgid "Number of cascades in the generated surface."
+#~ msgstr "Количество каскадов в генерируемой поверхности."
+
+#~ msgid "Generated mesh subdivisions."
+#~ msgstr "Количество подразделений в генерируемой поверхности."
+
+#~ msgid "Maximum distance from camera to the last cascades edge."
+#~ msgstr "Максимальное расстояние от камеры до края последнего каскада."
+
+#~ msgid "Lens Flares"
+#~ msgstr ""
+
+#~ msgid "*Mist > Use Custom Color*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "*Mist > Color*"
+#~ msgstr ""
+
+#~ msgid "Fog color. The default value is (0.5, 0.5, 0.5) (gray)."
+#~ msgstr "Цвет тумана. Значение по умолчанию (0.5, 0.5, 0.5) (серый)."
+

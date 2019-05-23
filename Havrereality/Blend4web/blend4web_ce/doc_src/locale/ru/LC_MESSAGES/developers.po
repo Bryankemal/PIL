@@ -1,0 +1,3213 @@
+# Blend4Web User Manual Russian Translation: Developers
+# Copyright (C) 2014-2016, Triumph
+# This file is distributed under the same license as Blend4Web.
+# Blend4Web Team <info [at] blend4web.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Blend4Web 16.08\n"
+"Report-Msgid-Bugs-To: https://www.blend4web.com/en/forums/forum/17/\n"
+"POT-Creation-Date: 2018-05-31 15:32+0300\n"
+"PO-Revision-Date: 2015-08-28 10:55+0300\n"
+"Last-Translator: Blend4Web Team <info [at] blend4web.com>\n"
+"Language-Team: Russian <info [at] blend4web.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+msgid "For Application Developers"
+msgstr "Разработчикам приложений"
+
+msgid "Table of Contents"
+msgstr "Содержание"
+
+msgid "Application Development"
+msgstr "Разработка приложений"
+
+msgid ""
+"To simplify development process, we recommend to use :ref:`Project "
+"Manager <project_management>`. It can be used to quickly :ref:`create "
+"<create_new_project>` a simple application with a generic code that is "
+"enough to load a simple scene and enable basic camera controls."
+msgstr ""
+"Для упрощения разработки рекомендуется пользоваться :ref:`менеджером "
+"проектов <project_management>`, с помощью которого можно быстро "
+":ref:`создать <create_new_project>` базовый каркас приложения и получить "
+"шаблонный код, достаточный для загрузки простой сцены с базовым "
+"управлением камерой."
+
+msgid "Application Code Structure"
+msgstr "Структура кода приложения"
+
+msgid ""
+"Starting with version 17.12, Blend4Web engine supports a new coding "
+"standard that uses ES6 modules. The old standard that uses modified "
+"CommonJS modules is still supported as well. The following chapter "
+"describes the structure of the program code in a generic Blend4Web "
+"aplication and the differences between these two programming approaches."
+msgstr ""
+
+msgid ""
+"The process of initializing and loading an application is separated into "
+"several stages, which is reflected in the code of the application. If you"
+" are using Project Manager, a newly created ``Copy`` or ``Compile`` type "
+"project will include a main JS file, which will be placed in the SDK. The"
+" path to the file will look like this: "
+"``./projects/PROJECT_NAME/PROJECT_NAME.js``."
+msgstr ""
+"Процесс инициализации и загрузки приложения состоит из нескольких "
+"последовательных стадий, что отражено в структуре кода приложения. При "
+"использовании менеджера проектов каждый вновь созданный проект типов "
+"``Copy`` и ``Compile`` будет содержать главный JS-файл, который находится"
+" внутри SDK по следующему пути: "
+"``./projects/ИМЯ_ПРОЕКТА/ИМЯ_ПРОЕКТА.js``."
+
+#, fuzzy
+msgid ""
+"This file contains generic code shaped as a module. Using the old "
+"CommonJS notation, this module can be registered using the certain "
+"structure:"
+msgstr ""
+"Этот файл содержит шаблонный код, оформленный в виде модуля. Он "
+"регистрируется специальной конструкцией:"
+
+msgid ""
+"If you are using ES6 notation, you don't have to register your modules "
+"and can use them without any preparations."
+msgstr ""
+
+msgid ""
+"So, the code of a module is contained within a function that accepts "
+"``exports`` and ``require`` parameters."
+msgstr ""
+"Таким образом, код модуля является содержимым функции, принимающей "
+"параметры ``exports`` и ``require``."
+
+msgid ""
+"``require`` is the method used for loading engine modules. The generic "
+"example mentioned above loads several modules:"
+msgstr ""
+"``require`` - метод, служащий для подгрузки библиотечных модулей движка. "
+"В шаблонном примере уже загружается ряд модулей:"
+
+msgid ""
+"The most important ones of them are the ``app`` and ``data`` modules. The"
+" ``app`` module simplifies application initialization while the ``data`` "
+"module contains API methods for loading 3D scene data."
+msgstr ""
+"Наиболее важные из них это ``app`` и ``data``. Модуль ``app`` служит для "
+"упрощения инициализации приложения, а ``data`` предоставляет методы API "
+"для загрузки данных 3D-сцены."
+
+msgid ""
+"To make module naming more convenient, ``m_`` prefix is often used "
+"(``m_app``, ``m_data`` etc.) to show that the variable is an engine "
+"module."
+msgstr ""
+"При именовании для удобства используется специальный префикс ``m_`` "
+"(``m_app``, ``m_data``, ...), чтобы указать, что соответствующая "
+"переменная является модулем."
+
+msgid ""
+"``exports`` is an object used for gaining access to module’s functions "
+"from outside (for example, from other modules). In this case, only the "
+"``init`` function has been made external:"
+msgstr ""
+"``exports`` - объект, служащий для доступа к функциям модуля извне, "
+"например, из других модулей. В данном случае внешней сделана только одна "
+"функция ``init``:"
+
+#, fuzzy
+msgid "**Old notation:**"
+msgstr "**demos_animation**"
+
+#, fuzzy
+msgid "**ES6 module:**"
+msgstr "**src**"
+
+msgid ""
+"Application initialization begins with this function, and it is called "
+"outside of the module:"
+msgstr ""
+"С неё начинается инициализации приложения, и её вызов происходит как раз "
+"вне модуля:"
+
+#, fuzzy
+msgid "**ES6 notation:**"
+msgstr "**demos_animation**"
+
+msgid ""
+"After this, the :b4wref:`app.init app.init` method is called. It creates "
+"Canvas HTML element and performs all necessary action for initializing "
+"WebGL. This method has many different attributes, the most important ones"
+" of which are:"
+msgstr ""
+"Далее срабатывает метод :b4wref:`app.init app.init` - библиотечный метод,"
+" который создаст HTML-элемент Canvas и выполнит все необходимые действия "
+"для инициализации WebGL. Он может принимать множество настроек, из "
+"которых наиболее важны следующие:"
+
+msgid ""
+"``canvas_container_id`` set the id of the HTML element that acts as a "
+"container for the Canvas element. By default, an element with the "
+"``main_canvas_container`` ID is used (this element is located in the main"
+" HTML file of the application)."
+msgstr ""
+"``canvas_container_id`` - id HTML-элемента - контейнера, внутри которого "
+"будет создан Canvas; по умолчанию используется элемент с id "
+"``main_canvas_container``, который присутствует в главном HTML-файле "
+"приложения."
+
+msgid ""
+"``callback`` is the function that is called after finishing "
+"initialization."
+msgstr "``callback`` - функция, вызываемая по завершении инициализации."
+
+msgid ""
+"When application initialization is completed, the :b4wref:`init_cb "
+"app.~AppInitCallback` function set by the ``callback`` parameter is "
+"called:"
+msgstr ""
+"Когда инициализация приложения будет закончена, вызовется функция "
+":b4wref:`init_cb app.~AppInitCallback`, указанная в параметре "
+"``callback``:"
+
+#, fuzzy
+msgid "**New notation:**"
+msgstr "**demos_animation**"
+
+#, fuzzy
+msgid "The function has following parameters:"
+msgstr "В неё передаются следующие параметры:"
+
+#, fuzzy
+msgid ""
+"*canvas_elem* is the created Canvas HTML element that will be used for "
+"rendering 3D content"
+msgstr ""
+"canvas_elem - созданный HTML-элемент Canvas, на котором будет "
+"осуществляться рендеринг 3D-контента"
+
+#, fuzzy
+msgid ""
+"*success* it the flag that indicates the success of the initialization. "
+"The ``false`` value meant that the application is unable to work due to "
+"initialization errors (for example, WebGL is not supported by the "
+"device)."
+msgstr ""
+"success - флаг успешности инициализации; значение ``false`` означает "
+"невозможность работы приложения вследствие ошибок инициализации "
+"(например, если устройством не поддерживается WebGL)."
+
+msgid ""
+"The :b4wref:`app.init app.init` methods sets initialization to the "
+"``window.onload`` event, so the ``init_cb`` function will have access to "
+"the entire DOM tree of the HTML document."
+msgstr ""
+"Метод :b4wref:`app.init app.init` назначает инициализацию на событие "
+"``window.onload``, поэтому в функции ``init_cb`` уже будет доступно все "
+"DOM-дерево HTML-документа."
+
+msgid ""
+"Now we can begin loading 3D scene. This is done in the ``load`` function "
+"that is called from the ``init_cb``:"
+msgstr ""
+"Теперь можно начинать загрузку 3D-сцены. Это происходит в функции "
+"``load``, вызываемой из ``init_cb``:"
+
+msgid ""
+"The :b4wref:`data.load data.load` method is used for loading. The first "
+"parameter of this method is the path to a 3D scene file. The path to a "
+"JSON file should be relative to the main HTML application file. Projects "
+"created in Project Manager have a dedicated asset folder, and you can "
+"easily obtain the path to it. This is done in the generic example code by"
+" introducing the ``APP_ASSETS_PATH`` global variable that is later used "
+"in the :b4wref:`data.load data.load`."
+msgstr ""
+"Для загрузки используется метод :b4wref:`data.load data.load`, в который "
+"первым параметром подается путь к файлу 3D-сцены. Путь к JSON-файлу "
+"должен указываться относительно главного HTML-файла приложения. Проекты, "
+"созданные в менеджере проектов, имеют отдельную директорию для ресурсов, "
+"где стандартно располагаются JSON-файлы, и относительный путь к этой "
+"директории можно легко получить. В коде шаблонного приложения это "
+"делается заранее с введением глобальной переменной ``APP_ASSETS_PATH``, "
+"которая затем и используется в :b4wref:`data.load data.load`."
+
+msgid ""
+"The second parameter of the method is the :b4wref:`load_cb "
+"data.~LoadedCallback` function which is called after the 3D scene is "
+"loaded and prepared for rendering."
+msgstr ""
+"Второй параметр метода - функция :b4wref:`load_cb data.~LoadedCallback`, "
+"вызываемая после того, как завершится загрузка и подготовка к рендерингу "
+"3D-сцены:"
+
+msgid ""
+"Calling this function means that the application has finished loading and"
+" now starts scene rendering. As this is the very first moment when the 3D"
+" scene data will be available, it is a suitable moment for initializing "
+"and preparing everything related to the scene, its object, animations and"
+" other things. For example, standard camera controls can be enabled here "
+"with the :b4wref:`app.enable_camera_controls` method."
+msgstr ""
+"Её вызов означает переход от загрузки к началу работы приложения и, "
+"соответственно, началу рендеринга сцены. Так как этот момент - самый "
+"ранний, когда будут доступны данные 3D-сцены, то это подходящее место для"
+" инициализации и подготовки всего, что связано со сценой, объектами, "
+"анимацией и т.д. Например, здесь включается стандартная модель управления"
+" камерой при помощи метода :b4wref:`app.enable_camera_controls`."
+
+msgid "This."
+msgstr ""
+
+msgid "Writing Application Logic"
+msgstr "Написание логики приложения"
+
+msgid ""
+"After initializing and loading 3D scene the application will proceed to "
+"work according to the logic set by the programmer such as interacting "
+"with input devices, manipulating scene objects, controlling camera "
+"behavior and so on."
+msgstr ""
+"После инициализации и загрузки 3D-сцены приложение будет работать, "
+"реализуя заданную программистом логику: взаимодействие через устройства "
+"ввода, манипуляции с объектами сцены, управление поведением камеры и т.д."
+
+msgid ""
+"By observing the :ref:`application loading process <app_init_loading>`, "
+"we can determine several places suitable for performing various tasks."
+msgstr ""
+"Рассматривая процесс :ref:`загрузки приложения <app_init_loading>`, можно"
+" выделить несколько мест, пригодных для решения той или иной задачи."
+
+msgid ""
+"The :b4wref:`app.init app.init` method used for starting the "
+"initialization accepts engine configuration parameters. So you can "
+"configure the engine right before calling this method using URL "
+"attributes as a base:"
+msgstr ""
+"Метод :b4wref:`app.init app.init`, стартующий инициализацию, принимает "
+"параметры конфигурации движка. Поэтому можно заняться конфигурированием "
+"прямо перед его вызовом, например, на основе параметров из URL-строки:"
+
+msgid ""
+"Initialization is started by the ``window.onload`` action, which means "
+"that after it is completed, the :b4wref:`init_cb app.~AppInitCallback` "
+"function will have access to the whole DOM tree. At this moment, you "
+"already can perform some preparations such as creating and setting up "
+"interface elements. However, the 3D scene itself is not yet loaded, and "
+"its objects are not yet available."
+msgstr ""
+"Так как инициализация происходит по событию ``window.onload``, то по её "
+"завершении в функции :b4wref:`init_cb app.~AppInitCallback` будет "
+"доступно всё DOM-дерево. Таким образом, в этот момент уже можно "
+"осуществлять какие-либо подготовительные действия, например, заниматься "
+"созданием/настройкой элементов интерфейса. Однако, 3D-сцена ещё не "
+"загружена, и её объекты ещё не доступны."
+
+msgid ""
+"After the 3D scene is loaded, the :b4wref:`load_cb data.~LoadedCallback` "
+"function is called. At this moment, all scene objects become available, "
+"thus any action that concerns them can be implemented in this function. "
+"Some examples can be found in the  :ref:`Code Snippets <code_snippets>` "
+"application."
+msgstr ""
+"По окончании загрузки 3D-сцены вызовется функция :b4wref:`load_cb "
+"data.~LoadedCallback`. В этот момент становятся доступными объекты сцены,"
+" поэтому все действия, связанные с ними, уже можно реализовывать в этой "
+"функции. Ряд конкретных примеров можно увидеть в приложении :ref:`Code "
+"Snippets <code_snippets>`."
+
+msgid ""
+"Logic can be added to the application by using either browser or engine "
+"API:"
+msgstr ""
+"Для добавления логики в приложение можно пользоваться разными способами, "
+"прибегая к стандартному браузерному API и к API движка:"
+
+msgid ""
+"Basic keyboard/mouse/gamepad input can be implemented with standard event"
+" handlers by using the ``addEventListener`` method. In more complex cases"
+" you can use the :b4wmod:`input` API module. The engine also features the"
+" :b4wref:`input.add_click_listener` method that registers both mouse "
+"clicks and touch screen events which makes it useful for writing "
+"applications compatible with desktop and mobile devices alike."
+msgstr ""
+"Обычную обработку ввода с клавиатуры/мыши/геймпада можно реализовать "
+"стандартными обработчиками событий посредством метода "
+"``addEventListener``. В более сложных случаях можно воспользоваться API "
+"модуля :b4wmod:`input`. Также в движке есть метод "
+":b4wref:`input.add_click_listener`, который одновременно отслеживает как "
+"нажатие мыши, так и нажатие на сенсорном экране, поэтому будет удобен при"
+" написании приложений совместимых как с настольными компьютерами, так и с"
+" мобильными устройствами."
+
+msgid ""
+"Time-stretched events that have to be performed at every frame "
+"(procedural animation, for example) can be implemented with methods such "
+"as :b4wref:`main.set_render_callback`, :b4wref:`main.append_loop_cb`, "
+":b4wref:`time.animate` and :b4wref:`time.set_timeout`. Standard "
+"``setTimeout`` and ``setInterval`` methods can also be used."
+msgstr ""
+"Действия, которые нужно выполнять каждый кадр, растянутые во времени "
+"(например, процедурная анимация) или отложенные можно реализовать такими "
+"методами, как :b4wref:`main.set_render_callback`, "
+":b4wref:`main.append_loop_cb`, :b4wref:`time.animate` и "
+":b4wref:`time.set_timeout`. Также можно использовать стандартные "
+"``setTimeout`` и ``setInterval``."
+
+msgid ""
+"For complex logic that takes into account both user actions and the state"
+" of the 3D scene can use engine’s :ref:`event-driven model <event_model>`"
+" that is based on sensor system."
+msgstr ""
+"Для сложной логики, зависящей и от действий пользователя и от состояния "
+"3D-сцены, можно применять :ref:`событийную модель <event_model>` движка "
+"на основе системы сенсоров."
+
+msgid "Module System"
+msgstr "Система модулей"
+
+msgid ""
+"Blend4Web engine is built upon modular structure: all engine API methods "
+"are separated into several modules. If necessary, a module can be plugged"
+" into the application with the ``require`` method. We recommend to "
+"structure the code of the actual application into modules as well."
+msgstr ""
+"Движок Blend4Web имеет модульную структуру, а именно: набор методов API "
+"движка разбит на отдельные модули, каждый из которых можно при "
+"необходимости подключить в приложение с помощью метода ``require``. "
+"Собственный код при разработке приложения рекомендуется организовывать "
+"таким же образом в виде отдельных модулей."
+
+msgid "Registering Modules"
+msgstr "Регистрация модулей."
+
+msgid ""
+"A module is essentially a code block wrapped by a specific structure that"
+" is used to register it:"
+msgstr ""
+"Отдельный модуль представляет собой блок кода, обернутый особой "
+"конструкцией, с помощью которой он регистрируется:"
+
+msgid ""
+"This only applies to the old CommonJS notation. If you are using ES6, "
+"modules can be simply plugged into your main application file using "
+"**import** method."
+msgstr ""
+
+msgid ""
+"The :b4wref:`b4w.register` method is used for registering modules. You "
+"can only register custom modules if their names do not coincide with the "
+"regular API modules. If necessary, the :b4wref:`b4w.module_check` method "
+"to check if a module with a given name is present:"
+msgstr ""
+"Для регистрации используется метод :b4wref:`b4w.register`. Регистрация "
+"собственных модулей допустима только если их имена не пересекаются с "
+"именами имеющихся модулей API. При необходимости проверка наличия модуля "
+"с некоторым именем может быть осуществлена с помощью метода "
+":b4wref:`b4w.module_check`:"
+
+msgid ""
+"As mentioned above, modules don't have to be registered in **ES6 "
+"notation**. However, any custom module plugged ito your application "
+"should still have a name distinct from the names of the regular API "
+"modules."
+msgstr ""
+
+msgid "Loading Modules"
+msgstr "Подгрузка модулей."
+
+msgid ""
+"Custom modules, just like regular ones, can be plugged in with the "
+"``require`` method:"
+msgstr ""
+"Подгружать собственные модули можно также как и библиотечные через метод "
+"``require``:"
+
+msgid ""
+"Here, **one** and **two** are the variables that are marked with the word"
+" **export** in the ``my_module.js`` file."
+msgstr ""
+
+msgid "Application Initialization"
+msgstr "Инициализация приложения."
+
+msgid ""
+"Application initialization in Blend4Web is usually done with a call like "
+"this:"
+msgstr ""
+"Инициализация приложения на Blend4Web обычно происходит с помощью "
+"подобного вызова:"
+
+msgid ""
+"Here, the ``my_module`` custom module and its ``init`` external function "
+"do, in a certain sense, act as the entry point to the application."
+msgstr ""
+"Здесь подгружаемый модуль ``my_module`` и его внешняя функция ``init`` "
+"являются своего рода точкой входа в приложение."
+
+msgid ""
+"In the global visibility scope a module can be loaded with the same "
+":b4wref:`b4w.require` method available as a method of the global ``b4w`` "
+"object: ``b4w.require(\"MODULE_NAME\")``."
+msgstr ""
+"Подгрузка модуля в глобальной области видимости происходит при помощи той"
+" же самой функции :b4wref:`b4w.require`, доступной как метод глобального "
+"объекта ``b4w``: ``b4w.require(\"ИМЯ_МОДУЛЯ\")``."
+
+msgid "Using Multiple Modules"
+msgstr "Использование нескольких модулей."
+
+msgid ""
+"After a project is created in the :ref:`Project Manager "
+"<project_management>`, its generic application JS-file will contain only "
+"one module. However, while developing the application, you might need to "
+"separate your code into several logic parts. In this case, you can either"
+" create several modules inside one file, or you can create several files "
+"each one of them contain one module."
+msgstr ""
+"После создании нового проекта в :ref:`менеджере проектов "
+"<project_management>` шаблонный JS-файл приложения будет содержать один "
+"единственный модуль. Однако, часто при разработке приложения может "
+"потребоваться логически разбить код на несколько модулей. В этом случае "
+"можно создавать как несколько модулей в одном файле, так и по принципу: "
+"один модуль - один файл."
+
+msgid ""
+"If your application uses multiple modules, keep in mind that every one of"
+" them should be properly registered before initialization starts, or you "
+"will get an engine error if you try to call a module that is not yet "
+"registered. If you are using several JS files, the script that starts the"
+" initialization (contains application entry point) should the last one to"
+" be plugged into the main HTML application file."
+msgstr ""
+"Если в приложении используется больше одного модуля, то нужно помнить, "
+"что регистрировать модули необходимо до инициализации, иначе при попытке "
+"вызвать ещё не зарегистрированный модуль движок выдаст ошибку. Для этого "
+"в случае нескольких JS-файлов скрипт, начинающий инициализацию "
+"(содержащий точку входа в приложение), должен подключаться в главный "
+"HTML-файл приложения последним."
+
+msgid "Background Transparency"
+msgstr "Прозрачный фон"
+
+msgid ""
+"The ``background_color`` and ``alpha`` parameters are passed to the "
+":b4wref:`m_app.init` method placed in the load callback function (a "
+"function that is called right after the scene is loaded), like this:"
+msgstr ""
+"Параметры ``background_color`` и ``alpha`` передаются в метод "
+":b4wref:`m_app.init`, который вызывается из callback-функции загрузчика "
+"(т.е., из функции, которая вызывается сразу после загрузки сцены), "
+"например, так:"
+
+msgid ""
+"The combination of the parameters passed to the method defines how the "
+"backgrounds of the Blend4Web application and the HTML application blend "
+"together. Available options are:"
+msgstr ""
+"Комбинация параметров, передаваемых в метод, определяет, как смешиваются "
+"цвета приложения Blend4Web и HTML-страницы. Возможны следующие варианты:"
+
+msgid "``alpha`` = false"
+msgstr "``alpha`` = false"
+
+msgid ""
+"The color of the background is defined by the ``background_color`` of the"
+" Blend4Web application, the background of the HTML application is not "
+"taken into consideration."
+msgstr ""
+"Цвет фона определяется параметром ``background_color`` приложения "
+"Blend4Web, цвет фона HTML-страницы не принимается в расчёт."
+
+msgid "``alpha`` = true"
+msgstr "``alpha`` = true"
+
+msgid ""
+"The background of the HTML application might influence the background of "
+"the Blend4Web application based on its transparency which is defined by "
+"the fourth component of the ``background_color`` parameter (``alpha`` = "
+"``background_color[3]``, not to be confused with the ``alpha`` parameter "
+"mentioned above)."
+msgstr ""
+"Фон HTML-страницы влияет на фон приложения Blend4Web в зависимости от его"
+" прозрачности, выражаемой четвёртой компонентой параметра "
+"``background_color`` (``alpha`` = ``background_color[3]``, не путать с "
+"параметром ``alpha``, упомянутым выше)."
+
+msgid "background_color[3] = 1"
+msgstr "background_color[3] = 1"
+
+msgid ""
+"This produces the same result as if the alpha parameter has been turned "
+"off (``alpha`` = false)"
+msgstr ""
+"Приводит к тому же результату, как если бы прозрачность была отключена "
+"(``alpha`` = false)"
+
+msgid "background_color[3] = 0"
+msgstr "background_color[3] = 0"
+
+msgid "Additive blending is used."
+msgstr "Используется аддитивное смешение."
+
+msgid ""
+"Picture above shows an HTML page containing a Blend4Web application with "
+"a blue [0, 0, 1] background that blends with the page's red (``Red``) "
+"color producing a violet tone."
+msgstr ""
+"Изображение выше демонстрирует HTML-страницу, содержащую приложение "
+"Blend4Web с синим [0, 0, 1] цветом, который смешивается с красным "
+"(``Red``) цветом фона самой страницы, создавая более светлый оттенок."
+
+msgid "background_color[3] > 0"
+msgstr "background_color[3] > 0"
+
+msgid ""
+"Additive blending is used with the ``background_color`` having a greater "
+"influence."
+msgstr ""
+"Также используется аддитивное смешивание, но цвет ``background_color`` "
+"имеет большее влияние."
+
+msgid ""
+"This picture shows the same HTML page with the same Blend4Web app, "
+"however, the ``alpha`` value is set to 0.5, leading to a darker tone of "
+"the application background."
+msgstr ""
+"На этом изображении приводится та же HTML-страница с тем же приложением "
+"Blend4Web, но параметр ``alpha`` имеет значение 0.5, из-за чего фон "
+"приложения имеет более тёмный оттенок."
+
+msgid ""
+"The mechanisms of alpha lending are described in greater detail in the "
+":ref:`Color Management <alpha_compositing>` chapter."
+msgstr ""
+"Более подробно смешивание прозрачности описано в главе :ref:`\"Работа с "
+"цветом\" <alpha_compositing>`."
+
+msgid ""
+"By default, the ``alpha`` parameter is set to true and the "
+"``background_color`` is set to transparent black [0, 0, 0, 0], which "
+"means that the application will have an HTML background with no "
+"influences from the background of the Blend4Web application."
+msgstr ""
+"Параметр ``alpha`` включен по умолчанию, а в качестве "
+"``background_color`` используется прозрачный чёрный цвет [0, 0, 0, 0], "
+"т.е. в этом случае в качестве фона приложения используется фон "
+"HTML-страницы без какого-либо влияния фона самого приложения."
+
+msgid ""
+"Background transparency can also be utilized in :ref:`Web Player "
+"applications <web_player_app>` by using the ``alpha`` :ref:`URL attribute"
+" <webplayer_attributes>`. To use this feature, firstly you need to enable"
+" the ``Background transparency (alpha)`` parameter in the :ref:`Web "
+"Player Params <web_player_params>` group while creating the application."
+msgstr ""
+"Прозрачный фон также может использоваться в :ref:`приложениях для "
+"Веб-плеера <web_player_app>`: в них за прозрачность отвечает "
+":ref:`URL-атрибут <webplayer_attributes>` ``alpha``. Для использования "
+"этой возможности необходимо при создании приложения активировать параметр"
+" ``Background transparency (alpha)`` из группы параметров :ref:`Web "
+"Player Params <web_player_params>`."
+
+msgid ""
+"If Blend4Web application uses sky rendering, the application canvas will "
+"be fully covered by objects (including sky), so the background will be "
+"fully opaque and not influenced by alpha settings."
+msgstr ""
+"При использовании рендеринга неба canvas приложения Blend4Web полностью "
+"перекрывается объектами (в т.ч. небом), так что фон приложения будет "
+"полностью непрозрачным вне зависимости от настроек прозрачности."
+
+msgid ""
+"Sky rendering is enabled by default in Blend4Web scenes created in "
+":ref:`Project Manager <project_management>`. Don't forget, in order to "
+"use a transparent background you will need to manually disable sky "
+"rendering."
+msgstr ""
+"Рендеринг неба по умолчанию включен в новой сцене, созданной при помощи "
+":ref:`Менеджера проектов <project_management>`. Не забудьте отключить "
+"его, если вы собираетесь использовать прозрачный фон."
+
+msgid "Resource Conversion"
+msgstr "Конвертация ресурсов"
+
+msgid ""
+"Currently, browsers do not fully support all possible media formats, so "
+"in order to create cross-browser applications (and also for optimization "
+"purposes) we recommend you to use the resource converter."
+msgstr ""
+"Существующие браузеры не полностью поддерживают основные форматы "
+"медиаданных, поэтому для создания кроссбраузерных приложений, а также с "
+"целью оптимизации, необходимо использовать конвертер ресурсов."
+
+msgid ""
+"To support a wider range of platforms, a Python script "
+"(*scripts/converter.py*) for converting the source files into other "
+"formats is included into the distribution."
+msgstr ""
+"В состав дистрибутива включен Python скрипт (*scripts/converter.py*) для "
+"конвертации исходных файлов в другие форматы с целью расширения спектра "
+"поддерживаемых платформ, а также для уменьшения размера ресурсов."
+
+msgid "There are two ways to run this script."
+msgstr "Запустить скрипт можно одним из двух способов."
+
+msgid ""
+"Firstly, you can run it automatically using the project management "
+"system. The ``Convert Resources`` button can be found in the main page of"
+" the :ref:`Project Manager <project_management>`, in the ``Operations`` "
+"tab at the right side of the screen."
+msgstr ""
+"Во-первых, вы можете воспользоваться менеджером проектов. Кнопка "
+"``Convert Resources`` находится на главной странице :ref:`менеджера "
+"проектов <project_management>`, в разделе ``Operations``, расположенном в"
+" правой части экрана."
+
+msgid "Secondly, you can run the script manually:"
+msgstr "Во-вторых, вы можете запустить скрипт вручную:"
+
+msgid "For MS Windows users:"
+msgstr "Для пользователей ОС Windows:"
+
+msgid "To run the scripts the Python 3.x needs to be installed in your system."
+msgstr ""
+"Стоит отдельно отметить, что для запуска скриптов требуется интерпретатор"
+" языка Python версии 3.x"
+
+msgid ""
+"With the -d parameter you can specify the path to a directory in which "
+"converting will take place."
+msgstr ""
+"С помощью опции -d можно указать путь к директории, в которой будет "
+"производится конвертация."
+
+msgid ""
+"To exclude some directory from resource conversion, it is enough to put a"
+" file named ``.b4w_no_conv`` in it. This will not affect conversion in "
+"nested directories."
+msgstr ""
+"При необходимости исключить некоторую директорию при конвертации, "
+"достаточно разместить в ней файл с именем ``.b4w_no_conv``. На "
+"конвертацию во вложенных директориях это не повлияет."
+
+msgid ""
+"The **resize_textures** argument is used for decreasing texture "
+"resolution for the **LOW** mode."
+msgstr ""
+"Аргумент **resize_textures** используется для изменения размера текстур в"
+" режиме **LOW**."
+
+msgid "Commands"
+msgstr "Команды"
+
+msgid "Commands for conversion:"
+msgstr "Команды для конвертации:"
+
+msgid "``resize_textures`` converts textures to lower resolution."
+msgstr "``resize_textures`` уменьшает размер текстур."
+
+msgid "``convert_dds`` converts textures to :ref:`DDS format <dds>`."
+msgstr "``convert_dds`` преобразует текстуры в :ref:`формат DDS <dds>`."
+
+msgid "``convert_pvr`` converts textures to :ref:`PVR format <pvrtc>`."
+msgstr "``convert_pvr`` преобразует текстуры в :ref:`формат PVR <dds>`."
+
+msgid ""
+"``convert_media`` converts audio and video files to :ref:`alternative "
+"formats <converter_data_format>`."
+msgstr ""
+"``convert_media`` преобразует аудио- и видеофайлы в :ref:`альтернативные "
+"форматы <converter_data_format>`."
+
+msgid ""
+"``convert_gzip`` generates GZIP-compressed versions of \".json\" and "
+"\".bin\" scene files and \".dds\" and \".pvr\" textures."
+msgstr ""
+"``convert_gzip`` сжимает при помощи GZIP-компрессии \".json\" и \".bin\" "
+"файлы сцены, а также \".dds\" и \".pvr\" текстуры."
+
+msgid "Commands for resource cleanup:"
+msgstr "Команды для чистки:"
+
+msgid ""
+"``cleanup_textures`` removes low resolution textures generated by the "
+"``resize_textures`` command."
+msgstr ""
+"``cleanup_textures`` удаляет текстуры низкого разрешения, создаваемые "
+"командой ``resize_textures``."
+
+msgid ""
+"``cleanup_dds`` removes DDS texture files generated by the "
+"``convert_dds`` command."
+msgstr ""
+"``cleanup_dds`` удаляет текстуры в формате DDS, создаваемые командой "
+"``convert_dds``."
+
+msgid ""
+"``cleanup_pvr`` removes PVR texture files generated by the "
+"``convert_pvr`` command."
+msgstr ""
+"``cleanup_pvr`` удаляет текстуры в формате PVR, создаваемые командой "
+"``convert_pvr``."
+
+msgid ""
+"``cleanup_media`` removes audio and video files in alternative formats "
+"that were generated by the ``convert_media`` command."
+msgstr ""
+"``cleanup_media`` удаляет аудио- и видеофайлы в альтернативных форматах, "
+"создаваемые командой ``convert_media``."
+
+msgid ""
+"``cleanup_gzip`` removes GZIP-compressed files generated by the "
+"``convert_gzip`` command."
+msgstr ""
+"``cleanup_gzip`` удаляет файл, сжатые при помощи GZIP, создаваемые "
+"командой ``convert_gzip``."
+
+msgid "Commands for image compression:"
+msgstr "Команды для сжатия изображений:"
+
+msgid ""
+"``compress_png`` compresses PNG files in order to decrease their size. "
+"This option requires OptiPNG tool to be installed and set up in the "
+"``PATH`` environment variable."
+msgstr ""
+"``compress_png`` сжимает файлы PNG с целью уменьшить их размер. Для "
+"работы этой команды требуется установить и прописать в переменной "
+"окружения ``PATH`` утилиту OptiPNG."
+
+msgid "Other commands:"
+msgstr "Прочие команды:"
+
+msgid ""
+"``check_dependencies`` checks :ref:`converter dependencies "
+"<converter_deps>`"
+msgstr ""
+"``check_dependencies`` проверяет :ref:`зависимости конвертера "
+"<converter_deps>`."
+
+msgid "Arguments"
+msgstr "Аргументы"
+
+msgid ""
+"``-d``, ``--dir <dir_path>`` enables using an alternative directory to "
+"store converted files. The <dir_path> value specifies the path to this "
+"directory."
+msgstr ""
+"``-d``, ``--dir <dir_path>`` включает использование альтернативного "
+"каталога для хранения сконвертированных файлов. Путь к директории "
+"задаётся параметром <dir_path>."
+
+msgid ""
+"``-j``, ``--jobs <jobs>`` specifies the number of jobs (threads) to run "
+"simultaneously. If this parameter is set to zero or is not specified, the"
+" number will be calculated automatically based on the number of CPUs."
+msgstr ""
+"``-j``, ``--jobs <jobs>`` задаёт количество задач (потоков), запущенных "
+"одновременно. Если этот параметр не задан, или если его значение равно "
+"нулю, количество потоков рассчитывается автоматически на основе "
+"количества процессоров."
+
+msgid ""
+"``-v``, ``--verbose`` enables outputting more information about files "
+"that are being converted. For example, when converting textures into DDS "
+"format, the script will show progress percentage for every file that is "
+"being converted."
+msgstr ""
+"``-v``, ``--verbose`` включает выдачу дополнительной информации о "
+"конвертируемых файлах. Например, при преобразовании текстур в формат DDS "
+"скрипт будет показывать процент готовности для каждого файла отдельно."
+
+msgid "Dependencies"
+msgstr "Зависимости"
+
+msgid ""
+"Please make sure that you have all converter dependencies installed. You "
+"can do it with the following command:"
+msgstr ""
+"Убедитесь, что у вас установлены все необходимые для конвертации "
+"программы. Это можно сделать следующей командой:"
+
+msgid "If some program is not installed, the following message will be displayed:"
+msgstr "Если какая-либо программа отсутствует, то будет выведено сообщения вида:"
+
+msgid "*Couldn't find PROGRAM_NAME.*"
+msgstr "*Couldn't find PROGRAM_NAME.*"
+
+msgid "**Linux**"
+msgstr "**Linux**"
+
+msgid "The list of dependencies is listed in the following table:"
+msgstr "Список необходимых программ можно посмотреть в таблице:"
+
+msgid "Name"
+msgstr "Название"
+
+msgid "Ubuntu 16.04 package"
+msgstr "Пакет в дистрибутиве Ubuntu 16.04"
+
+msgid "ImageMagick"
+msgstr "ImageMagick"
+
+msgid "imagemagick"
+msgstr "imagemagick"
+
+msgid "NVIDIA Texture Tools"
+msgstr "NVIDIA Texture Tools"
+
+msgid "libnvtt-bin"
+msgstr "libnvtt-bin"
+
+msgid "Libav"
+msgstr "Libav"
+
+msgid "libav-tools"
+msgstr "libav-tools"
+
+msgid "FFmpeg"
+msgstr "FFmpeg"
+
+msgid "ffmpeg"
+msgstr "ffmpeg"
+
+msgid "PVRTC"
+msgstr "PVRTC"
+
+msgid "install manually"
+msgstr "устанавливается вручную"
+
+msgid ""
+"Linux users can additionally install the package qt-faststart which is "
+"used to optimize loading media files."
+msgstr ""
+"Пользователи Linux могут дополнительно установить пакет qt-faststart, "
+"служащий для оптимизации загрузки медиаданных."
+
+msgid "**Windows**"
+msgstr "**Windows**"
+
+msgid ""
+"For MS Windows users it is not necessary to install these packages since "
+"they are already present in the SDK."
+msgstr ""
+"Для пользователей ОС Windows нет необходимости устанавливать эти пакеты, "
+"так как они уже находятся в составе SDK."
+
+msgid "**macOS**"
+msgstr "**macOS**"
+
+msgid ""
+"macOS users can install the `brew <http://www.brew.sh/>`_ package manager"
+" first and then install any missing packages."
+msgstr ""
+"Пользователи mac OS могут установить менеджер пакетов `brew "
+"<http://www.brew.sh/>`_, а затем с его помощью установить некоторые "
+"недостающие пакеты."
+
+msgid ""
+"Before installing packages, install the libpng and libjpeg libraries "
+"using these commands:"
+msgstr ""
+"Перед началом установки пакетов произведите установку библиотек libpng и "
+"libjpeg, выполнив следующие команды в консоли:"
+
+msgid "Now you can proceed with installing required dependencies:"
+msgstr "Теперь можно приступать к установке необходимых зависимостей:"
+
+msgid ""
+"In order to install NVIDIA Texture Tools, clone the repository with the "
+"following command:"
+msgstr ""
+"Для установки NVIDIA Texture Tools необходимо склонировать репозиторий, "
+"выполнив следующую команду:"
+
+msgid "Now you can build and install the package:"
+msgstr "Теперь можно произвести сборку и установку пакета:"
+
+msgid "Data Formats"
+msgstr "Форматы данных"
+
+msgid "The conversion is performed as follows:"
+msgstr "Преобразование происходит по схеме:"
+
+msgid "for audio (convert_media):"
+msgstr "для аудио (convert_media):"
+
+msgid "ogg (ogv, oga) -> mp4"
+msgstr "ogg (ogv, oga) -> mp4"
+
+msgid "mp3 -> oga"
+msgstr "mp3 -> oga"
+
+msgid "mp4 (m4v, m4a) -> oga"
+msgstr "mp4 (m4v, m4a) -> oga"
+
+msgid "webm -> m4a"
+msgstr "webm -> m4a"
+
+msgid ""
+"We recommend to use ``ogg`` as a base format. In this case the only "
+"conversion required for cross-browser compatibility will be ``ogg`` to "
+"``mp4``. Example of an input file: ``file_name.ogg``, example of an "
+"output file: ``file_name.altconv.mp4``."
+msgstr ""
+"Рекомендуется использовать в качестве базового формата ``ogg``, в этом "
+"случае для обеспечения кросс-браузерной совместимости потребуется только "
+"преобразование из ``ogg`` в ``mp4``. Пример файла на входе: "
+"``file_name.ogg``, пример файла на выходе: ``file_name.altconv.mp4``."
+
+msgid "for video (convert_media):"
+msgstr "для видео (convert_media):"
+
+msgid "ogg (ogv, oga) -> m4v / seq"
+msgstr "ogg (ogv, oga) -> m4v / seq"
+
+msgid "mp3 -> webm / seq"
+msgstr "mp3 -> webm / seq"
+
+msgid "mp4 (m4v, m4a) -> webm / seq"
+msgstr "mp4 (m4v, m4a) -> webm / seq"
+
+msgid "webm -> m4v / seq"
+msgstr "webm -> m4v / seq"
+
+msgid ""
+"We recommend to use ``WebM`` as a base format. In this case the only "
+"conversion required for cross-browser compatibility will be ``webm`` to "
+"``m4v`` (``webm`` to ``seq`` for iPhone). Example of an input file: "
+"``file_name.webm``, example of an output file: ``file_name.altconv.m4v``."
+msgstr ""
+"Рекомендуется использовать в качестве базового формата ``WebM``, в этом "
+"случае для обеспечения кросс-браузерной совместимости потребуется только "
+"преобразование из ``webm`` в ``m4v`` (из ``webm`` в ``seq`` для iPhone). "
+"Пример файла на входе: ``file_name.webm``, пример файла на выходе: "
+"``file_name.altconv.m4v``."
+
+msgid "for images (convert_dds):"
+msgstr "для изображений (convert_dds):"
+
+msgid "png -> dds/pvr"
+msgstr "png -> dds/pvr"
+
+msgid "jpg -> dds/pvr"
+msgstr "jpg -> dds/pvr"
+
+msgid "bmp -> dds/pvr"
+msgstr "bmp -> dds/pvr"
+
+msgid "gif -> dds"
+msgstr "gif -> dds"
+
+msgid ""
+"Example of an input file: ``file_name.jpg``, example of an output file: "
+"``file_name.altconv.jpg.dds``."
+msgstr ""
+"Пример файла на входе: ``file_name.jpg``, пример файла на выходе: "
+"``file_name.jpg.dds``."
+
+msgid ""
+"For the purpose of optimizing application performance it's possible to "
+"use ``min50`` (halved) and ``DDS`` or ``PVRTC`` (compressed) textures. In"
+" order to do this, we need to pass the following parameters during "
+"initialization of the application:"
+msgstr ""
+"В целях оптимизации работы приложения существует возможность "
+"использования текстур ``min50`` (уменьшенных вдвое) и текстур в форматах "
+"``DDS`` и ``PVRTC``. Для этого при инициализации приложения необходимо "
+"передать следующие параметры:"
+
+msgid ""
+"If you are planning to use textures compressed into :ref:`PVRTC <pvrtc>` "
+"format, then replace this line of code"
+msgstr ""
+"Для использования текстур, сжатых в формате :ref:`PVRTC <pvrtc>`, "
+"необходимо заменить эту строку кода"
+
+msgid "with the following:"
+msgstr "следующей:"
+
+msgid ""
+"This will tell the engine to load PVRTC textures, if such are present in "
+"the ``./assets/`` folder."
+msgstr ""
+"В этом случае движок будет загружать текстуры в формате PVRTC, если они "
+"есть в папке ``./assets/``."
+
+msgid "DDS Texture Compression"
+msgstr "Формат компрессии текстур DDS"
+
+msgid ""
+"``DDS`` textures require less memory (4 times less for ``RGBA`` data and "
+"6 times for ``RGB`` data), but using them has following downsides:"
+msgstr ""
+"Текстуры в формате ``DDS`` занимают меньше места в памяти (в 4 раза "
+"меньше для изображения в формате ``RGBA`` и в 6 раз меньше для "
+"изображения в формате ``RGB``), но при их использовании следует иметь в "
+"виду, что:"
+
+msgid ""
+"``DDS`` textures might not work on some devices, especially the mobile "
+"ones, as not all of them support the ``WEBGL_compressed_texture_s3tc`` "
+"extension;"
+msgstr ""
+"Текстуры ``DDS`` могут не работать на некоторых устройствах, особенно "
+"мобильных, т.к. не все такие устройства поддерживают расширение "
+"``WEBGL_compressed_texture_s3tc``;"
+
+msgid ""
+"as ``DDS`` is a lossy compression format, compression artifacts might be "
+"visible, especially on :ref:`normal <normal_map>` and :ref:`stencil "
+"<stencil_map>` maps; it is recommended to :ref:`disable compression "
+"<texture_disable_compression>` for such textures."
+msgstr ""
+"поскольку сжатие в формате ``DDS`` осуществляется с потерями, могут быть "
+"заметны артефакты сжатия, особенно на картах :ref:`нормалей <normal_map>`"
+" и :ref:`смешивания <stencil_map>`; для таких текстур рекомендуется "
+":ref:`отключать сжатие <texture_disable_compression>`."
+
+msgid ""
+"An example of the ``DDS`` compression artifacts, particularly visible on "
+"the edges of the shadow."
+msgstr "Артефакты сжатия формата ``DDS`` особенно хорошо заметны на границах тени."
+
+msgid ""
+"During exporting the scene from Blender to the ``JSON`` format (but not "
+"the ``HTML`` format), ``DDS`` textures will be plugged in automatically, "
+"if they are present."
+msgstr ""
+"При экспорте сцены из Blender в формат ``JSON`` (но не в формат "
+"``HTML``), ``DDS``-текстуры будут подключены автоматически, если они "
+"имеются в наличии."
+
+msgid ""
+"Textures can be converted to the ``DDS`` format using the :ref:`project "
+"manger <project_management>` or the *scripts/converter.py* script "
+"described above."
+msgstr ""
+"Текстуры могут быть конвертированы в формат ``DDS`` с помощью "
+":ref:`менеджера проектов <project_management>` или с помощью скрипта "
+"*scripts/converter.py*, который был описан выше."
+
+msgid "PVRTC Texture Compression"
+msgstr "Формат компрессии текстур PVRTC"
+
+msgid ""
+"``PVRTC`` is another texture compression format used primarily on iOS "
+"devices. In some cases it can produce texture files up to two times "
+"smaller than same texture images would take in ``DDS`` format."
+msgstr ""
+"``PVRTC`` - другой формат компрессии текстур, преимущественно "
+"используемый на устройствах iOS. В некоторых случаях он позволяет "
+"создавать файлы текстур размером вдвое меньше, чем при использовании "
+"формата ``DDS``."
+
+msgid ""
+"The format has two compression settings that are supported by the engine:"
+" 2-bpp (two bits per pixel) and 4-bpp (four bits per pixel)."
+msgstr ""
+"Движок поддерживает два метода сжатия: 2-bpp (два бита на пиксель) и "
+"4-bpp (четыре бита на пиксель)."
+
+msgid ""
+"As with ``DDS`` format, textures compressed using the ``PVRTC`` algorithm"
+" may not work on some platforms, especially mobile, because using this "
+"compression format require support for the "
+"``IMG_texture_compression_pvrtc`` WebGL extension."
+msgstr ""
+"Как и в случае с форматом ``DDS``, текстуры, сжатые с использованием "
+"алгоритма ``PVRTC``, могут не работать на некоторых устройствах, особенно"
+" мобильных, так как для корректной работы этого формата сжатия требуется "
+"поддержка расширения WebGL ``IMG_texture_compression_pvrtc``."
+
+msgid ""
+"The PVRTC library and SDK are available for Windows, Linux and macOS "
+"systems alike. Installation packages can be downloaded from the `Power VR"
+" Insider <https://community.imgtec.com/developers/powervr/>`_ web page."
+msgstr ""
+"Библиотеки и SDK PVRTC доступны в версиях для операционных систем "
+"Windows, Linux и macOS. Дистрибутивы можно загрузить с веб-сайта `Power "
+"VR Insider <https://community.imgtec.com/developers/powervr/>`_."
+
+msgid ""
+"The Blend4Web engine uses a console PVRTC tool. To use it, you need to "
+"add the path to it to the ``PATH`` environmental variable, like the "
+"following:"
+msgstr ""
+"Движок Blend4Web использует консольную утилиту PVRTC. Для того, чтобы "
+"использовать её, необходимо добавить путь к ней в переменную окружающей "
+"среды ``PATH``, например, так:"
+
+msgid ""
+"where <InstallDir> is the PVRTexTool installation directory and "
+"<PLATFORM> is a folder that contains the version of the tool that "
+"corresponds to your OS, for example, ``\\Windows_x86_64\\`` for 64-bit "
+"Windows OS."
+msgstr ""
+"Здесь <InstallDir> - директория, в которой находится PVRTexTool, а "
+"<PLATFORM> - папка, содержащая версию утилиты, подходящую для вашей "
+"операционной системы, например, ``\\Windows_x86_64\\`` для 64-битной "
+"версии Windows."
+
+msgid ""
+"In Windows systems, environment variables can be set in the ``System`` "
+"(in Windows 10 and 8) or ``Properties`` (in Windows 7 and Vista) dialogue"
+" window by choosing ``Advanced System Settings`` -> ``Environment "
+"Variables``, or by using console commands:"
+msgstr ""
+"В Windows переменные окружающей среды можно установить из диалогового "
+"окна ``Система`` (для Windows 8 и 10) или ``Свойства`` (для Windows 7 и "
+"Vista), выбрав ``Дополнительные параметры системы`` -> ``Переменные "
+"среды``, или с помощью консольных команд:"
+
+msgid ""
+"After this, you will be able to convert the textures to the PVR format by"
+" using converter.py script with the ``convert_dds`` command."
+msgstr ""
+"После этого текстуры можно будет преобразовать в формат PVR с помощью "
+"команды ``convert_dds`` скрипта converter.py."
+
+msgid "SEQ Video Format"
+msgstr "Формат видео SEQ"
+
+msgid ""
+"The ``.seq`` file format is used for sequential video. This is applied "
+"for IE 11 and iPhone because they are currently missing support for "
+"standard video formats for textures. Using dds format for images is more "
+"optimal compared to other formats."
+msgstr ""
+"Файл формата ``.seq`` представляет собой раскадрированное видео. "
+"Применяется на IE 11 и iPhone, поскольку на них возникают трудности при "
+"использовании видео стандартного формата в качестве текстуры. "
+"Использование dds-формата для изображений является более оптимальным по "
+"сравнению с другими форматами."
+
+msgid ""
+"The engine can use files which are manually created by a user if they "
+"have the following names: ``file_name.altconv.m4v``, "
+"``file_name.altconv.mp3`` and so on. Such files should be placed in the "
+"same directory as the media files used in Blender."
+msgstr ""
+"Движком могут использоваться файлы, созданные пользователем вручную и "
+"имеющие следующие наименования: ``file_name.altconv.m4v``, "
+"``file_name.altconv.mp3`` и т.д. Такие файлы необходимо размещать в одной"
+" директории с медиафайлом, используемым в Blender'e."
+
+msgid ""
+"You can also use the free and cross-platform application `Miro Video "
+"Converter <http://www.mirovideoconverter.com/>`_ to convert media files."
+msgstr ""
+"Вы также можете использовать бесплатную кроссплатформенную программу "
+"`Miro Video Converter <http://www.mirovideoconverter.com/>`_ для "
+"конвертации медиаданных."
+
+msgid "GZIP Compression"
+msgstr "Компрессия GZIP"
+
+msgid ""
+"Typical Blend4Web application can use various resource formats from "
+"standard  HTML, JS, CSS, PNG or JPEG files to engine-specific JSON- and "
+"BIN-files that contain scene data. Compressed  DDS/PVR image formats are "
+"also an option. Both big and small applications benefit from decreasing "
+"the size of the resources, as this also decreases the loading time."
+msgstr ""
+"Типичное приложение на Blend4Web может использовать ресурсы разных "
+"форматов, начиная от стандартных HTML, JS, CSS, PNG, JPEG и заканчивая "
+"специфическими для движка json- и bin-файлами, содержащими данные сцены, "
+"а также сконвертированными изображениями в форматах DDS/PVR. Как в случае"
+" больших, так и малых по размеру приложений может встать вопрос "
+"уменьшения объёма ресурсов скачиваемых браузером, и, соответственно, "
+"уменьшения времени ожидания пользователем."
+
+msgid ""
+"Usually, loading time can be decreased by setting up caching on the "
+"server that contains web application. You can also enable GZIP "
+"compression for various file types."
+msgstr ""
+"Обычно на сервере, содержащем веб-приложение, настраивается кеширование, "
+"что во многом решает эту проблему. Также на сервере может быть настроена "
+"GZIP компрессия для определённых форматов файлов, позволяя передавать их "
+"в запакованном виде, экономя сетевой трафик."
+
+msgid ""
+"Speaking of the specific file types, GZIP compression should be used for"
+"  JSON, BIN, DDS and PVR files. JSON and BIN files, being the main scene "
+"files, can contain large amounts of data, while DDS and PVR also can be "
+"quite large (at least when compared to standard PNG and JPEG files), and "
+"there can be quite a lot of them."
+msgstr ""
+"Если говорить о специфических для движка форматах, то GZIP компрессию "
+"имеет смысл применять для JSON, BIN, DDS и PVR. JSON и BIN - могут "
+"содержать большие объёмы информации как главные файлы сцены. DDS и PVR "
+"тоже могут быть довольно велики (особенно по сравнению со стандартными "
+"PNG/JPEG), а так как это файлы текстур, то в приложении их может "
+"использоваться довольно много. Также не менее важно то, что файлы данных "
+"форматов хорошо подвергаются сжатию. Лучшим вариантом решения будет "
+"настройка использования GZIP для этих форматов на сервере."
+
+msgid ""
+"But if for some reason GZIP compression cannot be set up on the server, "
+"it can be enabled in the application itself."
+msgstr ""
+"Однако, если по каким-либо причинам это сделать невозможно, то есть "
+"вариант включить это на уровне конкретного приложения."
+
+msgid ""
+"The engine can load compressed resources in the form of ``.gz`` files. To"
+" use this feature in a ``WebPlayer JSON`` type project, you need to pass "
+"the ``compressed_gzip`` URL parameter. If you are developing your own "
+"application, you need to pass the ``assets_gzip_available`` configuration"
+" parameter during the initialization."
+msgstr ""
+"Движок поддерживает загрузку запакованных ресурсов с расширением ``.gz``."
+" В проекте типа ``WebPlayer JSON`` для этого нужно передать URL-параметр "
+"``compressed_gzip``. При разработке же собственного приложения необходимо"
+" будет передать конфигурационный параметр ``assets_gzip_available`` при "
+"инициализации приложения:"
+
+msgid ""
+"Compressed ``.gz`` files should be placed alongside the original ones, "
+"for example, like this:"
+msgstr ""
+"При этом будет требоваться наличие сжатых ``.gz`` файлов рядом с "
+"оригинальными. Например:"
+
+msgid ""
+"This also applies to the ``.dds`` and ``.pvr`` files and their compressed"
+" counterparts ``.dds.gz`` and ``.pvr.gz``."
+msgstr ""
+"То же самое касается файлов ``.dds`` и ``.pvr`` и их сжатых вариантов "
+"``.dds.gz`` и ``.pvr.gz``."
+
+msgid ""
+"If a compressed ``.gz`` is not present, engine will load the original "
+"file and output a corresponding message to the console."
+msgstr ""
+"При отсутствии сжатого ``.gz`` файла движок загрузит оригинальный с "
+"соответствующим сообщением в консоли браузера."
+
+msgid ""
+"GZIP compressed files can be generated with the ``convert resources`` "
+":ref:`command <project_manager>` that can be found in the Project Manager"
+" interface. This can also be done in the console by running the "
+":ref:`./scripts/converter.py <converter>` script with the "
+"``compress_gzip`` (for compressing resources) or the ``cleanup_gzip`` "
+"(for removing compressed files) command."
+msgstr ""
+"Для того, чтобы сгенерировать все необходимые файлы, запакованные при "
+"помощи GZIP, достаточно выполнить :ref:`команду <project_manager>` "
+"``convert resources`` из интерфейса менеджера проектов. Также это можно "
+"сделать и из консоли, запустив скрипт :ref:`./scripts/converter.py "
+"<converter>` с командами ``compress_gzip`` - для генерации и "
+"``cleanup_gzip`` - для удаления."
+
+msgid "Code Examples"
+msgstr "Примеры кода"
+
+msgid ""
+"The SDK includes the Code Snippets application which demonstrates how to "
+"use the engine's functionality."
+msgstr ""
+"В составе SDK присутствует приложение Code Snippets, демонстрирующее "
+"примеры использования функционала движка."
+
+msgid "Currently, this application contains the following examples:"
+msgstr "На данный момент приложение включает в себя следующие примеры:"
+
+msgid "Bone API - an example of individual bones position control"
+msgstr "Bone API - пример управления положением отдельных костей скелета"
+
+msgid "Camera Animation - procedural camera animation"
+msgstr "Camera Animation - создание процедурной анимации камеры"
+
+msgid "Camera Move Styles - changing control modes for the camera"
+msgstr "Camera Move Styles - переключение режимов управления камерой"
+
+msgid "Canvas Texture - working with canvas textures"
+msgstr "Canvas Texture - пример работы с canvas-текстурой"
+
+msgid "Change Image - changing texture images on-the-fly"
+msgstr "Change Image - пример изменения текстуры на лету"
+
+msgid "Custom Anchors - creating custom annotations"
+msgstr "Custom Anchors - процедурное создание аннотаций"
+
+msgid "Dynamic Geometry - procedural geometry modification"
+msgstr "Dynamic Geometry - процедурное изменение геометрии"
+
+msgid "Gamepad - an example of controlling a character via gamepad"
+msgstr "Gamepad - пример управления персонажем с помощью геймпада"
+
+msgid "Gyro (Mobile Only) - working with mobile devices' gyroscopes"
+msgstr "Gyro (Mobile Only) - пример работы с гироскопом мобильных устройств"
+
+msgid "Instancing - copying scene objects in runtime"
+msgstr "Instancing - копирование объектов сцены"
+
+msgid "Leap Motion - an example of using Leap Motion controller"
+msgstr "Leap Motion - пример использования контроллера Leap Motion"
+
+msgid "Lines - procedural lines rendering"
+msgstr "Lines - рендеринг процедурных линий"
+
+msgid ""
+"Material API - tweaking material properties and replacing objects' "
+"materials"
+msgstr "Material API - изменение свойств материалов и замена материалов объекта"
+
+msgid "Morphing - using shape keys"
+msgstr "Morphing - использование ключей деформации объекта"
+
+msgid "Multitouch (Mobile Only) - using mobile devices multitouch sensor"
+msgstr ""
+"Multitouch (только для мобильных устройств) - использование "
+"мультитач-сенсора"
+
+msgid "Pathfinding - an example of calculating paths and using navigation meshes"
+msgstr "Pathfinding - расчёт пути с использованием навигационного меша"
+
+msgid "Ray Test - the usage of raycasting for obstacles detection"
+msgstr ""
+"Ray Test - использование функционала испускания лучей для определения "
+"препятствий"
+
+msgid "VR - a VR application example"
+msgstr "VR - пример приложения виртуальной реальности"
+
+msgid "Webcam - using media stream from a web camera"
+msgstr "Webcam - пример использования потока медиаданных с веб-камеры"
+
+msgid ""
+"The Code Snippets application is available at "
+"``./apps_dev/code_snippets/code_snippets_dev.html``. It can be also run "
+"by using a link in the ``index.html`` file located in the SDK root."
+msgstr ""
+"Приложение Code Snippets доступно по пути "
+"``./apps_dev/code_snippets/code_snippets_dev.html``. Также оно доступно "
+"по ссылке из файла ``index.html`` в корне SDK."
+
+msgid "Loading Application Assets"
+msgstr "Загрузка медиаресурсов приложения."
+
+msgid ""
+"To simplify project maintenance and server deployment always keep your "
+"application asset files (exported scenes, textures, sounds, etc) separate"
+" from other project files (JavaScript, CSS, HTML, etc). Inside your SDK "
+"this asset directory is located at ``projects/my_project/assets``."
+msgstr ""
+"Для упрощения обслуживания проектов и развертывания сервера храните "
+"медиаданные приложений (сцены, текстуры, звуки и т.п.) отдельно от прочих"
+" файлов проекта (JavaScript, CSS, HTML и пр.). Папка медиаресурсов "
+"располагается по адресу ``projects/my_project/assets`` в каталоге SDK."
+
+msgid ""
+"To load files (e.g by using :b4wref:`data.load()`) from this directory "
+"use the :b4wref:`config.get_assets_path()` method:"
+msgstr ""
+"Для загрузки файлов из директории (например, с помощью метода "
+":b4wref:`data.load()`) используйте метод "
+":b4wref:`config.get_assets_path()`:"
+
+msgid ""
+"This way you ensure that your applications will find assets independently"
+" of the current development stage (developed, built or deployed)."
+msgstr ""
+"Такой подход гарантирует, что приложение (как разрабатываемое, так и "
+"собранное или развёрнутое) сможет загружать медиаресурсы вне зависимости "
+"от того, на какой стадии разработки оно находится."
+
+msgid "Event-Driven Model"
+msgstr "Событийная модель"
+
+msgid ""
+"The event-driven model provides a universal interface for describing the "
+"3D scene's change of state. It simplifies the processing of physics "
+"events and user actions."
+msgstr ""
+"Событийная модель предоставляет унифицированный интерфейс для описания "
+"изменения состояний 3D сцены, упрощая обработку событий физики и действий"
+" пользователя."
+
+msgid "Sensors"
+msgstr "Сенсоры"
+
+msgid ""
+"The basic unit of the event-driven model is a sensor. A sensor is a "
+"programming entity and can only be active (1, one) or inactive (0, zero)."
+" Some sensors may carry a payload which can be received in the manifold's"
+" callback function with corresponding API. For example, the ray-tracing "
+"sensor (Ray Sensor) provides the relative length of the intersection ray."
+msgstr ""
+"Основным блоком событийной модели является сенсор (sensor). Сенсор "
+"является программной сущностью, которая выдаёт на выходе единственное "
+"числовое значение, в большинстве случаев это либо 1 (единица), либо 0 "
+"(ноль). Некоторые сенсоры также несут полезную нагрузку (payload), "
+"которую можно получить в функции-обработчике множества с помощью "
+"соответствующего API. Например, сенсор трассировки лучей (Ray Sensor) "
+"предоставляет относительную длину луча пересечения."
+
+msgid ""
+"Users cannot directly control sensors via the external API. Instead, all "
+"sensors must be present in one or multiple collections - so called sensor"
+" manifolds. A manifold is a logic container associated with a scene "
+"object. It generates a response to a defined set of sensor events by "
+"executing a callback function. To define the manifold it is required to "
+"have the following information (see also the API documentation for "
+"description of the ``controls.create_sensor_manifold`` function):"
+msgstr ""
+"Опрос значений сенсоров не доступен пользователю в виде API. Вместо "
+"этого, каждый сенсор должен присутствовать в одном или нескольких "
+"множествах (sensor manifold). Множество является логическим контейнером, "
+"ассоциированным с объектом на сцене. Оно генерирует ответ на определенный"
+" набор событий сенсоров в виде вызова функции-обработчика. Для "
+"определения множества необходимо иметь следующую информацию (см. также "
+"описание функции :b4wref:`controls.create_sensor_manifold` в документации"
+" по API):"
+
+msgid "An object to carry the manifold (e.g. a thrown object)."
+msgstr "Объект-носитель множества (например, бросаемый объект)."
+
+msgid "A unique id of the manifold (e.g. \"IMPACT\")."
+msgstr "Уникальный идентификатор множества (например, \"IMPACT\")."
+
+msgid ""
+"Callback execution mode (the options are: ``CT_POSITIVE`` - logic "
+"function positive result, ``CT_CONTINUOUS`` - every frame with a positive"
+" logic function result and once with a zero result, ``CT_LEVEL`` - any "
+"logic, function result change, ``CT_SHOT`` - one-stage logic function "
+"result change, ``CT_TRIGGER`` - logic function result switch, "
+"``CT_CHANGE`` - any sensor value change)."
+msgstr ""
+"Тип вызова функции-обработчика (варианты: ``CT_POSITIVE`` - положительный"
+" результат логической функции, ``CT_CONTINUOUS`` - каждый кадр при "
+"положительном результате логической функции и один раз при нулевом, "
+"``CT_LEVEL`` - любое изменение значения результата логической функции, "
+"``CT_SHOT`` - одномоментный скачок результата логической функции, "
+"``CT_TRIGGER`` - переключение результата логической функции, "
+"``CT_CHANGE`` - любое изменение любого из сенсоров)."
+
+msgid "An array of sensors."
+msgstr "Массив сенсоров."
+
+msgid ""
+"A logic function to define the combination of the sensor states for which"
+" the callback function is executed."
+msgstr ""
+"Логическая функция, определяющая при какой комбинации состояний сенсоров "
+"вызывается функция-обработчик."
+
+msgid "A callback function."
+msgstr "Функция-обработчик."
+
+msgid "An optional parameter to pass into the callback function."
+msgstr "Необязательный параметр, который может быть передан в функцию-обработчик."
+
+msgid ""
+"You can read more about engine API in the :b4wmod:`controls` module "
+"documentation."
+msgstr ""
+"Более подробно об API, используемых в событийной модели движка, описано в"
+" документации модуля :b4wmod:`controls`."
+
+msgid "Example"
+msgstr "Пример"
+
+msgid ""
+"Let's consider the task to insonify the impact of a thrown stone. A "
+"distinctive sound should be produced for impacting different media (for "
+"example terrain and wall). There are collision meshes with physical "
+"materials in the Blender scene, material ids are \"TERRAIN\" and "
+"\"WALL\". There is also a physical object being thrown in the scene, the "
+"object is named \"Stone\"."
+msgstr ""
+"Поставлена задача озвучить удар бросаемого камня так, чтобы при ударе о "
+"различные среды (например, земля и стена) выводился характерный звук. На "
+"сцене в Blender'е имеются ограничивающие меши с физическими материалами, "
+"их идентификаторы \"TERRAIN\" и \"WALL\". На сцене также присутствует "
+"бросаемый физический объект с названием \"Stone\"."
+
+msgid ""
+"Let's define a collision sensor for each medium, by the type of the sound"
+" produced."
+msgstr ""
+"Определим по одному сенсору соударения (Collision Sensor) для каждой "
+"среды, по типу издаваемого звука."
+
+msgid ""
+"Add the sensors into an array. Use the ``OR`` logic in the logic "
+"function. Place the sound processing code in the callback function. "
+"Create the sensor manifold with the \"IMPACT\" id and the ``CT_SHOT`` "
+"type."
+msgstr ""
+"Добавим сенсоры в массив. В качестве логической функции используем "
+"логическое ``ИЛИ``. В обработчике напишем код для воспроизведения звука. "
+"Создадим множество сенсоров с идентификатором \"IMPACT\" и типом "
+"``CT_SHOT`` (одномоментный)."
+
+msgid ""
+"When the \"Stone\" object collides with any physical material of "
+"\"TERRAIN\" or \"WALL\", the callback function is executed. Inside this "
+"function we get the values of both sensors by their indices in the sensor"
+" array (0 - \"TERRAIN\", 1 - \"WALL\"). The sensor value = 1 (active) "
+"means that the collision happened with the corresponding physical "
+"material. As a result the corresponding sound is produced (the code is "
+"not shown)."
+msgstr ""
+"При столкновении объекта \"Stone\" с любым из физических материалов "
+"\"TERRAIN\" или \"WALL\" происходит вызов функции-обработчика. Внутри "
+"этой функции получим значения обоих сенсоров по их индексу в массиве "
+"сенсоров (0 - \"TERRAIN\", 1 - \"WALL\"). Значение сенсора = 1 (активный)"
+" означает, что произошло столкновение с соответствующим физическим "
+"материалом. В результате воспроизводится соответствующий звук (код не "
+"показан)."
+
+msgid "SDK File Structure"
+msgstr "Файловая структура SDK"
+
+msgid "**addons**"
+msgstr "**addons**"
+
+msgid "**blend4web**"
+msgstr "**blend4web**"
+
+msgid "Blender addon"
+msgstr "аддон Blender"
+
+msgid "**apps_dev**"
+msgstr "**apps_dev**"
+
+msgid "SDK apps source code"
+msgstr "исходный код приложений SDK"
+
+msgid "**code_snippets**"
+msgstr "**code_snippets**"
+
+msgid "source files of the Code Snippets application"
+msgstr "исходные файлы приложения Code Snippets"
+
+msgid "**scripts**"
+msgstr "**scripts**"
+
+msgid "Blend4Web API usage examples' source files"
+msgstr "исходные файлы самих примеров использования API Blend4Web"
+
+msgid "**dairy_plant**"
+msgstr "**dairy_plant**"
+
+msgid "source files of the Dairy Plant demo (available only in SDK Pro)"
+msgstr "исходные файлы приложения \"Молочный завод\" (доступно только в SDK Pro)"
+
+msgid "**demos_animation**"
+msgstr "**demos_animation**"
+
+msgid "project files of the basic animation demos"
+msgstr "исходные файлы анимационных примеров"
+
+msgid "**demos_environment**"
+msgstr "**demos_environment**"
+
+msgid "project files of the basic environment demos"
+msgstr "исходные файлы примеров работы с окружающей средой"
+
+msgid "**demos_interactivity**"
+msgstr "**demos_interactivity**"
+
+msgid "project files of the basic interactivity demos"
+msgstr "исходные файлы примеров интерактивности"
+
+msgid "**demos_materials**"
+msgstr "**demos_materials**"
+
+msgid "project files of the basic materials demos"
+msgstr "исходные файлы примеров материалов"
+
+msgid "**demos_media**"
+msgstr "**demos_media**"
+
+msgid "project files of the basic media demos"
+msgstr "исходные файлы примеров работы с медиаресурсами"
+
+msgid "**demos_particles**"
+msgstr "**demos_particles**"
+
+msgid "project files of the basic particles demos"
+msgstr "исходные файлы примеров работы с частицами"
+
+msgid "**demos_physics**"
+msgstr "**demos_physics**"
+
+msgid "project files of the basic physics demos"
+msgstr "исходные файлы примеров работы с физикой"
+
+msgid "**demos_postprocessing**"
+msgstr "**demos_postprocessing**"
+
+msgid "project files of the basic postprocessing demos"
+msgstr "исходные файлы примеров работы со спецэффектами"
+
+msgid "**farm**"
+msgstr "**farm**"
+
+msgid "source files of the Farm demo (available only in SDK Pro)"
+msgstr "исходные файлы приложения \"Ферма\" (доступно только в SDK Pro)"
+
+msgid "**fashion**"
+msgstr "**fashion**"
+
+msgid "source files of the Fashion Show demo (available only in SDK Pro)"
+msgstr "исходные файлы приложения \"Показ мод\" (доступно только в SDK Pro)"
+
+msgid "**flight**"
+msgstr "**flight**"
+
+msgid "source files of the Island demo"
+msgstr "исходные файлы приложения \"Остров\""
+
+msgid "**new_year**"
+msgstr "**new_year**"
+
+msgid "source files of the New Year 2015 greeting card"
+msgstr "исходные файлы открытки \"С новым годом 2015\""
+
+msgid "**project.py**"
+msgstr "**project.py**"
+
+msgid "script for application developers"
+msgstr "скрипт для разработчиков приложений"
+
+msgid "**space_disaster**"
+msgstr "**space_disaster**"
+
+msgid "source files of the Space Disaster app"
+msgstr "исходные файлы приложения Space Disaster"
+
+msgid "**tutorials**"
+msgstr "**tutorials**"
+
+msgid "source files of the Blend4Web tutorials"
+msgstr "исходные файлы обучающих примеров Blend4Web"
+
+msgid "**victory_day_2015**"
+msgstr "**victory_day_2015**"
+
+msgid "source files of the V-Day 70 greeting card"
+msgstr "исходные файлы открытки \"День победы 70\""
+
+msgid "**viewer**"
+msgstr "**viewer**"
+
+msgid "the sources files of the Viewer application"
+msgstr "исходные файлы приложения для просмотра сцен Viewer"
+
+msgid "**webplayer**"
+msgstr "**webplayer**"
+
+msgid "source files of the Web Player app"
+msgstr "исходные файлы веб-плеера"
+
+msgid "**website**"
+msgstr "**website**"
+
+msgid "source files of applications from the Blend4Web official website"
+msgstr "исходные файлы приложений, размещаемых на официальном сайте Blend4Web"
+
+msgid "**blender**"
+msgstr "**blender**"
+
+msgid "source files of the Blender scenes"
+msgstr "исходные файлы сцен в формате Blender"
+
+msgid "**csrc**"
+msgstr "**csrc**"
+
+msgid ""
+"source code (in C) of the binary part of the engine exporter and of the "
+"other utilities"
+msgstr "исходный код бинарной части экспортера движка и других утилит на языке C"
+
+msgid "**deploy**"
+msgstr "**deploy**"
+
+msgid ""
+"the resource directory for deploying on the server (scene source files, "
+"compiled applications and documentation)"
+msgstr ""
+"директория с ресурсами для размещения на сервере (исходные файлы сцен, "
+"скомпилированные приложения и документация)"
+
+msgid "**api_doc**"
+msgstr "**api_doc**"
+
+msgid ""
+"API documentation for developers (built automatically, based on the "
+"engine's source code)"
+msgstr ""
+"документация API движка для разработчиков (собирается автоматически, на "
+"основе исходного кода движка)"
+
+msgid "**apps**"
+msgstr "**apps**"
+
+msgid ""
+"3D applications intended for deploying; the directory duplicates "
+"*apps_dev*"
+msgstr ""
+"3D-приложения, предназначенные для развертывания, директория дублирует "
+"*apps_dev*"
+
+msgid "**common**"
+msgstr "**common**"
+
+msgid ""
+"Compiled engine files. Shared by all applications from SDK (hence the "
+"name)."
+msgstr ""
+"Файлы скомпилированного движка. Используются приложениями из состава SDK "
+"(отсюда и название)."
+
+msgid "**assets**"
+msgstr "**assets**"
+
+msgid "application assets: scenes, textures and sounds"
+msgstr "медиаданные приложения: сцены, текстуры, звуковые файлы"
+
+msgid "**doc**"
+msgstr "**doc**"
+
+msgid "the current user manual in HTML format, built automatically from *doc_src*"
+msgstr ""
+"настоящее руководство пользователя в формате HTML, собирается "
+"автоматически из *doc_src*"
+
+msgid "**webglreport**"
+msgstr "**webglreport**"
+
+msgid "WebGL report application"
+msgstr "Приложения, выводящее информацию о WebGL"
+
+msgid "**distfiles**"
+msgstr "**distfiles**"
+
+msgid "distribution builder lists"
+msgstr "списки сборщика дистрибутивов"
+
+msgid "**doc_src**"
+msgstr "**doc_src**"
+
+msgid "source files of the current manual written in reST"
+msgstr "исходный код настоящего руководства пользователя на языке разметки reST"
+
+msgid "**index.html** and **index_assets**"
+msgstr "**index.html** и **index_assets**"
+
+msgid "main SDK webpage files"
+msgstr "файлы главной веб-страницы SDK"
+
+msgid "**license**"
+msgstr "**license**"
+
+msgid "files with license texts"
+msgstr "файлы с текстами лицензионных соглашений"
+
+msgid "**Makefile**"
+msgstr "**Makefile**"
+
+msgid "makefile for building the engine, the applications, and the documentation"
+msgstr "файл сборки для компиляции движка, приложений и документации"
+
+msgid "**projects**"
+msgstr "**projects**"
+
+msgid "directory for user projects"
+msgstr "каталог пользовательских проектов"
+
+msgid "**README.rst**"
+msgstr "**README.rst**"
+
+msgid "README file"
+msgstr "файл README"
+
+msgid "scripts"
+msgstr "скрипты"
+
+msgid "**check_resources.py**"
+msgstr "**check_resources.py**"
+
+msgid ""
+"script for checking of and reporting about unused resources (images and "
+"sounds referenced by the exported files)"
+msgstr ""
+"скрипт для проверки и сообщения о неиспользуемых ресурсах (изображения и "
+"звуки, на которые ссылаются экспортируемые файлы)"
+
+msgid "**compile_b4w.py**"
+msgstr "**compile_b4w.py**"
+
+msgid "script for building engine code and applications"
+msgstr "скрипт для сборки кода движка и приложений"
+
+msgid "**converter.py**"
+msgstr "**converter.py**"
+
+msgid ""
+"script which halves the texture dimensions, compresses the textures into "
+"the DDS format, converts sound files into mp4 and ogg formats"
+msgstr ""
+"скрипт, осуществляющий: уменьшение разрешения текстур вдвое, компрессию "
+"текстур в формат DDS, конвертацию звуковых файлов в форматы mp4 и ogg"
+
+msgid "**custom_json_encoder.py**"
+msgstr "**custom_json_encoder.py**"
+
+msgid "fork of the json Python module, sorts the keys in reverse order"
+msgstr "форк Python-модуля json, сортирует ключи по алфавиту в обратном порядке"
+
+msgid "**gen_glmatrix.sh**"
+msgstr "**gen_glmatrix.sh**"
+
+msgid ""
+"script for generating the math module based on the source code of "
+"glMatrix 2"
+msgstr ""
+"скрипт для генерации математического модуля на основе исходных файлов из "
+"репозитория glMatrix 2"
+
+msgid "**graph.sh**"
+msgstr "**graph.sh**"
+
+msgid "SVG generator for the current scene graph, used for debugging rendering"
+msgstr ""
+"генератор текущего графа сцены в формате svg, используется для отладки "
+"рендеринга"
+
+msgid "**make_dist.py**"
+msgstr "**make_dist.py**"
+
+msgid "distributions builder script"
+msgstr "сборщик дистрибутивов"
+
+msgid "**memory.sh**"
+msgstr "**memory.sh**"
+
+msgid "script for checking memory (RAM) and video memory (VRAM)"
+msgstr "скрипт для проверки обычной (RAM) и видео-памяти (VRAM)"
+
+msgid "**mod_list.py**"
+msgstr "**mod_list.py**"
+
+msgid "script for generating the list of modules to use in new applications"
+msgstr "скрипт для генерации списка модулей, используемых в приложениях"
+
+msgid "**plot.sh**"
+msgstr "**plot.sh**"
+
+msgid "debugging information graph builder"
+msgstr "построитель графиков отладочной информации"
+
+msgid "**process_blend.py**"
+msgstr "**process_blend.py**"
+
+msgid "script for automatic reexport of all scenes from the SDK"
+msgstr "скрипт для автоматического переэкспорта всех сцен из состава SDK"
+
+msgid "**remove_alpha_channel.sh**"
+msgstr "**remove_alpha_channel.sh**"
+
+msgid "script for removing the images' alpha channel"
+msgstr "скрипт для удаления альфа-канала изображения"
+
+msgid "**screencast.sh**"
+msgstr "**screencast.sh**"
+
+msgid "script for screen video recording"
+msgstr "скрипт для записи видео с экрана"
+
+msgid "**shader_analyzer.py**"
+msgstr "**shader_analyzer.py**"
+
+msgid ""
+"script starting the local web server which calculates complexity of the "
+"shaders"
+msgstr ""
+"скрипт, запускающий локальный веб-сервер, который осуществляет подсчет "
+"сложности шейдеров"
+
+msgid "**translator.py**"
+msgstr "**translator.py**"
+
+msgid "script for building add-on translations"
+msgstr "скрипт для сборки файлов с переводами аддона"
+
+msgid "**shaders**"
+msgstr "**shaders**"
+
+msgid "GLSL shaders of the engine"
+msgstr "GLSL-шейдеры движка"
+
+msgid "**src**"
+msgstr "**src**"
+
+msgid "main source code of the engine's kernel"
+msgstr "основной исходный код ядра движка"
+
+msgid "source code of engine add-ons"
+msgstr "исходный код дополнений движка"
+
+msgid "**ext**"
+msgstr "**ext**"
+
+msgid "source code of the external declarations that form the engine's API"
+msgstr "исходный код внешних объявлений, формирующих API движка"
+
+msgid "**libs**"
+msgstr "**libs**"
+
+msgid "source code of the libraries"
+msgstr "исходный код библиотек"
+
+msgid "**tmp**"
+msgstr "**tmp**"
+
+msgid "directory for temporary files (e.g. Fast Preview)"
+msgstr "директория для временных файлов (например, для Fast Preview)"
+
+msgid "**tools**"
+msgstr "**tools**"
+
+msgid "various tools for building the engine, apps or convert resources"
+msgstr "различные инструменты для сборки движка, приложений и конвертации ресурсов"
+
+msgid "**converter_utils**"
+msgstr "**converter_utils**"
+
+msgid "binary builds of the tools for resource conversion"
+msgstr "сборки утилит для конвертации ресурсов"
+
+msgid "**closure-compiler**"
+msgstr "**closure-compiler**"
+
+msgid "Google Closure compiler, its externs and their generators"
+msgstr ""
+"компилятор Google Closure, файлы исключений к нему, генераторы файлов "
+"исключений"
+
+msgid "**glsl**"
+msgstr "**glsl**"
+
+msgid "**compiler**"
+msgstr "**compiler**"
+
+msgid "compiler for the engine's GLSL shaders"
+msgstr "компилятор GLSL-шейдеров движка"
+
+msgid "**pegjs**"
+msgstr "**pegjs**"
+
+msgid ""
+"grammars of the PEG.js parser generator for implementing the GLSL "
+"preprocessor, and also the script for generating the parser modules from "
+"these grammars"
+msgstr ""
+"грамматики парсер-генератора PEG.js для реализации препроцессора GLSL, а "
+"также скрипт для генерации модулей парсеров из этих грамматик"
+
+msgid "**yuicompressor**"
+msgstr "**yuicompressor**"
+
+msgid "utility for compressing CSS files"
+msgstr "утилита для сжатия файлов CSS"
+
+msgid "**uranium**"
+msgstr "**uranium**"
+
+msgid ""
+"source code and building scripts of the Uranium physics engine (the fork "
+"of Bullet)"
+msgstr "исходный код и скрипты сборки физического движка Uranium (форк Bullet)"
+
+msgid "**VERSION**"
+msgstr "**VERSION**"
+
+msgid "contains the current version of the engine"
+msgstr "содержит текущую версию движка"
+
+msgid "Loading Local Resources"
+msgstr "Загрузка локальных ресурсов"
+
+msgid ""
+"The engine's renderer is a web application and it works when you view an "
+"HTML file in a browser. After initialization the resources (scenes, "
+"textures) are loaded. This process is subject to the `same-origin policy "
+"<http://en.wikipedia.org/wiki/Same-origin_policy>`_ rule. In particular "
+"this rule forbids loading from a local directory."
+msgstr ""
+"Рендерер движка является Web-приложением, и его работа происходит при "
+"просмотре HTML-файла в браузере. После инициализации происходит загрузка "
+"ресурсов (сцен, текстур), которая подчиняется `правилу ограничения домена"
+" <http://ru.wikipedia.org/wiki/Правило_ограничения_домена>`_, "
+"запрещающему, в частности, загрузку из локальной директории."
+
+msgid ""
+"Since version 15.02, the Blend4Web SDK includes the :ref:`development "
+"server <local_development_server>` to solve the problem of loading local "
+"resources."
+msgstr ""
+"Начиная с версии 15.02, в состав Blend4Web SDK входит :ref:`сервер "
+"разработки <local_development_server>`, решающий проблему загрузки "
+"локальных ресурсов."
+
+msgid "Quality Profiles"
+msgstr "Профили качества изображения"
+
+msgid ""
+"Several quality profiles are implemented in order to support platforms "
+"with different functionality."
+msgstr ""
+"Для поддержки различных по функциональности платформ в движке реализовано"
+" несколько профилей качества изображения:"
+
+msgid ""
+"*low quality* (``P_LOW``) - a range of functions is turned off (such as "
+"shadows, dynamic reflection, postprocessing), the size of textures is "
+"halved when using a release version, anti-aliasing is disabled"
+msgstr ""
+"*низкое качество* (``P_LOW``) - отключен ряд функций (тени, динамическое "
+"отражение, постпроцессинг), размер текстур для сборочной версии уменьшен "
+"вдвое, антиалиасинг отключен"
+
+msgid ""
+"*high quality* (``P_HIGH``) - all features requested by the scene are "
+"used, the anti-aliasing method is FXAA"
+msgstr ""
+"*высокое качество* (``P_HIGH``) - используются все запрошенные сценой "
+"функции, метод антиалиасинга FXAA"
+
+msgid ""
+"*maximum quality* (``P_ULTRA``) - rendering resolution is doubled, "
+"resolution of shadow maps is increased, the anti-aliasing method is FXAA "
+"(uses higher quality settings and works slower)."
+msgstr ""
+"*максимальное качество* (``P_ULTRA``) - вдвое увеличено разрешение "
+"рендеринга, увеличено разрешение карт теней, метод антиалиасинга SMAA "
+"(используется более высокое качество, скорость работы ниже)."
+
+msgid ""
+"*custom quality* (``P_CUSTOM``) - any quality parameter can be set to any"
+" possible value. This option is used when you need to set certain quality"
+" parameters manually. By default, it uses the same settings as ``High`` "
+"quality profile."
+msgstr ""
+"*пользовательское качество* (``P_CUSTOM``) - любой параметр качества "
+"может иметь любое доступное значение. Используется, если необходимо "
+"вручную задать некоторые параметры. По умолчанию используются настройки, "
+"аналогичные профилю ``High``."
+
+msgid ""
+"Switching the quality profiles can be performed in runtime before "
+"initialization of the WebGL context. The default profile is ``P_HIGH``."
+msgstr ""
+"Переключение профилей качества осуществляется программно, до "
+"инициализации контекста WebGL. Профиль по умолчанию ``P_HIGH``."
+
+msgid "Additional Quality Settings"
+msgstr "Дополнительные настройки качества"
+
+msgid ""
+"Application developers can also set the **quality** parameter upon engine"
+" initialization using the ``app.js`` add-on:"
+msgstr ""
+"Разработчики приложений могут также установить параметр **quality** при "
+"инициализации движка с использованием дополнения ``app.js``:"
+
+msgid ""
+"All rendering parameters affected by quality settings are listed in the "
+"following sheet:"
+msgstr ""
+"Ниже перечислены все параметры рендеринга, зависящие от выбранного "
+"профиля качества изображения:"
+
+msgid "*Parameter*"
+msgstr "*Параметр*"
+
+msgid "**Ultra**"
+msgstr ""
+
+msgid "**High**"
+msgstr ""
+
+msgid "**Low**"
+msgstr ""
+
+msgid "cfg_def.shadows"
+msgstr ""
+
+msgid "true"
+msgstr ""
+
+msgid "false"
+msgstr ""
+
+msgid "cfg_def.shore_smoothing"
+msgstr ""
+
+msgid "cfg_def.ssao"
+msgstr ""
+
+msgid "cfg_def.dof"
+msgstr ""
+
+msgid "cfg_def.god_rays"
+msgstr ""
+
+msgid "cfg_def.bloom"
+msgstr ""
+
+msgid "cfg_def.reflections"
+msgstr ""
+
+msgid "cfg_def.refractions"
+msgstr ""
+
+msgid "cfg_def.foam"
+msgstr ""
+
+msgid "cfg_def.parallax"
+msgstr ""
+
+msgid "cfg_def.dynamic_grass"
+msgstr ""
+
+msgid "cfg_scs.grass_tex_size"
+msgstr ""
+
+msgid "4.0*512"
+msgstr ""
+
+msgid "2*512"
+msgstr ""
+
+msgid "1*512"
+msgstr ""
+
+msgid "cfg_scs.cubemap_tex_size"
+msgstr ""
+
+msgid "512"
+msgstr ""
+
+msgid "256"
+msgstr ""
+
+msgid "cfg_def.texture_min_filter"
+msgstr ""
+
+msgid "3"
+msgstr ""
+
+msgid "2"
+msgstr ""
+
+msgid "cfg_def.anisotropic_filtering"
+msgstr ""
+
+msgid "cfg_def.use_min50"
+msgstr ""
+
+msgid "cfg_def.water_dynamic"
+msgstr ""
+
+msgid "cfg_def.shore_distance"
+msgstr ""
+
+msgid "cfg_def.antialiasing"
+msgstr ""
+
+msgid "cfg_def.smaa"
+msgstr ""
+
+msgid "cfg_def.compositing"
+msgstr ""
+
+msgid "cfg_def.motion_blur"
+msgstr ""
+
+msgid "cfg_def.allow_hidpi"
+msgstr ""
+
+msgid "cfg_def.enable_outlining"
+msgstr ""
+
+msgid "cfg_def.glow_materials"
+msgstr ""
+
+msgid "cfg_def.msaa_samples"
+msgstr ""
+
+msgid "16"
+msgstr ""
+
+msgid "4"
+msgstr ""
+
+msgid "1"
+msgstr ""
+
+msgid "cfg_def.srgb_type"
+msgstr ""
+
+msgid "\"SRGB_PROPER\""
+msgstr ""
+
+msgid "\"SRGB_SIMPLE\""
+msgstr ""
+
+msgid "cfg_phy.max_fps"
+msgstr ""
+
+msgid "120"
+msgstr ""
+
+msgid "60"
+msgstr ""
+
+msgid "cfg_def.lod_smooth_transitions"
+msgstr ""
+
+msgid ""
+"Other rendering parameters are not affected by setting the quality "
+"profile, but can be accessed via API methods or, in many cases, from "
+"Blend4Web add-on UI in Blender. These parameters are listed below:"
+msgstr ""
+"Другие параметры рендеринга не зависят от профиля качества, но доступны с"
+" помощью методов API и - во многих случаях - через интерфейс аддона "
+"Blend4Web в Blender. Эти параметры перечислены ниже:"
+
+msgid "Shadow settings"
+msgstr "Настройки теней"
+
+msgid ""
+"``b4w.shadow_settings.soft_shadows`` `- enables and disables shadow "
+"blurring`"
+msgstr ""
+"``b4w.shadow_settings.soft_shadows`` `- включает и выключает размытие "
+"теней`"
+
+msgid ""
+"``b4w.shadow_settings.blur_samples`` `- sets the number of samples used "
+"to blur shadows`"
+msgstr ""
+"``b4w.shadow_settings.blur_samples`` `- устанавливает количество сэмплов,"
+" используемых для размытия теней`"
+
+msgid "``b4w.shadow_settings.csm_resolution`` `- sets shadow cascade resolution`"
+msgstr ""
+"``b4w.shadow_settings.csm_resolution`` `- устанавливает разрешение "
+"каскадов теней`"
+
+msgid ""
+"``b4w.shadow_settings.self_shadow_polygon_offset`` `- sets self-shadow "
+"polygon offset`"
+msgstr ""
+"``b4w.shadow_settings.self_shadow_polygon_offset`` `- устанавливает "
+"коэффициент смещения полигона в зависимости от направления на источник "
+"света`"
+
+msgid ""
+"``b4w.shadow_settings.self_shadow_normal_offset`` `- sets shadow normal "
+"offset`"
+msgstr ""
+"``b4w.shadow_settings.self_shadow_polygon_offset`` `- устанавливает "
+"коэффициент смещения полигона по нормали`"
+
+msgid ""
+"``b4w.shadow_settings.enable_csm`` `- enables and disables shadow "
+"cascades`"
+msgstr "``b4w.shadow_settings.enable_csm`` `- включает и выключает каскады теней`"
+
+msgid ""
+"``b4w.shadow_settings.first_cascade_blur_radius`` `- sets the radius of "
+"blurring between shadow cascades`"
+msgstr ""
+"``b4w.shadow_settings.first_cascade_blur_radius`` `- задаёт радиус "
+"размытия между каскадами теней`"
+
+msgid ""
+"These settings are also available in Blend4Web Add-on interface and are "
+"described in greater detail in a :ref:`dedicated chapter <shadows>`."
+msgstr ""
+"Все эти параметры также доступны в интерфейсе аддона Blend4Web; о них "
+"подробно рассказано в :ref:`соответствующей главе <shadows>`."
+
+msgid "Reflection settings"
+msgstr "Настройки отражений"
+
+msgid ""
+"``b4w.reflection_quality`` `- controls the overall quality of the "
+"rendered reflections`"
+msgstr ""
+"``b4w.reflection_quality`` `- отвечает за общее качество рендеринга "
+"отражений`"
+
+msgid ""
+"This parameter, along with other reflection settings, is also available "
+"in Blend4Web Add-on interface and are described in greater detail in a "
+":ref:`dedicated chapter <render_reflections>`."
+msgstr ""
+"Этот параметр, как и прочие настройки отражений, доступен также в "
+"интерфейсе аддона Blend4Web; о них подробно рассказано в "
+":ref:`соответствующей главе <render_reflections>`."
+
+msgid "Outlining settings"
+msgstr "Настройки контура объектов"
+
+msgid "``b4w.outline_color`` `- sets the color of the object outline`"
+msgstr "``b4w.outline_color`` `- устанавливает цвет контура`"
+
+msgid ""
+"``b4w.outline_factor`` `- sets the thickness and the brightness of the "
+"object outline`"
+msgstr "``b4w.outline_factor`` `- устанавливает толщину и яркость контура`"
+
+msgid ""
+"These parameters are also available in Blend4Web Add-on interface and are"
+" described in greater detail in a :ref:`dedicated chapter "
+"<render_object_outlining>`."
+msgstr ""
+"Все эти параметры также доступны в интерфейсе аддона Blend4Web; о них "
+"подробно рассказано в :ref:`соответствующей главе "
+"<render_object_outlining>`."
+
+msgid "Glow settings"
+msgstr "Настройки свечения материала"
+
+msgid ""
+"``b4w.glow_settings.small_glow_mask_coeff`` `- sets the intensity of glow"
+" obtained through the smaller mask`"
+msgstr ""
+"``b4w.glow_settings.small_glow_mask_coeff`` `- устанавливает "
+"интенсивность свечения по малой маске`"
+
+msgid ""
+"``b4w.glow_settings.small_glow_mask_width`` `- sets the width of glow "
+"obtained through the smaller mask`"
+msgstr ""
+"``b4w.glow_settings.small_glow_mask_width`` `- отвечает за ширину "
+"свечения по малой маске`"
+
+msgid ""
+"``b4w.glow_settings.large_glow_mask_coeff`` `- sets the intensity of glow"
+" obtained through the larger mask`"
+msgstr ""
+"``b4w.glow_settings.large_glow_mask_coeff`` `- управляет интенсивностью "
+"свечения по большой маске`"
+
+msgid ""
+"``b4w.glow_settings.large_glow_mask_width`` `- sets the width of glow "
+"obtained through the larger mask`"
+msgstr ""
+"``b4w.glow_settings.large_glow_mask_width`` `- здесь устанавливается "
+"ширина свечения по большой маске`"
+
+msgid ""
+"``b4w.glow_settings.render_glow_over_blend`` `- enables and disables "
+"rendering the glow effect over transparent objects`"
+msgstr ""
+"``b4w.glow_settings.render_glow_over_blend`` `- включает и выключает "
+"отрисовывание эффекта поверх прозрачных объектов`"
+
+msgid ""
+"These settings are also available in Blend4Web Add-on interface and are "
+"described in greater detail in a :ref:`dedicated chapter "
+"<render_glow_materials>`."
+msgstr ""
+"Все эти параметры также доступны в интерфейсе аддона Blend4Web; о них "
+"подробно рассказано в :ref:`соответствующей главе "
+"<render_glow_materials>`."
+
+msgid "Anti-Aliasing settings"
+msgstr "Настройки сглаживания"
+
+msgid ""
+"``b4w.antialiasing_quality`` `- this parameter controls the overall "
+"quality of the anti-aliasing effect`"
+msgstr ""
+"``b4w.antialiasing_quality`` `- этот параметр управляет общим качеством "
+"сглаживания`"
+
+msgid ""
+"These settings are also available in Blend4Web Add-on interface and are "
+"described in greater detail in a :ref:`dedicated chapter "
+"<render_anti_aliasing>`."
+msgstr ""
+"Все эти параметры также доступны в интерфейсе аддона Blend4Web; о них "
+"подробно рассказано в :ref:`соответствующей главе "
+"<render_anti_aliasing>`."
+
+msgid "Bloom settings"
+msgstr "Настройки эффекта засветки (Bloom)"
+
+msgid ""
+"``b4w.bloom_settings.adaptive`` `- enables and disables using adaptive "
+"average luminance`"
+msgstr ""
+"``b4w.bloom_settings.adaptive`` `- включает и выключает рассчёт "
+"адаптивной средней яркости`"
+
+msgid "``b4w.bloom_settings.key`` `- controls the intesity of the Bloom effect`"
+msgstr ""
+"``b4w.god_rays_settings.intensity`` `- задаёт интенсивность эффекта "
+"засветки`"
+
+msgid "``b4w.bloom_settings.blur`` `- sets the blur factor of the effect`"
+msgstr "``b4w.bloom_settings.blur`` `- задаёт степень размытия засветки`"
+
+msgid ""
+"``b4w.bloom_settings.edge_lum`` `- sets the boundary value of an "
+"element’s relative brightness above which the bloom effect appears`"
+msgstr ""
+"``b4w.bloom_settings.edge_lum`` `- устанавливает граничное значение "
+"относительной яркости элемента, выше которого начинает проявляться эффект"
+" засветки`"
+
+msgid ""
+"These settings are also available in Blend4Web Add-on interface and are "
+"described in greater detail in a :ref:`dedicated chapter <render_bloom>`."
+msgstr ""
+"Все эти параметры также доступны в интерфейсе аддона Blend4Web; о них "
+"подробно рассказано в :ref:`соответствующей главе <render_bloom>`."
+
+msgid "Moton Blur settings"
+msgstr "Настройки эффекта размытия при движении (motion blur)"
+
+msgid ""
+"``b4w.motion_blur_settings.motion_blur_factor`` `- controls the strength "
+"of the motion blur effect`"
+msgstr ""
+"``b4w.motion_blur_settings.motion_blur_factor`` `- управляет силой "
+"эффекта размытия при движении`"
+
+msgid ""
+"``b4w.motion_blur_settings.motion_blur_decay_threshold`` `- sets the "
+"fade-out ratio of the motion blur effect`"
+msgstr ""
+"``b4w.motion_blur_settings.motion_blur_decay_threshold`` `- устанавливает"
+" степень плавности размытия`"
+
+msgid ""
+"These settings are also available in Blend4Web Add-on interface and are "
+"described in greater detail in a :ref:`dedicated chapter "
+"<render_motion_blur>`."
+msgstr ""
+"Все эти параметры также доступны в интерфейсе аддона Blend4Web; о них "
+"подробно рассказано в :ref:`соответствующей главе <render_motion_blur>`."
+
+msgid "SSAO settings"
+msgstr "Настройки эффекта взаимного затенения (SSAO)"
+
+msgid ""
+"``b4w.ssao_settings.radius_increase`` `- sets the spherical sampling "
+"radius multiply factor when transferring from the internal sampling ring "
+"to the external one`"
+msgstr ""
+"``b4w.ssao_settings.radius_increase`` `- устанавливает фактор умножения "
+"радиуса сферического сэмплинга при переходе от внутреннего кольца к "
+"внешнему`"
+
+msgid ""
+"``b4w.ssao_settings.hemisphere`` `- enables and disables using "
+"hemispherical sampling for shading`"
+msgstr ""
+"``b4w.ssao_settings.hemisphere`` `- включает и выключает использование "
+"полусферического сэмплинга для затенения`"
+
+msgid "``b4w.ssao_settings.blur_depth`` `- enables and disables blur depth test`"
+msgstr ""
+"``b4w.ssao_settings.blur_depth`` `- включает и выключает размытие SSAO на"
+" основе буфера глубины`"
+
+msgid ""
+"``b4w.ssao_settings.blur_discard_value`` `- sets the discard value for "
+"the blur depth test`"
+msgstr ""
+"``b4w.ssao_settings.blur_discard_value`` `- устанавливает степень влияния"
+" разницы глубины сэмплов на их \"\\вес\"\\ при размытии`"
+
+msgid ""
+"``b4w.ssao_settings.influence`` `- sets the appearance factor for the "
+"SSAO effect`"
+msgstr ""
+"``b4w.ssao_settings.influence`` `- устанавливает степень проявленности "
+"эффекта взаимного затенения`"
+
+msgid ""
+"``b4w.ssao_settings.dist_factor`` `- sets the distant factor for the SSAO"
+" effect`"
+msgstr ""
+"``b4w.ssao_settings.dist_factor`` `- устанавливает фактор уменьшения "
+"проявленности эффекта с расстоянием`"
+
+msgid ""
+"``b4w.ssao_settings.samples`` `- sets the number of samples used to "
+"compute the SSAO effect`"
+msgstr ""
+"``b4w.ssao_settings.samples`` `- задаёт количество сэмплов, используемых "
+"при рассчёте эффекта`"
+
+msgid ""
+"These settings are also available in Blend4Web Add-on interface and are "
+"described in greater detail in a :ref:`dedicated chapter <render_ssao>`."
+msgstr ""
+"Все эти параметры также доступны в интерфейсе аддона Blend4Web; о них "
+"подробно рассказано в :ref:`соответствующей главе <render_ssao>`."
+
+msgid "God Rays settings"
+msgstr "Настройки сумеречных лучей"
+
+msgid ""
+"``b4w.god_rays_settings.intensity`` `- sets the intesity of the god rays "
+"effect`"
+msgstr ""
+"``b4w.god_rays_settings.intensity`` `- задаёт интенсивность эффекта "
+"сумеречных лучей`"
+
+msgid ""
+"``b4w.god_rays_settings.max_ray_length`` `- sets the maximum length of "
+"the rays`"
+msgstr ""
+"``b4w.god_rays_settings.max_ray_length`` `- задаёт максимальную длинну "
+"лучей`"
+
+msgid ""
+"``b4w.god_rays_settings.steps_per_pass`` `- sets the number of steps used"
+" to calculate the god rays effect`"
+msgstr ""
+"``b4w.god_rays_settings.steps_per_pass`` `- заадёт количество сэмплов, "
+"используемых при рассчёте эффекта`"
+
+msgid ""
+"These settings are also available in Blend4Web Add-on interface and are "
+"described in greater detail in a :ref:`dedicated chapter "
+"<render_god_rays>`."
+msgstr ""
+"Все эти параметры также доступны в интерфейсе аддона Blend4Web; о них "
+"подробно рассказано в :ref:`соответствующей главе <render_god_rays>`."
+
+msgid "Color Correction settings"
+msgstr "Настройки цветокоррекции"
+
+msgid ""
+"``b4w.color_correction_settings.brightness`` `- sets the brightness of "
+"the image`"
+msgstr ""
+"``b4w.color_correction_settings.brightness`` `- устанавливает яркость "
+"изображения`"
+
+msgid ""
+"``b4w.color_correction_settings.contrast`` `- sets the contrast of the "
+"image`"
+msgstr ""
+"``b4w.color_correction_settings.contrast`` `- устанвливает контрастность "
+"изображения`"
+
+msgid ""
+"``b4w.color_correction_settings.exposure`` `- sets the exposure of the "
+"image`"
+msgstr ""
+"``b4w.color_correction_settings.exposure`` `- отвечает за парметр "
+"выдержки (exposure) изображения`"
+
+msgid ""
+"``b4w.color_correction_settings.saturation`` `- sets the satuartion of "
+"the image`"
+msgstr ""
+"``b4w.color_correction_settings.saturation`` `- контролирует насыщенность"
+" изображения`"
+
+msgid ""
+"These settings are also available in Blend4Web Add-on interface and are "
+"described in greater detail in a :ref:`dedicated chapter "
+"<render_color_correction>`."
+msgstr ""
+"Все эти параметры также доступны в интерфейсе аддона Blend4Web; о них "
+"подробно рассказано в :ref:`соответствующей главе "
+"<render_color_correction>`."
+
+msgid "Non-Standard Canvas Position and Orientation"
+msgstr "Нестандартное расположение и ориентация элемента Canvas"
+
+msgid ""
+"The Canvas element, to which the rendering is performed, can change its "
+"position relative to the browser window. This can occur due to some "
+"manipulations over the DOM tree, or as a result of page scrolling which "
+"is especially relevant for non-fullscreen web applications."
+msgstr ""
+"Элемент Canvas, на котором осуществляется рендеринг, может изменять своё "
+"местоположение относительно окна браузера. Это может происходить в "
+"результате манипуляций, проводимых над DOM-деревом, либо в результате "
+"скроллинга страницы, что особенно актуально для неполноэкранных "
+"приложений."
+
+msgid ""
+"In most cases this will not affect the performance of the app by any "
+"means. However, some DOM events related to mouse cursor or touch position"
+" may carry incorrect information. This occurs because the coordinates "
+"obtained from the corresponding events are measured relative to the "
+"origin of the browser window, while the engine works with the coordinate "
+"space of the Canvas element itself (its origin is located in the top left"
+" corner)."
+msgstr ""
+"В большинстве случаев это не будет никак сказываться на работе "
+"приложения. Однако для событий, связанных с положением курсора мыши или "
+"позицией касания на touch-устройстве, возможно получение некорректных "
+"результатов. Это происходит, потому что координаты, получаемые из "
+"соответствующих событий, принадлежат системе отсчета относительно окна "
+"браузера, а движок работает с координатами в системе отсчета именно "
+"Canvas элемента (верхний левый угол элемента)."
+
+msgid ""
+"If the top left corner of the Canvas element matches the top left corner "
+"of the browser window and is fixed in its position (non-movable) then "
+"it's sufficient to use event.clientX and event.clientY coordinates of the"
+" input events or :b4wref:`mouse.get_coords_x()` and "
+":b4wref:`mouse.get_coords_y()` methods."
+msgstr ""
+"Если верхний левый угол Canvas'а совпадает с верхним левым углом окна "
+"браузера, и его местоположение не будет изменяться, то достаточно "
+"использовать координаты event.clientX и event.clientY соответствующего "
+"события либо функции API :b4wref:`mouse.get_coords_x()` и "
+":b4wref:`mouse.get_coords_y()`:"
+
+msgid ""
+"In the case of more sophisticated manipulations with the Canvas element "
+"(scrolling of the page elements, displacement from the top level corner "
+"of the browser window, changes in the DOM-tree) it's needed to obtain "
+"properly calculated coordinates. This can be done by using the "
+"aforementioned :b4wref:`mouse.get_coords_x()` and "
+":b4wref:`mouse.get_coords_y()` methods with a ``true`` value as a third "
+"parameter:"
+msgstr ""
+"В случае более сложных манипуляций с положением элемента Canvas "
+"(скроллинг отдельных элементов страницы, смещение относительно левого "
+"верхнего угла окна браузера, манипуляции с DOM-деревом) требуется "
+"получить корректно рассчитанные координаты. Это можно сделать при помощи "
+"вышеупомянутых методов :b4wref:`mouse.get_coords_x()` и "
+":b4wref:`mouse.get_coords_y()` с ``true`` в качестве третьего параметра."
+
+msgid ""
+"Another option in this case is to use the "
+":b4wref:`container.client_to_canvas_coords()` method as follows:"
+msgstr ""
+"Другой вариант - использовать метод "
+":b4wref:`container.client_to_canvas_coords()`, как на следующем примере:"
+
+msgid "Mobile Web Apps"
+msgstr "Мобильные веб-приложения"
+
+msgid ""
+"An option to scale the whole webpage and change the orientation of a "
+"mobile device should be considered when creating user interface for a web"
+" application. It is recommended to prevent scaling and keep the aspect "
+"ratio of a webpage constant to avoid possible problems. This can be "
+"achieved by adding the following meta-tag to the page header:"
+msgstr ""
+"Возможность масштабирования всей веб-страницы на мобильных устройствах "
+"также может приводить к смещению элемента Canvas. Описанные выше решения "
+"годятся и для этого случая, однако, в качестве альтернативы можно "
+"запретить масштабирование вовсе и избежать подобных проблем. Для этого "
+"достаточно в заголовке страницы добавить следующий мета-тег:"
+
+msgid ""
+"Sometimes you might need to lock a mobile device to a certain "
+"orientation, especially when you don't want to make both landscape and "
+"portrait interface variants. Since the native screenlock API is "
+"experimental and isn't widespread, this might be easier to do using CSS "
+"rules."
+msgstr ""
+"В некоторых случаях может потребоваться зафиксировать определённую "
+"ориентацию мобильного устройства (например, если вы не хотите создавать "
+"отдельные варианты интерфейса для ландшафтной и портретной ориентации). "
+"Поскольку штатный API для фиксации экрана - экспериментальный и не "
+"распространён широко, это проще сделать при помощи правил CSS."
+
+msgid ""
+"To keep the orientation in landscape mode only, one can set rotation for "
+"the <html> element by 90 degrees in the portrait mode:"
+msgstr ""
+"Для сохранения ориентации в ландшафтном режиме можно установить вращение "
+"элемента <html> на 90 градусов в портретном режиме:"
+
+msgid ""
+"Similarly, the CSS rule for the portrait mode only should look like the "
+"following:"
+msgstr ""
+"В свою очередь, правило CSS для использования только портретного режима "
+"будет выглядеть следующим образом:"
+
+msgid "sensor"
+msgstr "сенсор"
+
+msgid "manifold"
+msgstr "множество"
+
+#~ msgid "Table of Content"
+#~ msgstr "Содержание"
+
+#~ msgid "This command will re-export blend files in JSON and HTML formats."
+#~ msgstr "Повторно экспортирует blend-файлы в форматах JSON и HTML."
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "Содержание"
+#~ msgstr ""
+
+#~ msgid "Повторно экспортирует blend-файлы в форматах JSON и HTML."
+#~ msgstr ""
+
+#~ msgid "``\"-s | --assets\"`` определяет директорию с ресурсами сцены."
+#~ msgstr ""
+
+#~ msgid "An example of the ``DDS`` compression artifacts."
+#~ msgstr ""
+
+#~ msgid "``\"-d | --dir\"`` directory for deploying the project."
+#~ msgstr "``\"-d | --dir\"`` директория для развертывания проекта."
+
+#~ msgid "ogg -> mp4"
+#~ msgstr ""
+
+#~ msgid "mp4 -> ogg"
+#~ msgstr ""
+
+#~ msgid "m4v -> webm"
+#~ msgstr ""
+
+#~ msgid "ogv -> webm"
+#~ msgstr ""
+
+#~ msgid "m4v -> seq"
+#~ msgstr ""
+
+#~ msgid "ogv -> seq"
+#~ msgstr ""
+
+#~ msgid "ogg, oga -> mp4"
+#~ msgstr ""
+
+#~ msgid "mp4, m4a -> ogg"
+#~ msgstr ""
+
+#~ msgid "webm -> m4v"
+#~ msgstr ""
+
+#~ msgid "mp4, m4v -> webm"
+#~ msgstr ""
+
+#~ msgid "ogg, ogv -> webm"
+#~ msgstr ""
+
+#~ msgid "webm -> seq"
+#~ msgstr ""
+
+#~ msgid "mp4, m4v -> seq"
+#~ msgstr ""
+
+#~ msgid "ogg, ogv -> seq"
+#~ msgstr ""
+
+#~ msgid "mp3 -> ogg"
+#~ msgstr ""
+
+#~ msgid "mp4 (m4v, m4a) -> ogg"
+#~ msgstr ""
+
+#~ msgid "background_color.alpha = 1"
+#~ msgstr ""
+
+#~ msgid "background_color.alpha = 0"
+#~ msgstr ""
+
+#~ msgid "background_color.alpha > 0"
+#~ msgstr ""
+
+#~ msgid "Project Management"
+#~ msgstr "Управление проектами"
+
+#~ msgid "Advanced Project Management"
+#~ msgstr "Расширенное управление проектами"
+
+#~ msgid "Projects List"
+#~ msgstr "Список проектов"
+
+#~ msgid "Prints list of projects in the SDK."
+#~ msgstr "Выводит список проектов, находящихся в SDK."
+
+#~ msgid "Project Structure"
+#~ msgstr "Структура проекта"
+
+#~ msgid "A typical app developed using the project manager looks as follows:"
+#~ msgstr ""
+
+#~ msgid "This app consists of 4 different directories."
+#~ msgstr "Как видно, это приложение состоит из 4 различных директорий:"
+
+#~ msgid "apps_dev/myproject. Contains source files of project's apps."
+#~ msgstr "apps_dev/myproject. Содержит исходные файлы приложений проекта."
+
+#~ msgid "blender/myproject. Contains source files of project's scenes."
+#~ msgstr "blender/myproject. Содержит исходные файлы сцен проекта."
+
+#~ msgid "deploy/assets/myproject. Contains exported files of project's scenes."
+#~ msgstr "deploy/assets/myproject. Содержит экспортированные файлы сцен проекта."
+
+#~ msgid "deploy/apps/myproject. Contains exported files of project's scenes."
+#~ msgstr "deploy/apps/myproject. Содержит экспортированные файлы сцен проекта."
+
+#~ msgid "``.b4w_project`` Configuration File"
+#~ msgstr "Конфигурационный файл ``.b4w_project``"
+
+#~ msgid "Available parameters:"
+#~ msgstr "Доступные опции:"
+
+#~ msgid "The .b4w_project file will look like::"
+#~ msgstr "Файл .b4w_project будет выглядеть следующим образом::"
+
+#~ msgid "Developing multiple apps inside a project"
+#~ msgstr "Разработка нескольких приложений в составе проекта"
+
+#~ msgid "Building Projects"
+#~ msgstr "Сборка проекта"
+
+#~ msgid "Builds a project in the ``deploy/apps/myproject`` directory."
+#~ msgstr "Собирает проект в директории ``deploy/apps/myproject``."
+
+#~ msgid "``\"-v | --version\"`` add version to paths of scripts and styles."
+#~ msgstr "``\"-v | --version\"`` добавляет версию к адресам скриптов и стилей."
+
+#~ msgid "Compiler Requirements"
+#~ msgstr "Требования, накладываемые компилятором:"
+
+#~ msgid "Automatic Re-export"
+#~ msgstr "Автоматический экспорт ресурсов"
+
+#~ msgid "``\"-b | --blender-exec\"`` path to the blender executable."
+#~ msgstr "``\"-b | --blender-exec\"`` путь к исполняемому файлу blender."
+
+#~ msgid "``\"-s | --assets\"`` specify directory with scene assets."
+#~ msgstr "``\"-s | --assets\"`` определяет директорию с ресурсами сцены."
+
+#~ msgid "Deploying Projects"
+#~ msgstr "Развертывание проекта"
+
+#~ msgid "Save a project to an external directory together with all dependencies."
+#~ msgstr ""
+
+#~ msgid "``\"-E | --assets-prefix\"`` assets URL prefix (\"assets\" by default)."
+#~ msgstr ""
+
+#~ msgid "``\"-o | --override\"`` remove directory if it exists."
+#~ msgstr "``\"-o | --override\"`` удаляет директорию, если она существует."
+
+#~ msgid "``\"-s | --assets\"`` override project's assets directory(s)."
+#~ msgstr ""
+
+#~ msgid "``\"-t | --engine-type\"`` override project's engine type config."
+#~ msgstr ""
+
+#~ msgid "Remove Project"
+#~ msgstr "Удаление проекта"
+
+#~ msgid "Upgrading Apps for New SDK Versions"
+#~ msgstr "Обновление приложений на новые версии SDK"
+
+#~ msgid "While upgrading for new SDK versions often two problems arise:"
+#~ msgstr ""
+
+#~ msgid "Modules of the new and old versions of the engine do not match."
+#~ msgstr "Несоответствие модулей новой и старой версии движка."
+
+#~ msgid "Old and new engine API do not match."
+#~ msgstr "Несоответствие старых и новых API движка."
+
+#~ msgid "Path to Loaded Application Assets"
+#~ msgstr "Пути к загружаемым ресурсам приложения"
+
+#~ msgid "pvrtc (?)"
+#~ msgstr ""
+
+#~ msgid "background_color/alpha = 1"
+#~ msgstr ""
+
+#~ msgid "background_color/alpha = 0"
+#~ msgstr ""
+
+#~ msgid "background_color/alpha > 0"
+#~ msgstr ""
+
+#~ msgid "png -> dds"
+#~ msgstr ""
+
+#~ msgid "jpg -> dds"
+#~ msgstr ""
+
+#~ msgid "bmp -> dds"
+#~ msgstr ""
+
+#~ msgid "**Mac OS**"
+#~ msgstr ""
+
+#~ msgid "**assets.json**"
+#~ msgstr ""
+
+#~ msgid "metadata with information about scenes loaded by the Viewer"
+#~ msgstr ""
+
+#~ msgid "source code of the applications"
+#~ msgstr "исходный код приложений"
+
+#~ msgid "source files of the Blend4Web API usage demonstration application"
+#~ msgstr ""
+
+#~ msgid "**firstperson**"
+#~ msgstr ""
+
+#~ msgid "**blender_scripts**"
+#~ msgstr ""
+
+#~ msgid "exporter and utility scripts for Blender"
+#~ msgstr "экспортер и вспомогательные скрипты для Blender'а"
+
+#~ msgid "**globals_detect**"
+#~ msgstr ""
+
+#~ msgid "utility code for detecting global variables"
+#~ msgstr "вспомогательный код для определения глобальных переменных"
+
+#~ msgid "lists of the files for building distributions"
+#~ msgstr "списки файлов для сборки дистрибутивов"
+
+#~ msgid "Non-FullScreen Web Apps"
+#~ msgstr "Специфика неполноэкранных приложений"
+
+#~ msgid "``resize_textures``"
+#~ msgstr ""
+
+#~ msgid "Converts textures to lower resolution"
+#~ msgstr ""
+
+#~ msgid "``convert_dds``"
+#~ msgstr ""
+
+#~ msgid "Converts textures to :ref:`DDS format <dds>`"
+#~ msgstr ""
+
+#~ msgid "``convert_media``"
+#~ msgstr "для видео (convert_media):"
+
+#~ msgid "``cleanup_textures``"
+#~ msgstr ""
+
+#~ msgid "``cleanup_dds``"
+#~ msgstr ""
+
+#~ msgid "Removers DDS texture files generated by the convert_dds command"
+#~ msgstr ""
+
+#~ msgid "``cleanup_media``"
+#~ msgstr ""
+
+#~ msgid "``compress_png``"
+#~ msgstr ""
+
+#~ msgid "``check_dependencies``"
+#~ msgstr "Зависимости"
+
+#~ msgid "Checks :ref:`converter dependencies <converter_deps>`"
+#~ msgstr ""
+
+#~ msgid "``-d``, ``--dir <dir_path>``"
+#~ msgstr ""
+
+#~ msgid "``-j``, ``--jobs <jobs>``"
+#~ msgstr ""
+
+#~ msgid "``-v``, ``--verbose``"
+#~ msgstr ""
+
+#~ msgid "VR - initializing a VR application"
+#~ msgstr "VR - инициализация VR-приложения"
+
+#~ msgid "Application Programming"
+#~ msgstr "Написание логики приложений"
+
+#~ msgid "\"Hello World!\" application"
+#~ msgstr "Приложение Hello world!"
+
+#~ msgid "The simplest Blend4Web app may look like this:"
+#~ msgstr "Простейшее приложение на основе Blend4Web может иметь вид:"
+
+#~ msgid "Loading Scenes in Apps"
+#~ msgstr "Загрузка сцены в приложение"
+
+#~ msgid "To load a 3D scene you need:"
+#~ msgstr ""
+
+#~ msgid "Place a ``<canvas>`` element on a page for rendering."
+#~ msgstr ""
+
+#~ msgid "Call the ``m_data.load()`` function to load a 3D scene."
+#~ msgstr "Вызвать функцию ``m_data.load()`` для загрузки трёхмерной сцены."
+
+#~ msgid "Example:"
+#~ msgstr "Пример:"
+
+#~ msgid "Creating Apps Quickly"
+#~ msgstr "Быстрое создание приложений"
+
+#~ msgid "**ES5 code:**"
+#~ msgstr "**src**"
+
+#~ msgid "Shadow settings:"
+#~ msgstr ""
+
+#~ msgid "b4w.shadow_settings.soft_shadows"
+#~ msgstr ""
+
+#~ msgid "b4w.shadow_settings.blur_samples"
+#~ msgstr ""
+
+#~ msgid "b4w.shadow_settings.csm_resolution"
+#~ msgstr ""
+
+#~ msgid "b4w.shadow_settings.self_shadow_polygon_offset"
+#~ msgstr ""
+
+#~ msgid "b4w.shadow_settings.self_shadow_normal_offset"
+#~ msgstr ""
+
+#~ msgid "b4w.shadow_settings.enable_csm"
+#~ msgstr ""
+
+#~ msgid "b4w.shadow_settings.first_cascade_blur_radius"
+#~ msgstr ""
+
+#~ msgid "Reflection settings:"
+#~ msgstr ""
+
+#~ msgid "b4w.reflection_quality"
+#~ msgstr ""
+
+#~ msgid "Outlining settings:"
+#~ msgstr ""
+
+#~ msgid "b4w.outline_color"
+#~ msgstr ""
+
+#~ msgid "b4w.outline_factor"
+#~ msgstr ""
+
+#~ msgid "Glow settings:"
+#~ msgstr ""
+
+#~ msgid "b4w.glow_settings.small_glow_mask_coeff"
+#~ msgstr ""
+
+#~ msgid "b4w.glow_settings.small_glow_mask_width"
+#~ msgstr ""
+
+#~ msgid "b4w.glow_settings.large_glow_mask_coeff"
+#~ msgstr ""
+
+#~ msgid "b4w.glow_settings.large_glow_mask_width"
+#~ msgstr ""
+
+#~ msgid "b4w.glow_settings.render_glow_over_blend"
+#~ msgstr ""
+
+#~ msgid "Anti-Aliasing settings:"
+#~ msgstr ""
+
+#~ msgid "b4w.antialiasing_quality"
+#~ msgstr ""
+
+#~ msgid "Bloom settings:"
+#~ msgstr ""
+
+#~ msgid "b4w.bloom_settings.adaptive"
+#~ msgstr ""
+
+#~ msgid "b4w.bloom_settings.key"
+#~ msgstr ""
+
+#~ msgid "b4w.bloom_settings.blur"
+#~ msgstr ""
+
+#~ msgid "b4w.bloom_settings.edge_lum"
+#~ msgstr ""
+
+#~ msgid "Moton Blur settings:"
+#~ msgstr ""
+
+#~ msgid "b4w.motion_blur_settings.motion_blur_factor"
+#~ msgstr ""
+
+#~ msgid "b4w.motion_blur_settings.motion_blur_decay_threshold"
+#~ msgstr ""
+
+#~ msgid "SSAO settings:"
+#~ msgstr ""
+
+#~ msgid "b4w.ssao_settings.radius_increase"
+#~ msgstr ""
+
+#~ msgid "b4w.ssao_settings.hemisphere"
+#~ msgstr ""
+
+#~ msgid "b4w.ssao_settings.blur_depth"
+#~ msgstr ""
+
+#~ msgid "b4w.ssao_settings.blur_discard_value"
+#~ msgstr ""
+
+#~ msgid "b4w.ssao_settings.influence"
+#~ msgstr ""
+
+#~ msgid "b4w.ssao_settings.dist_factor"
+#~ msgstr ""
+
+#~ msgid "b4w.ssao_settings.samples"
+#~ msgstr ""
+
+#~ msgid "God Rays settings:"
+#~ msgstr ""
+
+#~ msgid "b4w.god_rays_settings.intensity"
+#~ msgstr ""
+
+#~ msgid "b4w.god_rays_settings.max_ray_length"
+#~ msgstr ""
+
+#~ msgid "b4w.god_rays_settings.steps_per_pass"
+#~ msgstr ""
+
+#~ msgid "Color Correction settings:"
+#~ msgstr ""
+
+#~ msgid "b4w.color_correction_settings.brightness"
+#~ msgstr ""
+
+#~ msgid "b4w.color_correction_settings.contrast"
+#~ msgstr ""
+
+#~ msgid "b4w.color_correction_settings.exposure"
+#~ msgstr ""
+
+#~ msgid "b4w.color_correction_settings.saturation"
+#~ msgstr ""
+
+#~ msgid "``b4w.bloom_settings.key`` - ?"
+#~ msgstr ""
+
