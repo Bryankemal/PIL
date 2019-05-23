@@ -22,8 +22,8 @@
   },
   "scripts": {
     "css-deploy": "npm run css-build && npm run css-postcss",
-    "css-build": "node-sass _sass/main.scss css/main.css",
-    "css-postcss": "postcss --use autoprefixer --output css/main.css css/main.css",
+    "css-build": "node-sass _sass/main.scss css/main.css && node-sass _sass/visite.scss css/visite.css",
+    "css-postcss": "postcss --use autoprefixer --output css/main.css css/main.css && postcss --use autoprefixer --output css/visite.css css/visite.css",
     "css-watch": "npm run css-build -- --watch",
     "deploy": "npm run css-deploy && npm run js-build",
     "js-build": "babel _javascript --out-dir lib",
