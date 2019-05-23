@@ -6513,6 +6513,11 @@ table {
   border-radius: 5px;
   border: 3px solid #32327d; }
 
+.tableConteneur {
+  float: inherit;
+  table-layout: inherit;
+  margin-top: 2%; }
+
 #pieds {
   background-image: url("../src/fondConteneur.png");
   overflow: auto;
@@ -6550,10 +6555,6 @@ table {
   margin-top: 4%;
   margin-bottom: -7%;
   padding-left: 1%; }
-
-#img {
-  width: 82%;
-  border-radius: 5px; }
 
 #logo {
   width: 15%;

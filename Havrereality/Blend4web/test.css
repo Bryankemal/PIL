@@ -2,7 +2,7 @@
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 3; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -20,6 +20,7 @@
   border: 1px solid #32327d;
   border-radius: 5px;
   width: 80%; /* Could be more or less, depending on screen size */
+  height: 60%;
   -webkit-transition: opacity 400ms ease-in;
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
@@ -41,18 +42,25 @@
   color : #244281;
 }
 
-table, .donnees { float: right;
-table-layout: fixed;
-width: 32%;}
+.tableDonnees {
+  float: right;
+  table-layout: fixed;
+  width: 32%;
+  border-radius: inherit;
+  border: inherit;
+  margin-left: inherit;
+  margin-right: inherit;
+  text-align: center;
+  vertical-align: inherit;
+}
 
-th, .donnees{
+.thdonnees{
     border-radius: 2px;
     font-size: 22px;
+    text-align: center;
 }
-tr{
-  background-color: white;
-}
-td, .donnees {
+
+.tddonnees {
    border-radius: 2px;
    font-size: 20px;
    word-wrap: break-word;
@@ -60,9 +68,19 @@ td, .donnees {
 .grey{
   background-color: #f0f0f0;
 }
+.white{
+  background-color: white;
+}
 
 .boutonTableau{
   text-align: center;
   background-color: inherit;
   background-color: rgba(36,66,129,0.8);
+}
+
+.shutdown{
+  background-color: white;
+  font-size: 25px;
+  float: right;
+  margin-left: 2%;
 }
