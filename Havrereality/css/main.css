@@ -6522,7 +6522,6 @@ table {
   background-image: url("../src/fondConteneur.png");
   overflow: auto;
   position: relative;
-  z-index: 1;
   text-align: center;
   border: 2.5px solid #32327d; }
 
