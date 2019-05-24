@@ -91,3 +91,92 @@
   float: right;
   margin-left: 2%;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1000px)
+{
+  .tableDonnees {
+    position: absolute;
+    table-layout: fixed;
+    width: 90%;
+    height: 40%;
+    border-radius: inherit;
+    border: inherit;
+    margin-top: 37%;
+    margin-left: inherit;
+    margin-right: inherit;
+    text-align: center;
+    vertical-align: inherit;
+    float: none;
+  }
+
+    .thdonnees{
+        border-radius: 2px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .tddonnees {
+       border-radius: 2px;
+       font-size: 12px;
+       word-wrap: break-word;
+    }
+
+  .shutdown{
+    font-size: 14px;
+  }
+
+  .shutdown:hover{
+    font-size: 14px;
+  }
+
+  iframe {
+    width: 90%;
+    height: 50%;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 767px)
+{
+  .tableDonnees {
+    position: absolute;
+    table-layout: fixed;
+    width: 90%;
+    height: 40%;
+    border-radius: inherit;
+    border: inherit;
+    margin-top: 70%;
+    margin-left: inherit;
+    margin-right: inherit;
+    text-align: center;
+    vertical-align: inherit;
+    float: none;
+  }
+
+    .thdonnees{
+        border-radius: 2px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .tddonnees {
+       border-radius: 2px;
+       font-size: 12px;
+       word-wrap: break-word;
+    }
+
+  .shutdown{
+    font-size: 14px;
+    margin-left: inherit;
+    margin-top: 2%;
+
+  }
+
+  .shutdown:hover{
+    font-size: 14px;
+  }
+
+  iframe {
+    width: 90%;
+    height: 50%;
+  }
+}
