@@ -17,7 +17,7 @@
   position: relative;
   z-index: 5;
   background-color: rgba(36,66,129,0.6);
-  margin: 17% auto; /* 15% from the top and centered */
+  margin: 10% auto; /* 15% from the top and centered */
   border: 3px solid #b3c0da;
   border-radius: 5px;
   width: 80%; /* Could be more or less, depending on screen size */
@@ -141,7 +141,7 @@
 
   iframe {
     width: 90%;
-    height: 50%;
+    height: 78%;
   }
 }
 
