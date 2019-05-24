@@ -2,12 +2,11 @@
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 3; /* Sit on top */
+  z-index: 5; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -15,7 +14,7 @@
 /* Modal Content/Box */
 .modal-content {
   background-color: rgba(36,66,129,0.6);
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 17% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #32327d;
   border-radius: 5px;
@@ -43,12 +42,13 @@
 }
 
 .tableDonnees {
-  float: right;
+  position: absolute;
   table-layout: fixed;
   width: 32%;
+  height: 95%;
   border-radius: inherit;
   border: inherit;
-  margin-left: inherit;
+  margin-left: 61%;
   margin-right: inherit;
   text-align: center;
   vertical-align: inherit;
@@ -83,4 +83,100 @@
   font-size: 25px;
   float: right;
   margin-left: 2%;
+}
+
+.shutdown:hover{
+  background-color: red;
+  font-size: 25px;
+  float: right;
+  margin-left: 2%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px)
+{
+  .tableDonnees {
+    position: absolute;
+    table-layout: fixed;
+    width: 90%;
+    height: 40%;
+    border-radius: inherit;
+    border: inherit;
+    margin-top: 37%;
+    margin-left: inherit;
+    margin-right: inherit;
+    text-align: center;
+    vertical-align: inherit;
+    float: none;
+  }
+
+    .thdonnees{
+        border-radius: 2px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .tddonnees {
+       border-radius: 2px;
+       font-size: 12px;
+       word-wrap: break-word;
+    }
+
+  .shutdown{
+    font-size: 14px;
+  }
+
+  .shutdown:hover{
+    font-size: 14px;
+  }
+
+  iframe {
+    width: 90%;
+    height: 50%;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 767px)
+{
+  .tableDonnees {
+    position: absolute;
+    table-layout: fixed;
+    width: 90%;
+    height: 40%;
+    border-radius: inherit;
+    border: inherit;
+    margin-top: 70%;
+    margin-left: inherit;
+    margin-right: inherit;
+    text-align: center;
+    vertical-align: inherit;
+    float: none;
+  }
+
+    .thdonnees{
+        border-radius: 2px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .tddonnees {
+       border-radius: 2px;
+       font-size: 12px;
+       word-wrap: break-word;
+    }
+
+  .shutdown{
+    font-size: 14px;
+    margin-left: inherit;
+    margin-top: 2%;
+
+  }
+
+  .shutdown:hover{
+    font-size: 14px;
+  }
+
+  iframe {
+    width: 90%;
+    height: 50%;
+  }
 }
