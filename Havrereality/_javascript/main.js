@@ -40,7 +40,7 @@
   tabDonnees[1] = flatrack;
   tabDonnees[2] = highcube;
 
-  var nomObjet = ["citerne.html" , "FlatRack.html", "carre.html"];
+  var nomObjet = ["citerne.html" , "FlatRack.html", "hc.html"];
   var taille = nomObjet.length;
   // Get the button that opens the modal
   var i;
