@@ -13,26 +13,27 @@
 
 /* Modal Content/Box */
 .modal-content {
+  padding: 1%;
+  position: relative;
+  z-index: 5;
   background-color: rgba(36,66,129,0.6);
   margin: 17% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #32327d;
+  border: 3px solid #b3c0da;
   border-radius: 5px;
   width: 80%; /* Could be more or less, depending on screen size */
-  height: 60%;
+  height: 75%;
   -webkit-transition: opacity 400ms ease-in;
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
 }
 
-/* The Close Button */
+/* The next/previous Buttons */
 .switch {
   background: white;
   color: #244281;
   text-decoration: none;
   font-weight: bold;
   border-radius: 3px;
-  box-shadow: 3px 3px 3px #000;
   text-align: center;
 }
 
@@ -47,11 +48,11 @@
   width: 32%;
   height: 95%;
   border-radius: inherit;
-  border: inherit;
   margin-left: 61%;
-  margin-right: inherit;
+  margin-right: -30%;
   text-align: center;
   vertical-align: inherit;
+  border: 3px solid #b3c0da;
 }
 
 .thdonnees{
@@ -64,6 +65,7 @@
    border-radius: 2px;
    font-size: 20px;
    word-wrap: break-word;
+   padding-left: 2%;
 }
 .grey{
   background-color: #f0f0f0;
@@ -81,19 +83,27 @@
 .shutdown{
   background-color: white;
   font-size: 25px;
+  margin-right: 1%;
   float: right;
-  margin-left: 2%;
+  font-weight: bold;
+  border: 3px solid #b3c0da;
+  border-radius: 3px;
 }
 
 .shutdown:hover{
   background-color: red;
   font-size: 25px;
   float: right;
-  margin-left: 2%;
+  color: white;
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1000px)
 {
+  .modal-content {
+    height: 40%;
+  }
+
   .tableDonnees {
     position: absolute;
     table-layout: fixed;
@@ -137,6 +147,10 @@
 
 @media screen and (min-width: 200px) and (max-width: 767px)
 {
+  .modal-content {
+    height: 60%;
+  }
+
   .tableDonnees {
     position: absolute;
     table-layout: fixed;

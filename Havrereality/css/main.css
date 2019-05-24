@@ -6529,14 +6529,12 @@ table {
 #corps {
   background-color: #f0f0f0;
   position: relative;
-  z-index: 1;
   border: 2.5px solid #32327d;
   margin-top: 3%; }
 
 #menu {
   background-color: #b3c0da;
   position: relative;
-  z-index: 1;
   padding-top: 7%;
   padding-left: 1%;
   padding-right: 1%;
@@ -6545,7 +6543,6 @@ table {
 
 #barreTop {
   position: relative;
-  z-index: 2;
   margin-top: 4%;
   margin-bottom: -7%;
   padding-left: 1%; }
@@ -6553,7 +6550,7 @@ table {
 #logo {
   width: 15%;
   position: relative;
-  z-index: 3;
+  z-index: 1;
   margin-bottom: -11%;
   margin-left: 13%; }
 
@@ -6618,9 +6615,8 @@ h1 {
   h1 {
     font-size: 15px; }
   .pImportant {
-    font-size: 10px; }
-  .table {
-    margin-bottom: -1%; }
+    font-size: 10px;
+    margin-bottom: 3px; }
   li {
     text-align: center;
     font-size: 15px; } }
