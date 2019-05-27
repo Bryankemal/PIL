@@ -143,7 +143,7 @@ function Precedent() {
 
 function MajTableau(id) {
   var valeur = tabDonnees[id];
-  var titre = document.getElementById("nomNavire");
+  var titre = document.getElementById("nomManutention");
   titre.innerHTML = valeur["titre"];
   var longueur = document.getElementById("longueur");
   longueur.innerHTML = valeur["longueur"];
