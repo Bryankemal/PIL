@@ -6,7 +6,7 @@ var courantId;
 
 // Création objet
 //
-// Porte conteneur
+// Standard
 var porteconteneur = new Object();
 porteconteneur["titre"] = "Porte-conteneur";
 porteconteneur["largeur"] = "2.438 mètres";
@@ -16,7 +16,7 @@ porteconteneur["capacite"] = "500 litres";
 porteconteneur["poids"] = "1000 kilogrammes";
 porteconteneur["description"] = "Le porte conteneur est un immense navire transportant un nombre important de conteneur entre les différents port du monde.";
 
-// Feeder
+// HighCube
 var feeder = new Object();
 feeder["titre"] = "Feeder Laura Ann";
 feeder["largeur"] = "2.438 mètres";
@@ -26,7 +26,7 @@ feeder["capacite"] = "500 litres";
 feeder["poids"] = "1000 kilogrammes";
 feeder["description"] = "Le feeder est navire chargé de conteneur.";
 
-// Barge pousseur
+// Double porte
 var bargepousseur = new Object();
 bargepousseur["titre"] = "Barge pousseur";
 bargepousseur["largeur"] = "2.438 mètres";
@@ -36,7 +36,7 @@ bargepousseur["capacite"] = "500 litres";
 bargepousseur["poids"] = "1000 kilogrammes";
 bargepousseur["description"] = "Conteneur s'ouvrant grâce à deux portes";
 
-// Marpol collector
+// Citerne
 var marpolcollector = new Object();
 marpolcollector["titre"] = "Marpol collector";
 marpolcollector["largeur"] = "2.438 mètres";
@@ -46,7 +46,7 @@ marpolcollector["capacite"] = "500 litres";
 marpolcollector["poids"] = "1000 kilogrammes";
 marpolcollector["description"] = "Conteneur citerne qui transporte principalement de l'essence";
 
-// Tanker
+// Flatrack
 var tanker = new Object();
 tanker["titre"] = "Tanker st Sara";
 tanker["largeur"] = "2.438 mètres";
@@ -56,7 +56,7 @@ tanker["capacite"] = "500 litres";
 tanker["poids"] = "1000 kilogrammes";
 tanker["description"] = "Le tanker st Sara vient se placer à côté des porte-conteneur pour les ravitailler en carburant";
 
-// Tugboat
+// PaletWide
 var tugboat = new Object();
 tugboat["titre"] = "Tugboat";
 tugboat["largeur"] = "2.438 mètres";
@@ -66,7 +66,7 @@ tugboat["capacite"] = "500 litres";
 tugboat["poids"] = "1000 kilogrammes";
 tugboat["description"] = "Les Tugboat servent à diriger un porte-conteneur dès son arrivée au port du Havre";
 
-// Automoteur
+// Conteneur DRY
 var automoteur = new Object();
 automoteur["titre"] = "Automoteur";
 automoteur["largeur"] = "2.438 mètres";
@@ -76,7 +76,7 @@ automoteur["capacite"] = "500 litres";
 automoteur["poids"] = "1000 kilogrammes";
 automoteur["description"] = "Conteneur 45";
 
-// Roulier
+// OpenSide
 var roulier = new Object();
 roulier["titre"] = "Roulier";
 roulier["largeur"] = "2.438 mètres";

@@ -5,7 +5,7 @@
 
   // Création objet
   //
-  // Standard
+  // Porte conteneur
   var porteconteneur = new Object();
   porteconteneur["titre"] = "Porte-conteneur";
   porteconteneur["largeur"] = "2.438 mètres";
@@ -15,7 +15,7 @@
   porteconteneur["poids"] = "1000 kilogrammes";
   porteconteneur["description"] = "Le porte conteneur est un immense navire transportant un nombre important de conteneur entre les différents port du monde.";
 
-  // HighCube
+  // Feeder
   var feeder = new Object();
   feeder["titre"] = "Feeder Laura Ann";
   feeder["largeur"] = "2.438 mètres";
@@ -25,7 +25,7 @@
   feeder["poids"] = "1000 kilogrammes";
   feeder["description"] = "Le feeder est navire chargé de conteneur.";
 
-  // Double porte
+  // Barge pousseur
   var bargepousseur = new Object();
   bargepousseur["titre"] = "Barge pousseur";
   bargepousseur["largeur"] = "2.438 mètres";
@@ -35,7 +35,7 @@
   bargepousseur["poids"] = "1000 kilogrammes";
   bargepousseur["description"] = "Conteneur s'ouvrant grâce à deux portes";
 
-  // Citerne
+  // Marpol collector
   var marpolcollector = new Object();
   marpolcollector["titre"] = "Marpol collector";
   marpolcollector["largeur"] = "2.438 mètres";
@@ -45,7 +45,7 @@
   marpolcollector["poids"] = "1000 kilogrammes";
   marpolcollector["description"] = "Conteneur citerne qui transporte principalement de l'essence";
 
-  // Flatrack
+  // Tanker
   var tanker = new Object();
   tanker["titre"] = "Tanker st Sara";
   tanker["largeur"] = "2.438 mètres";
@@ -55,7 +55,7 @@
   tanker["poids"] = "1000 kilogrammes";
   tanker["description"] = "Le tanker st Sara vient se placer à côté des porte-conteneur pour les ravitailler en carburant";
 
-  // PaletWide
+  // Tugboat
   var tugboat = new Object();
   tugboat["titre"] = "Tugboat";
   tugboat["largeur"] = "2.438 mètres";
@@ -65,7 +65,7 @@
   tugboat["poids"] = "1000 kilogrammes";
   tugboat["description"] = "Les Tugboat servent à diriger un porte-conteneur dès son arrivée au port du Havre";
 
-  // Conteneur DRY
+  // Automoteur
   var automoteur = new Object();
   automoteur["titre"] = "Automoteur";
   automoteur["largeur"] = "2.438 mètres";
@@ -75,7 +75,7 @@
   automoteur["poids"] = "1000 kilogrammes";
   automoteur["description"] = "Conteneur 45";
 
-  // OpenSide
+  // Roulier
   var roulier = new Object();
   roulier["titre"] = "Roulier";
   roulier["largeur"] = "2.438 mètres";

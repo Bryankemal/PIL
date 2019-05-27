@@ -45,93 +45,59 @@
         <div class="column is-7" id="corps">
           <div class="pImportant">
             <p>
-              <strong>Les conteneurs</strong> : cliquez simplement sur un conteneur pour le visualiser
+              <strong>Les équipements de manutentions</strong> : cliquez simplement sur un équipement pour le visualiser
             </p>
           </div>
           <table id="tableauConteneur" class="table">
             <tbody>
               <tr>
                 <td id="titreConteneur">
-                    Standard
+                    Portique
                 </td>
                 <td id="titreConteneur">
-                    High cube
+                    Cavalier
                 </td>
                 <td id="titreConteneur">
-                    Double porte
+                    Portique multimodale barge
                 </td>
                 <td id="titreConteneur">
-                    Citerne
+                    Reach stacker
                 </td>
               </tr>
               <tr>
                 <td id="tableConteneur">
-                    <a><img class="imgResponsive" title="Conteneur standard" src="../src/conteneur/standard.jpg" id="0" onclick="afficheModale(this.id)" ></a>
+                    <a><img class="imgResponsive" title="Porte-Conteneur" src="../src/navire/porteconteneur.jpg" id="0" onclick="afficheModale(this.id)" ></a>
                 </td>
                 <td id="tableConteneur">
-                    <a><img class="imgResponsive" title="High Cube" src="../src/conteneur/hc.jpg" id="1" onclick="afficheModale(this.id)"></a>
+                    <a><img class="imgResponsive" title="Feeder" src="../src/navire/feeder.jpg" id="1" onclick="afficheModale(this.id)"></a>
                 </td>
                 <td id="tableConteneur">
-                    <a><img class="imgResponsive" title="Double porte" src="../src/conteneur/doubleporte.jpg" id="2" onclick="afficheModale(this.id)"></a>
+                    <a><img class="imgResponsive" title="Barge pousseur" src="../src/navire/bargepousseur.jpg" id="2" onclick="afficheModale(this.id)"></a>
                 </td>
                 <td id="tableConteneur">
-                    <a><img class="imgResponsive" title="Citerne" src="../src/conteneur/citerne.jpg" id="3" onclick="afficheModale(this.id)"></a>
+                    <a><img class="imgResponsive" title="Marpol collector" src="../src/navire/marpol.jpg" id="3" onclick="afficheModale(this.id)"></a>
                 </td>
               </tr>
               <tr>
                 <td id="titreConteneur">
-                    FlatRack
+                    Portique multimodale train
                 </td>
                 <td id="titreConteneur">
-                    PaletWide
+                    Chariot élévateur conteneur
                 </td>
                 <td id="titreConteneur">
-                    Mini conteneur
-                </td>
-                <td id="titreConteneur">
-                    Open side
+                    Chariot élévateur palette
                 </td>
               </tr>
               <tr>
                 <td id="tableConteneur">
-                    <a><img class="imgResponsive" title="FlatRack" src="../src/conteneur/flatrack.jpg" id="4" onclick="afficheModale(this.id)" ></a>
+                    <a><img class="imgResponsive" title="Tanker" src="../src/navire/tanker.jpg" id="4" onclick="afficheModale(this.id)" ></a>
                 </td>
                 <td id="tableConteneur">
-                    <a><img class="imgResponsive" title="PaletWide" src="../src/conteneur/paletwide.jpg" id="5" onclick="afficheModale(this.id)"></a>
+                    <a><img class="imgResponsive" title="Tugboat" src="../src/navire/tugboat.jpg" id="5" onclick="afficheModale(this.id)"></a>
                 </td>
                 <td id="tableConteneur">
-                    <a><img class="imgResponsive" title="Conteneur 6' 8' 10'" src="../src/conteneur/dry.jpg" id="6" onclick="afficheModale(this.id)"></a>
-                </td>
-                <td id="tableConteneur">
-                    <a><img class="imgResponsive" title="OpenSide" src="../src/conteneur/openside.jpg" id="7" onclick="afficheModale(this.id)"></a>
-                </td>
-              </tr>
-              <tr>
-                <td id="titreConteneur">
-                    Reefer
-                </td>
-                <td id="titreConteneur">
-                    Open top
-                </td>
-                <td id="titreConteneur">
-                    Pliable Staxxon
-                </td>
-                <td id="titreConteneur">
-                    Pliable 4 Fold
-                </td>
-              </tr>
-              <tr>
-                <td id="tableConteneur">
-                    <a><img class="imgResponsive" title="Reefer" src="../src/conteneur/reefer.jpg" id="8" onclick="afficheModale(this.id)" ></a>
-                </td>
-                <td id="tableConteneur">
-                    <a><img class="imgResponsive" title="Open top" src="../src/conteneur/opentop.jpg" id="9" onclick="afficheModale(this.id)"></a>
-                </td>
-                <td id="tableConteneur">
-                    <a><img class="imgResponsive" title="Conteneur pliable staxxon" src="../src/conteneur/staxxon.jpg" id="10" onclick="afficheModale(this.id)"></a>
-                </td>
-                <td id="tableConteneur">
-                    <a><img class="imgResponsive" title="Conteneur pliable fold" src="../src/conteneur/fold.jpg" id="11" onclick="afficheModale(this.id)"></a>
+                    <a><img class="imgResponsive" title="Automoteur" src="../src/navire/automoteur.jpg" id="6" onclick="afficheModale(this.id)"></a>
                 </td>
               </tr>
             </body>
@@ -147,7 +113,7 @@
                 </div>
                 <table class="tableDonnees">
                   <tr class="grey">
-                    <th class="thdonnees" id="nomConteneur" colspan=2 >Titre</th>
+                    <th class="thdonnees" id="nomNavire" colspan=2 >Titre</th>
                   </tr>
                   <tr class="white">
                     <td class="tddonnees">Largeur</td>
@@ -232,6 +198,6 @@
         <div class="column"></div>
       </div>
     </section>
-    <script type="text/javascript" src="../lib/main.js"></script>
+    <script type="text/javascript" src="../lib/manutention.js"></script>
   </body>
 </html>
