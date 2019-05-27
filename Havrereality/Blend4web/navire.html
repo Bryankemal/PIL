@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Havreality</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="visualisation.css">
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="hero is-medium ">
+
+    <div class="columns is-mobile">
+        <div class="column is-11"></div>
+    </div>
+
+      <img class="is-rounded" id="logo" src="../src/logoV3.png">
+
+      <div class="columns is-mobile">
+        <div class="column"></div>
+        <div class="column is-2"></div>
+        <div class="column is-7" id="barreTop">
+
+        </div>
+        <div class="column"></div>
+      </div>
+
+      <div class="columns is-mobile">
+        <div class="column"></div>
+        <div class="column is-2" id="menu">
+          <center><a href="../page/index.html" class="menu-label" id="titreliste">
+              Accueil
+          </a></center>
+          <ul class="menu-list">
+              <li> <a id="liste" href="conteneur.html">Conteneurs</a> </li>
+              <li> <a id="liste" href="navire.html">Navires</a> </li>
+              <li> <a id="liste" href="manutention.html">Equipements de manutentions</a> </li>
+              <li> <a id="liste" href="https://www.marinetraffic.com/en/ais/home/centerx:-12.0/centery:25.0/zoom:4">Marine trafic</a> </li>
+          </ul>
+        </div>
+        <div class="column is-7" id="corps">
+          <div class="pImportant">
+            <p>
+              <strong>Les navires</strong> : cliquez simplement sur un conteneur pour le visualiser
+            </p>
+          </div>
+          <table id="tableauConteneur" class="table">
+            <tbody>
+              <tr>
+                <td id="titreConteneur">
+                    Porte-conteneur
+                </td>
+                <td id="titreConteneur">
+                    Feeder
+                </td>
+                <td id="titreConteneur">
+                    Barge pousseur
+                </td>
+                <td id="titreConteneur">
+                    Marpol collector
+                </td>
+              </tr>
+              <tr>
+                <td id="tableConteneur">
+                    <a><img class="imgResponsive" title="Porte-Conteneur" src="../src/navire/porteconteneur.jpg" id="0" onclick="afficheModale(this.id)" ></a>
+                </td>
+                <td id="tableConteneur">
+                    <a><img class="imgResponsive" title="Feeder" src="../src/navire/feeder.jpg" id="1" onclick="afficheModale(this.id)"></a>
+                </td>
+                <td id="tableConteneur">
+                    <a><img class="imgResponsive" title="Barge pousseur" src="../src/navire/bargepousseur.jpg" id="2" onclick="afficheModale(this.id)"></a>
+                </td>
+                <td id="tableConteneur">
+                    <a><img class="imgResponsive" title="Marpol collector" src="../src/navire/marpol.jpg" id="3" onclick="afficheModale(this.id)"></a>
+                </td>
+              </tr>
+              <tr>
+                <td id="titreConteneur">
+                    Tanker
+                </td>
+                <td id="titreConteneur">
+                    Tugboat
+                </td>
+                <td id="titreConteneur">
+                    Automoteur
+                </td>
+                <td id="titreConteneur">
+                    Roulier
+                </td>
+              </tr>
+              <tr>
+                <td id="tableConteneur">
+                    <a><img class="imgResponsive" title="Tanker" src="../src/navire/tanker.jpg" id="4" onclick="afficheModale(this.id)" ></a>
+                </td>
+                <td id="tableConteneur">
+                    <a><img class="imgResponsive" title="Tugboat" src="../src/navire/tugboat.jpg" id="5" onclick="afficheModale(this.id)"></a>
+                </td>
+                <td id="tableConteneur">
+                    <a><img class="imgResponsive" title="Automoteur" src="../src/navire/automoteur.jpg" id="6" onclick="afficheModale(this.id)"></a>
+                </td>
+                <td id="tableConteneur">
+                    <a><img class="imgResponsive" title="Roulier" src="../src/navire/roulier.jpg" id="7" onclick="afficheModale(this.id)"></a>
+                </td>
+              </tr>
+            </body>
+          </table>
+
+          <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+
+                <div>
+                  <iframe style="position: absolute;"  width="60%" height="95%"></iframe>
+                </div>
+                <table class="tableDonnees">
+                  <tr class="grey">
+                    <th class="thdonnees" id="nomNavire" colspan=2 >Titre</th>
+                  </tr>
+                  <tr class="white">
+                    <td class="tddonnees">Largeur</td>
+                    <td class="tddonnees" id="largeur"></td>
+                  </tr>
+                  <tr class="grey">
+                    <td class="tddonnees">Longueur</td>
+                    <td class="tddonnees" id="longueur"></td>
+                  </tr>
+                  <tr class="white">
+                    <td class="tddonnees">Hauteur</td>
+                    <td class="tddonnees" id="hauteur"></td>
+                  </tr>
+                  <tr class="grey">
+                    <td class="tddonnees">Capacité</td>
+                    <td class="tddonnees" id="capacite"></td>
+                  </tr>
+                  <tr class="white">
+                    <td class="tddonnees" >Poids</td>
+                    <td class="tddonnees" id="poids"></td>
+                  </tr>
+                  <tr class="grey">
+                    <td class="tddonnees" >Description</td>
+                    <td class="tddonnees" id="description"></td>
+                  </tr>
+                  <tr class="grey">
+                    <td class="boutonTableau">
+                      <button class="switch" onclick="javascript:Precedent()">Précedent</button>
+                    </td>
+                    <td class="boutonTableau">
+                      <button class="switch" onclick="javascript:Suivant()">Suivant</button>
+                    </td>
+                  </tr>
+                </table>
+                <span class="shutdown">&times;</span>
+              </div>
+
+          </div>
+      </div>
+        <div class="column"></div>
+      </div>
+      <div class="columns is-mobile">
+        <div class="column"></div>
+        <div class="column is-9 " id="pieds">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>
+                  <figure class="image">
+                    <a href="https://www.normandie.fr/"><img id="img" src="../src/logoRegionNormandie.png"></a>
+                  </figure>
+                </td>
+                <td>
+                  <figure class="image">
+                    <a href="https://www.univ-lehavre.fr/spip.php?article1295"><img id="img" src="../src/drapeau_europe.png"></a>
+                  </figure>
+                </td>
+                <td>
+                  <figure class="image">
+                    <a href="http://www.normandie-univ.fr/accueil-845.kjsp"><img id="img" src="../src/logoNormandieUniv.png"></a>
+                  </figure>
+                </td>
+                <td>
+                  <figure class="image">
+                    <a href="https://www.univ-lehavre.fr/"><img id="img" src="../src/logoUnivLH.png"></a>
+                  </figure>
+                </td>
+                <td>
+                  <figure class="image">
+                    <a href="http://www.litislab.eu/"><img id="img" src="../src/logoLitis.png"></a>
+                  </figure>
+                </td>
+              </tr>
+            </body>
+          </table>
+          <p class="credit">
+            © Pôle Ingénieur et Logistique, Le HAVRE
+            <br>
+            Projet réalisé par Clément BONNEVILLE, Bryan DELOISON, Wesley DI-SOTTO.
+          </p>
+        </div>
+        <div class="column"></div>
+      </div>
+    </section>
+    <script type="text/javascript" src="../lib/navire.js"></script>
+  </body>
+</html>
