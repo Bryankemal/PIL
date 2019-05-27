@@ -6513,6 +6513,17 @@ table {
   border-radius: 5px;
   border: 3px solid #32327d; }
 
+table td {
+  text-align: center; }
+
+.source {
+  font-size: 10px;
+  color: #c5c5c5;
+  text-align: center; }
+
+.grey {
+  background-color: #f0f0f0; }
+
 #pieds {
   background-image: url("../src/fondConteneur.png");
   overflow: auto;
@@ -6633,7 +6644,7 @@ h1 {
   background-color: white; }
 
 a {
-  color: #32327d; }
+  color: #000cff; }
 
 @media screen and (min-width: 900px) {
   #titreliste {

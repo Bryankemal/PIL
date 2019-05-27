@@ -25,6 +25,12 @@ table
   border: 3px solid $bFonce;
 }
 
+table td { text-align:center; }
+
+.source { font-size: 10px; color: #c5c5c5; text-align: center;}
+
+.grey { background-color: #f0f0f0; }
+
 #pieds
 {
   background-image: url("../src/fondConteneur.png");
@@ -171,7 +177,7 @@ h1
 }
 
 #menu a:active { background-color: white; }
-a { color: $bFonce ;}
+a { color: #000cff ;}
 
 @media screen and (min-width: 900px)
 {
