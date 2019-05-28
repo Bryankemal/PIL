@@ -25,6 +25,13 @@ table
   border: 3px solid $bFonce;
 }
 
+table td { text-align:center; }
+table th { text-align:center; }
+
+.source { font-size: 10px; color: #c5c5c5; text-align: center;}
+
+.grey { background-color: #f0f0f0; }
+
 .credit
 {
   background-color: $white;
@@ -62,8 +69,16 @@ a { color: $bFonce ;}
   padding-left: 1%;
 }
 
+#img {width: 82%;}
 
-#img { width: 82%; border-radius: 5px;}
+#contentImg
+{
+  width:50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid $bFonce;
+}
 
 #logo
 {
