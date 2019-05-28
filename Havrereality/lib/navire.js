@@ -9,82 +9,63 @@ var courantId;
 // Porte conteneur
 var porteconteneur = new Object();
 porteconteneur["titre"] = "Porte-conteneur";
-porteconteneur["largeur"] = "2.438 mètres";
-porteconteneur["longueur"] = "20' : 6.058 mètres <br>" + "40' : 12.192 mètres";
-porteconteneur["hauteur"] = "2.591 mètres";
-porteconteneur["capacite"] = "500 litres";
-porteconteneur["poids"] = "1000 kilogrammes";
-porteconteneur["description"] = "Le porte conteneur est un immense navire transportant un nombre important de conteneur entre les différents port du monde.";
+porteconteneur["largeur"] = "Entre 227,31 mètres et 399,87 mètres";
+porteconteneur["longueur"] = "Entre 30,56 mètres et 58,8 mètres";
+porteconteneur["capacite"] = "Entre 1 572 EVP et 21 413 EVP";
+porteconteneur["description"] = "Le porte conteneur est un immense navire transportant un grand nombre de conteneur entre les différents ports du monde.";
 
 // Feeder
 var feeder = new Object();
 feeder["titre"] = "Feeder Laura Ann";
-feeder["largeur"] = "2.438 mètres";
-feeder["longueur"] = "20' : 6.058 mètres <br>" + "40' : 12.192 mètres";
-feeder["hauteur"] = "2.891 mètres";
-feeder["capacite"] = "500 litres";
-feeder["poids"] = "1000 kilogrammes";
-feeder["description"] = "Le feeder est navire chargé de conteneur.";
+feeder["largeur"] = "22,50 mètres";
+feeder["longueur"] = "134,40 mètres";
+feeder["capacite"] = "868 EVP";
+feeder["description"] = "Le feeder est un navire transportant plusieurs conteneurs vers des ports où les porte-conteneurs ne font pas escales.";
 
 // Barge pousseur
 var bargepousseur = new Object();
 bargepousseur["titre"] = "Barge pousseur";
-bargepousseur["largeur"] = "2.438 mètres";
-bargepousseur["longueur"] = "6.058 mètres";
-bargepousseur["hauteur"] = "2.891 mètres";
-bargepousseur["capacite"] = "500 litres";
-bargepousseur["poids"] = "1000 kilogrammes";
-bargepousseur["description"] = "Conteneur s'ouvrant grâce à deux portes";
-
+bargepousseur["largeur"] = "Entre 227,31 mètres et 399,87 mètres";
+bargepousseur["longueur"] = "Entre 30,56 mètres et 58,8 mètres";
+bargepousseur["capacite"] = "Entre 1 572 EVP et 21 413 EVP";
+bargepousseur["description"] = "Le porte conteneur est un immense navire transportant un grand nombre de conteneur entre les différents ports du monde.";
 // Marpol collector
 var marpolcollector = new Object();
 marpolcollector["titre"] = "Marpol collector";
-marpolcollector["largeur"] = "2.438 mètres";
-marpolcollector["longueur"] = "6.058 mètres";
-marpolcollector["hauteur"] = "2.591 mètres";
-marpolcollector["capacite"] = "500 litres";
-marpolcollector["poids"] = "1000 kilogrammes";
-marpolcollector["description"] = "Conteneur citerne qui transporte principalement de l'essence";
-
+marpolcollector["largeur"] = "15 mètres";
+marpolcollector["longueur"] = "46 mètres";
+marpolcollector["capacite"] = "400 m³";
+marpolcollector["description"] = "Le Marpol collector assure la collecte des déchets d'exploitation et résidus de cargaison des navires au port du Havre";
 // Tanker
 var tanker = new Object();
 tanker["titre"] = "Tanker st Sara";
-tanker["largeur"] = "2.438 mètres";
-tanker["longueur"] = "20' : 6.058 mètres <br>" + "40' : 12.192 mètres";
-tanker["hauteur"] = "2.591 mètres";
-tanker["capacite"] = "500 litres";
-tanker["poids"] = "1000 kilogrammes";
-tanker["description"] = "Le tanker st Sara vient se placer à côté des porte-conteneur pour les ravitailler en carburant";
-
+tanker["largeur"] = "17,2 mètres";
+tanker["longueur"] = "122.66 mètres";
+tanker["capacite"] = "8 607 m3 avec 13 cuves";
+tanker["description"] = "Le st Sara assure le service de soutage dans le port du Havre.";
 // Tugboat
 var tugboat = new Object();
 tugboat["titre"] = "Tugboat";
-tugboat["largeur"] = "2.438 mètres";
-tugboat["longueur"] = "13,716 mètres";
-tugboat["hauteur"] = "2.591 mètres";
-tugboat["capacite"] = "500 litres";
-tugboat["poids"] = "1000 kilogrammes";
-tugboat["description"] = "Les Tugboat servent à diriger un porte-conteneur dès son arrivée au port du Havre";
+tugboat["largeur"] = "8,5 mètres";
+tugboat["longueur"] = "26,2 mètres";
+tugboat["capacite"] = "-";
+tugboat["description"] = "Les Tugboat sont des petits bateaux très puissant qui guident les grands navires lors de leurs entrées au port du Havre ";
 
 // Automoteur
 var automoteur = new Object();
 automoteur["titre"] = "Automoteur";
-automoteur["largeur"] = "2.438 mètres";
-automoteur["longueur"] = "6' : 1.829 mètres <br>" + "8' : 2,438 mètres" + "10' : 3,048 mètres";
-automoteur["hauteur"] = "2.591 mètres";
-automoteur["capacite"] = "500 litres";
-automoteur["poids"] = "1000 kilogrammes";
-automoteur["description"] = "Conteneur 45";
+automoteur["largeur"] = "Entre 227,31 mètres et 399,87 mètres";
+automoteur["longueur"] = "Entre 30,56 mètres et 58,8 mètres";
+automoteur["capacite"] = "Entre 1 572 EVP et 21 413 EVP";
+automoteur["description"] = "Le porte conteneur est un immense navire transportant un grand nombre de conteneur entre les différents ports du monde.";
 
 // Roulier
 var roulier = new Object();
 roulier["titre"] = "Roulier";
-roulier["largeur"] = "2.438 mètres";
-roulier["longueur"] = "13,716 mètres";
-roulier["hauteur"] = "2.591 mètres";
-roulier["capacite"] = "500 litres";
-roulier["poids"] = "1000 kilogrammes";
-roulier["description"] = "Le roulier est un navire servant pour le transport de l'automobile";
+roulier["largeur"] = "Entre 227,31 mètres et 399,87 mètres";
+roulier["longueur"] = "Entre 30,56 mètres et 58,8 mètres";
+roulier["capacite"] = "Entre 1 572 EVP et 21 413 EVP";
+roulier["description"] = "Le porte conteneur est un immense navire transportant un grand nombre de conteneur entre les différents ports du monde.";
 
 var tabDonnees = [];
 tabDonnees[0] = porteconteneur;
@@ -160,12 +141,8 @@ function MajTableau(id) {
   longueur.innerHTML = valeur["longueur"];
   var largeur = document.getElementById("largeur");
   largeur.innerHTML = valeur["largeur"];
-  var hauteur = document.getElementById("hauteur");
-  hauteur.innerHTML = valeur["hauteur"];
   var capacite = document.getElementById("capacite");
   capacite.innerHTML = valeur["capacite"];
-  var poids = document.getElementById("poids");
-  poids.innerHTML = valeur["poids"];
   var description = document.getElementById("description");
   description.innerHTML = valeur["description"];
 }
