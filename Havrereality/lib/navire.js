@@ -113,7 +113,7 @@ function afficheModale(id) {
   modal.style.display = "block";
   var container = document.getElementById("example1div");
   var b = document.querySelector("iframe");
-  b.src = nomObjet[id];
+  b.src = "navire/" + nomObjet[id];
   courantId = parseInt(id);
   MajTableau(courantId);
 }
@@ -137,7 +137,7 @@ function Suivant() {
   if (courantId == taille) {
     courantId = 0;
   }
-  b.src = nomObjet[courantId];
+  b.src = "navire/" + nomObjet[courantId];
   MajTableau(courantId);
 }
 
@@ -148,7 +148,7 @@ function Precedent() {
   if (courantId == -1) {
     courantId = taille - 1;
   }
-  b.src = nomObjet[courantId];
+  b.src = "navire/" + nomObjet[courantId];
   MajTableau(courantId);
 }
 
