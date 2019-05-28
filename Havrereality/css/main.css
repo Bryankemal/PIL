@@ -6505,7 +6505,7 @@ label.panel-block {
   padding: 3rem 1.5rem 6rem; }
 
 html {
-  background-image: url(../src/fond.png); }
+  background-image: url(../src/forme/fond.png); }
 
 table {
   table-layout: fixed;
@@ -6525,7 +6525,7 @@ table td {
   background-color: #f0f0f0; }
 
 #pieds {
-  background-image: url("../src/fondConteneur.png");
+  background-image: url("../src/forme/fondConteneur.png");
   overflow: auto;
   position: relative;
   text-align: center;

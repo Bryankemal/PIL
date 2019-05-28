@@ -15,7 +15,7 @@ $family-sans-serif: "Helvetica", "Arial", sans-serif;
 // import du reste des éléments de Bulma (node_modules)
 @import "../node_modules/bulma/bulma.sass";
 
-html { background-image: url(../src/fond.png); }
+html { background-image: url(../src/forme/fond.png); }
 
 table
 {
@@ -34,7 +34,7 @@ table
 
 #pieds
 {
-  background-image: url("../src/fondConteneur.png");
+  background-image: url("../src/forme/fondConteneur.png");
   overflow: auto;
   position: relative;
   z-index: 1;

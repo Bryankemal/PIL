@@ -6505,7 +6505,7 @@ label.panel-block {
   padding: 3rem 1.5rem 6rem; }
 
 html {
-  background-image: url(../src/fond.png); }
+  background-image: url(../src/forme/fond.png); }
 
 table {
   table-layout: inherit;
@@ -6519,7 +6519,7 @@ table {
   border: 3px solid #32327d; }
 
 #pieds {
-  background-image: url("../src/fondConteneur.png");
+  background-image: url("../src/forme/fondConteneur.png");
   overflow: auto;
   position: relative;
   z-index: 1;
