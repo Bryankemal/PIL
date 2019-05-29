@@ -195,12 +195,12 @@
   }
 }
 
-#tableConteneur{
+#tableObjet3D{
   background-color: #404040;
   border: solid #2d2d2d;
 }
 
-#tableauConteneur{
+#tableauObjet3D{
   margin-top: 2%;
 }
 
@@ -210,7 +210,7 @@
     opacity:0.5;
 }
 
-#titreConteneur{
+#titreObjet3D{
   background-color: #6f6f6f;
   border: solid #2d2d2d;
   color: white;
@@ -220,14 +220,14 @@
 
 @media screen and (min-width: 400px) and (max-width: 600px)
 {
-  #titreConteneur {
+  #titreObjet3D {
     font-size: 10px;
   }
 }
 
 @media screen and (min-width: 200px) and (max-width: 400px)
 {
-  #titreConteneur {
+  #titreObjet3D {
     font-size: 8px;
   }
 }
