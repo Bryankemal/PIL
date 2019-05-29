@@ -63,7 +63,7 @@
   paletwide["hauteur"] = "2,896 mètres";
   paletwide["capacite"] = "89,2 m³";
   paletwide["poids"] = "4.860 kilogrammes";
-  paletwide["description"] = "Conteneur 45";
+  paletwide["description"] = "Le Palet wide est idéal pour le transport de marchandises sur palettes en Europe. Comme il est un peu plus large, il peut contenir 2 à 6 palettes de plus qu'un conteneur high cube standard de 45 pieds";
 
   // Conteneur DRY
   var dry = new Object();

@@ -9,71 +9,57 @@ var courantId;
 // Portique
 var portique = new Object();
 portique["titre"] = "Portique";
-portique["largeur"] = "2.438 mètres";
-portique["longueur"] = "20' : 6.058 mètres <br>" + "40' : 12.192 mètres";
-portique["hauteur"] = "2.591 mètres";
-portique["capacite"] = "500 litres";
-portique["poids"] = "1000 kilogrammes";
+portique["hauteur"] = "~48 mètres";
+portique["capacite"] = "15 et 20 conteneurs/heure";
+portique["poids"] = "~1.800 tonnes";
 portique["description"] = "Le portique permet de décharger un porte-conteneur amarré au port";
 
 // Cavalier
 var cavalier = new Object();
 cavalier["titre"] = "Cavalier";
-cavalier["largeur"] = "2.438 mètres";
-cavalier["longueur"] = "20' : 6.058 mètres <br>" + "40' : 12.192 mètres";
-cavalier["hauteur"] = "2.891 mètres";
-cavalier["capacite"] = "500 litres";
-cavalier["poids"] = "1000 kilogrammes";
+cavalier["hauteur"] = "~15 mètres";
+cavalier["capacite"] = "Entre 62 et 104 conteneurs/heure";
+cavalier["poids"] = "~68 tonnes";
 cavalier["description"] = "Le cavalier transporte les conteneurs pour les stocker sur le port ou pour charger des camions";
 
 // Portique multimodale barge
 var portiquebarge = new Object();
 portiquebarge["titre"] = "Portique multimodale barge";
-portiquebarge["largeur"] = "2.438 mètres";
-portiquebarge["longueur"] = "6.058 mètres";
-portiquebarge["hauteur"] = "2.891 mètres";
-portiquebarge["capacite"] = "500 litres";
-portiquebarge["poids"] = "1000 kilogrammes";
+portiquebarge["hauteur"] = "33 mètres";
+portiquebarge["capacite"] = "600 conteneurs traités par jour";
+portiquebarge["poids"] = "~1.500 tonnes";
 portiquebarge["description"] = "Le portique multimodale charge est décharge les barges se trouvant à la plate-forme multimodale";
 
 // Reach stacker
 var reachstacker = new Object();
 reachstacker["titre"] = "Reach stacker";
-reachstacker["largeur"] = "2.438 mètres";
-reachstacker["longueur"] = "6.058 mètres";
-reachstacker["hauteur"] = "2.591 mètres";
-reachstacker["capacite"] = "500 litres";
-reachstacker["poids"] = "1000 kilogrammes";
+reachstacker["hauteur"] = "4,5 mètres";
+reachstacker["capacite"] = "Peut charger jusqu'à ~46.000 kilogrammes";
+reachstacker["poids"] = "~70 tonnes";
 reachstacker["description"] = "Le Reach stacker transporte les conteneurs et peut charger des trains";
 
 // Portique multimodale train
 var portiquetrain = new Object();
 portiquetrain["titre"] = "Portique multimodale train";
-portiquetrain["largeur"] = "2.438 mètres";
-portiquetrain["longueur"] = "20' : 6.058 mètres <br>" + "40' : 12.192 mètres";
 portiquetrain["hauteur"] = "2.591 mètres";
-portiquetrain["capacite"] = "500 litres";
-portiquetrain["poids"] = "1000 kilogrammes";
-portiquetrain["description"] = "Le portiquetrain st Sara vient se placer à côté des porte-conteneur pour les ravitailler en carburant";
+portiquetrain["capacite"] = "600 conteneurs traités par jour";
+portiquetrain["poids"] = "~1.500 tonnes";
+portiquetrain["description"] = "Le portique multimodale de train charge et décharge les trains lors de leurs arrivées la plate-forme multimodale";
 
 // Chariot conteneur
 var chariotconteneur = new Object();
 chariotconteneur["titre"] = "Chariot élévateur conteneur";
-chariotconteneur["largeur"] = "2.438 mètres";
-chariotconteneur["longueur"] = "13,716 mètres";
-chariotconteneur["hauteur"] = "2.591 mètres";
-chariotconteneur["capacite"] = "500 litres";
-chariotconteneur["poids"] = "1000 kilogrammes";
+chariotconteneur["hauteur"] = "~2,50 mètres";
+chariotconteneur["capacite"] = "Peut charger jusqu'à ~32.000 kilogrammes";
+chariotconteneur["poids"] = "~11.500 kilogrammes";
 chariotconteneur["description"] = "Le chariot élévateur transporte les conteneurs sur le port.";
 
 // Chariot palette
 var chariotpalette = new Object();
 chariotpalette["titre"] = "Chariot élévateur palette";
-chariotpalette["largeur"] = "2.438 mètres";
-chariotpalette["longueur"] = "6' : 1.829 mètres <br>" + "8' : 2,438 mètres" + "10' : 3,048 mètres";
-chariotpalette["hauteur"] = "2.591 mètres";
-chariotpalette["capacite"] = "500 litres";
-chariotpalette["poids"] = "1000 kilogrammes";
+chariotpalette["hauteur"] = "2,610 mètres";
+chariotpalette["capacite"] = "Peut charger jusqu'à ~1600 kilogrammes";
+chariotpalette["poids"] = "~3330 kilogrammes";
 chariotpalette["description"] = "Le chariot élévateur de palette sert à charger et décharger des palettes.";
 
 var tabDonnees = [];
@@ -145,10 +131,6 @@ function MajTableau(id) {
   var valeur = tabDonnees[id];
   var titre = document.getElementById("nomManutention");
   titre.innerHTML = valeur["titre"];
-  var longueur = document.getElementById("longueur");
-  longueur.innerHTML = valeur["longueur"];
-  var largeur = document.getElementById("largeur");
-  largeur.innerHTML = valeur["largeur"];
   var hauteur = document.getElementById("hauteur");
   hauteur.innerHTML = valeur["hauteur"];
   var capacite = document.getElementById("capacite");

@@ -24,10 +24,11 @@
   // Barge pousseur
   var bargepousseur = new Object();
   bargepousseur["titre"] = "Barge pousseur";
-  bargepousseur["largeur"] = "Entre 227,31 mètres et 399,87 mètres";
-  bargepousseur["longueur"] = "Entre 30,56 mètres et 58,8 mètres";
-  bargepousseur["capacite"] = "Entre 1 572 EVP et 21 413 EVP";
-  bargepousseur["description"] = "Le porte conteneur est un immense navire transportant un grand nombre de conteneur entre les différents ports du monde.";
+  bargepousseur["largeur"] = "7,40 mètres";
+  bargepousseur["longueur"] = "24 mètres";
+  bargepousseur["capacite"] = "~100 EVP";
+  bargepousseur["description"] = "La barge est dépourvue de moteur, elle est propulsée par un bateau qui va la pousser."
+  +"Elle est utilisée pour le ravitaillement et déchargement de cargaison.";
   // Marpol collector
   var marpolcollector = new Object();
   marpolcollector["titre"] = "Marpol collector";
@@ -53,18 +54,17 @@
   // Automoteur
   var automoteur = new Object();
   automoteur["titre"] = "Automoteur";
-  automoteur["largeur"] = "Entre 227,31 mètres et 399,87 mètres";
-  automoteur["longueur"] = "Entre 30,56 mètres et 58,8 mètres";
-  automoteur["capacite"] = "Entre 1 572 EVP et 21 413 EVP";
-  automoteur["description"] = "Le porte conteneur est un immense navire transportant un grand nombre de conteneur entre les différents ports du monde.";
-
+  automoteur["largeur"] = "Entre 5 mètres et 11,40 mètres";
+  automoteur["longueur"] = "Entre 38 mètres et 95 mètres";
+  automoteur["capacite"] = "111 EVP";
+  automoteur["description"] = "La barge automoteur transporte des conteneurs par les voies fluviales.";
   // Roulier
   var roulier = new Object();
   roulier["titre"] = "Roulier";
-  roulier["largeur"] = "Entre 227,31 mètres et 399,87 mètres";
-  roulier["longueur"] = "Entre 30,56 mètres et 58,8 mètres";
-  roulier["capacite"] = "Entre 1 572 EVP et 21 413 EVP";
-  roulier["description"] = "Le porte conteneur est un immense navire transportant un grand nombre de conteneur entre les différents ports du monde.";
+  roulier["largeur"] = "32 mètres";
+  roulier["longueur"] = "199 mètres";
+  roulier["capacite"] = "6.700 voitures";
+  roulier["description"] = "Le roulier est un navire transportant des véhicules. Il peut aussi transportant des conteneurs.";
 
   var tabDonnees = [];
   tabDonnees[0] = porteconteneur;
