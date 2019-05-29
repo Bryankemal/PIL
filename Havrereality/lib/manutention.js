@@ -1,6 +1,7 @@
 "use strict";
 
 // Get the modal
+
 var modal = document.getElementById("myModal");
 var courantId;
 
@@ -25,7 +26,7 @@ cavalier["description"] = "Le cavalier transporte les conteneurs pour les stocke
 // Portique multimodale barge
 var portiquebarge = new Object();
 portiquebarge["titre"] = "Portique multimodale barge";
-portiquebarge["hauteur"] = "33 mètres";
+portiquebarge["hauteur"] = "~33 mètres";
 portiquebarge["capacite"] = "600 conteneurs traités par jour";
 portiquebarge["poids"] = "~1.500 tonnes";
 portiquebarge["description"] = "Le portique multimodale charge est décharge les barges se trouvant à la plate-forme multimodale";
@@ -41,7 +42,7 @@ reachstacker["description"] = "Le Reach stacker transporte les conteneurs et peu
 // Portique multimodale train
 var portiquetrain = new Object();
 portiquetrain["titre"] = "Portique multimodale train";
-portiquetrain["hauteur"] = "2.591 mètres";
+portiquetrain["hauteur"] = "~33 mètres";
 portiquetrain["capacite"] = "600 conteneurs traités par jour";
 portiquetrain["poids"] = "~1.500 tonnes";
 portiquetrain["description"] = "Le portique multimodale de train charge et décharge les trains lors de leurs arrivées la plate-forme multimodale";
@@ -57,7 +58,7 @@ chariotconteneur["description"] = "Le chariot élévateur transporte les contene
 // Chariot palette
 var chariotpalette = new Object();
 chariotpalette["titre"] = "Chariot élévateur palette";
-chariotpalette["hauteur"] = "2,610 mètres";
+chariotpalette["hauteur"] = "~2,610 mètres";
 chariotpalette["capacite"] = "Peut charger jusqu'à ~1600 kilogrammes";
 chariotpalette["poids"] = "~3330 kilogrammes";
 chariotpalette["description"] = "Le chariot élévateur de palette sert à charger et décharger des palettes.";

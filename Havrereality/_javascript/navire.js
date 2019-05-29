@@ -41,7 +41,7 @@
   tanker["titre"] = "Tanker st Sara";
   tanker["largeur"] = "17,2 mètres";
   tanker["longueur"] = "122.66 mètres";
-  tanker["capacite"] = "8 607 m3 avec 13 cuves";
+  tanker["capacite"] = "8.607 m³ avec 13 cuves";
   tanker["description"] = "Le st Sara assure le service de soutage dans le port du Havre.";
   // Tugboat
   var tugboat = new Object();
