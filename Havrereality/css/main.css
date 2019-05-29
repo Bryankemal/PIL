@@ -6518,7 +6518,7 @@ table td {
 
 .source {
   font-size: 10px;
-  color: #c5c5c5;
+  color: #9c99a0;
   text-align: center; }
 
 .grey {
@@ -6566,6 +6566,7 @@ table td {
   margin-left: 13%; }
 
 .credit {
+  font-size: 10px;
   background-color: #ffffff;
   border: 3px solid #32327d; }
 
@@ -6604,6 +6605,34 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   border: 3px solid #32327d; }
+
+hr.style-eight {
+  overflow: visible;
+  /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #32327d;
+  color: #32327d;
+  text-align: center; }
+
+hr.style-eight:after {
+  content: " I ";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: #b3c0da; }
+
+#titreliste {
+  color: #32327d;
+  font-weight: bold;
+  font-size: 2em; }
+
+#liste {
+  color: #32327d;
+  font-weight: bold;
+  font-size: 1em; }
 
 /*---------------------Media Queries (responsive design)----------------------*/
 @media screen and (min-width: 200px) and (max-width: 600px) {
@@ -6645,19 +6674,6 @@ h1 {
 
 a {
   color: #000cff; }
-
-@media screen and (min-width: 900px) {
-  #titreliste {
-    color: #32327d;
-    font-weight: bold;
-    font-size: 2em; }
-  #liste {
-    color: #32327d;
-    font-weight: bold;
-    font-size: 1em; }
-  li {
-    border-bottom: 0.2em solid #244281;
-    width: 100%; } }
 
 @media screen and (max-width: 900px) {
   #titreliste {

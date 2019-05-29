@@ -6521,7 +6521,7 @@ table th {
 
 .source {
   font-size: 10px;
-  color: #c5c5c5;
+  color: #9c99a0;
   text-align: center; }
 
 .grey {
@@ -6529,8 +6529,8 @@ table th {
 
 .credit {
   background-color: #ffffff;
-  border-radius: 5px;
-  border: 3px solid #32327d; }
+  border: 3px solid #32327d;
+  font-size: 10px; }
 
 #pieds {
   background-image: url("../src/forme/fondConteneur.png");
@@ -6557,9 +6557,12 @@ a {
   margin-bottom: -7%;
   padding-left: 1%; }
 
-#img {
+#imgNav {
   width: 82%;
   border: 3px solid #b3c0da; }
+
+#img {
+  width: 82%; }
 
 #contentImg {
   width: 50%;

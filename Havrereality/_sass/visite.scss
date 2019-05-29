@@ -28,15 +28,15 @@ table
 table td { text-align:center; }
 table th { text-align:center; }
 
-.source { font-size: 10px; color: #c5c5c5; text-align: center;}
+.source { font-size: 10px; color: #9c99a0; text-align: center;}
 
 .grey { background-color: #f0f0f0; }
 
 .credit
 {
   background-color: $white;
-  border-radius: 5px;
   border: 3px solid $bFonce;
+  font-size: 10px;
 }
 
 #pieds
@@ -69,7 +69,9 @@ a { color: $bFonce ;}
   padding-left: 1%;
 }
 
-#img {width: 82%; border: 3px solid $bClair;}
+#imgNav { width:82%; border: 3px solid $bClair; }
+
+#img {width: 82%;}
 
 #contentImg
 {

@@ -27,7 +27,7 @@ table
 
 table td { text-align:center; }
 
-.source { font-size: 10px; color: #c5c5c5; text-align: center;}
+.source { font-size: 10px; color: #9c99a0; text-align: center;}
 
 .grey { background-color: #f0f0f0; }
 
@@ -81,6 +81,7 @@ table td { text-align:center; }
 
 .credit
 {
+  font-size: 10px;
   background-color: $white;
   border: 3px solid $bFonce;
 }
@@ -130,6 +131,44 @@ h1
   border: 3px solid $bFonce;
 }
 
+hr.style-eight
+{
+  overflow: visible;
+   /* For IE */ padding: 0;
+   border: none;
+   border-top: medium double $bFonce;
+   color: $bFonce;
+   text-align: center;
+ }
+
+
+hr.style-eight:after
+{
+   content: " I ";
+   display: inline-block;
+   position: relative;
+   top: -0.7em;
+   font-size: 1.5em;
+   padding: 0 0.25em;
+   background: $bClair;
+ }
+
+ #titreliste
+ {
+   color: $bFonce;
+   font-weight: bold;
+   font-size: 2em;
+ }
+
+ #liste
+ {
+   color: $bFonce;
+   font-weight: bold;
+   font-size: 1em;
+ }
+
+
+
 /*---------------------Media Queries (responsive design)----------------------*/
 
 @media screen and (min-width: 200px) and (max-width: 600px)
@@ -178,29 +217,6 @@ h1
 
 #menu a:active { background-color: white; }
 a { color: #000cff ;}
-
-@media screen and (min-width: 900px)
-{
-  #titreliste
-  {
-    color: $bFonce;
-    font-weight: bold;
-    font-size: 2em;
-  }
-
-  #liste
-  {
-    color: $bFonce;
-    font-weight: bold;
-    font-size: 1em;
-  }
-
-  li
-  {
-    border-bottom: 0.2em solid #244281;
-    width: 100%;
-  }
-}
 
 @media screen and (max-width: 900px)
 {
