@@ -198,7 +198,23 @@ hr.style-eight:after
 
 /*---------------------Media Queries (responsive design)----------------------*/
 
-@media screen and (min-width: 200px) and (max-width: 600px)
+
+
+@media screen and (min-width: 200px) and (max-width: 400px)
+{
+  #downloadLink{
+    font-size: 8px;
+  }
+
+  p,center { font-size: 8px; }
+
+  h1 { font-size: 10px; margin-bottom: 4%; }
+  h2 { font-size: 8px; }
+
+  td {font-size: 8px;}
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px)
 {
   #logo
   {

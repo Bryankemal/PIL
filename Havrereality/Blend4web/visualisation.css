@@ -144,8 +144,107 @@
     height: 78%;
   }
 }
+@media screen and (min-width: 200px) and (max-width: 350px)
+{
+  .modal-content {
+    height: 60%;
+  }
 
-@media screen and (min-width: 200px) and (max-width: 767px)
+  .tableDonnees {
+    position: absolute;
+    table-layout: fixed;
+    width: 90%;
+    height: 40%;
+    border-radius: inherit;
+    border: inherit;
+    margin-top: 90%;
+    margin-left: inherit;
+    margin-right: inherit;
+    text-align: center;
+    vertical-align: inherit;
+    float: none;
+  }
+
+    .thdonnees{
+        border-radius: 2px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .tddonnees {
+       border-radius: 2px;
+       font-size: 12px;
+       word-wrap: break-word;
+    }
+
+  .shutdown{
+    font-size: 14px;
+    margin-left: inherit;
+    margin-top: 2%;
+
+  }
+
+  .shutdown:hover{
+    font-size: 14px;
+  }
+
+  iframe {
+    width: 90%;
+    height: 50%;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 425px)
+{
+  .modal-content {
+    height: 60%;
+  }
+
+  .tableDonnees {
+    position: absolute;
+    table-layout: fixed;
+    width: 90%;
+    height: 40%;
+    border-radius: inherit;
+    border: inherit;
+    margin-top: 75%;
+    margin-left: inherit;
+    margin-right: inherit;
+    text-align: center;
+    vertical-align: inherit;
+    float: none;
+  }
+
+    .thdonnees{
+        border-radius: 2px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .tddonnees {
+       border-radius: 2px;
+       font-size: 12px;
+       word-wrap: break-word;
+    }
+
+  .shutdown{
+    font-size: 14px;
+    margin-left: inherit;
+    margin-top: 2%;
+
+  }
+
+  .shutdown:hover{
+    font-size: 14px;
+  }
+
+  iframe {
+    width: 90%;
+    height: 50%;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px)
 {
   .modal-content {
     height: 60%;
@@ -218,16 +317,21 @@
   word-wrap: break-word;
 }
 
-@media screen and (min-width: 400px) and (max-width: 600px)
+@media screen and (min-width: 200px) and (max-width: 375px)
 {
-  #titreObjet3D {
-    font-size: 10px;
+  #tableauObjet3D{
+    margin-top: 7%;
   }
+  #titreObjet3D { font-size: 6px; }
+
 }
 
-@media screen and (min-width: 200px) and (max-width: 400px)
+@media screen and (min-width: 375px) and (max-width: 500px)
 {
-  #titreObjet3D {
-    font-size: 8px;
-  }
+  #titreObjet3D{ font-size: 8px; }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px)
+{
+  #titreObjet3D{ font-size: 10px; }
 }
