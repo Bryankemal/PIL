@@ -98,6 +98,18 @@ h1
   margin-left: 5px;
   position:relative;
   z-index: 2;
+  margin-bottom: 1%;
+}
+
+h2
+{
+  font-family:Bahnschrift;
+  text-align: center;
+  color: $bFonce;
+  font-size: 20px;
+  margin-left: 5px;
+  position:relative;
+  z-index: 2;
   margin-bottom: 5px;
 }
 
@@ -170,10 +182,19 @@ hr.style-eight:after
 
  #downloadLink
  {
-   
+   width:100%;
+   background-color: $bClair;
+   color: $bFonce;
+   font-size: 20px;
+   font-family: $family-sans-serif;
+   font-weight: bold;
  }
 
-
+ #downloadLink:hover
+ {
+   background-color: $bFonce;
+   color: white;
+ }
 
 /*---------------------Media Queries (responsive design)----------------------*/
 
@@ -199,9 +220,16 @@ hr.style-eight:after
     width: 50%;
   }
 
+  #downloadLink{
+    font-size: 6px;
+  }
+
   p,center { font-size: 10px; }
 
-  h1 { font-size: 15px; }
+  h1 { font-size: 15px; margin-bottom: 4%; }
+  h2 { font-size: 10px; }
+
+  th {font-size: 8px;}
 
   .pImportant { font-size: 10px; margin-bottom: 3px;}
 
