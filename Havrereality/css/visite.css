@@ -6565,7 +6565,7 @@ a {
   width: 82%; }
 
 #contentImg {
-  width: 50%;
+  width: 80%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -6626,8 +6626,8 @@ h1 {
     z-index: 3;
     margin-bottom: -21%;
     margin-left: 11.5%; }
-  #img {
-    width: 75%; }
+  #contentImg {
+    width: 100%; }
   #barreTop {
     position: relative;
     z-index: 2;
