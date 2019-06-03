@@ -91,6 +91,8 @@ a { color: $bFonce ;}
   margin-left: 13%;
 }
 
+#video { width: 560px; height: 315px; }
+
 .lienPagesSuivPrec
 {
   background-color: $bClair;
@@ -166,7 +168,7 @@ h1
 
   p,center { font-size: 10px; }
 
-  h1 { font-size: 15px; }
+  h1 { font-size: 11px; }
 
   .pImportant { font-size: 10px; }
 
@@ -174,7 +176,7 @@ h1
 
   .table td,tr { padding: 0rem 0rem 0rem 0rem; align-content: center; width: auto; padding-right: 0px;  }
 
-  li { text-align: center; font-size: 15px; }
+  li { font-size: 10px; }
 
   .lienPagesSuivPrec { font-size: 10px; }
 
@@ -188,11 +190,16 @@ h1
     padding-top:6%;
   }
 
+  .source {font-size: 7.5px;}
+
+
+  #video { width: 224px; height: 126px; }
+
   .credit
   {
     background-color: $white;
     border: 1px solid $bFonce;
-    font-size: 7px;
+    font-size: 6px;
   }
 }
 

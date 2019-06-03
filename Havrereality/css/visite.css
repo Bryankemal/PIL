@@ -6578,6 +6578,10 @@ a {
   margin-bottom: -13%;
   margin-left: 13%; }
 
+#video {
+  width: 560px;
+  height: 315px; }
+
 .lienPagesSuivPrec {
   background-color: #b3c0da;
   position: relative;
@@ -6634,7 +6638,7 @@ h1 {
   p, center {
     font-size: 10px; }
   h1 {
-    font-size: 15px; }
+    font-size: 11px; }
   .pImportant {
     font-size: 10px; }
   .table {
@@ -6649,18 +6653,22 @@ h1 {
     width: auto;
     padding-right: 0px; }
   li {
-    text-align: center;
-    font-size: 15px; }
+    font-size: 10px; }
   .lienPagesSuivPrec {
     font-size: 10px; }
   .pNormal {
     font-size: 10px; }
   #corps {
     padding-top: 6%; }
+  .source {
+    font-size: 7.5px; }
+  #video {
+    width: 224px;
+    height: 126px; }
   .credit {
     background-color: #ffffff;
     border: 1px solid #32327d;
-    font-size: 7px; } }
+    font-size: 6px; } }
 
 @media screen and (min-width: 401px) and (max-width: 599px) {
   #logo {
