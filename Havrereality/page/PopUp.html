@@ -6,16 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Havreality</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="banniere.css">
   </head>
-  <body onload="window.location.href = '#openModal';">
+  <body onload="tempo()" onload="window.location.href = '#openModal';">
     <div id="openModal" class="modalDialog">
-        <div>
-            <p class="popuptitre">Bienvenue sur le site Havreality</p>
-            <p class="popuptexte">N'oubliez pas de télécharger l'application <a id="popup" href="#" title="Lien de téléchargement"><strong>Havreality</strong></a> avant de commencer la visite </p>
-            <center><a href="http://lehavreportcenter.com/les-sorties-du-jeudi/"><img class ="popupImage" src="http://lehavreportcenter.com/wp-content/uploads/2019/03/Illustration-jeudi-25-avril-web.png" alt="Portcenter"></a></center>
-            <center><a href="index.html" title="Fermer" class="close"> Accéder au site </a>
-            <a href="etape1Visite.html" title="Visite" class="close"> Accéder à la visite </a></center>
+        <div class="pImportant">
+          <h1>
+            Bienvenue sur le site de l’application HAVREALITY, la première visite du port du Havre en réalité augmentée !
+          </h1>
+            <h2>N'oubliez pas de télécharger l'application <a id="popup" href="index.html" title="Lien de téléchargement"><strong>Havreality</strong></a> avant de commencer la visite </h2>
+            <div id="baniere_defil">
+        				<img src="http://lehavreportcenter.com/wp-content/uploads/2019/04/Parcours_Jeudi-23-mai_Revist%C3%A9_Web.jpg" id="img_baniere0">
+        				<img src="../src/forme/fondEcranHavreality.png" id="img_baniere1">
+        				<img src="../src/forme/porteconteneur.jpg" id="img_baniere2">
+        				<img src="../src/forme/drapeau_europe.png" id="img_baniere3">
+        				<img src="../src/forme/logoRegionNormandie.png" id="img_baniere4">
+        		</div>
+            <div id="boutonlien">
+              <a id="lien" href="index.html" class="button is-rounded" title="Fermer"> Accéder au site </a>&nbsp
+              <a id="lien" href="etape1Visite.html" class="button is-rounded" title="Visite"> Accéder à la visite </a>
+            </div>
         </div>
     </div>
+    <script type="text/javascript" src="../lib/display_baniere.js"></script>
   </body>
 </html>

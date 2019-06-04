@@ -6574,6 +6574,11 @@ table th {
   border: 3px solid #32327d; }
 
 /*------------------------------Styles de texte-------------------------------*/
+#warning {
+  color: red;
+  font-size: 18px;
+  font-weight: bold; }
+
 h1 {
   font-weight: bold;
   font-family: Bahnschrift;
@@ -6663,6 +6668,10 @@ hr.style-eight:after {
 @media screen and (min-width: 200px) and (max-width: 450px) {
   #downloadLink {
     font-size: 8px; }
+  #warning {
+    color: red;
+    font-size: 12px;
+    font-weight: bold; }
   li {
     text-align: center;
     font-size: 10px; }

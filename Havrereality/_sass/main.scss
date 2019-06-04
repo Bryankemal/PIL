@@ -89,6 +89,11 @@ table th { text-align:center; }
 
 /*------------------------------Styles de texte-------------------------------*/
 
+#warning{
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
 h1
 {
   font-weight: bold;
@@ -204,6 +209,12 @@ hr.style-eight:after
 {
   #downloadLink{
     font-size: 8px;
+  }
+
+  #warning{
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
   }
 
   li { text-align: center; font-size: 10px; }
