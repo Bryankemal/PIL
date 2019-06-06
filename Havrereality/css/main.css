@@ -6555,6 +6555,9 @@ table th {
   border: 2.5px solid #32327d;
   margin-top: 3%; }
 
+a:active {
+  background-color: white; }
+
 #barreTop {
   position: relative;
   margin-top: 4%;
@@ -6631,7 +6634,8 @@ hr.style-eight {
   border: none;
   border-top: medium double #32327d;
   color: #32327d;
-  text-align: center; }
+  text-align: center;
+  margin: 1.25rem; }
 
 hr.style-eight:after {
   content: " I ";
@@ -6642,12 +6646,13 @@ hr.style-eight:after {
   padding: 0 0.25em;
   background: #b3c0da; }
 
-#titreliste {
+#liste {
   color: #32327d;
   font-weight: bold;
-  font-size: 2em; }
+  font-size: 1em; }
 
-#liste {
+#liste-active {
+  background-color: white;
   color: #32327d;
   font-weight: bold;
   font-size: 1em; }
@@ -6749,8 +6754,28 @@ a {
     color: #32327d;
     font-weight: bold;
     font-size: 0.5em; }
+  #liste-active {
+    color: #32327d;
+    font-weight: bold;
+    font-size: 0.5em; }
+  hr.style-eight {
+    overflow: visible;
+    /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #32327d;
+    color: #32327d;
+    text-align: center;
+    margin: 0.5rem; }
+  hr.style-eight:after {
+    content: " I ";
+    display: inline-block;
+    position: relative;
+    top: -1.25em;
+    font-size: 0.75em;
+    padding: 0 0.25em;
+    background: #b3c0da; }
   li {
-    border-bottom: 0.2em solid #244281;
     width: 100%; } }
 
 /* Pop-up */
