@@ -9,10 +9,10 @@ var courantId;
 // Porte conteneur
 var porteconteneur = new Object();
 porteconteneur["titre"] = "Porte-conteneur";
-porteconteneur["largeur"] = "Entre 227,31 mètres et 399,87 mètres";
-porteconteneur["longueur"] = "Entre 30,56 mètres et 58,8 mètres";
+porteconteneur["largeur"] = "Entre 30,56 mètres et 58,8 mètres";
+porteconteneur["longueur"] = "Entre 227,31 mètres et 399,87 mètres";
 porteconteneur["capacite"] = "Entre 1 572 EVP et 21 413 EVP";
-porteconteneur["description"] = "Le porte conteneur est un immense navire transportant un grand nombre de conteneur entre les différents ports du monde.";
+porteconteneur["description"] = "Le porte-conteneurs est un grand navire transportant un nombre très important de conteneurs entre les différents ports du monde.";
 
 // Feeder
 var feeder = new Object();
@@ -28,7 +28,7 @@ bargepousseur["titre"] = "Barge pousseur";
 bargepousseur["largeur"] = "7,40 mètres";
 bargepousseur["longueur"] = "24 mètres";
 bargepousseur["capacite"] = "~100 EVP";
-bargepousseur["description"] = "La barge est dépourvue de moteur, elle est propulsée par un bateau qui va la pousser." + "Elle est utilisée pour le ravitaillement et déchargement de cargaison.";
+bargepousseur["description"] = "La barge est dépourvue de moteur, elle est propulsée par pousseur." + "Elle est utilisée pour l'approvisionnement et le déchargement de cargaison.";
 // Marpol collector
 var marpolcollector = new Object();
 marpolcollector["titre"] = "Marpol collector";
@@ -38,18 +38,18 @@ marpolcollector["capacite"] = "400 m³";
 marpolcollector["description"] = "Le Marpol collector assure la collecte des déchets d'exploitation et résidus de cargaison des navires au port du Havre";
 // Tanker
 var tanker = new Object();
-tanker["titre"] = "Tanker st Sara";
+tanker["titre"] = "Tanker St Sara";
 tanker["largeur"] = "17,2 mètres";
 tanker["longueur"] = "122.66 mètres";
 tanker["capacite"] = "8.607 m³ avec 13 cuves";
-tanker["description"] = "Le st Sara assure le service de soutage dans le port du Havre.";
+tanker["description"] = "Le St Sara assure le service de soutage dans le port du Havre.";
 // Tugboat
 var tugboat = new Object();
-tugboat["titre"] = "Tugboat";
+tugboat["titre"] = "Remorqueur";
 tugboat["largeur"] = "8,5 mètres";
 tugboat["longueur"] = "26,2 mètres";
 tugboat["capacite"] = "-";
-tugboat["description"] = "Les Tugboat sont des petits bateaux très puissant qui guident les grands navires lors de leurs entrées au port du Havre ";
+tugboat["description"] = "Les remorqueurs sont des petits bateaux très puissants qui guident les grands navires lors de leurs entrées au port du Havre ";
 
 // Automoteur
 var automoteur = new Object();
@@ -64,7 +64,7 @@ roulier["titre"] = "Roulier";
 roulier["largeur"] = "32 mètres";
 roulier["longueur"] = "199 mètres";
 roulier["capacite"] = "6.700 voitures";
-roulier["description"] = "Le roulier est un navire transportant des véhicules. Il peut aussi transportant des conteneurs.";
+roulier["description"] = "Le roulier est un navire transportant des véhicules. Il peut aussi transporter des conteneurs.";
 
 var tabDonnees = [];
 tabDonnees[0] = porteconteneur;

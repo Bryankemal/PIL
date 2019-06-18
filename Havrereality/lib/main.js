@@ -74,7 +74,7 @@ dry["longueur"] = "6' : 1,829 mètres <br>" + "8' : 2,438 mètres" + "10' : 3,04
 dry["hauteur"] = "2.591 mètres";
 dry["capacite"] = "6' : 6,66 m³ <br>" + "8' : 9,950 m³" + "10' : 15,950 m³";
 dry["poids"] = "6' : 450 kilogrammes <br>" + "8' : 950 kilogrammes" + "10' : 1.300 kilogrammes";
-dry["description"] = "Des petits conteneurs facilement transportable et adaptable aux espaces restreints. Ils conviennent notamment aux besoins des chantiers.";
+dry["description"] = "Des petits conteneurs facilement transportables et adaptables aux espaces restreints. Ils conviennent notamment aux besoins des chantiers.";
 
 // OpenSide
 var openside = new Object();

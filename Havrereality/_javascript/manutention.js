@@ -34,7 +34,7 @@ portiquebarge["description"] = "Le portique multimodale charge est décharge les
 var reachstacker = new Object();
 reachstacker["titre"] = "Reach stacker";
 reachstacker["hauteur"] = "4,5 mètres";
-reachstacker["capacite"] = "Peut charger jusqu'à ~46.000 kilogrammes";
+reachstacker["capacite"] = "Peut charger jusqu'à ~46 tonnes";
 reachstacker["poids"] = "~70 tonnes";
 reachstacker["description"] = "Le Reach stacker transporte les conteneurs et peut charger des trains";
 
@@ -50,8 +50,8 @@ portiquetrain["description"] = "Le portique multimodale de train charge et déch
 var chariotconteneur = new Object();
 chariotconteneur["titre"] = "Chariot élévateur conteneur";
 chariotconteneur["hauteur"] = "~2,50 mètres";
-chariotconteneur["capacite"] = "Peut charger jusqu'à ~32.000 kilogrammes";
-chariotconteneur["poids"] = "~11.500 kilogrammes";
+chariotconteneur["capacite"] = "Peut charger jusqu'à ~32 tonnes";
+chariotconteneur["poids"] = "~11,5 tonnes";
 chariotconteneur["description"] = "Le chariot élévateur transporte les conteneurs sur le port.";
 
 // Chariot palette
@@ -60,7 +60,7 @@ chariotpalette["titre"] = "Chariot élévateur palette";
 chariotpalette["hauteur"] = "~2,610 mètres";
 chariotpalette["capacite"] = "Peut charger jusqu'à ~1600 kilogrammes";
 chariotpalette["poids"] = "~3330 kilogrammes";
-chariotpalette["description"] = "Le chariot élévateur de palette sert à charger et décharger des palettes.";
+chariotpalette["description"] = "Ce chariot élévateur sert à charger et décharger des palettes.";
 
 var tabDonnees = [];
 tabDonnees[0] = portique;
